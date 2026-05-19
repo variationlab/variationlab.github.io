@@ -1,0 +1,3179 @@
+[
+  {
+    "title": "How Notations Evolve: A Historical Analysis with Implications for Supporting User-Defined Abstractions",
+    "authors": [
+      {
+        "firstName": "Jingyue",
+        "lastName": "Zhang",
+        "publicationName": "Jingyue Zhang"
+      },
+      {
+        "firstName": "J.D.",
+        "lastName": "Zamfirescu-Pereira",
+        "publicationName": "J.D. Zamfirescu-Pereira"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Damien",
+        "lastName": "Masson",
+        "publicationName": "Damien Masson"
+      },
+      {
+        "firstName": "Ian",
+        "lastName": "Arawjo",
+        "publicationName": "Ian Arawjo"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI",
+      "shortName": "CHI",
+      "venueType": "conference"
+    },
+    "year": 2026,
+    "publishDate": "2026-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/notationsCHI26.pdf"
+  },
+  {
+    "title": "A Paradigm for Creative Ownership",
+    "authors": [
+      {
+        "firstName": "Tejaswi",
+        "lastName": "Polimetla",
+        "publicationName": "Tejaswi Polimetla"
+      },
+      {
+        "firstName": "Katy",
+        "middleName": "Ilonka",
+        "lastName": "Gero",
+        "publicationName": "Katy Ilonka Gero"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI",
+      "shortName": "CHI",
+      "venueType": "conference"
+    },
+    "year": 2026,
+    "publishDate": "2026-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/ownershipCHI26.pdf",
+    "supplementals": [
+      {
+        "name": "Live Demo",
+        "url": "https://creative-ownership.tejaswi.net/"
+      }
+    ]
+  },
+  {
+    "title": "Meta-HCI: Practising Reflection in HCI Research",
+    "authors": [
+      {
+        "firstName": "Annika",
+        "lastName": "Kaltenhauser",
+        "publicationName": "Annika Kaltenhauser"
+      },
+      {
+        "firstName": "James Peter",
+        "lastName": "Arnera",
+        "publicationName": "James Peter Arnera"
+      },
+      {
+        "firstName": "Amelie",
+        "lastName": "Unger",
+        "publicationName": "Amelie Unger"
+      },
+      {
+        "firstName": "Sophia",
+        "lastName": "Ppali",
+        "publicationName": "Sophia Ppali"
+      },
+      {
+        "firstName": "Niels",
+        "lastName": "van Berkel",
+        "publicationName": "Niels van Berkel"
+      },
+      {
+        "firstName": "Benjamin",
+        "lastName": "Tag",
+        "publicationName": "Benjamin Tag"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Phoebe",
+        "lastName": "Sengers",
+        "publicationName": "Phoebe Sengers"
+      },
+      {
+        "firstName": "Simo",
+        "lastName": "Hosio",
+        "publicationName": "Simo Hosio"
+      },
+      {
+        "firstName": "Jonas",
+        "lastName": "Oppenlaender",
+        "publicationName": "Jonas Oppenlaender"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI Extended Abstracts",
+      "shortName": "CHI EA",
+      "venueType": "conference"
+    },
+    "year": 2026,
+    "publishDate": "2026-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/meta_HCI_CHI26meetup.pdf"
+  },
+  {
+    "title": "Science and Technology for Augmenting Reading (STAR)",
+    "authors": [
+      {
+        "firstName": "Tal",
+        "lastName": "August",
+        "publicationName": "Tal August"
+      },
+      {
+        "firstName": "Andrew",
+        "lastName": "Head",
+        "publicationName": "Andrew Head"
+      },
+      {
+        "firstName": "Alexa",
+        "lastName": "Siu",
+        "publicationName": "Alexa Siu"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Jonathan",
+        "middleName": "K.",
+        "lastName": "Kummerfeld",
+        "publicationName": "Jonathan K. Kummerfeld"
+      },
+      {
+        "firstName": "Joseph Chee",
+        "lastName": "Chang",
+        "publicationName": "Joseph Chee Chang"
+      },
+      {
+        "firstName": "Lucy Lu",
+        "lastName": "Wang",
+        "publicationName": "Lucy Lu Wang"
+      },
+      {
+        "firstName": "Marti",
+        "middleName": "A.",
+        "lastName": "Hearst",
+        "publicationName": "Marti A. Hearst"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI Extended Abstracts Workshop",
+      "shortName": "CHI EA",
+      "venueType": "workshop"
+    },
+    "year": 2026,
+    "publishDate": "2026-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/star_workshop_chi26.pdf"
+  },
+  {
+    "title": "MagicCopy: Bring my data along with me beyond boundaries of apps",
+    "authors": [
+      {
+        "firstName": "Priyan",
+        "lastName": "Vaithilingam",
+        "publicationName": "Priyan Vaithilingam"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Nathalie Henry",
+        "lastName": "Riche",
+        "publicationName": "Nathalie Henry Riche"
+      },
+      {
+        "firstName": "Gonzalo",
+        "lastName": "Ramos",
+        "publicationName": "Gonzalo Ramos"
+      },
+      {
+        "firstName": "Jeevana Priya",
+        "lastName": "Inala",
+        "publicationName": "Jeevana Priya Inala"
+      },
+      {
+        "firstName": "Chenglong",
+        "lastName": "Wang",
+        "publicationName": "Chenglong Wang"
+      }
+    ],
+    "venue": {
+      "fullName": "arXiv",
+      "shortName": "arXiv",
+      "venueType": "other"
+    },
+    "year": 2026,
+    "publishDate": "2026-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/magiccopy.pdf"
+  },
+  {
+    "title": "Interface Design to Support Legal Reading and Writing: Insights from Interviews with Legal Experts",
+    "authors": [
+      {
+        "firstName": "Chelse",
+        "lastName": "Swoopes",
+        "publicationName": "Chelse Swoopes"
+      },
+      {
+        "firstName": "Ziwei",
+        "lastName": "Gu",
+        "publicationName": "Ziwei Gu"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "arXiv",
+      "shortName": "arXiv",
+      "venueType": "other"
+    },
+    "year": 2025,
+    "publishDate": "2025-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/legalinterviews.pdf"
+  },
+  {
+    "title": "AbstractExplorer: Leveraging Structure-Mapping Theory to Enhance Comparative Close Reading at Scale",
+    "authors": [
+      {
+        "firstName": "Ziwei",
+        "lastName": "Gu",
+        "publicationName": "Ziwei Gu"
+      },
+      {
+        "firstName": "Joyce",
+        "lastName": "Zhou",
+        "publicationName": "Joyce Zhou"
+      },
+      {
+        "firstName": "Nina",
+        "lastName": "Lei",
+        "publicationName": "Nina Lei"
+      },
+      {
+        "firstName": "Jonathan",
+        "lastName": "Kummerfeld",
+        "publicationName": "Jonathan Kummerfeld"
+      },
+      {
+        "firstName": "Mahmood",
+        "lastName": "Jasim",
+        "publicationName": "Mahmood Jasim"
+      },
+      {
+        "firstName": "Narges",
+        "lastName": "Mahyar",
+        "publicationName": "Narges Mahyar"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "UIST",
+      "shortName": "UIST",
+      "venueType": "conference"
+    },
+    "year": 2025,
+    "publishDate": "2025-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/abstractexplorer.pdf"
+  },
+  {
+    "title": "Semantic Commit: Helping Users Update Intent Specifications for AI Memory at Scale",
+    "authors": [
+      {
+        "firstName": "Priyan",
+        "lastName": "Vaithilingam",
+        "publicationName": "Priyan Vaithilingam"
+      },
+      {
+        "firstName": "Munyeong",
+        "lastName": "Kim",
+        "publicationName": "Munyeong Kim"
+      },
+      {
+        "firstName": "Frida-Cecilia",
+        "lastName": "Acosta-Parenteau",
+        "publicationName": "Frida-Cecilia Acosta-Parenteau"
+      },
+      {
+        "firstName": "Daniel",
+        "lastName": "Lee",
+        "publicationName": "Daniel Lee"
+      },
+      {
+        "firstName": "Amine",
+        "lastName": "Mhedhbi",
+        "publicationName": "Amine Mhedhbi"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Ian",
+        "lastName": "Arawjo",
+        "publicationName": "Ian Arawjo"
+      }
+    ],
+    "venue": {
+      "fullName": "UIST",
+      "shortName": "UIST",
+      "venueType": "conference"
+    },
+    "year": 2025,
+    "publishDate": "2025-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/semantic_commit.pdf"
+  },
+  {
+    "title": "CorpusStudio: Surfacing Emergent Patterns In A Corpus Of Prior Work While Writing",
+    "authors": [
+      {
+        "firstName": "Hai",
+        "lastName": "Dang",
+        "publicationName": "Hai Dang"
+      },
+      {
+        "firstName": "Chelse",
+        "lastName": "Swoopes",
+        "publicationName": "Chelse Swoopes"
+      },
+      {
+        "firstName": "Daniel",
+        "lastName": "Buschek",
+        "publicationName": "Daniel Buschek"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI",
+      "shortName": "CHI",
+      "venueType": "conference"
+    },
+    "year": 2025,
+    "publishDate": "2025-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/corpusstudio.pdf"
+  },
+  {
+    "title": "Supporting Co-Adaptive Machine Teaching through Human Concept Learning and Cognitive Theories",
+    "authors": [
+      {
+        "firstName": "Simret Araya",
+        "lastName": "Gebreegziabher",
+        "publicationName": "Simret Araya Gebreegziabher"
+      },
+      {
+        "firstName": "Yukun",
+        "lastName": "Yang",
+        "publicationName": "Yukun Yang"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Toby Jia-Jun",
+        "lastName": "Li",
+        "publicationName": "Toby Jia-Jun Li"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI",
+      "shortName": "CHI",
+      "venueType": "conference"
+    },
+    "year": 2025,
+    "publishDate": "2025-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/mocha_chi25.pdf",
+    "award": "best-paper",
+    "awardText": "Best Paper Award"
+  },
+  {
+    "title": "Creative Writers' Attitudes on Writing as Training Data for Large Language Models",
+    "authors": [
+      {
+        "firstName": "Katy",
+        "middleName": "Ilonka",
+        "lastName": "Gero",
+        "publicationName": "Katy Ilonka Gero"
+      },
+      {
+        "firstName": "Meera",
+        "lastName": "Desai",
+        "publicationName": "Meera Desai"
+      },
+      {
+        "firstName": "Carly",
+        "lastName": "Schnitzler",
+        "publicationName": "Carly Schnitzler"
+      },
+      {
+        "firstName": "Nayun",
+        "lastName": "Eom",
+        "publicationName": "Nayun Eom"
+      },
+      {
+        "firstName": "Jack",
+        "lastName": "Cushman",
+        "publicationName": "Jack Cushman"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI",
+      "shortName": "CHI",
+      "venueType": "conference"
+    },
+    "year": 2025,
+    "publishDate": "2025-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/gero_LIL_chi25.pdf",
+    "award": "best-paper",
+    "awardText": "Best Paper Award"
+  },
+  {
+    "title": "Leveraging Variation Theory in Counterfactual Data Augmentation for Optimized Active Learning",
+    "authors": [
+      {
+        "firstName": "Simret Araya",
+        "lastName": "Gebreegziabher",
+        "publicationName": "Simret Araya Gebreegziabher"
+      },
+      {
+        "firstName": "Kuangshi",
+        "lastName": "Ai",
+        "publicationName": "Kuangshi Ai"
+      },
+      {
+        "firstName": "Zheng",
+        "lastName": "Zhang",
+        "publicationName": "Zheng Zhang"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Toby Jia-Jun",
+        "lastName": "Li",
+        "publicationName": "Toby Jia-Jun Li"
+      }
+    ],
+    "venue": {
+      "fullName": "ACL",
+      "shortName": "ACL",
+      "venueType": "conference"
+    },
+    "year": 2025,
+    "publishDate": "2025-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/leveragingVT_acl.pdf"
+  },
+  {
+    "title": "Law is vulnerable to AI influence; interface design can help",
+    "authors": [
+      {
+        "firstName": "Aileen",
+        "lastName": "Nielsen",
+        "publicationName": "Aileen Nielsen"
+      },
+      {
+        "firstName": "Chelse",
+        "lastName": "Swoopes",
+        "publicationName": "Chelse Swoopes"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "SSRN preprint",
+      "shortName": "SSRN",
+      "venueType": "other"
+    },
+    "year": 2025,
+    "publishDate": "2025-01-01",
+    "doi": "",
+    "preprint": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5387231",
+    "supplementals": [
+      {
+        "name": "PDF",
+        "url": "https://glassmanlab.seas.harvard.edu/papers/law_is_vulnerable_SSRN.pdf"
+      }
+    ]
+  },
+  {
+    "title": "An AI-Resilient Text Rendering Technique for Reading and Skimming Documents",
+    "authors": [
+      {
+        "firstName": "Ziwei",
+        "lastName": "Gu",
+        "publicationName": "Ziwei Gu"
+      },
+      {
+        "firstName": "Ian",
+        "lastName": "Arawjo",
+        "publicationName": "Ian Arawjo"
+      },
+      {
+        "firstName": "Kenneth",
+        "lastName": "Li",
+        "publicationName": "Kenneth Li"
+      },
+      {
+        "firstName": "Jonathan",
+        "middleName": "K.",
+        "lastName": "Kummerfeld",
+        "publicationName": "Jonathan K. Kummerfeld"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI",
+      "shortName": "CHI",
+      "venueType": "conference"
+    },
+    "year": 2024,
+    "publishDate": "2024-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/gptsm.pdf",
+    "supplementals": [
+      {
+        "name": "Software",
+        "url": "https://github.com/ZiweiGu/GP-TSM"
+      }
+    ]
+  },
+  {
+    "title": "Why Do Skimmers Perform Better with Grammar-Preserving Text Saliency Modulation (GP-TSM)? Evidence from an Eye Tracking Study",
+    "authors": [
+      {
+        "firstName": "Ziwei",
+        "lastName": "Gu",
+        "publicationName": "Ziwei Gu"
+      },
+      {
+        "firstName": "Owen",
+        "lastName": "Raymond",
+        "publicationName": "Owen Raymond"
+      },
+      {
+        "firstName": "Naser",
+        "lastName": "Al Madi",
+        "publicationName": "Naser Al Madi"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI Late Breaking Work",
+      "shortName": "CHI LBW",
+      "venueType": "conference"
+    },
+    "year": 2024,
+    "publishDate": "2024-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/gptsm_eye_lbw.pdf"
+  },
+  {
+    "title": "AI-Resilient Interfaces",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Ziwei",
+        "lastName": "Gu",
+        "publicationName": "Ziwei Gu"
+      },
+      {
+        "firstName": "Jonathan",
+        "middleName": "K.",
+        "lastName": "Kummerfeld",
+        "publicationName": "Jonathan K. Kummerfeld"
+      }
+    ],
+    "venue": {
+      "fullName": "arXiv",
+      "shortName": "arXiv",
+      "venueType": "other"
+    },
+    "year": 2024,
+    "publishDate": "2024-01-01",
+    "doi": "",
+    "preprint": "https://arxiv.org/abs/2405.08447",
+    "supplementals": [
+      {
+        "name": "PDF",
+        "url": "https://glassmanlab.seas.harvard.edu/papers/AI_Resilient_Interfaces_draft.pdf"
+      }
+    ]
+  },
+  {
+    "title": "Supporting Sensemaking of Large Language Model Outputs at Scale",
+    "authors": [
+      {
+        "firstName": "Katy",
+        "middleName": "Ilonka",
+        "lastName": "Gero",
+        "publicationName": "Katy Ilonka Gero"
+      },
+      {
+        "firstName": "Chelse",
+        "lastName": "Swoopes",
+        "publicationName": "Chelse Swoopes"
+      },
+      {
+        "firstName": "Ziwei",
+        "lastName": "Gu",
+        "publicationName": "Ziwei Gu"
+      },
+      {
+        "firstName": "Jonathan",
+        "middleName": "K.",
+        "lastName": "Kummerfeld",
+        "publicationName": "Jonathan K. Kummerfeld"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI",
+      "shortName": "CHI",
+      "venueType": "conference"
+    },
+    "year": 2024,
+    "publishDate": "2024-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/mesotext.pdf",
+    "award": "honorable-mention",
+    "awardText": "Honorable Mention Award"
+  },
+  {
+    "title": "ChainForge: A Visual Toolkit for Prompt Engineering and LLM Hypothesis Testing",
+    "authors": [
+      {
+        "firstName": "Ian",
+        "lastName": "Arawjo",
+        "publicationName": "Ian Arawjo"
+      },
+      {
+        "firstName": "Chelse",
+        "lastName": "Swoopes",
+        "publicationName": "Chelse Swoopes"
+      },
+      {
+        "firstName": "Priyan",
+        "lastName": "Vaithilingam",
+        "publicationName": "Priyan Vaithilingam"
+      },
+      {
+        "firstName": "Martin",
+        "lastName": "Wattenberg",
+        "publicationName": "Martin Wattenberg"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI",
+      "shortName": "CHI",
+      "venueType": "conference"
+    },
+    "year": 2024,
+    "publishDate": "2024-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/chainforge.pdf",
+    "award": "honorable-mention",
+    "awardText": "Honorable Mention Award",
+    "supplementals": [
+      {
+        "name": "Demo",
+        "url": "https://chainforge.ai/"
+      },
+      {
+        "name": "Software",
+        "url": "https://github.com/ianarawjo/ChainForge"
+      }
+    ]
+  },
+  {
+    "title": "DynaVis: Dynamically Synthesized UI Widgets for Visualization Editing",
+    "authors": [
+      {
+        "firstName": "Priyan",
+        "lastName": "Vaithilingam",
+        "publicationName": "Priyan Vaithilingam"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Jeevana Priya",
+        "lastName": "Inala",
+        "publicationName": "Jeevana Priya Inala"
+      },
+      {
+        "firstName": "Chenglong",
+        "lastName": "Wang",
+        "publicationName": "Chenglong Wang"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI",
+      "shortName": "CHI",
+      "venueType": "conference"
+    },
+    "year": 2024,
+    "publishDate": "2024-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/dynavis.pdf",
+    "award": "best-paper",
+    "awardText": "Best Paper Award"
+  },
+  {
+    "title": "Imagining a Future of Designing with AI: Dynamic Grounding, Constructive Negotiation, and Sustainable Motivation",
+    "authors": [
+      {
+        "firstName": "Priyan",
+        "lastName": "Vaithilingam",
+        "publicationName": "Priyan Vaithilingam"
+      },
+      {
+        "firstName": "Ian",
+        "lastName": "Arawjo",
+        "publicationName": "Ian Arawjo"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "DIS",
+      "shortName": "DIS",
+      "venueType": "conference"
+    },
+    "year": 2024,
+    "publishDate": "2024-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/imagining_dis24.pdf"
+  },
+  {
+    "title": "Syntaktis: A Large-Language-Model-Backed Editing Interface for Supporting Ethical Journalism Practices",
+    "authors": [
+      {
+        "firstName": "Leah",
+        "lastName": "Teichholtz",
+        "publicationName": "Leah Teichholtz"
+      },
+      {
+        "firstName": "Katy",
+        "lastName": "Gero",
+        "publicationName": "Katy Ilonka Gero"
+      },
+      {
+        "firstName": "Elena",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "Computation+Journalism",
+      "shortName": "C+J",
+      "venueType": "conference"
+    },
+    "year": 2024,
+    "publishDate": "2024-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/syntaktis.pdf"
+  },
+  {
+    "title": "Amortizing Pragmatic Program Synthesis with Rankings",
+    "authors": [
+      {
+        "firstName": "Yewen",
+        "lastName": "Pu",
+        "publicationName": "Yewen Pu"
+      },
+      {
+        "firstName": "Saujas",
+        "lastName": "Vaduguru",
+        "publicationName": "Saujas Vaduguru"
+      },
+      {
+        "firstName": "Priyan",
+        "lastName": "Vaithilingam",
+        "publicationName": "Priyan Vaithilingam"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Daniel",
+        "lastName": "Fried",
+        "publicationName": "Daniel Fried"
+      }
+    ],
+    "venue": {
+      "fullName": "ICML",
+      "shortName": "ICML",
+      "venueType": "conference"
+    },
+    "year": 2024,
+    "publishDate": "2024-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/amortizing_icml24.pdf"
+  },
+  {
+    "title": "Reliability Criteria for News Websites",
+    "authors": [
+      {
+        "firstName": "Hendrik",
+        "lastName": "Heuer",
+        "publicationName": "Hendrik Heuer"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "TOCHI",
+      "shortName": "TOCHI",
+      "venueType": "journal"
+    },
+    "year": 2024,
+    "publishDate": "2024-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/reliability_criteria.pdf"
+  },
+  {
+    "title": "Antagonistic AI",
+    "authors": [
+      {
+        "firstName": "Carrie",
+        "lastName": "Cai",
+        "publicationName": "Carrie Cai"
+      },
+      {
+        "firstName": "Ian",
+        "lastName": "Arawjo",
+        "publicationName": "Ian Arawjo"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "arXiv",
+      "shortName": "arXiv",
+      "venueType": "other"
+    },
+    "year": 2024,
+    "publishDate": "2024-01-01",
+    "doi": ""
+  },
+  {
+    "title": "What do we even know about interpretability? (On Interpretability and Overreliance)",
+    "authors": [
+      {
+        "firstName": "Jan",
+        "lastName": "Skirzynski",
+        "publicationName": "Jan Skirzynski"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Berk",
+        "lastName": "Ustun",
+        "publicationName": "Berk Ustun"
+      }
+    ],
+    "venue": {
+      "fullName": "Interpretable AI: Past, Present and Future @ NeurIPS",
+      "shortName": "NeurIPS Workshop",
+      "venueType": "workshop"
+    },
+    "year": 2024,
+    "publishDate": "2024-01-01",
+    "doi": ""
+  },
+  {
+    "title": "AI-Resilient Interfaces and the Value of Variation",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "U.S. Kavli Frontiers of Science",
+      "shortName": "NAS",
+      "venueType": "workshop"
+    },
+    "year": 2024,
+    "publishDate": "2024-01-01",
+    "doi": ""
+  },
+  {
+    "title": "PaTAT: Human-AI Collaborative Qualitative Coding with Explainable Interactive Rule Synthesis",
+    "authors": [
+      {
+        "firstName": "Simret Araya",
+        "lastName": "Gebreegziabher",
+        "publicationName": "Simret Araya Gebreegziabher"
+      },
+      {
+        "firstName": "Zheng",
+        "lastName": "Zhang",
+        "publicationName": "Zheng Zhang"
+      },
+      {
+        "firstName": "Xiaohang",
+        "lastName": "Tang",
+        "publicationName": "Xiaohang Tang"
+      },
+      {
+        "firstName": "Yihao",
+        "lastName": "Meng",
+        "publicationName": "Yihao Meng"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Toby Jia-Jun",
+        "lastName": "Li",
+        "publicationName": "Toby Jia-Jun Li"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI",
+      "shortName": "CHI",
+      "venueType": "conference"
+    },
+    "year": 2023,
+    "publishDate": "2023-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/patat_CHI23.pdf"
+  },
+  {
+    "title": "Human-Computer Interaction and AI: What practitioners need to know to design and build effective AI system from a human perspective",
+    "authors": [
+      {
+        "firstName": "Daniel",
+        "lastName": "Russell",
+        "publicationName": "Daniel Russell"
+      },
+      {
+        "firstName": "Q. Vera",
+        "lastName": "Liao",
+        "publicationName": "Q. Vera Liao"
+      },
+      {
+        "firstName": "Chinmay",
+        "lastName": "Kulkarni",
+        "publicationName": "Chinmay Kulkarni"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Nikolas",
+        "lastName": "Martelaro",
+        "publicationName": "Nikolas Martelaro"
+      }
+    ],
+    "venue": {
+      "fullName": "Course @ CHI",
+      "shortName": "CHI Course",
+      "venueType": "other"
+    },
+    "year": 2023,
+    "publishDate": "2023-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/Human-Computer_Interaction_and_AI_CHIcourse23.pdf",
+    "supplementals": [
+      {
+        "name": "Course Website",
+        "url": "https://sites.google.com/view/chi-2023-hci-and-ai-tutorial/home"
+      }
+    ]
+  },
+  {
+    "title": "Varying How We Teach: Adding Contrast Helps Humans Learn about Robot Motions",
+    "authors": [
+      {
+        "firstName": "Tiffany",
+        "lastName": "Horter",
+        "publicationName": "Tiffany Horter"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Julie",
+        "lastName": "Shah",
+        "publicationName": "Julie Shah"
+      },
+      {
+        "firstName": "Serena",
+        "lastName": "Booth",
+        "publicationName": "Serena Booth"
+      }
+    ],
+    "venue": {
+      "fullName": "Human-Interactive Robot Learning Workshop @ HRI",
+      "shortName": "HIRL @ HRI",
+      "venueType": "workshop"
+    },
+    "year": 2023,
+    "publishDate": "2023-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/HRI_2023_HIRL_Workshop__Learning_about_Robot_Motions_with_Variation_Theory.pdf"
+  },
+  {
+    "title": "Towards More Effective AI-Assisted Programming: A Systematic Design Exploration to Improve Visual Studio IntelliCode's User Experience",
+    "authors": [
+      {
+        "firstName": "Priyan",
+        "lastName": "Vaithilingam",
+        "publicationName": "Priyan Vaithilingam"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Peter",
+        "lastName": "Groenwegen",
+        "publicationName": "Peter Groenwegen"
+      },
+      {
+        "firstName": "Sumit",
+        "lastName": "Gulwani",
+        "publicationName": "Sumit Gulwani"
+      },
+      {
+        "firstName": "Austin Z",
+        "lastName": "Henley",
+        "publicationName": "Austin Z Henley"
+      },
+      {
+        "firstName": "Rohan",
+        "lastName": "Malpani",
+        "publicationName": "Rohan Malpani"
+      },
+      {
+        "firstName": "David",
+        "lastName": "Pugh",
+        "publicationName": "David Pugh"
+      },
+      {
+        "firstName": "Arjun",
+        "lastName": "Radhakrishna",
+        "publicationName": "Arjun Radhakrishna"
+      },
+      {
+        "firstName": "Gustavo",
+        "lastName": "Soares",
+        "publicationName": "Gustavo Soares"
+      },
+      {
+        "firstName": "Joey",
+        "lastName": "Wang",
+        "publicationName": "Joey Wang"
+      },
+      {
+        "firstName": "Aaron",
+        "lastName": "Yim",
+        "publicationName": "Aaron Yim"
+      }
+    ],
+    "venue": {
+      "fullName": "International Conference on Software Engineering Software Engineering in Practice Track",
+      "shortName": "ICSE SEIP",
+      "venueType": "conference"
+    },
+    "year": 2023,
+    "publishDate": "2023-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/Vaithilingam2023ICSE_IntelliCode.PDF"
+  },
+  {
+    "title": "Accessible Text Tools for People with Cognitive Impairments and Non-Native Readers: Challenges and Opportunities",
+    "authors": [
+      {
+        "firstName": "Hendrik",
+        "lastName": "Heuer",
+        "publicationName": "Hendrik Heuer"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "Mensch und Computer",
+      "shortName": "MuC",
+      "venueType": "conference"
+    },
+    "year": 2023,
+    "publishDate": "2023-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/accessible_text_tools_MuC23.pdf"
+  },
+  {
+    "title": "Accessible Text Tools: Where They Are Needed & What They Should Look Like",
+    "authors": [
+      {
+        "firstName": "Hendrik",
+        "lastName": "Heuer",
+        "publicationName": "Hendrik Heuer"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "Late Breaking Work @ CHI",
+      "shortName": "CHI LBW",
+      "venueType": "conference"
+    },
+    "year": 2023,
+    "publishDate": "2023-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/heuer_CHI23LBW_accessibleTextTools.pdf"
+  },
+  {
+    "title": "Designing Interfaces for Human-Computer Communication: An On-Going Collection of Considerations",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "arXiv",
+      "shortName": "arXiv",
+      "venueType": "other"
+    },
+    "year": 2023,
+    "publishDate": "2023-01-01",
+    "doi": "",
+    "preprint": "https://arxiv.org/pdf/2309.02257.pdf"
+  },
+  {
+    "title": "The Usability of Pragmatic Communication in Regular Expression Synthesis",
+    "authors": [
+      {
+        "firstName": "Priyan",
+        "lastName": "Vaithilingam",
+        "publicationName": "Priyan Vaithilingam"
+      },
+      {
+        "firstName": "Yewen",
+        "lastName": "Pu",
+        "publicationName": "Yewen Pu"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "arXiv",
+      "shortName": "arXiv",
+      "venueType": "other"
+    },
+    "year": 2023,
+    "publishDate": "2023-01-01",
+    "doi": ""
+  },
+  {
+    "title": "AtomXR: Streamlined XR Prototyping with Natural Language and Immersive Physical Interaction",
+    "authors": [
+      {
+        "firstName": "Carrie",
+        "lastName": "Cai",
+        "publicationName": "Carrie Cai"
+      },
+      {
+        "firstName": "Cristian",
+        "lastName": "Ardayfio",
+        "publicationName": "Cristian Ardayfio"
+      },
+      {
+        "firstName": "An Phan",
+        "lastName": "Nguyen",
+        "publicationName": "An Phan Nguyen"
+      },
+      {
+        "firstName": "Tiffany",
+        "lastName": "Lin",
+        "publicationName": "Tiffany Lin"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "arXiv",
+      "shortName": "arXiv",
+      "venueType": "other"
+    },
+    "year": 2023,
+    "publishDate": "2023-01-01",
+    "doi": ""
+  },
+  {
+    "title": "An Interactive UI to Support Sensemaking over Collections of Parallel Texts",
+    "authors": [
+      {
+        "firstName": "Joyce",
+        "lastName": "Zhou",
+        "publicationName": "Joyce Zhou"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Daniel",
+        "middleName": "S.",
+        "lastName": "Weld",
+        "publicationName": "Daniel S. Weld"
+      }
+    ],
+    "venue": {
+      "fullName": "arXiv",
+      "shortName": "arXiv",
+      "venueType": "other"
+    },
+    "year": 2023,
+    "publishDate": "2023-01-01",
+    "doi": ""
+  },
+  {
+    "title": "ChainForge: An open-source visual programming environment for prompt engineering",
+    "authors": [
+      {
+        "firstName": "Ian",
+        "lastName": "Arawjo",
+        "publicationName": "Ian Arawjo"
+      },
+      {
+        "firstName": "Priyan",
+        "lastName": "Vaithilingam",
+        "publicationName": "Priyan Vaithilingam"
+      },
+      {
+        "firstName": "Martin",
+        "lastName": "Wattenberg",
+        "publicationName": "Martin Wattenberg"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "Poster @ ACM Symposium on User Interface Software and Technology",
+      "shortName": "UIST Poster",
+      "venueType": "workshop"
+    },
+    "year": 2023,
+    "publishDate": "2023-01-01",
+    "doi": ""
+  },
+  {
+    "title": "Reverse Sketching",
+    "authors": [
+      {
+        "firstName": "Tyler",
+        "lastName": "Holloway",
+        "publicationName": "Tyler Holloway"
+      },
+      {
+        "firstName": "Chelse",
+        "lastName": "Swoopes",
+        "publicationName": "Chelse Swoopes"
+      },
+      {
+        "firstName": "Ian",
+        "lastName": "Arawjo",
+        "publicationName": "Ian Arawjo"
+      },
+      {
+        "firstName": "Hila",
+        "lastName": "Peleg",
+        "publicationName": "Hila Peleg"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "Workshop on Evaluation and Usability of Programming Languages and Tools",
+      "shortName": "PLATEAU",
+      "venueType": "workshop"
+    },
+    "year": 2023,
+    "publishDate": "2023-01-01",
+    "doi": ""
+  },
+  {
+    "title": "Sensemaking Interfaces for Human Evaluation of Language Model Outputs",
+    "authors": [
+      {
+        "firstName": "Katy",
+        "middleName": "Ilonka",
+        "lastName": "Gero",
+        "publicationName": "Katy Ilonka Gero"
+      },
+      {
+        "firstName": "Jonathan",
+        "middleName": "K.",
+        "lastName": "Kummerfeld",
+        "publicationName": "Jonathan K. Kummerfeld"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "Human Evaluation of Generative Models Workshop @ NeurIPS",
+      "shortName": "NeurIPS Workshop",
+      "venueType": "workshop"
+    },
+    "year": 2022,
+    "publishDate": "2022-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/gero2022_neuripsworkshop.pdf"
+  },
+  {
+    "title": "A Selective Summary of Where to Hide a Stolen Elephant: Leaps in Creative Writing with Multimodal Machine Intelligence",
+    "authors": [
+      {
+        "firstName": "Nikhil",
+        "lastName": "Singh",
+        "publicationName": "Nikhil Singh"
+      },
+      {
+        "firstName": "Guillermo",
+        "lastName": "Bernal",
+        "publicationName": "Guillermo Bernal"
+      },
+      {
+        "firstName": "Daria",
+        "lastName": "Savchenko",
+        "publicationName": "Daria Savchenko"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "Workshop on Intelligent and Interactive Writing Assistants @ ACL",
+      "shortName": "In2Writing @ ACL",
+      "venueType": "workshop"
+    },
+    "year": 2022,
+    "publishDate": "2022-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/elephant_in2writing_selective_summary.pdf"
+  },
+  {
+    "title": "Where to Hide a Stolen Elephant: Leaps in Creative Writing with Multimodal Machine Intelligence",
+    "authors": [
+      {
+        "firstName": "Nikhil",
+        "lastName": "Singh",
+        "publicationName": "Nikhil Singh"
+      },
+      {
+        "firstName": "Guillermo",
+        "lastName": "Bernal",
+        "publicationName": "Guillermo Bernal"
+      },
+      {
+        "firstName": "Daria",
+        "lastName": "Savchenko",
+        "publicationName": "Daria Savchenko"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "TOCHI",
+      "shortName": "TOCHI",
+      "venueType": "journal"
+    },
+    "year": 2022,
+    "publishDate": "2022-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/elephant_tochi2022.pdf"
+  },
+  {
+    "title": "Revisiting Human-Robot Teaching and Learning Through the Lens of Human Concept Learning Theory",
+    "authors": [
+      {
+        "firstName": "Serena",
+        "lastName": "Booth",
+        "publicationName": "Serena Booth"
+      },
+      {
+        "firstName": "Sanjana",
+        "lastName": "Sharma",
+        "publicationName": "Sanjana Sharma"
+      },
+      {
+        "firstName": "Sarah",
+        "lastName": "Chung",
+        "publicationName": "Sarah Chung"
+      },
+      {
+        "firstName": "Julie",
+        "lastName": "Shah",
+        "publicationName": "Julie Shah"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "ACM/IEEE International Conference on Human-Robot Interaction",
+      "shortName": "HRI",
+      "venueType": "conference"
+    },
+    "year": 2022,
+    "publishDate": "2022-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/booth_hri2022.pdf"
+  },
+  {
+    "title": "Do explanations increase the effectiveness of AI-crowd generated fake news warnings?",
+    "authors": [
+      {
+        "firstName": "Ziv",
+        "lastName": "Epstein",
+        "publicationName": "Ziv Epstein"
+      },
+      {
+        "firstName": "Nicolo",
+        "lastName": "Foppiani",
+        "publicationName": "Nicolo Foppiani"
+      },
+      {
+        "firstName": "Sophie",
+        "lastName": "Hilgard",
+        "publicationName": "Sophie Hilgard"
+      },
+      {
+        "firstName": "Sanjana",
+        "lastName": "Sharma",
+        "publicationName": "Sanjana Sharma"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "David",
+        "lastName": "Rand",
+        "publicationName": "David Rand"
+      }
+    ],
+    "venue": {
+      "fullName": "International AAAI Conference on Web and Social Media",
+      "shortName": "ICWSM",
+      "venueType": "conference"
+    },
+    "year": 2022,
+    "publishDate": "2022-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/epsteinEtAl_CS279_icwsm.pdf"
+  },
+  {
+    "title": "Expectation vs. Experience: Evaluating the Usability of Code Generation Tools Powered by Large Language Models",
+    "authors": [
+      {
+        "firstName": "Priyan",
+        "lastName": "Vaithilingam",
+        "publicationName": "Priyan Vaithilingam"
+      },
+      {
+        "firstName": "Tianyi",
+        "lastName": "Zhang",
+        "publicationName": "Tianyi Zhang"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "Late Breaking Work @ CHI",
+      "shortName": "CHI LBW",
+      "venueType": "conference"
+    },
+    "year": 2022,
+    "publishDate": "2022-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/copilot_lbw_chi22.pdf"
+  },
+  {
+    "title": "Concept-Annotated Examples for Library Comparison",
+    "authors": [
+      {
+        "firstName": "Litao",
+        "lastName": "Yan",
+        "publicationName": "Litao Yan"
+      },
+      {
+        "firstName": "Miryung",
+        "lastName": "Kim",
+        "publicationName": "Miryung Kim"
+      },
+      {
+        "firstName": "Bjorn",
+        "lastName": "Hartmann",
+        "publicationName": "Bjorn Hartmann"
+      },
+      {
+        "firstName": "Tianyi",
+        "lastName": "Zhang",
+        "publicationName": "Tianyi Zhang"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "UIST",
+      "shortName": "UIST",
+      "venueType": "conference"
+    },
+    "year": 2022,
+    "publishDate": "2022-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/paralib_uist22.pdf"
+  },
+  {
+    "title": "A Comparative Evaluation of Interventions Against Misinformation: Augmenting the WHO Checklist",
+    "authors": [
+      {
+        "firstName": "Hendrik",
+        "lastName": "Heuer",
+        "publicationName": "Hendrik Heuer"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI",
+      "shortName": "CHI",
+      "venueType": "conference"
+    },
+    "year": 2022,
+    "publishDate": "2022-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/who_checklist_chi22.pdf"
+  },
+  {
+    "title": "Metric Elicitation; Moving from Theory to Practice",
+    "authors": [
+      {
+        "firstName": "Saad",
+        "lastName": "Ali",
+        "publicationName": "Saad Ali"
+      },
+      {
+        "firstName": "Shubhankar",
+        "lastName": "Upadhyay",
+        "publicationName": "Shubhankar Upadhyay"
+      },
+      {
+        "firstName": "Gaurang",
+        "lastName": "Hiranandani",
+        "publicationName": "Gaurang Hiranandani"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Oluwasanmi",
+        "lastName": "Koyejo",
+        "publicationName": "Oluwasanmi Koyejo"
+      }
+    ],
+    "venue": {
+      "fullName": "arXiv",
+      "shortName": "arXiv",
+      "venueType": "other"
+    },
+    "year": 2022,
+    "publishDate": "2022-01-01",
+    "doi": ""
+  },
+  {
+    "title": "Loopholes: a Window into Value Alignment and the Learning of Meaning",
+    "authors": [
+      {
+        "firstName": "Sophie",
+        "lastName": "Bridgers",
+        "publicationName": "Sophie Bridgers"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Laura",
+        "lastName": "Schulz",
+        "publicationName": "Laura Schulz"
+      },
+      {
+        "firstName": "Tomer",
+        "lastName": "Ullman",
+        "publicationName": "Tomer Ullman"
+      }
+    ],
+    "venue": {
+      "fullName": "Meaning in Context Workshop @ NeurIPS",
+      "shortName": "MiC @ NeurIPS",
+      "venueType": "workshop"
+    },
+    "year": 2021,
+    "publishDate": "2021-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/MiC_NeurIPS21_Loopholes.pdf",
+    "supplementals": [
+      {
+        "name": "Workshop",
+        "url": "https://mic-workshop.github.io/"
+      }
+    ]
+  },
+  {
+    "title": "Interactive Cohort Analysis and Hypothesis Discovery by Exploring Temporal Patterns in Population-Level Health Records",
+    "authors": [
+      {
+        "firstName": "Tianyi",
+        "lastName": "Zhang",
+        "publicationName": "Tianyi Zhang"
+      },
+      {
+        "firstName": "Thomas",
+        "middleName": "H. Jr.",
+        "lastName": "McCoy",
+        "publicationName": "Thomas H. Jr. McCoy"
+      },
+      {
+        "firstName": "Roy",
+        "middleName": "H.",
+        "lastName": "Perlis",
+        "publicationName": "Roy H. Perlis"
+      },
+      {
+        "firstName": "Finale",
+        "lastName": "Doshi-Velez",
+        "publicationName": "Finale Doshi-Velez"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "Workshop on Visual Analytics in Healthcare @ IEEE VIS",
+      "shortName": "VAHC @ VIS",
+      "venueType": "workshop"
+    },
+    "year": 2021,
+    "publishDate": "2021-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/Interactive_Visual_Analytics_for_EHRs_VAHC_2021.pdf",
+    "award": "honorable-mention",
+    "awardText": "Honorable Mention Award"
+  },
+  {
+    "title": "Visualizing Examples of Deep Neural Networks at Scale",
+    "authors": [
+      {
+        "firstName": "Litao",
+        "lastName": "Yan",
+        "publicationName": "Litao Yan"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Tianyi",
+        "lastName": "Zhang",
+        "publicationName": "Tianyi Zhang"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI",
+      "shortName": "CHI",
+      "venueType": "conference"
+    },
+    "year": 2021,
+    "publishDate": "2021-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/examplenet_chi2021.pdf",
+    "award": "honorable-mention",
+    "awardText": "Honorable Mention Award"
+  },
+  {
+    "title": "Evaluating the Interpretability of Generative Models by Interactive Reconstruction",
+    "authors": [
+      {
+        "firstName": "Andrew Slavin",
+        "lastName": "Ross",
+        "publicationName": "Andrew Slavin Ross"
+      },
+      {
+        "firstName": "Nina",
+        "lastName": "Chen",
+        "publicationName": "Nina Chen"
+      },
+      {
+        "firstName": "Elisa Zhao",
+        "lastName": "Hang",
+        "publicationName": "Elisa Zhao Hang"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Finale",
+        "lastName": "Doshi-Velez",
+        "publicationName": "Finale Doshi-Velez"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI",
+      "shortName": "CHI",
+      "venueType": "conference"
+    },
+    "year": 2021,
+    "publishDate": "2021-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/evalGenModels_chi2021.pdf",
+    "award": "honorable-mention",
+    "awardText": "Honorable Mention Award"
+  },
+  {
+    "title": "ASSUAGE: Assembly Synthesis Using A Guided Exploration",
+    "authors": [
+      {
+        "firstName": "Jingmei",
+        "lastName": "Hu",
+        "publicationName": "Jingmei Hu"
+      },
+      {
+        "firstName": "Priyan",
+        "lastName": "Vaithilingam",
+        "publicationName": "Priyan Vaithilingam"
+      },
+      {
+        "firstName": "Stephen",
+        "lastName": "Chong",
+        "publicationName": "Stephen Chong"
+      },
+      {
+        "firstName": "Margo",
+        "lastName": "Seltzer",
+        "publicationName": "Margo Seltzer"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "UIST",
+      "shortName": "UIST",
+      "venueType": "conference"
+    },
+    "year": 2021,
+    "publishDate": "2021-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/ASSUAGE_UIST21.pdf"
+  },
+  {
+    "title": "PL and HCI: Better Together",
+    "authors": [
+      {
+        "firstName": "Sarah",
+        "middleName": "E.",
+        "lastName": "Chasins",
+        "publicationName": "Sarah E. Chasins"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Joshua",
+        "lastName": "Sunshine",
+        "publicationName": "Joshua Sunshine"
+      }
+    ],
+    "venue": {
+      "fullName": "Communications of the ACM",
+      "shortName": "CACM",
+      "venueType": "journal"
+    },
+    "year": 2021,
+    "publishDate": "2021-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/PLandHCI_betterTogether.pdf",
+    "supplementals": [
+      {
+        "name": "HTML",
+        "url": "https://cacm.acm.org/magazines/2021/8/254314-pl-and-hci/fulltext"
+      }
+    ]
+  },
+  {
+    "title": "Interpretable Program Synthesis",
+    "authors": [
+      {
+        "firstName": "Tianyi",
+        "lastName": "Zhang",
+        "publicationName": "Tianyi Zhang"
+      },
+      {
+        "firstName": "Zhiyang",
+        "lastName": "Chen",
+        "publicationName": "Zhiyang Chen"
+      },
+      {
+        "firstName": "Yuanli",
+        "lastName": "Zhu",
+        "publicationName": "Yuanli Zhu"
+      },
+      {
+        "firstName": "Priyan",
+        "lastName": "Vaithilingam",
+        "publicationName": "Priyan Vaithilingam"
+      },
+      {
+        "firstName": "Xinyu",
+        "lastName": "Wang",
+        "publicationName": "Xinyu Wang"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI",
+      "shortName": "CHI",
+      "venueType": "conference"
+    },
+    "year": 2021,
+    "publishDate": "2021-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/ips_chi2021.pdf"
+  },
+  {
+    "title": "Proxy Tasks and Subjective Measures Can Be Misleading in Evaluating XAI Systems",
+    "authors": [
+      {
+        "firstName": "Zana",
+        "lastName": "Bucinca",
+        "publicationName": "Zana Bucinca"
+      },
+      {
+        "firstName": "Phoebe",
+        "lastName": "Lin",
+        "publicationName": "Phoebe Lin"
+      },
+      {
+        "firstName": "Krzysztof",
+        "lastName": "Gajos",
+        "publicationName": "Krzysztof Gajos"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "IUI",
+      "shortName": "IUI",
+      "venueType": "conference"
+    },
+    "year": 2020,
+    "publishDate": "2020-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/bucinca_iui20_proxy.pdf",
+    "award": "best-paper",
+    "awardText": "Best Paper Award"
+  },
+  {
+    "title": "Interactive Program Synthesis by Augmented Examples",
+    "authors": [
+      {
+        "firstName": "Tianyi",
+        "lastName": "Zhang",
+        "publicationName": "Tianyi Zhang"
+      },
+      {
+        "firstName": "London",
+        "lastName": "Lowmanstone",
+        "publicationName": "London Lowmanstone"
+      },
+      {
+        "firstName": "Xinyu",
+        "lastName": "Wang",
+        "publicationName": "Xinyu Wang"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "UIST",
+      "shortName": "UIST",
+      "venueType": "conference"
+    },
+    "year": 2020,
+    "publishDate": "2020-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/ips_augex_uist20.pdf"
+  },
+  {
+    "title": "Exempla Gratis (E.G.): Code Examples for Free",
+    "authors": [
+      {
+        "firstName": "Celeste",
+        "lastName": "Barnaby",
+        "publicationName": "Celeste Barnaby"
+      },
+      {
+        "firstName": "Koushik",
+        "lastName": "Sen",
+        "publicationName": "Koushik Sen"
+      },
+      {
+        "firstName": "Tianyi",
+        "lastName": "Zhang",
+        "publicationName": "Tianyi Zhang"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Satish",
+        "lastName": "Chandra",
+        "publicationName": "Satish Chandra"
+      }
+    ],
+    "venue": {
+      "fullName": "FSE Industry Track",
+      "shortName": "FSE",
+      "venueType": "conference"
+    },
+    "year": 2020,
+    "publishDate": "2020-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/fse2020-industry-example-generation.pdf"
+  },
+  {
+    "title": "Enabling Data-Driven API Design with Community Usage Data: A Need-Finding Study",
+    "authors": [
+      {
+        "firstName": "Tianyi",
+        "lastName": "Zhang",
+        "publicationName": "Tianyi Zhang"
+      },
+      {
+        "firstName": "Bjorn",
+        "lastName": "Hartmann",
+        "publicationName": "Bjorn Hartmann"
+      },
+      {
+        "firstName": "Miryung",
+        "lastName": "Kim",
+        "publicationName": "Miryung Kim"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI",
+      "shortName": "CHI",
+      "venueType": "conference"
+    },
+    "year": 2020,
+    "publishDate": "2020-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/Data-driven-API-CHI20.pdf"
+  },
+  {
+    "title": "Triangulating the News: Visualizing Commonality and Variation Across Many News Stories on the Same Event",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Janet",
+        "lastName": "Sung",
+        "publicationName": "Janet Sung"
+      },
+      {
+        "firstName": "Katherine",
+        "lastName": "Qian",
+        "publicationName": "Katherine Qian"
+      },
+      {
+        "firstName": "Yuri",
+        "lastName": "Vishnevsky",
+        "publicationName": "Yuri Vishnevsky"
+      },
+      {
+        "firstName": "Amy",
+        "lastName": "Zhang",
+        "publicationName": "Amy Zhang"
+      }
+    ],
+    "venue": {
+      "fullName": "Computation + Journalism Symposium",
+      "shortName": "C+J",
+      "venueType": "conference"
+    },
+    "year": 2020,
+    "publishDate": "2020-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/glassman_CJ_2020.pdf"
+  },
+  {
+    "title": "Characterizing Developer Use of Automatically Generated Patches",
+    "authors": [
+      {
+        "firstName": "Jose Pablo",
+        "lastName": "Cambronero",
+        "publicationName": "Jose Pablo Cambronero"
+      },
+      {
+        "firstName": "Jiasi",
+        "lastName": "Shen",
+        "publicationName": "Jiasi Shen"
+      },
+      {
+        "firstName": "Jurgen",
+        "lastName": "Cito",
+        "publicationName": "Jurgen Cito"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Martin",
+        "lastName": "Rinard",
+        "publicationName": "Martin Rinard"
+      }
+    ],
+    "venue": {
+      "fullName": "VL/HCC",
+      "shortName": "VL/HCC",
+      "venueType": "conference"
+    },
+    "year": 2019,
+    "publishDate": "2019-01-01",
+    "doi": "",
+    "preprint": "https://arxiv.org/abs/1907.06535"
+  },
+  {
+    "title": "Approaching polyglot programming: what can we learn from bilingualism studies?",
+    "authors": [
+      {
+        "firstName": "Rebecca",
+        "lastName": "Hao",
+        "publicationName": "Rebecca Hao"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "Workshop on Evaluation and Usability of Programming Languages and Tools",
+      "shortName": "PLATEAU",
+      "venueType": "workshop"
+    },
+    "year": 2019,
+    "publishDate": "2019-01-01",
+    "doi": ""
+  },
+  {
+    "title": "Visualizing API Usage Examples at Scale",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Tianyi",
+        "lastName": "Zhang",
+        "publicationName": "Tianyi Zhang"
+      },
+      {
+        "firstName": "Bjorn",
+        "lastName": "Hartmann",
+        "publicationName": "Bjorn Hartmann"
+      },
+      {
+        "firstName": "Miryung",
+        "lastName": "Kim",
+        "publicationName": "Miryung Kim"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI",
+      "shortName": "CHI",
+      "venueType": "conference"
+    },
+    "year": 2018,
+    "publishDate": "2018-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/examplore_chi18.pdf"
+  },
+  {
+    "title": "Interactive Extraction of Examples from Existing Code",
+    "authors": [
+      {
+        "firstName": "Andrew",
+        "lastName": "Head",
+        "publicationName": "Andrew Head"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Bjorn",
+        "lastName": "Hartmann",
+        "publicationName": "Bjorn Hartmann"
+      },
+      {
+        "firstName": "Marti",
+        "lastName": "Hearst",
+        "publicationName": "Marti Hearst"
+      }
+    ],
+    "venue": {
+      "fullName": "ACM Conference on Human Factors in Computing Systems",
+      "shortName": "CHI",
+      "venueType": "conference"
+    },
+    "year": 2018,
+    "publishDate": "2018-01-01",
+    "doi": "",
+    "award": "honorable-mention",
+    "awardText": "Best of CHI Honorable Mention"
+  },
+  {
+    "title": "Writing Reusable Code Feedback at Scale with Mixed-Initiative Program Synthesis",
+    "authors": [
+      {
+        "firstName": "Andrew",
+        "lastName": "Head",
+        "publicationName": "Andrew Head"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Gustavo",
+        "lastName": "Soares",
+        "publicationName": "Gustavo Soares"
+      },
+      {
+        "firstName": "Ryo",
+        "lastName": "Suzuki",
+        "publicationName": "Ryo Suzuki"
+      },
+      {
+        "firstName": "Lucas",
+        "lastName": "Figueredo",
+        "publicationName": "Lucas Figueredo"
+      },
+      {
+        "firstName": "Loris",
+        "lastName": "D'Antoni",
+        "publicationName": "Loris D'Antoni"
+      },
+      {
+        "firstName": "Bjorn",
+        "lastName": "Hartmann",
+        "publicationName": "Bjorn Hartmann"
+      }
+    ],
+    "venue": {
+      "fullName": "Learning @ Scale",
+      "shortName": "L@S",
+      "venueType": "conference"
+    },
+    "year": 2017,
+    "publishDate": "2017-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/glassmanLatS17.pdf"
+  },
+  {
+    "title": "TraceDiff: Debugging Unexpected Code Behavior Using Trace Divergences",
+    "authors": [
+      {
+        "firstName": "Ryo",
+        "lastName": "Suzuki",
+        "publicationName": "Ryo Suzuki"
+      },
+      {
+        "firstName": "Gustavo",
+        "lastName": "Soares",
+        "publicationName": "Gustavo Soares"
+      },
+      {
+        "firstName": "Andrew",
+        "lastName": "Head",
+        "publicationName": "Andrew Head"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Rafael",
+        "lastName": "Reis",
+        "publicationName": "Rafael Reis"
+      },
+      {
+        "firstName": "Mauro",
+        "lastName": "Mongiovi",
+        "publicationName": "Mauro Mongiovi"
+      },
+      {
+        "firstName": "Loris",
+        "lastName": "D'Antoni",
+        "publicationName": "Loris D'Antoni"
+      },
+      {
+        "firstName": "Bjorn",
+        "lastName": "Hartmann",
+        "publicationName": "Bjorn Hartmann"
+      }
+    ],
+    "venue": {
+      "fullName": "IEEE Symposium on Visual Languages and Human-Centric Computing",
+      "shortName": "VL/HCC",
+      "venueType": "conference"
+    },
+    "year": 2017,
+    "publishDate": "2017-01-01",
+    "doi": ""
+  },
+  {
+    "title": "Clustering LaTeX Solutions to Machine Learning Assignments for Rapid Assessment",
+    "authors": [
+      {
+        "firstName": "Sarah",
+        "lastName": "Tan",
+        "publicationName": "Sarah Tan"
+      },
+      {
+        "firstName": "Finale",
+        "lastName": "Doshi-Velez",
+        "publicationName": "Finale Doshi-Velez"
+      },
+      {
+        "firstName": "Juan",
+        "lastName": "Quiroz",
+        "publicationName": "Juan Quiroz"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "Machine Learning for Education Workshop @ KDD",
+      "shortName": "KDD Workshop",
+      "venueType": "workshop"
+    },
+    "year": 2017,
+    "publishDate": "2017-01-01",
+    "doi": ""
+  },
+  {
+    "title": "Exploring the Design Space of Automatically Synthesized Hints for Introductory Programming Assignments",
+    "authors": [
+      {
+        "firstName": "Ryo",
+        "lastName": "Suzuki",
+        "publicationName": "Ryo Suzuki"
+      },
+      {
+        "firstName": "Gustavo",
+        "lastName": "Soares",
+        "publicationName": "Gustavo Soares"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Andrew",
+        "lastName": "Head",
+        "publicationName": "Andrew Head"
+      },
+      {
+        "firstName": "Loris",
+        "lastName": "D'Antoni",
+        "publicationName": "Loris D'Antoni"
+      },
+      {
+        "firstName": "Bjorn",
+        "lastName": "Hartmann",
+        "publicationName": "Bjorn Hartmann"
+      }
+    ],
+    "venue": {
+      "fullName": "CHI Conference Extended Abstracts on Human Factors in Computing Systems",
+      "shortName": "CHI EA",
+      "venueType": "conference"
+    },
+    "year": 2017,
+    "publishDate": "2017-01-01",
+    "doi": ""
+  },
+  {
+    "title": "Teamscope: Scalable Team Evaluation via Automated Metric Mining for Communication, Organization, Execution, and Evolution",
+    "authors": [
+      {
+        "firstName": "Andrew",
+        "lastName": "Ju",
+        "publicationName": "Andrew Ju"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Armando",
+        "lastName": "Fox",
+        "publicationName": "Armando Fox"
+      }
+    ],
+    "venue": {
+      "fullName": "ACM Learning at Scale Conference",
+      "shortName": "L@S",
+      "venueType": "conference"
+    },
+    "year": 2017,
+    "publishDate": "2017-01-01",
+    "doi": ""
+  },
+  {
+    "title": "Learnersourcing Personalized Hints",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Aaron",
+        "lastName": "Lin",
+        "publicationName": "Aaron Lin"
+      },
+      {
+        "firstName": "Carrie",
+        "lastName": "Cai",
+        "publicationName": "Carrie Cai"
+      },
+      {
+        "firstName": "Robert",
+        "lastName": "Miller",
+        "publicationName": "Robert Miller"
+      }
+    ],
+    "venue": {
+      "fullName": "ACM Computer-Supported Cooperative Work and Social Computing",
+      "shortName": "CSCW",
+      "venueType": "conference"
+    },
+    "year": 2016,
+    "publishDate": "2016-01-01",
+    "doi": ""
+  },
+  {
+    "title": "DocMatrix: Self-Teaching from Multiple Sources",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Daniel",
+        "lastName": "Russell",
+        "publicationName": "Daniel Russell"
+      }
+    ],
+    "venue": {
+      "fullName": "ASIS&T Annual Meeting",
+      "shortName": "ASIS&T",
+      "venueType": "conference"
+    },
+    "year": 2016,
+    "publishDate": "2016-01-01",
+    "doi": ""
+  },
+  {
+    "title": "Learning Latent Student Design Decisions in Python Programming Classes",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "Workshop on Machine Learning for Digital Education and Assessment Systems @ ICML",
+      "shortName": "ICML Workshop",
+      "venueType": "workshop"
+    },
+    "year": 2016,
+    "publishDate": "2016-01-01",
+    "doi": ""
+  },
+  {
+    "title": "Learning Latent Student Design Decisions in Massive Python Programming Classes",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "New England Machine Learning Day",
+      "shortName": "NEML",
+      "venueType": "workshop"
+    },
+    "year": 2016,
+    "publishDate": "2016-01-01",
+    "doi": ""
+  },
+  {
+    "title": "Leveraging Learners for Teaching Programming and Hardware Design at Scale",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Robert",
+        "lastName": "Miller",
+        "publicationName": "Robert Miller"
+      }
+    ],
+    "venue": {
+      "fullName": "ACM Computer-Supported Cooperative Work and Social Computing",
+      "shortName": "CSCW",
+      "venueType": "workshop"
+    },
+    "year": 2016,
+    "publishDate": "2016-01-01",
+    "doi": ""
+  },
+  {
+    "title": "Scaling Up Qualitative Data Analysis With Interfaces Powered by Interpretable Machine Learning",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Been",
+        "lastName": "Kim",
+        "publicationName": "Been Kim"
+      },
+      {
+        "firstName": "Julie",
+        "lastName": "Shah",
+        "publicationName": "Julie Shah"
+      }
+    ],
+    "venue": {
+      "fullName": "Human-Centered Data Science Workshop @ CSCW",
+      "shortName": "CSCW Workshop",
+      "venueType": "workshop"
+    },
+    "year": 2016,
+    "publishDate": "2016-01-01",
+    "doi": ""
+  },
+  {
+    "title": "Making Static Lessons Adaptive through Crowdsourcing & Machine Learning",
+    "authors": [
+      {
+        "firstName": "Joseph Jay",
+        "lastName": "Williams",
+        "publicationName": "Joseph Jay Williams"
+      },
+      {
+        "firstName": "Juho",
+        "lastName": "Kim",
+        "publicationName": "Juho Kim"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Anna",
+        "lastName": "Rafferty",
+        "publicationName": "Anna Rafferty"
+      },
+      {
+        "firstName": "Walter",
+        "lastName": "Lasecki",
+        "publicationName": "Walter Lasecki"
+      }
+    ],
+    "venue": {
+      "fullName": "Design Recommendations for Intelligent Tutoring Systems: Domain Modeling",
+      "shortName": "Book Chapter",
+      "venueType": "book"
+    },
+    "year": 2016,
+    "publishDate": "2016-07-01",
+    "doi": ""
+  },
+  {
+    "title": "Foobaz: Variable Name Feedback for Student Code at Scale",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Lyla J",
+        "lastName": "Fischer",
+        "publicationName": "Lyla J Fischer"
+      },
+      {
+        "firstName": "Jeremy",
+        "lastName": "Scott",
+        "publicationName": "Jeremy Scott"
+      },
+      {
+        "firstName": "Robert",
+        "middleName": "C.",
+        "lastName": "Miller",
+        "publicationName": "Robert C. Miller"
+      }
+    ],
+    "venue": {
+      "fullName": "UIST",
+      "shortName": "UIST",
+      "venueType": "conference"
+    },
+    "year": 2015,
+    "publishDate": "2015-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/uist2015-elg-foobaz.pdf"
+  },
+  {
+    "title": "OverCode: Visualizing Variation in Student Solutions to Programming Problems at Scale",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Jeremy",
+        "lastName": "Scott",
+        "publicationName": "Jeremy Scott"
+      },
+      {
+        "firstName": "Rishabh",
+        "lastName": "Singh",
+        "publicationName": "Rishabh Singh"
+      },
+      {
+        "firstName": "Philip",
+        "lastName": "Guo",
+        "publicationName": "Philip Guo"
+      },
+      {
+        "firstName": "Robert",
+        "middleName": "C.",
+        "lastName": "Miller",
+        "publicationName": "Robert C. Miller"
+      }
+    ],
+    "venue": {
+      "fullName": "TOCHI",
+      "shortName": "TOCHI",
+      "venueType": "journal"
+    },
+    "year": 2015,
+    "publishDate": "2015-01-01",
+    "doi": "",
+    "preprint": "https://glassmanlab.seas.harvard.edu/papers/glassman-tochi.pdf"
+  },
+  {
+    "title": "Mudslide: A Spatially Anchored Census of Student Confusion for Online Lecture Videos",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Juho",
+        "lastName": "Kim",
+        "publicationName": "Juho Kim"
+      },
+      {
+        "firstName": "Andres",
+        "lastName": "Monroy-Hernandez",
+        "publicationName": "Andres Monroy-Hernandez"
+      },
+      {
+        "firstName": "Meredith Ringel",
+        "lastName": "Morris",
+        "publicationName": "Meredith Ringel Morris"
+      }
+    ],
+    "venue": {
+      "fullName": "ACM Conference on Human Factors in Computing Systems",
+      "shortName": "CHI",
+      "venueType": "conference"
+    },
+    "year": 2015,
+    "publishDate": "2015-01-01",
+    "doi": "",
+    "award": "honorable-mention",
+    "awardText": "Best of CHI Honorable Mention"
+  },
+  {
+    "title": "RIMES: Embedding Interactive Multimedia Exercises in Lecture Videos",
+    "authors": [
+      {
+        "firstName": "Juho",
+        "lastName": "Kim",
+        "publicationName": "Juho Kim"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Andres",
+        "lastName": "Monroy-Hernandez",
+        "publicationName": "Andres Monroy-Hernandez"
+      },
+      {
+        "firstName": "Meredith Ringel",
+        "lastName": "Morris",
+        "publicationName": "Meredith Ringel Morris"
+      }
+    ],
+    "venue": {
+      "fullName": "ACM Conference on Human Factors in Computing Systems",
+      "shortName": "CHI",
+      "venueType": "conference"
+    },
+    "year": 2015,
+    "publishDate": "2015-01-01",
+    "doi": ""
+  },
+  {
+    "title": "iBCM: Interactive Bayesian Case Model Empowering Humans via Intuitive Interaction",
+    "authors": [
+      {
+        "firstName": "Been",
+        "lastName": "Kim",
+        "publicationName": "Been Kim"
+      },
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Brittany",
+        "lastName": "Johnson",
+        "publicationName": "Brittany Johnson"
+      },
+      {
+        "firstName": "Julie",
+        "lastName": "Shah",
+        "publicationName": "Julie Shah"
+      }
+    ],
+    "venue": {
+      "fullName": "MIT CSAIL Technical Report",
+      "shortName": "CSAIL TR",
+      "venueType": "other"
+    },
+    "year": 2015,
+    "publishDate": "2015-04-01",
+    "doi": ""
+  },
+  {
+    "title": "Learner-Sourcing in an Engineering Class at Scale",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Chris",
+        "lastName": "Terman",
+        "publicationName": "Chris Terman"
+      },
+      {
+        "firstName": "Robert",
+        "lastName": "Miller",
+        "publicationName": "Robert Miller"
+      }
+    ],
+    "venue": {
+      "fullName": "ACM Learning at Scale Conference",
+      "shortName": "L@S",
+      "venueType": "conference"
+    },
+    "year": 2015,
+    "publishDate": "2015-01-01",
+    "doi": ""
+  },
+  {
+    "title": "Interacting with Massive Numbers of Student Solutions",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "ACM Symposium on User Interface Software & Technology",
+      "shortName": "UIST",
+      "venueType": "workshop"
+    },
+    "year": 2014,
+    "publishDate": "2014-01-01",
+    "doi": ""
+  },
+  {
+    "title": "Feature Engineering for Clustering Student Solutions",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Rishabh",
+        "lastName": "Singh",
+        "publicationName": "Rishabh Singh"
+      },
+      {
+        "firstName": "Robert",
+        "lastName": "Miller",
+        "publicationName": "Robert Miller"
+      }
+    ],
+    "venue": {
+      "fullName": "ACM Learning at Scale Conference",
+      "shortName": "L@S",
+      "venueType": "workshop"
+    },
+    "year": 2014,
+    "publishDate": "2014-01-01",
+    "doi": ""
+  },
+  {
+    "title": "Toward Facilitating Assistance to Students Attempting Engineering Design Problems",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Nate",
+        "lastName": "Gulley",
+        "publicationName": "Nate Gulley"
+      },
+      {
+        "firstName": "Robert",
+        "middleName": "C.",
+        "lastName": "Miller",
+        "publicationName": "Robert C. Miller"
+      }
+    ],
+    "venue": {
+      "fullName": "ACM International Computing Education Research",
+      "shortName": "ICER",
+      "venueType": "conference"
+    },
+    "year": 2013,
+    "publishDate": "2013-01-01",
+    "doi": ""
+  },
+  {
+    "title": "Region of attraction estimation for a perching aircraft: A Lyapunov method exploiting barrier certificates",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Alexis",
+        "lastName": "Desbiens",
+        "publicationName": "Alexis Desbiens"
+      },
+      {
+        "firstName": "Mark",
+        "lastName": "Tobenkin",
+        "publicationName": "Mark Tobenkin"
+      },
+      {
+        "firstName": "Mark",
+        "lastName": "Cutkosky",
+        "publicationName": "Mark Cutkosky"
+      },
+      {
+        "firstName": "Russ",
+        "lastName": "Tedrake",
+        "publicationName": "Russ Tedrake"
+      }
+    ],
+    "venue": {
+      "fullName": "IEEE International Conference on Robotics and Automation",
+      "shortName": "ICRA",
+      "venueType": "conference"
+    },
+    "year": 2012,
+    "publishDate": "2012-01-01",
+    "doi": ""
+  },
+  {
+    "title": "A quadratic regulator-based heuristic for rapidly exploring state space",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "Russ",
+        "lastName": "Tedrake",
+        "publicationName": "Russ Tedrake"
+      }
+    ],
+    "venue": {
+      "fullName": "IEEE International Conference on Robotics and Automation",
+      "shortName": "ICRA",
+      "venueType": "conference"
+    },
+    "year": 2010,
+    "publishDate": "2010-01-01",
+    "doi": ""
+  },
+  {
+    "title": "Reducing the number of channels for an ambulatory patient-specific EEG-based epileptic seizure detector by applying recursive feature elimination",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      },
+      {
+        "firstName": "John",
+        "lastName": "Guttag",
+        "publicationName": "John Guttag"
+      }
+    ],
+    "venue": {
+      "fullName": "IEEE Engineering in Medicine and Biology Society",
+      "shortName": "EMBS",
+      "venueType": "conference"
+    },
+    "year": 2006,
+    "publishDate": "2006-01-01",
+    "doi": ""
+  },
+  {
+    "title": "A wavelet-like filter based on neuron action potentials for analysis of human scalp electroencephalographs",
+    "authors": [
+      {
+        "firstName": "Elena",
+        "middleName": "L.",
+        "lastName": "Glassman",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "IEEE Transactions on Biomedical Engineering",
+      "shortName": "TBME",
+      "venueType": "journal"
+    },
+    "year": 2005,
+    "publishDate": "2005-11-01",
+    "doi": ""
+  }
+]

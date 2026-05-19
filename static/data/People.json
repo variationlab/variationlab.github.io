@@ -1,0 +1,136 @@
+[
+  {
+    "firstName": "Elena",
+    "middleName": "L.",
+    "lastName": "Glassman",
+    "email": "glassman@seas.harvard.edu",
+    "url": "https://glassmanlab.seas.harvard.edu/glassman.html",
+    "googleScholar": "https://scholar.google.com/citations?user=9Y7gKp0AAAAJ",
+    "category": "faculty",
+    "currentAcademicStatus": "faculty",
+    "headshot": "/images/members/elena.jpg",
+    "interests": [
+      "Human-computer interaction",
+      "AI-resilient interfaces",
+      "Human-AI collaboration"
+    ],
+    "startTime": "2018-07-01",
+    "publicationName": "Elena L. Glassman"
+  },
+  {
+    "firstName": "Chelse",
+    "lastName": "Swoopes",
+    "category": "member",
+    "currentAcademicStatus": "phd-student",
+    "headshot": "/images/members/chelse.jpg",
+    "interests": [
+      "Human-computer interaction",
+      "AI-assisted reading",
+      "Writing tools"
+    ],
+    "startTime": "2023-09-01",
+    "publicationName": "Chelse Swoopes"
+  },
+  {
+    "firstName": "Ziwei",
+    "lastName": "Gu",
+    "url": "https://www.ziweigu.com/",
+    "category": "member",
+    "currentAcademicStatus": "phd-student",
+    "headshot": "/images/members/ziwei.jpg",
+    "interests": [
+      "AI-resilient interfaces",
+      "Reading interfaces",
+      "Human-AI interaction"
+    ],
+    "startTime": "2023-09-01",
+    "publicationName": "Ziwei Gu"
+  },
+  {
+    "firstName": "Chau",
+    "lastName": "Vu",
+    "url": "https://www.vuhachau.com/",
+    "category": "member",
+    "currentAcademicStatus": "phd-student",
+    "headshot": "/images/members/chau.jpg",
+    "interests": [
+      "Human-AI interaction",
+      "Creativity support",
+      "Personal informatics"
+    ],
+    "startTime": "2026-09-01",
+    "publicationName": "Chau Vu"
+  },
+  {
+    "firstName": "Ruishi",
+    "lastName": "Zou",
+    "category": "member",
+    "currentAcademicStatus": "phd-student",
+    "headshot": "/images/members/ruishi.jpg",
+    "interests": [
+      "Human-AI interaction",
+      "Interactive systems"
+    ],
+    "startTime": "2026-09-01",
+    "publicationName": "Ruishi Zou",
+    "url": "https://ruishizou.github.io/",
+    "googleScholar": "https://scholar.google.com/citations?user=fHRnWkUAAAAJ",
+    "contact": {
+      "bluesky": "https://bsky.app/profile/ruishi-zou.bsky.social",
+      "twitter": "https://x.com/ruishi_zou",
+      "linkedin": "https://www.linkedin.com/in/ruzou/"
+    }
+  },
+  {
+    "firstName": "Ian",
+    "lastName": "Arawjo",
+    "url": "https://ianarawjo.com/",
+    "category": "alumni",
+    "currentAcademicStatus": "faculty",
+    "headshot": "/images/members/ian.jpg",
+    "interests": [
+      "Human-computer interaction",
+      "Programming tools",
+      "Human-AI collaboration"
+    ],
+    "startTime": "2022-09-01",
+    "endTime": "2025-08-31",
+    "formerRole": "Postdoctoral researcher",
+    "currentRole": "Assistant Professor of HCI, Universite de Montreal",
+    "publicationName": "Ian Arawjo"
+  },
+  {
+    "firstName": "Priyan",
+    "lastName": "Vaithilingam",
+    "url": "https://priyan.info/",
+    "category": "alumni",
+    "currentAcademicStatus": "phd-graduated",
+    "interests": [
+      "AI-assisted programming",
+      "Interactive systems"
+    ],
+    "startTime": "2019-09-01",
+    "endTime": "2026-08-31",
+    "formerRole": "Postdoctoral researcher",
+    "currentRole": "ML Research Scientist at Apple",
+    "publicationName": "Priyan Vaithilingam"
+  },
+  {
+    "firstName": "Katy",
+    "middleName": "Ilonka",
+    "lastName": "Gero",
+    "url": "https://www.katygero.com/",
+    "category": "alumni",
+    "currentAcademicStatus": "faculty",
+    "interests": [
+      "Creativity support",
+      "Human-AI writing",
+      "Generative AI"
+    ],
+    "startTime": "2022-09-01",
+    "endTime": "2025-08-31",
+    "formerRole": "Postdoctoral researcher",
+    "currentRole": "Faculty, University of Sydney",
+    "publicationName": "Katy Ilonka Gero"
+  }
+]
