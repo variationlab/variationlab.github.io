@@ -1,5 +1,6 @@
 <script lang="ts">
 	import CurrentMember from '$lib/components/person/currentMember.svelte';
+	import CurrentMemberRow from '$lib/components/person/currentMemberRow.svelte';
 	import OtherMember from '$lib/components/person/otherMember.svelte';
 	import type { Members } from '$lib/types';
 	import { getMemberName, getMemberStatus } from '$lib/data/Members';
@@ -8,11 +9,7 @@
 
 	let currentMembers = $derived(members.filter((member) => member.category !== 'alumni'));
 	let alumniMembers = $derived(members.filter((member) => member.category === 'alumni'));
-	let firstCurrentMembers = $derived(currentMembers.slice(0, 3));
-	let remainingCurrentMembers = $derived(currentMembers.slice(3));
 	let previewedMemberName = $state<string | undefined>();
-	let openSocialMenuName = $state<string | undefined>();
-	let socialMenuCloseTimer: ReturnType<typeof setTimeout> | undefined;
 	let previewedMember = $derived(
 		currentMembers.find((member) => getMemberName(member) === previewedMemberName)
 	);
@@ -24,88 +21,48 @@
 	function clearPreview() {
 		previewedMemberName = undefined;
 	}
-
-	function openSocialMenu(member: Members) {
-		if (socialMenuCloseTimer) {
-			clearTimeout(socialMenuCloseTimer);
-		}
-
-		openSocialMenuName = getMemberName(member);
-	}
-
-	function scheduleCloseSocialMenu(member: Members) {
-		const memberName = getMemberName(member);
-
-		if (socialMenuCloseTimer) {
-			clearTimeout(socialMenuCloseTimer);
-		}
-
-		socialMenuCloseTimer = setTimeout(() => {
-			if (openSocialMenuName === memberName) {
-				openSocialMenuName = undefined;
-			}
-		}, 120);
-	}
-
-	function syncSocialMenu(member: Members, open: boolean) {
-		if (open) {
-			openSocialMenu(member);
-			return;
-		}
-
-		if (openSocialMenuName === getMemberName(member)) {
-			openSocialMenuName = undefined;
-		}
-	}
 </script>
 
 <section>
 	<div class="mb-5 flex flex-wrap items-baseline gap-x-4 gap-y-1">
-		<h1 class="pageKicker text-zinc-500">People</h1>
+		<h1 class="pageKicker text-zinc-950 sm:text-zinc-500">
+			<span class="sm:hidden">Members</span>
+			<span class="hidden sm:inline">People</span>
+		</h1>
 	</div>
 
-	<div class="grid gap-2 sm:grid-cols-3 lg:grid-cols-5">
-		{#each firstCurrentMembers as member (getMemberName(member))}
-			<CurrentMember
-				{member}
-				socialMenuOpen={openSocialMenuName === getMemberName(member)}
-				onPreview={previewMember}
-				onClearPreview={clearPreview}
-				onOpenSocialMenu={openSocialMenu}
-				onScheduleCloseSocialMenu={scheduleCloseSocialMenu}
-				onSyncSocialMenu={syncSocialMenu}
-			/>
+	<div class="grid gap-y-5 sm:hidden">
+		{#each currentMembers as member (getMemberName(member))}
+			<CurrentMemberRow {member} />
 		{/each}
+	</div>
 
+	<div class="hidden min-w-0 gap-2 sm:grid sm:grid-cols-4 lg:grid-cols-5">
 		<aside
-			class="col-span-full flex min-h-40 flex-col justify-center px-1 py-3 sm:col-span-3 lg:col-span-2 lg:min-h-0 lg:px-3 lg:py-2"
+			class="row-start-1 flex min-h-0 max-w-full min-w-0 flex-col justify-start px-1 py-2 sm:col-span-2 sm:col-start-3 lg:col-start-4 lg:px-3"
 			aria-live="polite"
 		>
 			{#if previewedMember}
-				<h2 class="personTitle text-zinc-950">
+				<h2 class="personTitle max-w-full [overflow-wrap:anywhere] break-words text-zinc-950">
 					{getMemberName(previewedMember)}
 				</h2>
-				<p class="bodyText mt-1 text-zinc-800 italic">
+				<p
+					class="bodyText mt-1 max-w-full [overflow-wrap:anywhere] break-words text-zinc-800 italic"
+				>
 					{getMemberStatus(previewedMember)}
 				</p>
-				<p class="bodyText mt-1 text-zinc-700">
+				<p class="bodyText mt-1 max-w-full [overflow-wrap:anywhere] break-words text-zinc-700">
 					{previewedMember.interests.join(', ')}
 				</p>
 			{:else}
-				<p class="bodyText text-[#a51c30] italic">Augmenting human intelligence with variation</p>
+				<p class="pageKicker text-harvard max-w-full [overflow-wrap:anywhere] break-words italic">
+					Augmenting human intelligence with variation
+				</p>
 			{/if}
 		</aside>
 
-		{#each remainingCurrentMembers as member (getMemberName(member))}
-			<CurrentMember
-				{member}
-				socialMenuOpen={openSocialMenuName === getMemberName(member)}
-				onPreview={previewMember}
-				onClearPreview={clearPreview}
-				onOpenSocialMenu={openSocialMenu}
-				onScheduleCloseSocialMenu={scheduleCloseSocialMenu}
-				onSyncSocialMenu={syncSocialMenu}
-			/>
+		{#each currentMembers as member (getMemberName(member))}
+			<CurrentMember {member} onPreview={previewMember} onClearPreview={clearPreview} />
 		{/each}
 	</div>
 </section>

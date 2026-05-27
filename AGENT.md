@@ -5,8 +5,8 @@
 - Keep hash-routed page components in separate folders under `src/routes/<page>/`.
 - Hash-routed page components are normal imported components, not SvelteKit routes: do not rename them to `+page.svelte`; use lower camelCase filenames such as `peoplePage.svelte`.
 - The authoritative content source for initial people and publication data is `https://github.com/eglassman/eglassman.github.io/blob/master/index.html`.
-- Use `pnpm` for all package-manager execution, including checks, tests, builds, and dev servers.
-- Do not start the dev server automatically; the user will run it when needed.
+- Use `pnpm` for package-manager execution such as checks, tests, and builds.
+- Do not start local dev or preview servers for this project, including `pnpm run dev`, `pnpm dev`, `pnpm run preview`, or Vite server commands. The user will run the server when needed; only start one if the user explicitly asks for it.
 - Naming convention: PascalCase for classes/modules/components, camelCase for variables/functions.
 - Strict design requirement: keep global/page backgrounds plain white; avoid global background colors, gradients, and tinted page washes.
 - Typography must follow a clear view hierarchy: prefer shared typography classes for repeated roles such as hero titles, page/section labels, item titles, body text, meta text, and compact links; avoid scattering one-off font sizes unless a component has a specific local need.

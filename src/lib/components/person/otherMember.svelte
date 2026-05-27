@@ -9,6 +9,7 @@
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
 	import {
 		getMemberEmailLink,
+		getMemberGitHubLink,
 		getMemberGoogleScholarLink,
 		getMemberName,
 		getMemberSocialLinks,
@@ -26,7 +27,18 @@
 	const emailLink = $derived(getMemberEmailLink(member));
 	const websiteLink = $derived(getMemberWebsiteLink(member));
 	const googleScholarLink = $derived(getMemberGoogleScholarLink(member));
+	const githubLink = $derived(getMemberGitHubLink(member));
 	const socialLinks = $derived(getMemberSocialLinks(member));
+	const hasLinks = $derived(
+		Boolean(emailLink || googleScholarLink || githubLink) || hasMemberSocialLinks(member)
+	);
+	const actionCount = $derived(
+		Number(Boolean(emailLink)) +
+			Number(Boolean(googleScholarLink)) +
+			Number(Boolean(githubLink)) +
+			Number(socialLinks.length > 0)
+	);
+	const actionGapCount = $derived(Math.max(actionCount - 1, 0));
 
 	function openSocialMenu() {
 		if (socialMenuCloseTimer) {
@@ -61,8 +73,9 @@
 		}
 	});
 
-	const socialTriggerButtonClass =
-		'w-8 text-zinc-600 transition-colors hover:text-[#a51c30] focus-visible:text-[#a51c30] data-[state=open]:text-[#a51c30]';
+	const memberActionButtonClass =
+		'size-[var(--member-action-size)] text-zinc-600 transition-colors hover:text-[#a51c30] focus-visible:text-[#a51c30] [&_svg]:size-[var(--member-action-icon-size)]';
+	const socialTriggerButtonClass = `${memberActionButtonClass} data-[state=open]:text-[#a51c30]`;
 </script>
 
 {#snippet memberSummary()}
@@ -117,19 +130,22 @@
 			{@render memberSummary()}
 		{/if}
 
-		{#if emailLink || googleScholarLink || hasMemberSocialLinks(member)}
-			<div class="mt-1.5 flex items-center gap-1">
+		{#if hasLinks}
+			<div
+				class="memberRowActions mt-1.5 flex items-center gap-[var(--member-action-gap)]"
+				style={`--member-action-count: ${actionCount}; --member-action-gap-count: ${actionGapCount};`}
+			>
 				{#if emailLink}
 					<Button
 						variant="ghost"
 						size="icon-sm"
-						class="text-zinc-600 hover:text-[#a51c30]"
+						class={memberActionButtonClass}
 						href={emailLink.url}
 						target="_blank"
 						rel="external noopener noreferrer"
 						aria-label={`Email ${getMemberName(member)}`}
 					>
-						<Mail aria-hidden="true" size={15} />
+						<Mail aria-hidden="true" />
 					</Button>
 				{/if}
 
@@ -137,23 +153,33 @@
 					<Button
 						variant="ghost"
 						size="icon-sm"
-						class="text-zinc-600 hover:text-[#a51c30]"
+						class={memberActionButtonClass}
 						href={googleScholarLink.url}
 						target="_blank"
 						rel="external noopener noreferrer"
 						aria-label={`${getMemberName(member)} Google Scholar`}
 					>
-						<GraduationCap aria-hidden="true" size={15} />
+						<GraduationCap aria-hidden="true" />
+					</Button>
+				{/if}
+
+				{#if githubLink}
+					<Button
+						variant="ghost"
+						size="icon-sm"
+						class={memberActionButtonClass}
+						href={githubLink.url}
+						target="_blank"
+						rel="external noopener noreferrer"
+						aria-label={`${getMemberName(member)} GitHub`}
+					>
+						<SocialLogo kind="github" />
 					</Button>
 				{/if}
 
 				{#if hasMemberSocialLinks(member)}
 					<DropdownMenu.Root open={socialMenuOpen} onOpenChange={syncSocialMenu}>
-						<DropdownMenu.Trigger
-							onpointerenter={openSocialMenu}
-							onpointerleave={scheduleCloseSocialMenu}
-							onfocusin={openSocialMenu}
-						>
+						<DropdownMenu.Trigger>
 							{#snippet child({ props })}
 								<Button
 									{...props}
@@ -161,8 +187,11 @@
 									size="icon-sm"
 									class={socialTriggerButtonClass}
 									aria-label={`${getMemberName(member)} social links`}
+									onpointerenter={openSocialMenu}
+									onpointerleave={scheduleCloseSocialMenu}
+									onfocusin={openSocialMenu}
 								>
-									<LinkIcon aria-hidden="true" size={15} />
+									<LinkIcon aria-hidden="true" />
 								</Button>
 							{/snippet}
 						</DropdownMenu.Trigger>
@@ -194,3 +223,23 @@
 		{/if}
 	</div>
 </article>
+
+<style>
+	.memberRowActions {
+		--member-action-source-width: 4rem;
+		--member-action-default-size: 2rem;
+		--member-action-gap: 0.25rem;
+		--member-action-calculated-size: calc(
+			(
+					var(--member-action-source-width) -
+						(var(--member-action-gap-count) * var(--member-action-gap))
+				) /
+				var(--member-action-count)
+		);
+		--member-action-size: min(
+			var(--member-action-calculated-size),
+			var(--member-action-default-size)
+		);
+		--member-action-icon-size: calc(var(--member-action-size) * 0.5);
+	}
+</style>

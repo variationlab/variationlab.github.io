@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import type { Members } from '$lib/types';
 import {
 	getMemberEmailLink,
+	getMemberGitHubLink,
 	getMemberGoogleScholarLink,
 	getMemberStatus,
 	getMemberSocialLinks,
@@ -55,6 +56,17 @@ describe('Member contact link helpers', () => {
 		expect(getMemberSocialLinks(member)).toEqual([]);
 	});
 
+	it('keeps GitHub as a direct profile button link', () => {
+		const member = { ...baseMember, github: 'https://github.com/example' };
+
+		expect(getMemberGitHubLink(member)).toEqual({
+			kind: 'github',
+			label: 'GitHub',
+			url: 'https://github.com/example'
+		});
+		expect(getMemberSocialLinks(member)).toEqual([]);
+	});
+
 	it('collects only available social dropdown links', () => {
 		const member: Members = {
 			...baseMember,
@@ -68,7 +80,6 @@ describe('Member contact link helpers', () => {
 		};
 
 		expect(getMemberSocialLinks(member)).toEqual([
-			{ kind: 'github', label: 'GitHub', url: 'https://github.com/example' },
 			{ kind: 'linkedin', label: 'LinkedIn', url: 'https://linkedin.com/in/example' },
 			{ kind: 'twitter', label: 'Twitter', url: 'https://twitter.com/example' },
 			{

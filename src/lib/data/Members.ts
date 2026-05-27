@@ -1,13 +1,13 @@
 import type { Members } from '$lib/types';
 
 export type MemberDirectLink = {
-	kind: 'email' | 'website' | 'googleScholar';
+	kind: 'email' | 'website' | 'googleScholar' | 'github';
 	label: string;
 	url: string;
 };
 
 export type MemberSocialLink = {
-	kind: 'github' | 'linkedin' | 'twitter' | 'bluesky';
+	kind: 'linkedin' | 'twitter' | 'bluesky';
 	label: string;
 	url: string;
 };
@@ -53,9 +53,17 @@ export function getMemberGoogleScholarLink(member: Members): MemberDirectLink | 
 	};
 }
 
+export function getMemberGitHubLink(member: Members): MemberDirectLink | undefined {
+	if (!member.github) return undefined;
+	return {
+		kind: 'github',
+		label: 'GitHub',
+		url: member.github
+	};
+}
+
 export function getMemberSocialLinks(member: Members): MemberSocialLink[] {
 	return [
-		member.github ? { kind: 'github' as const, label: 'GitHub', url: member.github } : undefined,
 		member.contact?.linkedin
 			? { kind: 'linkedin' as const, label: 'LinkedIn', url: member.contact.linkedin }
 			: undefined,

@@ -73,13 +73,32 @@
     ],
     "startTime": "2026-09-01",
     "publicationName": "Ruishi Zou",
+    "email": "ruishi.ray.zou@gmail.com",
     "url": "https://ruishizou.github.io/",
     "googleScholar": "https://scholar.google.com/citations?user=fHRnWkUAAAAJ",
+    "github": "https://github.com/ruishizou",
     "contact": {
       "bluesky": "https://bsky.app/profile/ruishi-zou.bsky.social",
       "twitter": "https://x.com/ruishi_zou",
       "linkedin": "https://www.linkedin.com/in/ruzou/"
     }
+  },
+  {
+    "firstName": "Tyler",
+    "lastName": "Holloway",
+    "email": "tylerholloway@g.harvard.edu",
+    "url": "https://hci.seas.harvard.edu/people/tyler-holloway",
+    "category": "alumni",
+    "currentAcademicStatus": "phd-student",
+    "interests": [
+      "Machine learning",
+      "Program synthesis",
+      "Health disparities"
+    ],
+    "startTime": "2020-09-01",
+    "publicationName": "Tyler Holloway",
+    "formerRole": "PhD student",
+    "currentRole": "PhD student"
   },
   {
     "firstName": "Ian",
@@ -96,7 +115,7 @@
     "startTime": "2022-09-01",
     "endTime": "2025-08-31",
     "formerRole": "Postdoctoral researcher",
-    "currentRole": "Assistant Professor of HCI, Universite de Montreal",
+    "currentRole": "Assistant Professor, Universite de Montreal",
     "publicationName": "Ian Arawjo"
   },
   {
@@ -130,7 +149,116 @@
     "startTime": "2022-09-01",
     "endTime": "2025-08-31",
     "formerRole": "Postdoctoral researcher",
-    "currentRole": "Faculty, University of Sydney",
+    "currentRole": "Lecturer, University of Sydney",
     "publicationName": "Katy Ilonka Gero"
+  },
+  {
+    "firstName": "Naser",
+    "lastName": "Al Madi",
+    "email": "nsalmadi@colby.edu",
+    "url": "https://cs.colby.edu/nsalmadi/",
+    "category": "alumni",
+    "currentAcademicStatus": "faculty",
+    "interests": [
+      "Eye tracking",
+      "Program comprehension",
+      "Software engineering"
+    ],
+    "startTime": "2023-01-01",
+    "endTime": "2024-12-31",
+    "formerRole": "Visiting scholar",
+    "currentRole": "Associate Professor, Colby College",
+    "publicationName": "Naser Al Madi"
+  },
+  {
+    "firstName": "Jonathan",
+    "middleName": "K.",
+    "lastName": "Kummerfeld",
+    "email": "jonathan.kummerfeld@sydney.edu.au",
+    "url": "https://jkk.name/",
+    "category": "alumni",
+    "currentAcademicStatus": "faculty",
+    "interests": [
+      "Natural language processing",
+      "Human-AI collaborative systems",
+      "Crowdsourcing"
+    ],
+    "startTime": "2022-01-01",
+    "endTime": "2023-12-31",
+    "formerRole": "Visiting scholar",
+    "currentRole": "Senior Lecturer, University of Sydney",
+    "publicationName": "Jonathan K. Kummerfeld"
+  },
+  {
+    "firstName": "Hendrik",
+    "lastName": "Heuer",
+    "email": "hendrik.heuer@cais-research.de",
+    "url": "https://hen-drik.de/",
+    "category": "alumni",
+    "currentAcademicStatus": "faculty",
+    "interests": [
+      "Trustworthy AI",
+      "Misinformation",
+      "Human-computer interaction"
+    ],
+    "startTime": "2020-01-01",
+    "endTime": "2022-12-31",
+    "formerRole": "Visiting scholar",
+    "currentRole": "Research Professor, CAIS",
+    "publicationName": "Hendrik Heuer"
+  },
+  {
+    "firstName": "Tianyi",
+    "lastName": "Zhang",
+    "url": "https://tianyi-zhang.github.io/",
+    "category": "alumni",
+    "currentAcademicStatus": "faculty",
+    "interests": [
+      "Human-centered software engineering",
+      "Programming tools",
+      "Human-AI interaction"
+    ],
+    "startTime": "2019-09-01",
+    "endTime": "2021-08-31",
+    "formerRole": "Postdoctoral researcher",
+    "currentRole": "Assistant Professor, Purdue University",
+    "publicationName": "Tianyi Zhang"
+  },
+  {
+    "firstName": "Hai",
+    "lastName": "Dang",
+    "email": "hai.dang@uni-bayreuth.de",
+    "url": "https://www.hciai.uni-bayreuth.de/en/team/hai_dang/index.php",
+    "category": "alumni",
+    "currentAcademicStatus": "phd-student",
+    "interests": [
+      "Human-computer interaction",
+      "Interactive AI",
+      "Writing support tools"
+    ],
+    "startTime": "2024-01-01",
+    "endTime": "2024-12-31",
+    "formerRole": "Visiting doctoral scholar",
+    "currentRole": "Doctoral researcher, University of Bayreuth",
+    "publicationName": "Hai Dang"
+  },
+  {
+    "firstName": "Sonia",
+    "middleName": "K.",
+    "lastName": "Murthy",
+    "email": "soniamurthy@g.harvard.edu",
+    "url": "https://kempnerinstitute.harvard.edu/people/our-people/sonia-murthy/",
+    "category": "alumni",
+    "currentAcademicStatus": "phd-student",
+    "interests": [
+      "Cognitive science",
+      "Language models",
+      "Human-AI interaction"
+    ],
+    "startTime": "2022-09-01",
+    "endTime": "2023-12-31",
+    "formerRole": "PhD student",
+    "currentRole": "PhD student, Harvard Computer Science",
+    "publicationName": "Sonia K. Murthy"
   }
 ]

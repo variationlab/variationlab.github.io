@@ -57,12 +57,10 @@
 {:else if activeRouteId === 'contact'}
 	<ContactPage />
 {:else}
-	<section class="grid gap-8 md:grid-cols-[minmax(0,1fr)_21rem] md:items-start">
-		<div class="max-w-2xl">
-			<p class="pageKicker text-harvard">Harvard SEAS</p>
-			<h1 class="heroTitle mt-2 text-zinc-950">The Variation Lab</h1>
+	<section class="grid gap-8 md:items-start">
+		<div class="max-w-full">
 			<p class="heroLead mt-4 text-zinc-700">
-				We build AI-resilient interfaces that help people notice, evaluate, and recover from AI
+				We are the <span class="pageKicker text-harvard">Variation lab</span> from Harvard SEAS. We build AI-resilient interfaces that help people notice, evaluate, and recover from AI
 				choices during open-ended work like reading, writing, ideating, and sensemaking.
 			</p>
 			<div class="mt-6 flex flex-wrap gap-3">
@@ -70,42 +68,6 @@
 				<a class="homeLink homeLinkSecondary" href="#/people">Meet People</a>
 			</div>
 		</div>
-
-		<aside class="border-t border-zinc-200 pt-4 md:border-t-0 md:pt-0">
-			<h2 class="sectionLabel text-harvard">People</h2>
-			<div class="mt-3 grid grid-cols-3 gap-1.5">
-				{#each featuredMembers as member (getMemberName(member))}
-					{@const status = getMemberStatus(member)}
-					{#if member.url}
-						<a
-							class="homePersonTile group"
-							href={member.url}
-							target="_blank"
-							rel="external noopener noreferrer"
-							aria-label={`${getMemberName(member)}: ${status}`}
-						>
-							<img
-								class="h-full w-full object-cover transition duration-200 group-hover:scale-105 group-focus-visible:scale-105"
-								src={member.headshot}
-								alt={`${getMemberName(member)} headshot`}
-							/>
-							<span class="homePersonName">{member.firstName}</span>
-							<span class="homePersonStatus">{status}</span>
-						</a>
-					{:else}
-						<div class="homePersonTile group" aria-label={`${getMemberName(member)}: ${status}`}>
-							<img
-								class="h-full w-full object-cover transition duration-200 group-hover:scale-105"
-								src={member.headshot}
-								alt={`${getMemberName(member)} headshot`}
-							/>
-							<span class="homePersonName">{member.firstName}</span>
-							<span class="homePersonStatus">{status}</span>
-						</div>
-					{/if}
-				{/each}
-			</div>
-		</aside>
 	</section>
 
 	<section class="mt-10 border-t border-zinc-200 pt-6">

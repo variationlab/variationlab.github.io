@@ -3,6 +3,7 @@
 	import type { MemberSocialLink } from '$lib/data/Members';
 
 	type SocialIcon = Pick<SimpleIcon, 'path' | 'title'>;
+	type SocialLogoKind = MemberSocialLink['kind'] | 'github';
 
 	const linkedinIcon: SocialIcon = {
 		title: 'LinkedIn',
@@ -14,9 +15,9 @@
 		linkedin: linkedinIcon,
 		twitter: siX,
 		bluesky: siBluesky
-	} satisfies Record<MemberSocialLink['kind'], SocialIcon>;
+	} satisfies Record<SocialLogoKind, SocialIcon>;
 
-	let { kind, size = 15 }: { kind: MemberSocialLink['kind']; size?: number } = $props();
+	let { kind, size = 15 }: { kind: SocialLogoKind; size?: number } = $props();
 
 	let icon = $derived(socialIcons[kind]);
 </script>
