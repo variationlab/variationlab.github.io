@@ -1,13 +1,20 @@
 <script lang="ts">
+	import site from '$lib/data/Site';
+	import { onMount } from 'svelte';
 	import CurrentMember from '$lib/components/person/currentMember.svelte';
 	import CurrentMemberRow from '$lib/components/person/currentMemberRow.svelte';
 	import OtherMember from '$lib/components/person/otherMember.svelte';
 	import type { Members } from '$lib/types';
-	import { getMemberName, getMemberStatus } from '$lib/data/Members';
+	import { getMemberName, getMemberStatus, orderActiveMembers } from '$lib/data/Members';
 
 	let { members }: { members: Members[] } = $props();
 
 	let currentMembers = $derived(members.filter((member) => member.category !== 'alumni'));
+
+	// Shuffle only after hydration; keep this order during hover and other UI updates.
+	onMount(() => {
+		currentMembers = orderActiveMembers(members);
+	});
 	let alumniMembers = $derived(members.filter((member) => member.category === 'alumni'));
 	let previewedMemberName = $state<string | undefined>();
 	let previewedMember = $derived(
@@ -56,7 +63,7 @@
 				</p>
 			{:else}
 				<p class="pageKicker text-harvard max-w-full [overflow-wrap:anywhere] break-words italic">
-					Augmenting human intelligence with variation
+					{site.peopleTagline}
 				</p>
 			{/if}
 		</aside>

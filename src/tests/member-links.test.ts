@@ -5,6 +5,7 @@ import {
 	getMemberGitHubLink,
 	getMemberGoogleScholarLink,
 	getMemberStatus,
+	orderActiveMembers,
 	getMemberSocialLinks,
 	getMemberWebsiteLink,
 	hasMemberSocialLinks
@@ -21,6 +22,49 @@ const baseMember: Members = {
 };
 
 describe('Member contact link helpers', () => {
+	it('keeps active faculty first and shuffles everyone else without changing the input', () => {
+		const studentA = { ...baseMember, publicationName: 'Student A' };
+		const studentB = { ...baseMember, publicationName: 'Student B' };
+		const faculty: Members = {
+			...baseMember,
+			publicationName: 'Faculty',
+			currentAcademicStatus: 'faculty'
+		};
+		const secondFaculty: Members = { ...faculty, publicationName: 'Second Faculty' };
+		const alumni: Members = { ...faculty, publicationName: 'Alumni', category: 'alumni' };
+		const input = [studentA, faculty, alumni, studentB, secondFaculty];
+		expect(orderActiveMembers(input, () => 0)).toEqual([
+			faculty,
+			secondFaculty,
+			studentB,
+			studentA
+		]);
+		expect(input).toEqual([studentA, faculty, alumni, studentB, secondFaculty]);
+		expect(orderActiveMembers([], () => 0)).toEqual([]);
+		expect(orderActiveMembers([studentA], () => 0)).toEqual([studentA]);
+	});
+	it('uses explicit current roles regardless of name or category', () => {
+		for (const firstName of ['Elena', 'Chau', 'Ruishi', 'Example']) {
+			expect(getMemberStatus({ ...baseMember, firstName, currentRole: 'Research scientist' })).toBe(
+				'Research scientist'
+			);
+			expect(getMemberStatus({ ...baseMember, firstName })).toBe('PhD student');
+		}
+	});
+
+	it.each([
+		['undergrad', 'Undergraduate student'],
+		['master', 'Master’s student'],
+		['phd-student', 'PhD student'],
+		['phd-candidate', 'PhD candidate'],
+		['phd-graduated', 'PhD graduate'],
+		['postdoc', 'Postdoctoral researcher'],
+		['faculty', 'Faculty'],
+		['other', 'Lab member']
+	] as const)('labels %s without assuming a department', (currentAcademicStatus, label) => {
+		expect(getMemberStatus({ ...baseMember, currentAcademicStatus })).toBe(label);
+	});
+
 	it('creates a mailto link for email addresses', () => {
 		const member = { ...baseMember, email: 'example@example.edu' };
 

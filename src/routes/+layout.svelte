@@ -1,5 +1,6 @@
 <script lang="ts">
 	import './layout.css';
+	import site from '$lib/data/Site';
 	import favicon from '$lib/assets/favicon.svg';
 	import { browser } from '$app/environment';
 	import TextAlignJustify from '@lucide/svelte/icons/text-align-justify';
@@ -31,16 +32,13 @@
 		<div
 			class="mx-auto flex w-full max-w-5xl items-center gap-4 px-4 py-3 font-sans sm:px-5 lg:px-6"
 		>
-			<a
-				class="group flex shrink-0 items-center gap-3"
-				href="#/"
-				aria-label="The Variation Lab home"
-			>
-				<img class="h-10 w-auto" src="/images/harvard-hci-logo.png" alt="Harvard HCI" />
+			<a class="group flex shrink-0 items-center gap-3" href="#/" aria-label={`${site.title} home`}>
+				<img class="h-10 w-auto" src={site.headerLogo.src} alt={site.headerLogo.alt} />
 				<span
-					class="navBrand border-b border-transparent text-zinc-950 transition-colors group-hover:border-zinc-300 group-hover:text-[#a51c30] group-focus-visible:border-zinc-300 group-focus-visible:text-[#a51c30]"
+					class="navBrand border-b border-transparent text-zinc-950 transition-colors group-hover:border-zinc-300 group-hover:text-[var(--brand-color)] group-focus-visible:border-zinc-300 group-focus-visible:text-[var(--brand-color)]"
 				>
-					<span class="text-harvard">Harvard</span> Variation Lab
+					<span class="text-harvard">{site.institution}</span>
+					{site.labName}
 				</span>
 			</a>
 			<nav
@@ -51,7 +49,7 @@
 					<a
 						class={activeRouteId === route.id
 							? 'text-harvard border-b border-current font-semibold'
-							: 'border-b border-transparent hover:border-zinc-300 hover:text-[#a51c30]'}
+							: 'border-b border-transparent hover:border-zinc-300 hover:text-[var(--brand-color)]'}
 						href={'#' + route.href.slice(1)}
 						aria-current={activeRouteId === route.id ? 'page' : undefined}>{route.label}</a
 					>
@@ -66,7 +64,7 @@
 								{...props}
 								variant="ghost"
 								size="icon"
-								class="text-zinc-700 hover:text-[#a51c30] data-[state=open]:text-[#a51c30]"
+								class="text-zinc-700 hover:text-[var(--brand-color)] data-[state=open]:text-[var(--brand-color)]"
 								aria-label="Open navigation menu"
 							>
 								<TextAlignJustify aria-hidden="true" size={22} />
@@ -81,8 +79,8 @@
 										{...props}
 										class={`${props.class ?? ''} w-full ${
 											activeRouteId === route.id
-												? 'font-semibold text-[#a51c30]'
-												: 'text-zinc-700 hover:text-[#a51c30]'
+												? 'font-semibold text-[var(--brand-color)]'
+												: 'text-zinc-700 hover:text-[var(--brand-color)]'
 										}`}
 										href={'#' + route.href.slice(1)}
 										aria-current={activeRouteId === route.id ? 'page' : undefined}
@@ -104,15 +102,16 @@
 		</main>
 	</div>
 
-	<footer class="mt-12 bg-[#303a46] px-4 py-9 font-sans text-white sm:px-5 lg:px-6">
+	<footer
+		class="mt-12 bg-[var(--footer-background)] px-4 py-9 font-sans text-white sm:px-5 lg:px-6"
+	>
 		<div class="mx-auto flex w-full max-w-5xl flex-col items-center gap-6">
 			<div class="flex flex-wrap items-center justify-center gap-x-7 gap-y-4">
 				<div class="footerBrand text-right">
-					<span class="block">Variation</span>
-					<span class="block">Lab</span>
+					{#each site.footerNameLines as line, index (index)}<span class="block">{line}</span>{/each}
 				</div>
 				<div class="h-16 w-px bg-white/30"></div>
-				<img class="h-16 w-auto max-w-72" src="/images/harvard-seas.svg" alt="Harvard SEAS" />
+				<img class="h-16 w-auto max-w-72" src={site.footerLogo.src} alt={site.footerLogo.alt} />
 			</div>
 
 			<nav
@@ -128,7 +127,8 @@
 			</nav>
 
 			<p class="footerCopyright text-center text-white/55">
-				Copyright © 2026 The President and Fellows of Harvard College
+				Copyright © {new Date().getFullYear()}
+				{site.copyrightHolder}
 			</p>
 		</div>
 	</footer>

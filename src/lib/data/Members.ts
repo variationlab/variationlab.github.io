@@ -16,14 +16,30 @@ export function getMemberName(member: Members): string {
 	return member.publicationName;
 }
 
+export function orderActiveMembers(members: Members[], random = Math.random): Members[] {
+	const active = members.filter((member) => member.category !== 'alumni');
+	const faculty = active.filter((member) => member.currentAcademicStatus === 'faculty');
+	const others = active.filter((member) => member.currentAcademicStatus !== 'faculty');
+	for (let index = others.length - 1; index > 0; index--) {
+		const swapIndex = Math.floor(random() * (index + 1));
+		[others[index], others[swapIndex]] = [others[swapIndex], others[index]];
+	}
+	return [...faculty, ...others];
+}
+
 export function getMemberStatus(member: Members): string {
-	if (member.category === 'alumni' && member.currentRole) return member.currentRole;
-	if (member.firstName === 'Elena') return 'Assistant Professor of Computer Science, SEAS';
-	if (member.firstName === 'Chelse' || member.firstName === 'Ziwei')
-		return 'PhD student, Computer Science';
-	if (member.firstName === 'Chau' || member.firstName === 'Ruishi')
-		return 'Incoming PhD student, Computer Science';
-	return 'Lab member';
+	if (member.currentRole?.trim()) return member.currentRole;
+	const labels: Record<Members['currentAcademicStatus'], string> = {
+		undergrad: 'Undergraduate student',
+		master: 'Master’s student',
+		'phd-student': 'PhD student',
+		'phd-candidate': 'PhD candidate',
+		'phd-graduated': 'PhD graduate',
+		postdoc: 'Postdoctoral researcher',
+		faculty: 'Faculty',
+		other: 'Lab member'
+	};
+	return labels[member.currentAcademicStatus];
 }
 
 export function getMemberEmailLink(member: Members): MemberDirectLink | undefined {

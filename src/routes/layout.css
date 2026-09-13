@@ -48,6 +48,11 @@
 }
 
 :root {
+	--brand-color: #a51c30;
+	--brand-hover: #7f1725;
+	--link-hover: #c45162;
+	--brand-surface: #f8f4f5;
+	--footer-background: #303a46;
 	color: #18181b;
 	font-family: 'Fira Sans', ui-sans-serif, system-ui, sans-serif;
 	--line-display: 1.16;
@@ -95,11 +100,11 @@ body {
 }
 
 a:hover {
-	color: #c45162;
+	color: var(--link-hover);
 }
 
 .text-harvard {
-	color: #a51c30;
+	color: var(--brand-color);
 }
 
 .navBrand {
@@ -221,9 +226,9 @@ a:hover {
 .homeLink {
 	display: inline-flex;
 	align-items: center;
-	border: 1px solid #a51c30;
+	border: 1px solid var(--brand-color);
 	border-radius: 8px;
-	background: #a51c30;
+	background: var(--brand-color);
 	color: #fff;
 	font-size: 0.875rem;
 	font-weight: 600;
@@ -232,18 +237,18 @@ a:hover {
 }
 
 .homeLink:hover {
-	background: #7f1725;
+	background: var(--brand-hover);
 	color: #fff;
 }
 
 .homeLinkSecondary {
 	background: #fff;
-	color: #a51c30;
+	color: var(--brand-color);
 }
 
 .homeLinkSecondary:hover {
-	background: #f8f4f5;
-	color: #7f1725;
+	background: var(--brand-surface);
+	color: var(--brand-hover);
 }
 
 .homePersonTile {

@@ -21,11 +21,13 @@ export interface Members extends Authors {
 		| 'postdoc'
 		| 'faculty'
 		| 'other';
+	/** Full /images/members/ path including .jpg, .jpeg, .png, or .webp; square, at most 650 × 650 px. */
 	headshot?: string;
 	interests: string[];
 	startTime: string;
 	endTime?: string;
 	formerRole?: string;
+	/** Display title for any member; otherwise use the general academic-status label. */
 	currentRole?: string;
 	contact?: SocialMedia;
 }

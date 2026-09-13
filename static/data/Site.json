@@ -1,0 +1,27 @@
+{
+  "title": "Harvard Variation Lab",
+  "institution": "Harvard",
+  "labName": "Variation Lab",
+  "footerNameLines": [
+    "Variation",
+    "Lab"
+  ],
+  "headerLogo": {
+    "src": "/images/harvard-hci-logo.png",
+    "alt": "Harvard HCI"
+  },
+  "footerLogo": {
+    "src": "/images/harvard-seas.svg",
+    "alt": "Harvard SEAS"
+  },
+  "copyrightHolder": "The President and Fellows of Harvard College",
+  "home": {
+    "introPrefix": "We are the",
+    "highlight": "Variation lab",
+    "introSuffix": "from Harvard SEAS. We build AI-resilient interfaces that help people notice, evaluate, and recover from AI choices during open-ended work like reading, writing, ideating, and sensemaking.",
+    "recentPublicationsLimit": 5
+  },
+  "peopleTagline": "Augmenting human intelligence with variation",
+  "coursesMessage": "Course information coming soon.",
+  "contactMessage": "Contact information coming soon."
+}

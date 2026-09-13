@@ -6,6 +6,7 @@
 	import UserRound from '@lucide/svelte/icons/user-round';
 	import { onDestroy } from 'svelte';
 	import SocialLogo from '$lib/components/SocialLogo.svelte';
+	import Image from '$lib/components/Image.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
 	import {
@@ -69,14 +70,14 @@
 	});
 
 	const memberActionButtonClass =
-		'size-[var(--member-action-size)] text-zinc-600 transition-colors hover:text-[#a51c30] focus-visible:text-[#a51c30] [&_svg]:size-[var(--member-action-icon-size)]';
-	const socialTriggerButtonClass = `${memberActionButtonClass} data-[state=open]:text-[#a51c30]`;
+		'size-[var(--member-action-size)] text-zinc-600 transition-colors hover:text-[var(--brand-color)] focus-visible:text-[var(--brand-color)] [&_svg]:size-[var(--member-action-icon-size)]';
+	const socialTriggerButtonClass = `${memberActionButtonClass} data-[state=open]:text-[var(--brand-color)]`;
 </script>
 
 {#snippet memberDetails()}
 	<div class="min-w-0">
 		<h2
-			class="personTitle text-zinc-950 group-hover/member:text-[#a51c30] group-focus-visible/member:text-[#a51c30]"
+			class="personTitle text-zinc-950 group-hover/member:text-[var(--brand-color)] group-focus-visible/member:text-[var(--brand-color)]"
 		>
 			{getMemberName(member)}
 		</h2>
@@ -87,7 +88,7 @@
 
 <article class="flex min-w-0 items-start gap-4 py-1">
 	{#if member.headshot}
-		<img
+		<Image
 			class="h-28 w-28 shrink-0 rounded-sm object-cover"
 			src={member.headshot}
 			alt={`${getMemberName(member)} headshot`}
@@ -101,7 +102,7 @@
 	<div class="min-w-0 flex-1 pt-0.5">
 		{#if websiteLink}
 			<a
-				class="group/member block rounded-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#a51c30]"
+				class="group/member block rounded-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-color)]"
 				href={websiteLink.url}
 				target="_blank"
 				rel="external noopener noreferrer"
@@ -114,9 +115,7 @@
 		{/if}
 
 		{#if hasLinks}
-			<div
-				class="mt-1.5 flex items-center gap-1.5"
-			>
+			<div class="mt-1.5 flex items-center gap-1.5">
 				{#if emailLink}
 					<Button
 						variant="ghost"
@@ -201,7 +200,7 @@
 									{#snippet child({ props })}
 										<a
 											{...props}
-											class={`${props.class ?? ''} w-full text-zinc-800 hover:text-[#a51c30]`}
+											class={`${props.class ?? ''} w-full text-zinc-800 hover:text-[var(--brand-color)]`}
 											href={link.url}
 											target="_blank"
 											rel="external noopener noreferrer"

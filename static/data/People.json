@@ -15,7 +15,8 @@
       "Human-AI collaboration"
     ],
     "startTime": "2018-07-01",
-    "publicationName": "Elena L. Glassman"
+    "publicationName": "Elena L. Glassman",
+    "currentRole": "Assistant Professor, Computer Science, SEAS"
   },
   {
     "firstName": "Chelse",
@@ -29,7 +30,8 @@
       "Writing tools"
     ],
     "startTime": "2023-09-01",
-    "publicationName": "Chelse Swoopes"
+    "publicationName": "Chelse Swoopes",
+    "currentRole": "PhD student, Computer Science"
   },
   {
     "firstName": "Ziwei",
@@ -44,7 +46,8 @@
       "Human-AI interaction"
     ],
     "startTime": "2023-09-01",
-    "publicationName": "Ziwei Gu"
+    "publicationName": "Ziwei Gu",
+    "currentRole": "PhD student, Computer Science"
   },
   {
     "firstName": "Chau",
@@ -59,7 +62,8 @@
       "Personal informatics"
     ],
     "startTime": "2026-09-01",
-    "publicationName": "Chau Vu"
+    "publicationName": "Chau Vu",
+    "currentRole": "PhD student, Computer Science"
   },
   {
     "firstName": "Ruishi",
@@ -81,7 +85,25 @@
       "bluesky": "https://bsky.app/profile/ruishi-zou.bsky.social",
       "twitter": "https://x.com/ruishi_zou",
       "linkedin": "https://www.linkedin.com/in/ruzou/"
-    }
+    },
+    "currentRole": "PhD student, Computer Science"
+  },
+  {
+    "firstName": "Trevor",
+    "lastName": "DePodesta",
+    "publicationName": "Trevor DePodesta",
+    "startTime": "2026-09-01",
+    "email": "tdepodesta@seas.harvard.edu",
+    "url": "https://tdepodesta.com/#home",
+    "category": "member",
+    "currentAcademicStatus": "phd-student",
+    "headshot": "/images/members/trevor.png",
+    "interests": [
+      "Machine interpretability",
+      "Human-AI interaction",
+      "Data visualization"
+    ],
+    "currentRole": "PhD student, Computer Science"
   },
   {
     "firstName": "Tyler",
@@ -211,6 +233,7 @@
     "firstName": "Tianyi",
     "lastName": "Zhang",
     "url": "https://tianyi-zhang.github.io/",
+    "headshot": "/images/members/tianyi.png",
     "category": "alumni",
     "currentAcademicStatus": "faculty",
     "interests": [

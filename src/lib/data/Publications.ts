@@ -15,13 +15,17 @@ export function getPublicationLinks(publication: Publication): { name: string; u
 	return [...links, ...(publication.supplementals ?? [])];
 }
 
+export function sortPublicationsByDate(items: Publication[]): Publication[] {
+	return [...items].sort((a, b) => b.publishDate.localeCompare(a.publishDate));
+}
+
 export function groupPublicationsByYear(
 	items: Publication[]
 ): { year: number; publications: Publication[] }[] {
 	const years = [...new Set(items.map((publication) => publication.year))].sort((a, b) => b - a);
 	return years.map((year) => ({
 		year,
-		publications: items.filter((publication) => publication.year === year)
+		publications: sortPublicationsByDate(items.filter((publication) => publication.year === year))
 	}));
 }
 

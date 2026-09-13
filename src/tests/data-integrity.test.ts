@@ -7,6 +7,7 @@ import type { Authors, Members, Publication } from '$lib/types';
 import {
 	getLabAuthorMemberships,
 	groupPublicationsByYear,
+	sortPublicationsByDate,
 	isDateWithinMembership,
 	isLabAuthorForPublication
 } from '$lib/data/Publications';
@@ -32,7 +33,9 @@ describe('Data integrity', () => {
 	it('maps every local member image to a member headshot', () => {
 		const localHeadshots = fs
 			.readdirSync(membersImagesDir)
-			.filter((file) => ['.jpg', '.jpeg'].includes(path.extname(file).toLowerCase()))
+			.filter((file) =>
+				['.jpg', '.jpeg', '.png', '.webp'].includes(path.extname(file).toLowerCase())
+			)
 			.map((file) => `/images/members/${file}`)
 			.sort();
 		const dataHeadshots = members
@@ -43,13 +46,17 @@ describe('Data integrity', () => {
 		expect(dataHeadshots).toEqual(localHeadshots);
 	});
 
-	it('uses existing files for every member headshot', () => {
+	it('requires an explicit supported extension and an existing file for every member headshot', () => {
 		const headshots = members
 			.map((member) => member.headshot)
-			.filter((headshot): headshot is string => Boolean(headshot));
+			.filter((headshot): headshot is string => headshot !== undefined);
 
 		expect(headshots.length).toBeGreaterThan(0);
 		headshots.forEach((headshot) => {
+			expect(
+				headshot,
+				'Use /images/members/filename with a .jpg, .jpeg, .png, or .webp extension'
+			).toMatch(/^\/images\/members\/[^/\\]+\.(jpg|jpeg|png|webp)$/i);
 			const filePath = path.join(membersImagesDir, path.basename(headshot));
 			expect(fs.existsSync(filePath)).toBe(true);
 		});
@@ -103,7 +110,7 @@ describe('Data integrity', () => {
 
 		expect(alumniMembers.length).toBeGreaterThan(0);
 		alumniMembers.forEach((member) => {
-			expect(member.formerRole).toBe('Postdoctoral researcher');
+			expect(member.formerRole?.trim()).toBeTruthy();
 		});
 	});
 
@@ -192,6 +199,18 @@ describe('Data integrity', () => {
 		const sortedYears = [...groupedYears].sort((a, b) => b - a);
 
 		expect(groupedYears).toEqual(sortedYears);
+	});
+
+	it('sorts publications by date without changing the input order', () => {
+		const older = { ...publications[0], publishDate: '2025-12-01', year: 2025 };
+		const newer = { ...publications[0], publishDate: '2026-08-01', year: 2026 };
+		const earlierSameYear = { ...publications[0], publishDate: '2026-02-01', year: 2026 };
+		const input = [older, earlierSameYear, newer];
+
+		expect(sortPublicationsByDate(input)).toEqual([newer, earlierSameYear, older]);
+		expect(input).toEqual([older, earlierSameYear, newer]);
+		expect(groupPublicationsByYear(input)[0].publications).toEqual([newer, earlierSameYear]);
+		expect(sortPublicationsByDate([])).toEqual([]);
 	});
 
 	it('normalizes supported hash routes and aliases', () => {

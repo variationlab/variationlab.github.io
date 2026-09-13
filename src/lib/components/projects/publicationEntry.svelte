@@ -39,7 +39,7 @@
 			{#each publicationLinks as link, index (link.url)}
 				{#if index > 0}<span class="linkSeparator">|</span>{/if}
 				<a
-					class="text-zinc-950 hover:text-[#a51c30]"
+					class="text-zinc-950 hover:text-[var(--brand-color)]"
 					href={link.url}
 					target="_blank"
 					rel="external noopener noreferrer">{link.name}</a

@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { getRouteLabel, normalizeHash, type RouteId } from '$lib/HashRoutes';
-	import { getMemberName, getMemberStatus } from '$lib/data/Members';
+	import site from '$lib/data/Site';
 	import {
 		getAuthorName,
+		sortPublicationsByDate,
 		getLabAuthorMemberships,
 		getPublicationLinks,
 		isLabAuthorForPublication
@@ -19,14 +20,11 @@
 
 	let activeRouteId = $state<RouteId>(browser ? normalizeHash(window.location.hash) : 'home');
 	let pageTitle = $derived(
-		activeRouteId === 'home'
-			? 'Harvard Variation Lab'
-			: `${getRouteLabel(activeRouteId)} | Harvard Variation Lab`
+		activeRouteId === 'home' ? site.title : `${getRouteLabel(activeRouteId)} | ${site.title}`
 	);
 
-	let recentPublications = $derived(data.publications.slice(0, 5));
-	let featuredMembers = $derived(
-		data.members.filter((member) => member.category !== 'alumni' && member.headshot)
+	let recentPublications = $derived(
+		sortPublicationsByDate(data.publications).slice(0, site.home.recentPublicationsLimit)
 	);
 	let labAuthorMemberships = $derived(getLabAuthorMemberships(data.members));
 
@@ -60,8 +58,8 @@
 	<section class="grid gap-8 md:items-start">
 		<div class="max-w-full">
 			<p class="heroLead mt-4 text-zinc-700">
-				We are the <span class="pageKicker text-harvard">Variation lab</span> from Harvard SEAS. We build AI-resilient interfaces that help people notice, evaluate, and recover from AI
-				choices during open-ended work like reading, writing, ideating, and sensemaking.
+				{site.home.introPrefix} <span class="pageKicker text-harvard">{site.home.highlight}</span>
+				{site.home.introSuffix}
 			</p>
 			<div class="mt-6 flex flex-wrap gap-3">
 				<a class="homeLink" href="#/publications">View Publications</a>
@@ -99,7 +97,7 @@
 							{#each getPublicationLinks(publication) as link, index (link.url)}
 								{#if index > 0}<span class="linkSeparator">|</span>{/if}
 								<a
-									class="text-zinc-950 hover:text-[#a51c30]"
+									class="text-zinc-950 hover:text-[var(--brand-color)]"
 									href={link.url}
 									target="_blank"
 									rel="external noopener noreferrer">{link.name}</a

@@ -1,55 +1,39 @@
-// Read static/images/members folder, and check if
-// 0 - all files are .jpg
-// 1 - all files are 1:1 aspect ratio, with maximum dimensions of 500x500
-
+// Member headshots must use supported extensions and be square, at most 650 × 650 px.
+// These content constraints are intentionally independent of the reusable Image component.
 import fs from 'fs';
 import path from 'path';
-import { expect, describe, it, beforeAll } from 'vitest';
+import { fileURLToPath } from 'url';
+import { imageSize } from 'image-size';
+import { expect, describe, it } from 'vitest';
+
+const allowedExtensions = ['.jpg', '.jpeg', '.png', '.webp'];
+const testsDir = path.dirname(fileURLToPath(import.meta.url));
+const imagesDir = path.join(testsDir, '../../static/images/members');
 
 describe('Image integrity', () => {
-	const imagesDir = path.join(__dirname, '../../static/images/members');
-	let sizeOf: typeof import('image-size').imageSize | undefined;
-
-	beforeAll(async () => {
-		try {
-			const mod = await import('image-size');
-			sizeOf = mod.imageSize;
-		} catch {
-			sizeOf = undefined;
-		}
-	});
-
-	it('should contain only .jpg or .jpeg files', () => {
-		const files = fs.readdirSync(imagesDir);
-		const allowed = ['.jpg', '.jpeg'];
-		const invalidFiles = files.filter(
-			(file) => !allowed.includes(path.extname(file).toLowerCase())
-		);
+	it('should contain only .jpg, .jpeg, .png, or .webp files', () => {
+		const invalidFiles = fs
+			.readdirSync(imagesDir)
+			.filter((file) => file !== '.DS_Store')
+			.filter((file) => !allowedExtensions.includes(path.extname(file).toLowerCase()));
 
 		expect(invalidFiles).toEqual([]);
 	});
 
-	it('should have 1:1 aspect ratio and max dimensions of 500x500', () => {
-		const allowed = ['.jpg', '.jpeg'];
+	it('should have 1:1 aspect ratio and max dimensions of 650x650 inclusive', () => {
 		const imageFiles = fs
 			.readdirSync(imagesDir)
-			.filter((file) => allowed.includes(path.extname(file).toLowerCase()));
+			.filter((file) => allowedExtensions.includes(path.extname(file).toLowerCase()));
 
 		expect(imageFiles.length).toBeGreaterThan(0);
-		const readImageSize = sizeOf;
-		if (!readImageSize) {
-			throw new Error('image-size module was not loaded');
-		}
-
 		imageFiles.forEach((file) => {
-			const filePath = path.join(imagesDir, file);
-			const buffer = fs.readFileSync(filePath);
-			const dims = readImageSize(buffer);
+			const dims = imageSize(fs.readFileSync(path.join(imagesDir, file)));
 
-			expect(dims).toBeDefined();
-			expect(dims.width).toBeLessThan(500);
-			expect(dims.height).toBeLessThan(500);
-			expect(dims.width).toBe(dims.height);
+			expect(dims.width, file).toBeGreaterThan(0);
+			expect(dims.height, file).toBeGreaterThan(0);
+			expect(dims.width, file).toBeLessThanOrEqual(650);
+			expect(dims.height, file).toBeLessThanOrEqual(650);
+			expect(dims.width, `${file} must be square`).toBe(dims.height);
 		});
 	});
 });
