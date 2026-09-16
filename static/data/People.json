@@ -92,14 +92,17 @@
     "firstName": "Trevor",
     "lastName": "DePodesta",
     "publicationName": "Trevor DePodesta",
-    "startTime": "2026-09-01",
+    "startTime": "2025-09-01",
     "email": "tdepodesta@seas.harvard.edu",
-    "url": "https://tdepodesta.com/#home",
+    "url": "https://tdepodesta.com",
+    "contact": {
+      "linkedin": "https://www.linkedin.com/in/trevor-depodesta-4225b1290/"
+    },
     "category": "member",
     "currentAcademicStatus": "phd-student",
     "headshot": "/images/members/trevor.png",
     "interests": [
-      "Machine interpretability",
+      "LLM interpretability",
       "Human-AI interaction",
       "Data visualization"
     ],
