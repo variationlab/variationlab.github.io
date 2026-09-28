@@ -4,19 +4,63 @@ export type LabAuthorMembership = {
 	publicationName: string;
 	startTime: string;
 	endTime?: string;
+	/** Member homepage, linked from their name on papers they are matched to. */
+	url?: string;
 };
 
 export function getAuthorName(authorValue: Authors): string {
 	return authorValue.publicationName;
 }
 
-export function getPublicationLinks(publication: Publication): { name: string; url: string }[] {
-	const links = publication.preprint ? [{ name: 'PDF', url: publication.preprint }] : [];
-	return [...links, ...(publication.supplementals ?? [])];
+/** Named link fields in display order, after the DOI link. */
+export const publicationLinkFields = [
+	['paperLink', 'Paper'],
+	['exploreLink', 'Explore'],
+	['codeLink', 'Code'],
+	['videoLink', 'Video'],
+	['presentationLink', 'Presentation'],
+	['materialLink', 'Materials'],
+	['slidesLink', 'Slides']
+] as const satisfies readonly (readonly [keyof Publication, string])[];
+
+export type PublicationLinkKind = 'doi' | (typeof publicationLinkFields)[number][0];
+
+export type PublicationLink = { kind: PublicationLinkKind; name: string; url: string };
+
+export function getPublicationLinks(publication: Publication): PublicationLink[] {
+	const doi = publication.doi.trim();
+	const doiLink: PublicationLink[] = doi
+		? [{ kind: 'doi', name: 'DOI', url: `https://doi.org/${doi}` }]
+		: [];
+	const named = publicationLinkFields.flatMap(([kind, name]): PublicationLink[] => {
+		const url = publication[kind];
+		return url ? [{ kind, name, url }] : [];
+	});
+	const links = [...doiLink, ...named];
+	// Drop repeated URLs so each link appears once (links are keyed by URL when rendered).
+	return links.filter(
+		(link, index) => links.findIndex((other) => other.url === link.url) === index
+	);
+}
+
+const teaserImageExtensions = new Set(['jpg', 'jpeg', 'png', 'webp', 'gif']);
+const teaserVideoExtensions = new Set(['mp4', 'webm']);
+
+export type TeaserKind = 'image' | 'video';
+
+export function getTeaserKind(src: string): TeaserKind | undefined {
+	const extension = src.split(/[?#]/)[0].split('.').pop()?.toLowerCase() ?? '';
+	if (teaserImageExtensions.has(extension)) return 'image';
+	if (teaserVideoExtensions.has(extension)) return 'video';
+	return undefined;
 }
 
 export function sortPublicationsByDate(items: Publication[]): Publication[] {
 	return [...items].sort((a, b) => b.publishDate.localeCompare(a.publishDate));
+}
+
+export function getSelectedPublications(items: Publication[]): Publication[] {
+	return sortPublicationsByDate(items.filter((publication) => publication.isSelected === true));
 }
 
 export function groupPublicationsByYear(
@@ -38,7 +82,8 @@ export function getLabAuthorMemberships(
 			{
 				publicationName: member.publicationName,
 				startTime: member.startTime,
-				endTime: member.endTime
+				endTime: member.endTime,
+				url: member.url
 			}
 		])
 	);
@@ -61,4 +106,14 @@ export function isLabAuthorForPublication(
 ): boolean {
 	const membership = memberships.get(authorValue.publicationName);
 	return Boolean(membership && isDateWithinMembership(publication.publishDate, membership));
+}
+
+/** Homepage for a matched lab author on this publication; undefined when unmatched or without one. */
+export function getLabAuthorHomepage(
+	authorValue: Authors,
+	publication: Publication,
+	memberships: ReadonlyMap<string, LabAuthorMembership>
+): string | undefined {
+	if (!isLabAuthorForPublication(authorValue, publication, memberships)) return undefined;
+	return memberships.get(authorValue.publicationName)?.url || undefined;
 }

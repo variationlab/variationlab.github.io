@@ -2,13 +2,12 @@
 	import { browser } from '$app/environment';
 	import { getRouteLabel, normalizeHash, type RouteId } from '$lib/HashRoutes';
 	import site from '$lib/data/Site';
-	import {
-		getAuthorName,
-		sortPublicationsByDate,
-		getLabAuthorMemberships,
-		getPublicationLinks,
-		isLabAuthorForPublication
-	} from '$lib/data/Publications';
+	import { getSelectedPublications, getLabAuthorMemberships } from '$lib/data/Publications';
+	import { getMemberName, orderActiveMembers } from '$lib/data/Members';
+	import MemberAvatar from '$lib/components/person/memberAvatar.svelte';
+	import { Button } from '$lib/components/ui/button';
+	import HomeHero from '$lib/components/home/homeHero.svelte';
+	import PublicationEntry from '$lib/components/projects/publicationEntry.svelte';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 	import ContactPage from './contact/contactPage.svelte';
@@ -23,10 +22,9 @@
 		activeRouteId === 'home' ? site.title : `${getRouteLabel(activeRouteId)} | ${site.title}`
 	);
 
-	let recentPublications = $derived(
-		sortPublicationsByDate(data.publications).slice(0, site.home.recentPublicationsLimit)
-	);
+	let selectedPublications = $derived(getSelectedPublications(data.publications));
 	let labAuthorMemberships = $derived(getLabAuthorMemberships(data.members));
+	let currentMembers = $derived(data.members.filter((member) => member.category !== 'alumni'));
 
 	function syncActiveRoute() {
 		activeRouteId = normalizeHash(window.location.hash);
@@ -34,6 +32,8 @@
 
 	onMount(() => {
 		syncActiveRoute();
+		// Shuffle only after hydration, matching the People page ordering.
+		currentMembers = orderActiveMembers(data.members);
 		window.addEventListener('hashchange', syncActiveRoute);
 
 		return () => {
@@ -55,57 +55,50 @@
 {:else if activeRouteId === 'contact'}
 	<ContactPage />
 {:else}
-	<section class="grid gap-8 md:items-start">
-		<div class="max-w-full">
-			<p class="heroLead mt-4 text-zinc-700">
-				{site.home.introPrefix} <span class="pageKicker text-harvard">{site.home.highlight}</span>
-				{site.home.introSuffix}
-			</p>
-			<div class="mt-6 flex flex-wrap gap-3">
-				<a class="homeLink" href="#/publications">View Publications</a>
-				<a class="homeLink homeLinkSecondary" href="#/people">Meet People</a>
-			</div>
+	<HomeHero />
+
+	<section class="mt-8 border-t border-zinc-200 pt-6" aria-labelledby="research-themes-title">
+		<h2 id="research-themes-title" class="sectionLabel mb-5 text-zinc-950">Research Themes</h2>
+		<div class="grid gap-x-10 gap-y-6 md:grid-cols-3">
+			{#each site.home.researchThemes as theme (theme.title)}
+				<article>
+					<h3 class="itemTitle text-harvard">{theme.title}</h3>
+					<p class="bodyText mt-1 text-zinc-700">{theme.description}</p>
+				</article>
+			{/each}
+		</div>
+	</section>
+
+	<section class="mt-10 border-t border-zinc-200 pt-6">
+		<div class="mb-5 flex items-baseline justify-between gap-4">
+			<h2 class="sectionLabel text-zinc-950">Team</h2>
+			<Button variant="link" href="#/people" class="smallLink h-auto border-0 p-0 text-harvard">
+				<span>View all people & alumni</span>
+			</Button>
+		</div>
+		<div
+			class="grid grid-cols-2 gap-x-4 gap-y-7 min-[420px]:grid-cols-3 sm:grid-cols-4 md:grid-cols-5"
+		>
+			{#each currentMembers as member (getMemberName(member))}
+				<MemberAvatar {member} />
+			{/each}
 		</div>
 	</section>
 
 	<section class="mt-10 border-t border-zinc-200 pt-6">
 		<div class="mb-4 flex items-baseline justify-between gap-4">
-			<h2 class="sectionLabel text-zinc-950">Recent Publications</h2>
-			<a class="smallLink text-harvard hover:text-zinc-950" href="#/publications">View all papers</a
+			<h2 class="sectionLabel text-zinc-950">Selected Publications</h2>
+			<Button
+				variant="link"
+				href="#/publications"
+				class="smallLink h-auto border-0 p-0 text-harvard"
 			>
+				<span>View all papers</span>
+			</Button>
 		</div>
 		<div class="space-y-5">
-			{#each recentPublications as publication (publication.title)}
-				<article class="grid gap-2 sm:grid-cols-[5rem_minmax(0,1fr)] sm:gap-5">
-					<div class="yearLabel text-zinc-950">{publication.year}</div>
-					<div>
-						<h3 class="itemTitle text-zinc-950">{publication.title}</h3>
-						<p class="metaText text-zinc-800">
-							{#each publication.authors as author, index (author.publicationName)}
-								{#if index > 0}<span>, </span>{/if}
-								<span
-									class={isLabAuthorForPublication(author, publication, labAuthorMemberships)
-										? 'font-semibold text-zinc-950'
-										: ''}>{getAuthorName(author)}</span
-								>
-							{/each}
-						</p>
-						<p class="metaText text-zinc-700 italic">
-							{publication.venue.fullName}, {publication.year}
-						</p>
-						<p class="smallLink mt-1">
-							{#each getPublicationLinks(publication) as link, index (link.url)}
-								{#if index > 0}<span class="linkSeparator">|</span>{/if}
-								<a
-									class="text-zinc-950 hover:text-[var(--brand-color)]"
-									href={link.url}
-									target="_blank"
-									rel="external noopener noreferrer">{link.name}</a
-								>
-							{/each}
-						</p>
-					</div>
-				</article>
+			{#each selectedPublications as publication (publication.title)}
+				<PublicationEntry {publication} {labAuthorMemberships} />
 			{/each}
 		</div>
 	</section>

@@ -32,7 +32,7 @@
 
 <section>
 	<div class="mb-5 flex flex-wrap items-baseline gap-x-4 gap-y-1">
-		<h1 class="pageKicker text-zinc-950 sm:text-zinc-500">
+		<h1 class="pageTitle text-zinc-950">
 			<span class="sm:hidden">Members</span>
 			<span class="hidden sm:inline">People</span>
 		</h1>
@@ -50,19 +50,17 @@
 			aria-live="polite"
 		>
 			{#if previewedMember}
-				<h2 class="personTitle max-w-full [overflow-wrap:anywhere] break-words text-zinc-950">
+				<h2 class="personTitle max-w-full wrap-anywhere text-zinc-950">
 					{getMemberName(previewedMember)}
 				</h2>
-				<p
-					class="bodyText mt-1 max-w-full [overflow-wrap:anywhere] break-words text-zinc-800 italic"
-				>
+				<p class="bodyText mt-1 max-w-full wrap-anywhere text-zinc-800 italic">
 					{getMemberStatus(previewedMember)}
 				</p>
-				<p class="bodyText mt-1 max-w-full [overflow-wrap:anywhere] break-words text-zinc-700">
+				<p class="bodyText mt-1 max-w-full wrap-anywhere text-zinc-700">
 					{previewedMember.interests.join(', ')}
 				</p>
 			{:else}
-				<p class="pageKicker text-harvard max-w-full [overflow-wrap:anywhere] break-words italic">
+				<p class="personTitle max-w-full wrap-anywhere text-harvard italic">
 					{site.peopleTagline}
 				</p>
 			{/if}

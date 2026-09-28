@@ -1,14 +1,13 @@
 {
   "title": "Harvard Variation Lab",
-  "institution": "Harvard",
   "labName": "Variation Lab",
   "footerNameLines": [
     "Variation",
     "Lab"
   ],
   "headerLogo": {
-    "src": "/images/harvard-hci-logo.png",
-    "alt": "Harvard HCI"
+    "src": "/images/logo/variation-lab-mark.svg",
+    "alt": "Variation Lab logo"
   },
   "footerLogo": {
     "src": "/images/harvard-seas.svg",
@@ -19,7 +18,20 @@
     "introPrefix": "We are the",
     "highlight": "Variation lab",
     "introSuffix": "from Harvard SEAS. We build AI-resilient interfaces that help people notice, evaluate, and recover from AI choices during open-ended work like reading, writing, ideating, and sensemaking.",
-    "recentPublicationsLimit": 5
+    "researchThemes": [
+      {
+        "title": "Designing for hard-to-measure value",
+        "description": "Recognizing activities whose value lies in the effort and experience itself, so AI assistance does not shortcut the meaning people would otherwise find."
+      },
+      {
+        "title": "AI-resilient interface design",
+        "description": "Helping people notice AI choices and giving them the context to judge whether those choices are wrong, or simply not right for them."
+      },
+      {
+        "title": "Theory-connected systems",
+        "description": "Building interfaces on theories of learning, attention, and emotion regulation, even when they defy common usability guidelines, and the infrastructure to do this across HCI."
+      }
+    ]
   },
   "peopleTagline": "Augmenting human intelligence with variation",
   "coursesMessage": "Course information coming soon.",

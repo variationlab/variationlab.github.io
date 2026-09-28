@@ -70,14 +70,14 @@
 	});
 
 	const memberActionButtonClass =
-		'size-[var(--member-action-size)] text-zinc-600 transition-colors hover:text-[var(--brand-color)] focus-visible:text-[var(--brand-color)] [&_svg]:size-[var(--member-action-icon-size)]';
-	const socialTriggerButtonClass = `${memberActionButtonClass} data-[state=open]:text-[var(--brand-color)]`;
+		'size-(--member-action-size) text-zinc-600 transition-colors hover:text-(--brand-color) focus-visible:text-(--brand-color) [&_svg]:size-(--member-action-icon-size)';
+	const socialTriggerButtonClass = `${memberActionButtonClass} data-[state=open]:text-(--brand-color)`;
 </script>
 
 {#snippet memberDetails()}
 	<div class="min-w-0">
 		<h2
-			class="personTitle text-zinc-950 group-hover/member:text-[var(--brand-color)] group-focus-visible/member:text-[var(--brand-color)]"
+			class="personTitle text-zinc-950 link-underline-base transition-colors group-hover/member:text-(--brand-color) group-hover/member:decoration-current group-focus-visible/member:text-(--brand-color) group-focus-visible/member:decoration-current"
 		>
 			{getMemberName(member)}
 		</h2>
@@ -102,7 +102,7 @@
 	<div class="min-w-0 flex-1 pt-0.5">
 		{#if websiteLink}
 			<a
-				class="group/member block rounded-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-color)]"
+				class="group/member block rounded-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-(--brand-color)"
 				href={websiteLink.url}
 				target="_blank"
 				rel="external noopener noreferrer"
@@ -200,7 +200,7 @@
 									{#snippet child({ props })}
 										<a
 											{...props}
-											class={`${props.class ?? ''} w-full text-zinc-800 hover:text-[var(--brand-color)]`}
+											class={`${props.class ?? ''} w-full text-zinc-800 link-underline hover:text-(--brand-color)`}
 											href={link.url}
 											target="_blank"
 											rel="external noopener noreferrer"

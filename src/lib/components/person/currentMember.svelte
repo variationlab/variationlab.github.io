@@ -63,7 +63,7 @@
 		Boolean(emailLink || googleScholarLink || githubLink) || hasMemberSocialLinks(member)
 	);
 	const detailLinkButtonClass =
-		'size-[var(--member-detail-link-button-size,2rem)] bg-zinc-100/75 text-zinc-700 transition-colors hover:bg-zinc-100 hover:text-[var(--brand-color)] focus-visible:text-[var(--brand-color)] [&_svg]:size-[var(--member-detail-link-icon-size,1rem)]';
+		'size-(--member-detail-link-button-size,2rem) bg-zinc-100/75 text-zinc-700 transition-colors hover:bg-zinc-100 hover:text-(--brand-color) focus-visible:text-(--brand-color) [&_svg]:size-(--member-detail-link-icon-size,1rem)';
 
 	function clearPreviewIfFocusLeaves(event: FocusEvent) {
 		const nextTarget = event.relatedTarget;
@@ -124,24 +124,24 @@
 
 	{#if websiteLink}
 		<a
-			class="absolute inset-0 z-10 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-color)]"
+			class="absolute inset-0 z-10 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--brand-color)"
 			href={websiteLink.url}
 			target="_blank"
 			rel="external noopener noreferrer"
 			aria-label={`${getMemberName(member)} website`}
 		></a>
 	{:else}
-		<button
-			type="button"
-			class="absolute inset-0 z-10 cursor-default bg-transparent outline-none"
+		<Button
+			variant="ghost"
+			class="absolute inset-0 z-10 h-auto cursor-default rounded-lg border-0 bg-transparent p-0 hover:bg-transparent focus-visible:ring-0 active:not-aria-[haspopup]:translate-y-0 aria-expanded:bg-transparent"
 			aria-label={`Show details for ${getMemberName(member)}`}
 			aria-expanded={isOpen}
 			onclick={togglePreview}
-		></button>
+		></Button>
 	{/if}
 
 	<span
-		class="tileName pointer-events-none absolute inset-x-0 bottom-0 z-20 rounded-b-lg bg-gradient-to-t from-zinc-950/80 to-transparent px-2 pt-10 pb-2 text-white"
+		class="tileName pointer-events-none absolute inset-x-0 bottom-0 z-20 rounded-b-lg bg-linear-to-t from-zinc-950/80 to-transparent px-2 pt-10 pb-2 text-white"
 	>
 		{member.firstName}
 	</span>
@@ -215,8 +215,9 @@
 					>
 						<div class="w-max rounded-md bg-zinc-100/75 p-1 backdrop-blur-[2px]">
 							{#each socialLinks as link (link.kind)}
-								<a
-									class="ml-auto flex w-full items-center justify-end gap-2 rounded-sm px-2 py-1.5 text-right text-sm outline-none hover:bg-white/60 hover:text-[var(--brand-color)] focus-visible:bg-white/60 focus-visible:text-[var(--brand-color)]"
+								<Button
+									variant="ghost"
+									class="metaText ml-auto flex h-auto w-full justify-end gap-2 rounded-sm border-0 px-2 py-1.5 text-right font-normal text-zinc-800 underline-offset-4 hover:bg-white/60 hover:text-(--brand-color) hover:underline focus-visible:bg-white/60 focus-visible:text-(--brand-color) focus-visible:underline"
 									href={link.url}
 									target="_blank"
 									rel="external noopener noreferrer"
@@ -224,7 +225,7 @@
 								>
 									<span>{link.label}</span>
 									<SocialLogo kind={link.kind} />
-								</a>
+								</Button>
 							{/each}
 						</div>
 					</div>
