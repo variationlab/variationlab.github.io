@@ -4,7 +4,10 @@ import {
 	getMemberEmailLink,
 	getMemberGitHubLink,
 	getMemberGoogleScholarLink,
+	getMemberProfileLinks,
+	getMemberProfilePath,
 	getMemberShortRole,
+	getMemberSlug,
 	getMemberStatus,
 	orderActiveMembers,
 	getMemberSocialLinks,
@@ -51,6 +54,15 @@ describe('Member contact link helpers', () => {
 		expect(orderActiveMembers([])).toEqual([]);
 		expect(orderActiveMembers([studentA])).toEqual([studentA]);
 	});
+	it('builds a stable profile path from the publication name', () => {
+		expect(getMemberSlug({ ...baseMember, publicationName: 'Elena L. Glassman' })).toBe(
+			'elena-l-glassman'
+		);
+		expect(getMemberProfilePath({ ...baseMember, publicationName: 'Ziwei Gu' })).toBe(
+			'/people/ziwei-gu'
+		);
+	});
+
 	it('uses the role before the department on short labels', () => {
 		expect(
 			getMemberShortRole({
@@ -96,8 +108,33 @@ describe('Member contact link helpers', () => {
 		});
 	});
 
+	it('defaults a generic profile link to the website icon', () => {
+		expect(
+			getMemberProfileLinks({
+				...baseMember,
+				profileLinks: [{ url: ' https://example.edu/lab ' }, { url: 'https://github.com/example', icon: 'github' }]
+			})
+		).toEqual([
+			{ url: 'https://example.edu/lab', icon: 'website' },
+			{ url: 'https://github.com/example', icon: 'github' }
+		]);
+		expect(getMemberProfileLinks(baseMember)).toEqual([]);
+		expect(
+			getMemberProfileLinks({
+				...baseMember,
+				profileLinks: [{ url: 'https://example.edu/talk', title: ' Lab talk ' }]
+			})
+		).toEqual([{ url: 'https://example.edu/talk', icon: 'website', title: 'Lab talk' }]);
+	});
+
 	it('keeps website links separate from profile dropdown links', () => {
-		const member = { ...baseMember, url: 'https://example.edu' };
+		const member = {
+			...baseMember,
+			profileLinks: [
+				{ url: 'https://example.edu/notes', title: 'Notes' },
+				{ url: 'https://example.edu' }
+			]
+		};
 
 		expect(getMemberWebsiteLink(member)).toEqual({
 			kind: 'website',
@@ -110,7 +147,7 @@ describe('Member contact link helpers', () => {
 	it('keeps Google Scholar as a direct profile button link', () => {
 		const member = {
 			...baseMember,
-			googleScholar: 'https://scholar.google.com/citations?user=example'
+			profileLinks: [{ url: 'https://scholar.google.com/citations?user=example', icon: 'googleScholar' as const }]
 		};
 
 		expect(getMemberGoogleScholarLink(member)).toEqual({
@@ -122,7 +159,10 @@ describe('Member contact link helpers', () => {
 	});
 
 	it('keeps GitHub as a direct profile button link', () => {
-		const member = { ...baseMember, github: 'https://github.com/example' };
+		const member = {
+			...baseMember,
+			profileLinks: [{ url: 'https://github.com/example', icon: 'github' as const }]
+		};
 
 		expect(getMemberGitHubLink(member)).toEqual({
 			kind: 'github',
@@ -135,13 +175,13 @@ describe('Member contact link helpers', () => {
 	it('collects only available social dropdown links', () => {
 		const member: Members = {
 			...baseMember,
-			github: 'https://github.com/example',
-			googleScholar: 'https://scholar.google.com/citations?user=example',
-			contact: {
-				linkedin: 'https://linkedin.com/in/example',
-				twitter: 'https://twitter.com/example',
-				bluesky: 'https://bsky.app/profile/example.bsky.social'
-			}
+			profileLinks: [
+				{ url: 'https://github.com/example', icon: 'github' },
+				{ url: 'https://scholar.google.com/citations?user=example', icon: 'googleScholar' },
+				{ url: 'https://linkedin.com/in/example', icon: 'linkedin' },
+				{ url: 'https://twitter.com/example', icon: 'twitter' },
+				{ url: 'https://bsky.app/profile/example.bsky.social', icon: 'bluesky' }
+			]
 		};
 
 		expect(getMemberSocialLinks(member)).toEqual([

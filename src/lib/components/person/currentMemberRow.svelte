@@ -14,6 +14,7 @@
 		getMemberGitHubLink,
 		getMemberGoogleScholarLink,
 		getMemberName,
+		getMemberProfilePath,
 		getMemberSocialLinks,
 		getMemberStatus,
 		getMemberWebsiteLink,
@@ -83,36 +84,35 @@
 		</h2>
 		<p class="bodyText mt-0.5 text-zinc-800 italic">{getMemberStatus(member)}</p>
 		<p class="bodyText mt-0.5 text-zinc-700">{member.interests.join(', ')}</p>
+		{#if member.bio}
+			<hr class="my-4 border-zinc-200" />
+			<p class="bodyText text-zinc-700">{member.bio}</p>
+		{/if}
 	</div>
 {/snippet}
 
 <article class="flex min-w-0 items-start gap-4 py-1">
-	{#if member.headshot}
-		<Image
-			class="h-28 w-28 shrink-0 rounded-sm object-cover"
-			src={member.headshot}
-			alt={`${getMemberName(member)} headshot`}
-		/>
-	{:else}
-		<div class="flex h-28 w-28 shrink-0 items-center justify-center rounded-sm bg-zinc-100">
-			<UserRound aria-hidden="true" size={36} strokeWidth={1.6} class="text-zinc-400" />
-		</div>
-	{/if}
+	<a class="shrink-0 rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-color)]" href={getMemberProfilePath(member)}>
+		{#if member.headshot}
+			<Image
+				class="h-28 w-28 rounded-sm object-cover"
+				src={member.headshot}
+				alt={`${getMemberName(member)} headshot`}
+			/>
+		{:else}
+			<div class="flex h-28 w-28 items-center justify-center rounded-sm bg-zinc-100">
+				<UserRound aria-hidden="true" size={36} strokeWidth={1.6} class="text-zinc-400" />
+			</div>
+		{/if}
+	</a>
 
 	<div class="min-w-0 flex-1 pt-0.5">
-		{#if websiteLink}
-			<a
-				class="group/member block rounded-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-color)]"
-				href={websiteLink.url}
-				target="_blank"
-				rel="external noopener noreferrer"
-				aria-label={`${getMemberName(member)} website`}
-			>
-				{@render memberDetails()}
-			</a>
-		{:else}
+		<a
+			class="group/member block rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-color)]"
+			href={getMemberProfilePath(member)}
+		>
 			{@render memberDetails()}
-		{/if}
+		</a>
 
 		{#if hasLinks}
 			<div class="mt-1.5 flex items-center gap-1.5">

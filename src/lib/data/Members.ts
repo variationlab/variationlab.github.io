@@ -1,4 +1,4 @@
-import type { Members } from '$lib/types';
+import type { MemberProfileLinkIcon, Members } from '$lib/types';
 
 export type MemberDirectLink = {
 	kind: 'email' | 'website' | 'googleScholar' | 'github';
@@ -14,6 +14,17 @@ export type MemberSocialLink = {
 
 export function getMemberName(member: Members): string {
 	return member.publicationName;
+}
+
+export function getMemberSlug(member: Members): string {
+	return getMemberName(member)
+		.toLowerCase()
+		.replace(/[^a-z0-9]+/g, '-')
+		.replace(/^-|-$/g, '');
+}
+
+export function getMemberProfilePath(member: Members): string {
+	return `/people/${getMemberSlug(member)}`;
 }
 
 export function orderActiveMembers(members: Members[]): Members[] {
@@ -53,45 +64,69 @@ export function getMemberEmailLink(member: Members): MemberDirectLink | undefine
 	};
 }
 
+export function getMemberProfileLinks(
+	member: Members
+): { url: string; icon: MemberProfileLinkIcon; title?: string }[] {
+	return (member.profileLinks ?? [])
+		.filter((link) => link.url.trim())
+		.map((link) => ({
+			url: link.url.trim(),
+			icon: link.icon ?? 'website',
+			...(link.title?.trim() ? { title: link.title.trim() } : {})
+		}));
+}
+
+function getMemberProfileLink(
+	member: Members,
+	icon: MemberProfileLinkIcon,
+	kind: MemberDirectLink['kind'],
+	label: string
+): MemberDirectLink | undefined {
+	const link = getMemberProfileLinks(member).find((item) => item.icon === icon);
+	if (!link) return undefined;
+	return {
+		kind,
+		label,
+		url: link.url
+	};
+}
+
 export function getMemberWebsiteLink(member: Members): MemberDirectLink | undefined {
-	if (!member.url) return undefined;
+	const links = getMemberProfileLinks(member).filter((item) => item.icon === 'website');
+	const link = links.find((item) => !item.title) ?? links[0];
+	if (!link) return undefined;
 	return {
 		kind: 'website',
 		label: 'Website',
-		url: member.url
+		url: link.url
 	};
 }
 
 export function getMemberGoogleScholarLink(member: Members): MemberDirectLink | undefined {
-	if (!member.googleScholar) return undefined;
-	return {
-		kind: 'googleScholar',
-		label: 'Google Scholar',
-		url: member.googleScholar
-	};
+	return getMemberProfileLink(member, 'googleScholar', 'googleScholar', 'Google Scholar');
 }
 
 export function getMemberGitHubLink(member: Members): MemberDirectLink | undefined {
-	if (!member.github) return undefined;
-	return {
-		kind: 'github',
-		label: 'GitHub',
-		url: member.github
-	};
+	return getMemberProfileLink(member, 'github', 'github', 'GitHub');
 }
 
 export function getMemberSocialLinks(member: Members): MemberSocialLink[] {
-	return [
-		member.contact?.linkedin
-			? { kind: 'linkedin' as const, label: 'LinkedIn', url: member.contact.linkedin }
-			: undefined,
-		member.contact?.twitter
-			? { kind: 'twitter' as const, label: 'Twitter', url: member.contact.twitter }
-			: undefined,
-		member.contact?.bluesky
-			? { kind: 'bluesky' as const, label: 'Bluesky', url: member.contact.bluesky }
-			: undefined
-	].filter((link): link is MemberSocialLink => Boolean(link));
+	const labels = {
+		linkedin: 'LinkedIn',
+		twitter: 'Twitter',
+		bluesky: 'Bluesky'
+	} as const;
+	const links = getMemberProfileLinks(member);
+
+	return (['linkedin', 'twitter', 'bluesky'] as const).flatMap((kind) =>
+		links
+			.filter((link) => link.icon === kind)
+			.map((link) => ({
+				kind,
+				label: labels[kind],
+				url: link.url
+			}))
+	);
 }
 
 export function hasMemberSocialLinks(member: Members): boolean {

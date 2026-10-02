@@ -4,8 +4,15 @@
     "middleName": "L.",
     "lastName": "Glassman",
     "email": "glassman@seas.harvard.edu",
-    "url": "https://glassmanlab.seas.harvard.edu/glassman.html",
-    "googleScholar": "https://scholar.google.com/citations?user=9Y7gKp0AAAAJ",
+    "profileLinks": [
+      {
+        "url": "https://glassmanlab.seas.harvard.edu/glassman.html"
+      },
+      {
+        "url": "https://scholar.google.com/citations?user=9Y7gKp0AAAAJ",
+        "icon": "googleScholar"
+      }
+    ],
     "category": "faculty",
     "currentAcademicStatus": "faculty",
     "headshot": "/images/members/elena.jpg",
@@ -14,6 +21,7 @@
       "AI-resilient interfaces",
       "Human-AI collaboration"
     ],
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "startTime": "2018-07-01",
     "publicationName": "Elena L. Glassman",
     "currentRole": "Assistant Professor, Computer Science, SEAS"
@@ -23,12 +31,14 @@
     "lastName": "Swoopes",
     "category": "member",
     "currentAcademicStatus": "phd-student",
+    "email": "cswoopes@g.harvard.edu",
     "headshot": "/images/members/chelse.jpg",
     "interests": [
       "Human-computer interaction",
       "AI-assisted reading",
       "Writing tools"
     ],
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "startTime": "2023-09-01",
     "publicationName": "Chelse Swoopes",
     "currentRole": "PhD Student, Computer Science"
@@ -36,15 +46,21 @@
   {
     "firstName": "Ziwei",
     "lastName": "Gu",
-    "url": "https://www.ziweigu.com/",
+    "profileLinks": [
+      {
+        "url": "https://www.ziweigu.com/"
+      }
+    ],
     "category": "member",
     "currentAcademicStatus": "phd-student",
+    "email": "ziweigu@g.harvard.edu",
     "headshot": "/images/members/ziwei.jpg",
     "interests": [
       "AI-resilient interfaces",
       "Reading interfaces",
       "Human-AI interaction"
     ],
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "startTime": "2023-09-01",
     "publicationName": "Ziwei Gu",
     "currentRole": "PhD Student, Computer Science"
@@ -52,15 +68,21 @@
   {
     "firstName": "Chau",
     "lastName": "Vu",
-    "url": "https://www.vuhachau.com/",
+    "profileLinks": [
+      {
+        "url": "https://www.vuhachau.com/"
+      }
+    ],
     "category": "member",
     "currentAcademicStatus": "phd-student",
+    "email": "chauvu@g.harvard.edu",
     "headshot": "/images/members/chau.jpg",
     "interests": [
       "Human-AI interaction",
       "Creativity support",
       "Personal informatics"
     ],
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "startTime": "2026-09-01",
     "publicationName": "Chau Vu",
     "currentRole": "PhD Student, Computer Science"
@@ -75,17 +97,35 @@
       "Human-AI interaction",
       "Interactive systems"
     ],
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "startTime": "2026-09-01",
     "publicationName": "Ruishi Zou",
-    "email": "ruishi.ray.zou@gmail.com",
-    "url": "https://ruishizou.github.io/",
-    "googleScholar": "https://scholar.google.com/citations?user=fHRnWkUAAAAJ",
-    "github": "https://github.com/ruishizou",
-    "contact": {
-      "bluesky": "https://bsky.app/profile/ruishi-zou.bsky.social",
-      "twitter": "https://x.com/ruishi_zou",
-      "linkedin": "https://www.linkedin.com/in/ruzou/"
-    },
+    "email": "ruishizou@g.harvard.edu",
+    "profileLinks": [
+      {
+        "url": "https://ruishizou.github.io/"
+      },
+      {
+        "url": "https://scholar.google.com/citations?user=fHRnWkUAAAAJ",
+        "icon": "googleScholar"
+      },
+      {
+        "url": "https://github.com/ruishizou",
+        "icon": "github"
+      },
+      {
+        "url": "https://www.linkedin.com/in/ruzou/",
+        "icon": "linkedin"
+      },
+      {
+        "url": "https://x.com/ruishi_zou",
+        "icon": "twitter"
+      },
+      {
+        "url": "https://bsky.app/profile/ruishi-zou.bsky.social",
+        "icon": "bluesky"
+      }
+    ],
     "currentRole": "PhD Student, Computer Science"
   },
   {
@@ -94,10 +134,19 @@
     "publicationName": "Trevor DePodesta",
     "startTime": "2025-09-01",
     "email": "tdepodesta@seas.harvard.edu",
-    "url": "https://tdepodesta.com",
-    "contact": {
-      "linkedin": "https://www.linkedin.com/in/trevor-depodesta-4225b1290/"
-    },
+    "profileLinks": [
+      {
+        "url": "https://tdepodesta.com"
+      },
+      {
+        "url": "https://www.linkedin.com/in/trevor-depodesta-4225b1290/",
+        "icon": "linkedin"
+      },
+      {
+        "url": "https://insight.seas.harvard.edu",
+        "title": "Insight Lab"
+      }
+    ],
     "category": "member",
     "currentAcademicStatus": "phd-student",
     "headshot": "/images/members/trevor.png",
@@ -106,13 +155,18 @@
       "Human-AI interaction",
       "Data visualization"
     ],
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "currentRole": "PhD Student, Computer Science"
   },
   {
     "firstName": "Tyler",
     "lastName": "Holloway",
     "email": "tylerholloway@g.harvard.edu",
-    "url": "https://hci.seas.harvard.edu/people/tyler-holloway",
+    "profileLinks": [
+      {
+        "url": "https://hci.seas.harvard.edu/people/tyler-holloway"
+      }
+    ],
     "category": "alumni",
     "currentAcademicStatus": "phd-student",
     "interests": [
@@ -128,7 +182,11 @@
   {
     "firstName": "Ian",
     "lastName": "Arawjo",
-    "url": "https://ianarawjo.com/",
+    "profileLinks": [
+      {
+        "url": "https://ianarawjo.com/"
+      }
+    ],
     "category": "alumni",
     "currentAcademicStatus": "faculty",
     "headshot": "/images/members/ian.jpg",
@@ -146,7 +204,11 @@
   {
     "firstName": "Priyan",
     "lastName": "Vaithilingam",
-    "url": "https://priyan.info/",
+    "profileLinks": [
+      {
+        "url": "https://priyan.info/"
+      }
+    ],
     "category": "alumni",
     "currentAcademicStatus": "phd-graduated",
     "interests": [
@@ -163,7 +225,11 @@
     "firstName": "Katy",
     "middleName": "Ilonka",
     "lastName": "Gero",
-    "url": "https://www.katygero.com/",
+    "profileLinks": [
+      {
+        "url": "https://www.katygero.com/"
+      }
+    ],
     "category": "alumni",
     "currentAcademicStatus": "faculty",
     "interests": [
@@ -181,7 +247,11 @@
     "firstName": "Naser",
     "lastName": "Al Madi",
     "email": "nsalmadi@colby.edu",
-    "url": "https://cs.colby.edu/nsalmadi/",
+    "profileLinks": [
+      {
+        "url": "https://cs.colby.edu/nsalmadi/"
+      }
+    ],
     "category": "alumni",
     "currentAcademicStatus": "faculty",
     "interests": [
@@ -200,7 +270,11 @@
     "middleName": "K.",
     "lastName": "Kummerfeld",
     "email": "jonathan.kummerfeld@sydney.edu.au",
-    "url": "https://jkk.name/",
+    "profileLinks": [
+      {
+        "url": "https://jkk.name/"
+      }
+    ],
     "category": "alumni",
     "currentAcademicStatus": "faculty",
     "interests": [
@@ -218,7 +292,11 @@
     "firstName": "Hendrik",
     "lastName": "Heuer",
     "email": "hendrik.heuer@cais-research.de",
-    "url": "https://hen-drik.de/",
+    "profileLinks": [
+      {
+        "url": "https://hen-drik.de/"
+      }
+    ],
     "category": "alumni",
     "currentAcademicStatus": "faculty",
     "interests": [
@@ -235,7 +313,11 @@
   {
     "firstName": "Tianyi",
     "lastName": "Zhang",
-    "url": "https://tianyi-zhang.github.io/",
+    "profileLinks": [
+      {
+        "url": "https://tianyi-zhang.github.io/"
+      }
+    ],
     "headshot": "/images/members/tianyi.png",
     "category": "alumni",
     "currentAcademicStatus": "faculty",
@@ -254,7 +336,11 @@
     "firstName": "Hai",
     "lastName": "Dang",
     "email": "hai.dang@uni-bayreuth.de",
-    "url": "https://www.hciai.uni-bayreuth.de/en/team/hai_dang/index.php",
+    "profileLinks": [
+      {
+        "url": "https://www.hciai.uni-bayreuth.de/en/team/hai_dang/index.php"
+      }
+    ],
     "category": "alumni",
     "currentAcademicStatus": "phd-student",
     "interests": [
@@ -273,7 +359,11 @@
     "middleName": "K.",
     "lastName": "Murthy",
     "email": "soniamurthy@g.harvard.edu",
-    "url": "https://kempnerinstitute.harvard.edu/people/our-people/sonia-murthy/",
+    "profileLinks": [
+      {
+        "url": "https://kempnerinstitute.harvard.edu/people/our-people/sonia-murthy/"
+      }
+    ],
     "category": "alumni",
     "currentAcademicStatus": "phd-student",
     "interests": [

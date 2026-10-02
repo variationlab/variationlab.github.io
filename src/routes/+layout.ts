@@ -1,7 +1,7 @@
-import type { PageLoad } from './$types';
 import type { Members, Publication } from '$lib/types';
+import type { LayoutLoad } from './$types';
 
-export const load: PageLoad = async ({ fetch }) => {
+export const load: LayoutLoad = async ({ fetch }) => {
 	const [peopleResponse, publicationsResponse] = await Promise.all([
 		fetch('/data/People.json'),
 		fetch('/data/Publications.json')

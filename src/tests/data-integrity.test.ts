@@ -2,8 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { describe, expect, it } from 'vitest';
-import { normalizeHash } from '$lib/HashRoutes';
-import type { Authors, Members, Publication } from '$lib/types';
+import { isCurrentRoute, pathForHash } from '$lib/SiteRoutes';
+import { memberProfileLinkIcons, type Authors, type Members, type Publication } from '$lib/types';
+import { getMemberSlug } from '$lib/data/Members';
 import {
 	getLabAuthorMemberships,
 	groupPublicationsByYear,
@@ -94,6 +95,21 @@ describe('Data integrity', () => {
 		});
 	});
 
+	it('has valid optional profile links', () => {
+		expect(members.length).toBeGreaterThan(0);
+		members.forEach((member) => {
+			member.profileLinks?.forEach((link) => {
+				expect(link.url.trim()).toBeTruthy();
+				if (link.icon !== undefined) {
+					expect(memberProfileLinkIcons).toContain(link.icon);
+				}
+				if (link.title !== undefined) {
+					expect(link.title.trim()).toBeTruthy();
+				}
+			});
+		});
+	});
+
 	it('has valid optional alumni role fields', () => {
 		members.forEach((member) => {
 			if (member.formerRole !== undefined) {
@@ -102,6 +118,27 @@ describe('Data integrity', () => {
 			if (member.currentRole !== undefined) {
 				expect(member.currentRole.trim()).toBeTruthy();
 			}
+		});
+	});
+
+	it('gives current members unique profile slugs', () => {
+		const slugs = members
+			.filter((member) => member.category !== 'alumni')
+			.map((member) => getMemberSlug(member));
+
+		expect(slugs.length).toBeGreaterThan(0);
+		slugs.forEach((slug) => {
+			expect(slug).toMatch(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
+		});
+		expect(new Set(slugs).size).toBe(slugs.length);
+	});
+
+	it('has a bio for every current member', () => {
+		const currentMembers = members.filter((member) => member.category !== 'alumni');
+
+		expect(currentMembers.length).toBeGreaterThan(0);
+		currentMembers.forEach((member) => {
+			expect(member.bio?.trim()).toBeTruthy();
 		});
 	});
 
@@ -213,16 +250,20 @@ describe('Data integrity', () => {
 		expect(sortPublicationsByDate([])).toEqual([]);
 	});
 
-	it('normalizes supported hash routes and aliases', () => {
-		expect(normalizeHash('#/people')).toBe('people');
-		expect(normalizeHash('#people')).toBe('people');
-		expect(normalizeHash('#/publications')).toBe('publications');
-		expect(normalizeHash('#/papers')).toBe('publications');
-		expect(normalizeHash('#papers')).toBe('publications');
-		expect(normalizeHash('#/courses')).toBe('courses');
-		expect(normalizeHash('#courses')).toBe('courses');
-		expect(normalizeHash('#/contact')).toBe('contact');
-		expect(normalizeHash('#contact')).toBe('contact');
-		expect(normalizeHash('#/')).toBe('home');
+	it('maps old hash aliases to real paths', () => {
+		expect(pathForHash('#/people')).toBe('/people');
+		expect(pathForHash('#people')).toBe('/people');
+		expect(pathForHash('#/publications')).toBe('/publications');
+		expect(pathForHash('#/papers')).toBe('/publications');
+		expect(pathForHash('#papers')).toBe('/publications');
+		expect(pathForHash('#/courses')).toBe('/courses');
+		expect(pathForHash('#courses')).toBe('/courses');
+		expect(pathForHash('#/contact')).toBe('/contact');
+		expect(pathForHash('#contact')).toBe('/contact');
+		expect(pathForHash('#/')).toBeUndefined();
+		expect(isCurrentRoute('/people/elena-l-glassman', '/people')).toBe(true);
+		expect(isCurrentRoute('/publications', '/people')).toBe(false);
+		expect(isCurrentRoute('/', '/')).toBe(true);
+		expect(isCurrentRoute('/people', '/')).toBe(false);
 	});
 });

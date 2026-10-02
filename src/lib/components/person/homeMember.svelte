@@ -1,12 +1,10 @@
 <script lang="ts">
 	import UserRound from '@lucide/svelte/icons/user-round';
 	import Image from '$lib/components/Image.svelte';
-	import { getMemberName, getMemberShortRole, getMemberWebsiteLink } from '$lib/data/Members';
+	import { getMemberName, getMemberProfilePath, getMemberShortRole } from '$lib/data/Members';
 	import type { Members } from '$lib/types';
 
 	let { member }: { member: Members } = $props();
-
-	const websiteLink = $derived(getMemberWebsiteLink(member));
 </script>
 
 {#snippet profile()}
@@ -32,18 +30,10 @@
 	</div>
 {/snippet}
 
-{#if websiteLink}
-	<a
-		class="group/member flex min-w-0 flex-col items-center gap-2 rounded-lg text-center outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-color)]"
-		href={websiteLink.url}
-		target="_blank"
-		rel="external noopener noreferrer"
-		aria-label={`${getMemberName(member)} website`}
-	>
-		{@render profile()}
-	</a>
-{:else}
-	<div class="flex min-w-0 flex-col items-center gap-2 text-center">
-		{@render profile()}
-	</div>
-{/if}
+<a
+	class="group/member flex min-w-0 flex-col items-center gap-2 rounded-lg text-center outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-color)]"
+	href={getMemberProfilePath(member)}
+	aria-label={`${getMemberName(member)} profile`}
+>
+	{@render profile()}
+</a>

@@ -2,28 +2,21 @@
 	import './layout.css';
 	import site from '$lib/data/Site';
 	import favicon from '$lib/assets/favicon.svg';
-	import { browser } from '$app/environment';
 	import TextAlignJustify from '@lucide/svelte/icons/text-align-justify';
 	import { Button } from '$lib/components/ui/button';
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
-	import { hashRoutes, normalizeHash, type RouteId } from '$lib/HashRoutes';
+	import { goto } from '$app/navigation';
+	import { page } from '$app/state';
+	import { isCurrentRoute, pathForHash, siteRoutes } from '$lib/SiteRoutes';
 	import { onMount } from 'svelte';
 
 	let { children } = $props();
 
-	let activeRouteId = $state<RouteId>(browser ? normalizeHash(window.location.hash) : 'home');
-
-	function syncActiveRoute() {
-		activeRouteId = normalizeHash(window.location.hash);
-	}
-
 	onMount(() => {
-		syncActiveRoute();
-		window.addEventListener('hashchange', syncActiveRoute);
+		if (page.url.pathname !== '/') return;
 
-		return () => {
-			window.removeEventListener('hashchange', syncActiveRoute);
-		};
+		const nextPath = pathForHash(window.location.hash);
+		if (nextPath) goto(nextPath, { replaceState: true });
 	});
 </script>
 
@@ -32,7 +25,7 @@
 		<div
 			class="mx-auto flex w-full max-w-5xl items-center gap-4 px-4 py-3 font-sans sm:px-5 lg:px-6"
 		>
-			<a class="group flex shrink-0 items-center gap-3" href="#/" aria-label={`${site.title} home`}>
+			<a class="group flex shrink-0 items-center gap-3" href="/" aria-label={`${site.title} home`}>
 				<img class="h-10 w-auto" src={site.headerLogo.src} alt={site.headerLogo.alt} />
 				<span
 					class="navBrand border-b border-transparent text-zinc-950 transition-colors group-hover:border-zinc-300 group-hover:text-[var(--brand-color)] group-focus-visible:border-zinc-300 group-focus-visible:text-[var(--brand-color)]"
@@ -45,13 +38,14 @@
 				class="navText ml-auto hidden flex-wrap items-baseline justify-end gap-x-4 gap-y-2 text-zinc-600 sm:flex"
 				aria-label="Primary"
 			>
-				{#each hashRoutes as route (route.id)}
+				{#each siteRoutes as route (route.id)}
 					<a
-						class={activeRouteId === route.id
+						class={isCurrentRoute(page.url.pathname, route.href)
 							? 'text-harvard border-b border-current font-semibold'
 							: 'border-b border-transparent hover:border-zinc-300 hover:text-[var(--brand-color)]'}
-						href={'#' + route.href.slice(1)}
-						aria-current={activeRouteId === route.id ? 'page' : undefined}>{route.label}</a
+						href={route.href}
+						aria-current={isCurrentRoute(page.url.pathname, route.href) ? 'page' : undefined}
+						>{route.label}</a
 					>
 				{/each}
 			</nav>
@@ -72,18 +66,18 @@
 						{/snippet}
 					</DropdownMenu.Trigger>
 					<DropdownMenu.Content align="end" class="w-44">
-						{#each hashRoutes as route (route.id)}
+						{#each siteRoutes as route (route.id)}
 							<DropdownMenu.Item>
 								{#snippet child({ props })}
 									<a
 										{...props}
 										class={`${props.class ?? ''} w-full ${
-											activeRouteId === route.id
+											isCurrentRoute(page.url.pathname, route.href)
 												? 'font-semibold text-[var(--brand-color)]'
 												: 'text-zinc-700 hover:text-[var(--brand-color)]'
 										}`}
-										href={'#' + route.href.slice(1)}
-										aria-current={activeRouteId === route.id ? 'page' : undefined}
+										href={route.href}
+										aria-current={isCurrentRoute(page.url.pathname, route.href) ? 'page' : undefined}
 									>
 										{route.label}
 									</a>
@@ -118,9 +112,9 @@
 				class="footerNav flex flex-wrap items-center justify-center gap-x-2 gap-y-2"
 				aria-label="Footer"
 			>
-				{#each hashRoutes as route, index (route.id)}
+				{#each siteRoutes as route, index (route.id)}
 					{#if index > 0}<span class="text-white/60">/</span>{/if}
-					<a class="text-white hover:text-white/75" href={'#' + route.href.slice(1)}>
+					<a class="text-white hover:text-white/75" href={route.href}>
 						{route.label}
 					</a>
 				{/each}

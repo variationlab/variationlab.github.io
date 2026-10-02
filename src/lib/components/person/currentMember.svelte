@@ -11,8 +11,8 @@
 		getMemberGitHubLink,
 		getMemberGoogleScholarLink,
 		getMemberName,
+		getMemberProfilePath,
 		getMemberSocialLinks,
-		getMemberWebsiteLink,
 		hasMemberSocialLinks
 	} from '$lib/data/Members';
 	import type { Members } from '$lib/types';
@@ -26,7 +26,6 @@
 	let { member, onPreview, onClearPreview }: CurrentMemberProps = $props();
 	let tileWidth = $state(0);
 	let isOpen = $state(false);
-	let clickedOpen = false;
 
 	function openPreview() {
 		isOpen = true;
@@ -35,17 +34,7 @@
 
 	function closePreview() {
 		isOpen = false;
-		clickedOpen = false;
 		onClearPreview();
-	}
-
-	function togglePreview() {
-		if (clickedOpen) {
-			closePreview();
-		} else {
-			clickedOpen = true;
-			openPreview();
-		}
 	}
 
 	function previewOnKeyboardFocus(event: FocusEvent) {
@@ -55,7 +44,6 @@
 	}
 
 	const emailLink = $derived(getMemberEmailLink(member));
-	const websiteLink = $derived(getMemberWebsiteLink(member));
 	const googleScholarLink = $derived(getMemberGoogleScholarLink(member));
 	const githubLink = $derived(getMemberGitHubLink(member));
 	const socialLinks = $derived(getMemberSocialLinks(member));
@@ -122,23 +110,11 @@
 		</div>
 	{/if}
 
-	{#if websiteLink}
-		<a
-			class="absolute inset-0 z-10 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-color)]"
-			href={websiteLink.url}
-			target="_blank"
-			rel="external noopener noreferrer"
-			aria-label={`${getMemberName(member)} website`}
-		></a>
-	{:else}
-		<button
-			type="button"
-			class="absolute inset-0 z-10 cursor-default bg-transparent outline-none"
-			aria-label={`Show details for ${getMemberName(member)}`}
-			aria-expanded={isOpen}
-			onclick={togglePreview}
-		></button>
-	{/if}
+	<a
+		class="absolute inset-0 z-10 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-color)]"
+		href={getMemberProfilePath(member)}
+		aria-label={`${getMemberName(member)} profile`}
+	></a>
 
 	<span
 		class="tileName pointer-events-none absolute inset-x-0 bottom-0 z-20 rounded-b-lg bg-gradient-to-t from-zinc-950/80 to-transparent px-2 pt-10 pb-2 text-white"

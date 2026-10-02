@@ -38,9 +38,15 @@
 		{/each}
 	</div>
 
-	<div class="hidden min-w-0 gap-2 sm:grid sm:grid-cols-4 lg:grid-cols-5">
+	<div class="hidden min-w-0 items-start gap-2 sm:grid sm:grid-cols-4 lg:grid-cols-5">
+		<div class="grid grid-cols-2 gap-2 sm:col-span-2 lg:col-span-3 lg:grid-cols-3">
+			{#each currentMembers as member (getMemberName(member))}
+				<CurrentMember {member} onPreview={previewMember} onClearPreview={clearPreview} />
+			{/each}
+		</div>
+
 		<aside
-			class="row-start-1 flex min-h-0 max-w-full min-w-0 flex-col justify-start px-1 py-2 sm:col-span-2 sm:col-start-3 lg:col-start-4 lg:px-3"
+			class="flex min-w-0 flex-col justify-start px-1 py-2 sm:col-span-2 lg:px-3"
 			aria-live="polite"
 		>
 			{#if previewedMember}
@@ -55,16 +61,18 @@
 				<p class="bodyText mt-1 max-w-full [overflow-wrap:anywhere] break-words text-zinc-700">
 					{previewedMember.interests.join(', ')}
 				</p>
+				{#if previewedMember.bio}
+					<hr class="my-4 border-zinc-200" />
+					<p class="bodyText max-w-full [overflow-wrap:anywhere] break-words text-zinc-700">
+						{previewedMember.bio}
+					</p>
+				{/if}
 			{:else}
 				<p class="pageKicker text-harvard max-w-full [overflow-wrap:anywhere] break-words italic">
 					{site.peopleTagline}
 				</p>
 			{/if}
 		</aside>
-
-		{#each currentMembers as member (getMemberName(member))}
-			<CurrentMember {member} onPreview={previewMember} onClearPreview={clearPreview} />
-		{/each}
 	</div>
 </section>
 
