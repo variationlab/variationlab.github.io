@@ -167,16 +167,6 @@ body {
 	}
 }
 
-.navBrand {
-	font-size: var(--text-xl);
-	font-weight: 700;
-	line-height: var(--leading-compact);
-
-	@variant sm {
-		font-size: var(--text-2xl);
-	}
-}
-
 .pageTitle {
 	font-size: var(--text-2xl);
 	font-weight: 700;

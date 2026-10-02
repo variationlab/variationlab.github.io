@@ -35,13 +35,8 @@
 		<div
 			class="mx-auto flex w-full max-w-5xl items-center gap-4 px-4 py-3 font-sans sm:px-5 lg:px-6"
 		>
-			<a class="group flex shrink-0 items-center gap-3" href="#/" aria-label={`${site.title} home`}>
-				<img class="h-10 w-auto" src={site.headerLogo.src} alt={site.headerLogo.alt} />
-				<span
-					class="navBrand border-b border-transparent text-harvard transition-colors group-hover:border-current group-focus-visible:border-current"
-				>
-					{site.labName}
-				</span>
+			<a class="flex shrink-0 items-center" href="#/" aria-label={`${site.title} home`}>
+				<img class="h-10 w-auto sm:h-12" src={site.headerLogo.src} alt={site.headerLogo.alt} />
 			</a>
 			<nav
 				class="navText ml-auto hidden flex-wrap items-baseline justify-end gap-x-4 gap-y-2 text-zinc-600 sm:flex"
