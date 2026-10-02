@@ -16,14 +16,12 @@ export function getMemberName(member: Members): string {
 	return member.publicationName;
 }
 
-export function orderActiveMembers(members: Members[], random = Math.random): Members[] {
+export function orderActiveMembers(members: Members[]): Members[] {
 	const active = members.filter((member) => member.category !== 'alumni');
 	const faculty = active.filter((member) => member.currentAcademicStatus === 'faculty');
-	const others = active.filter((member) => member.currentAcademicStatus !== 'faculty');
-	for (let index = others.length - 1; index > 0; index--) {
-		const swapIndex = Math.floor(random() * (index + 1));
-		[others[index], others[swapIndex]] = [others[swapIndex], others[index]];
-	}
+	const others = active
+		.filter((member) => member.currentAcademicStatus !== 'faculty')
+		.sort((a, b) => a.startTime.localeCompare(b.startTime));
 	return [...faculty, ...others];
 }
 

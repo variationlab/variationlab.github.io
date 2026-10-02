@@ -22,26 +22,33 @@ const baseMember: Members = {
 };
 
 describe('Member contact link helpers', () => {
-	it('keeps active faculty first and shuffles everyone else without changing the input', () => {
-		const studentA = { ...baseMember, publicationName: 'Student A' };
-		const studentB = { ...baseMember, publicationName: 'Student B' };
+	it('keeps active faculty first and orders everyone else by start date without changing the input', () => {
+		const studentA = { ...baseMember, publicationName: 'Student A', startTime: '2024-01-01' };
+		const studentB = { ...baseMember, publicationName: 'Student B', startTime: '2022-09-01' };
+		const studentC = { ...baseMember, publicationName: 'Student C', startTime: '2022-09-01' };
 		const faculty: Members = {
 			...baseMember,
 			publicationName: 'Faculty',
-			currentAcademicStatus: 'faculty'
+			currentAcademicStatus: 'faculty',
+			startTime: '2010-01-01'
 		};
-		const secondFaculty: Members = { ...faculty, publicationName: 'Second Faculty' };
+		const secondFaculty: Members = {
+			...faculty,
+			publicationName: 'Second Faculty',
+			startTime: '2015-01-01'
+		};
 		const alumni: Members = { ...faculty, publicationName: 'Alumni', category: 'alumni' };
-		const input = [studentA, faculty, alumni, studentB, secondFaculty];
-		expect(orderActiveMembers(input, () => 0)).toEqual([
+		const input = [studentA, faculty, alumni, studentC, studentB, secondFaculty];
+		expect(orderActiveMembers(input)).toEqual([
 			faculty,
 			secondFaculty,
+			studentC,
 			studentB,
 			studentA
 		]);
-		expect(input).toEqual([studentA, faculty, alumni, studentB, secondFaculty]);
-		expect(orderActiveMembers([], () => 0)).toEqual([]);
-		expect(orderActiveMembers([studentA], () => 0)).toEqual([studentA]);
+		expect(input).toEqual([studentA, faculty, alumni, studentC, studentB, secondFaculty]);
+		expect(orderActiveMembers([])).toEqual([]);
+		expect(orderActiveMembers([studentA])).toEqual([studentA]);
 	});
 	it('uses explicit current roles regardless of name or category', () => {
 		for (const firstName of ['Elena', 'Chau', 'Ruishi', 'Example']) {

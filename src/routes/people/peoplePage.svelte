@@ -1,6 +1,5 @@
 <script lang="ts">
 	import site from '$lib/data/Site';
-	import { onMount } from 'svelte';
 	import CurrentMember from '$lib/components/person/currentMember.svelte';
 	import CurrentMemberRow from '$lib/components/person/currentMemberRow.svelte';
 	import OtherMember from '$lib/components/person/otherMember.svelte';
@@ -9,12 +8,7 @@
 
 	let { members }: { members: Members[] } = $props();
 
-	let currentMembers = $derived(members.filter((member) => member.category !== 'alumni'));
-
-	// Shuffle only after hydration; keep this order during hover and other UI updates.
-	onMount(() => {
-		currentMembers = orderActiveMembers(members);
-	});
+	let currentMembers = $derived(orderActiveMembers(members));
 	let alumniMembers = $derived(members.filter((member) => member.category === 'alumni'));
 	let previewedMemberName = $state<string | undefined>();
 	let previewedMember = $derived(
