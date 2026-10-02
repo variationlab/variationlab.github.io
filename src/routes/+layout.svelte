@@ -5,34 +5,67 @@
 	import TextAlignJustify from '@lucide/svelte/icons/text-align-justify';
 	import { Button } from '$lib/components/ui/button';
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
-	import { goto } from '$app/navigation';
+	import { afterNavigate, goto } from '$app/navigation';
 	import { page } from '$app/state';
 	import { isCurrentRoute, pathForHash, siteRoutes } from '$lib/SiteRoutes';
 	import { onMount } from 'svelte';
 
 	let { children } = $props();
 
+	const COLLAPSE_DISTANCE = 190;
+
+	let scrollCollapse = $state(0);
+	let collapse = $derived(page.url.pathname === '/' ? scrollCollapse : 1);
+
+	function syncHeader() {
+		if (page.url.pathname !== '/') return;
+
+		const y = window.scrollY || 0;
+		const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		const next = reduceMotion ? (y > 12 ? 1 : 0) : Math.min(1, Math.max(0, y / COLLAPSE_DISTANCE));
+		if (next !== 0 && next !== 1 && Math.abs(next - scrollCollapse) < 0.004) return;
+		scrollCollapse = next;
+	}
+
 	onMount(() => {
+		syncHeader();
 		if (page.url.pathname !== '/') return;
 
 		const nextPath = pathForHash(window.location.hash);
 		if (nextPath) goto(nextPath, { replaceState: true });
 	});
+
+	afterNavigate(() => {
+		syncHeader();
+	});
 </script>
 
+<svelte:window onscroll={syncHeader} />
+
 <div class="flex min-h-screen max-w-full flex-col bg-white">
-	<header class="sticky top-0 z-50 border-b border-zinc-200 bg-white">
+	<header
+		class="headerBar sticky top-0 z-50 overflow-visible border-b border-zinc-200 bg-white"
+		class:headerCompact={collapse === 1}
+		style:--collapse={collapse}
+	>
 		<div
-			class="mx-auto flex w-full max-w-5xl items-center gap-4 px-4 py-3 font-sans sm:px-5 lg:px-6"
+			class="headerInner mx-auto flex w-full max-w-5xl flex-wrap items-center gap-x-4 gap-y-3 px-4 font-sans sm:px-5 lg:px-6"
 		>
-			<a class="group flex shrink-0 items-center gap-3" href="/" aria-label={`${site.title} home`}>
-				<img class="h-10 w-auto" src={site.headerLogo.src} alt={site.headerLogo.alt} />
-				<span
-					class="navBrand border-b border-transparent text-zinc-950 transition-colors group-hover:border-zinc-300 group-hover:text-[var(--brand-color)] group-focus-visible:border-zinc-300 group-focus-visible:text-[var(--brand-color)]"
-				>
-					{#each site.labName.split(' ') as word, index (word)}
-						{#if index > 0}{' '}{/if}<span class={index === 0 ? undefined : 'logoThin'}>{word}</span>
-					{/each}
+			<a
+				class="headerBrand group"
+				href="/"
+				aria-label={`${site.labName}. ${site.headerSubtitle}. Home`}
+			>
+				<img class="headerLogo" src={site.headerLogo.src} alt="" />
+				<span class="headerWords">
+					<span
+						class="navBrand border-b border-transparent text-zinc-950 transition-colors group-hover:border-zinc-300 group-hover:text-[var(--brand-color)] group-focus-visible:border-zinc-300 group-focus-visible:text-[var(--brand-color)]"
+					>
+						{#each site.labName.split(' ') as word, index (word)}
+							{#if index > 0}{' '}{/if}<span class={index === 0 ? undefined : 'logoThin'}>{word}</span>
+						{/each}
+					</span>
+					<span class="headerSubtitle">{site.headerSubtitle}</span>
 				</span>
 			</a>
 			<nav

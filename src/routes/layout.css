@@ -97,6 +97,7 @@
 
 body {
 	margin: 0;
+	overflow-anchor: none;
 	font-family: inherit;
 }
 
@@ -219,8 +220,96 @@ a:hover {
 	line-height: var(--line-content);
 }
 
+.headerBar {
+	--collapse: 1;
+	--logo-expanded: 8rem;
+	--logo-compact: 2.5rem;
+	--logo-h: calc(var(--logo-expanded) - (var(--logo-expanded) - var(--logo-compact)) * var(--collapse));
+	--word-compact: 1.25rem;
+	--word-expanded: clamp(1.5rem, 4.8vw, 2.2rem);
+	--word-size: calc(var(--word-expanded) - (var(--word-expanded) - var(--word-compact)) * var(--collapse));
+	--sub-size: 1.0625rem;
+	--sub-gap: calc(0.2rem * (1 - var(--collapse)));
+	--sub-h: calc(var(--sub-size) * 1.35 * (1 - var(--collapse)));
+	overflow-anchor: none;
+}
+
+.headerInner {
+	padding-top: calc(0.75rem + 0.45rem * (1 - var(--collapse)));
+	padding-bottom: calc(0.75rem + 0.75rem * (1 - var(--collapse)));
+}
+
+.headerBrand {
+	display: flex;
+	flex: 0 0 auto;
+	align-items: center;
+	gap: calc(0.75rem + 0.25rem * (1 - var(--collapse)));
+}
+
+.headerLogo {
+	height: var(--logo-h);
+	width: auto;
+	flex: 0 0 auto;
+	object-fit: contain;
+}
+
+.headerWords {
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--sub-gap);
+}
+
+.headerWords .navBrand {
+	font-size: var(--word-size);
+	white-space: nowrap;
+}
+
+.headerSubtitle {
+	height: var(--sub-h);
+	overflow: hidden;
+	color: #52525b;
+	font-family: var(--font-sans);
+	font-size: var(--sub-size);
+	font-style: italic;
+	font-weight: 400;
+	line-height: 1.35;
+	white-space: nowrap;
+	opacity: calc(1 - min(var(--collapse) * 1.75, 1));
+}
+
+.headerCompact .headerLogo {
+	height: 2.5rem;
+}
+
+.headerCompact .headerBrand {
+	gap: 0.75rem;
+}
+
+.headerCompact .headerInner {
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+}
+
+.headerCompact .headerWords .navBrand {
+	font-size: 1.25rem;
+}
+
+.headerCompact .headerSubtitle {
+	display: none;
+}
+
 @media (min-width: 640px) {
 	.navBrand {
+		font-size: 1.5rem;
+	}
+
+	.headerBar {
+		--word-compact: 1.5rem;
+	}
+
+	.headerCompact .headerWords .navBrand {
 		font-size: 1.5rem;
 	}
 
