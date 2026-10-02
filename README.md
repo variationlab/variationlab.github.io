@@ -3,7 +3,7 @@
 ## Editing site content
 
 - Set each person's display title with `currentRole` in `static/data/People.json`. It applies to current members and alumni. If omitted, the title uses a general label from `currentAcademicStatus`, without assuming a department or matching a name. Alumni `formerRole` may be any nonempty title.
-- Edit branding, logos, introductory copy, the people tagline, course/contact messages, and the recent-publication count in `static/data/Site.json`. This configuration is imported at build time; rebuild to publish changes.
+- Edit branding, logos, introductory copy, the people tagline, course/contact messages, and the recent-publication count in `src/lib/data/Site.json`. This configuration is imported at build time; rebuild to publish changes.
 - Set brand colors in the `:root` variables in `src/routes/layout.css`.
 - Publications are ordered by `publishDate`; JSON array order does not control recency. The copyright year follows the current year when rendered.
 
