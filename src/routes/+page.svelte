@@ -9,6 +9,8 @@
 		getPublicationLinks,
 		isLabAuthorForPublication
 	} from '$lib/data/Publications';
+	import { getMemberName, orderActiveMembers } from '$lib/data/Members';
+	import HomeMember from '$lib/components/person/homeMember.svelte';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 	import ContactPage from './contact/contactPage.svelte';
@@ -23,6 +25,7 @@
 		activeRouteId === 'home' ? site.title : `${getRouteLabel(activeRouteId)} | ${site.title}`
 	);
 
+	let currentMembers = $derived(orderActiveMembers(data.members));
 	let recentPublications = $derived(
 		sortPublicationsByDate(data.publications).slice(0, site.home.recentPublicationsLimit)
 	);
@@ -61,6 +64,13 @@
 				{site.home.introPrefix} <span class="pageKicker text-harvard">{site.home.highlight}</span>
 				{site.home.introSuffix}
 			</p>
+			<ul class="mt-6 flex items-start gap-4 overflow-x-auto lg:overflow-visible">
+				{#each currentMembers as member (getMemberName(member))}
+					<li class="w-36 shrink-0 lg:w-auto lg:min-w-0 lg:flex-1">
+						<HomeMember {member} />
+					</li>
+				{/each}
+			</ul>
 			<div class="mt-6 flex flex-wrap gap-3">
 				<a class="homeLink" href="#/publications">View Publications</a>
 				<a class="homeLink homeLinkSecondary" href="#/people">Meet People</a>

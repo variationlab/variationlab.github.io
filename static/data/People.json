@@ -31,7 +31,7 @@
     ],
     "startTime": "2023-09-01",
     "publicationName": "Chelse Swoopes",
-    "currentRole": "PhD student, Computer Science"
+    "currentRole": "PhD Student, Computer Science"
   },
   {
     "firstName": "Ziwei",
@@ -47,7 +47,7 @@
     ],
     "startTime": "2023-09-01",
     "publicationName": "Ziwei Gu",
-    "currentRole": "PhD student, Computer Science"
+    "currentRole": "PhD Student, Computer Science"
   },
   {
     "firstName": "Chau",
@@ -63,7 +63,7 @@
     ],
     "startTime": "2026-09-01",
     "publicationName": "Chau Vu",
-    "currentRole": "PhD student, Computer Science"
+    "currentRole": "PhD Student, Computer Science"
   },
   {
     "firstName": "Ruishi",
@@ -86,7 +86,7 @@
       "twitter": "https://x.com/ruishi_zou",
       "linkedin": "https://www.linkedin.com/in/ruzou/"
     },
-    "currentRole": "PhD student, Computer Science"
+    "currentRole": "PhD Student, Computer Science"
   },
   {
     "firstName": "Trevor",
@@ -106,7 +106,7 @@
       "Human-AI interaction",
       "Data visualization"
     ],
-    "currentRole": "PhD student, Computer Science"
+    "currentRole": "PhD Student, Computer Science"
   },
   {
     "firstName": "Tyler",
@@ -122,8 +122,8 @@
     ],
     "startTime": "2020-09-01",
     "publicationName": "Tyler Holloway",
-    "formerRole": "PhD student",
-    "currentRole": "PhD student"
+    "formerRole": "PhD Student",
+    "currentRole": "PhD Student"
   },
   {
     "firstName": "Ian",
@@ -283,8 +283,8 @@
     ],
     "startTime": "2022-09-01",
     "endTime": "2023-12-31",
-    "formerRole": "PhD student",
-    "currentRole": "PhD student, Harvard Computer Science",
+    "formerRole": "PhD Student",
+    "currentRole": "PhD Student, Harvard Computer Science",
     "publicationName": "Sonia K. Murthy"
   }
 ]

@@ -30,7 +30,7 @@ export function getMemberStatus(member: Members): string {
 	const labels: Record<Members['currentAcademicStatus'], string> = {
 		undergrad: 'Undergraduate student',
 		master: 'Master’s student',
-		'phd-student': 'PhD student',
+		'phd-student': 'PhD Student',
 		'phd-candidate': 'PhD candidate',
 		'phd-graduated': 'PhD graduate',
 		postdoc: 'Postdoctoral researcher',
@@ -38,6 +38,10 @@ export function getMemberStatus(member: Members): string {
 		other: 'Lab member'
 	};
 	return labels[member.currentAcademicStatus];
+}
+
+export function getMemberShortRole(member: Members): string {
+	return getMemberStatus(member).split(',')[0].trim();
 }
 
 export function getMemberEmailLink(member: Members): MemberDirectLink | undefined {

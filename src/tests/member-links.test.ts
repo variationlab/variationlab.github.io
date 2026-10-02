@@ -4,6 +4,7 @@ import {
 	getMemberEmailLink,
 	getMemberGitHubLink,
 	getMemberGoogleScholarLink,
+	getMemberShortRole,
 	getMemberStatus,
 	orderActiveMembers,
 	getMemberSocialLinks,
@@ -50,19 +51,32 @@ describe('Member contact link helpers', () => {
 		expect(orderActiveMembers([])).toEqual([]);
 		expect(orderActiveMembers([studentA])).toEqual([studentA]);
 	});
+	it('uses the role before the department on short labels', () => {
+		expect(
+			getMemberShortRole({
+				...baseMember,
+				currentRole: 'Assistant Professor, Computer Science, SEAS'
+			})
+		).toBe('Assistant Professor');
+		expect(
+			getMemberShortRole({ ...baseMember, currentRole: 'PhD Student, Computer Science' })
+		).toBe('PhD Student');
+		expect(getMemberShortRole(baseMember)).toBe('PhD Student');
+	});
+
 	it('uses explicit current roles regardless of name or category', () => {
 		for (const firstName of ['Elena', 'Chau', 'Ruishi', 'Example']) {
 			expect(getMemberStatus({ ...baseMember, firstName, currentRole: 'Research scientist' })).toBe(
 				'Research scientist'
 			);
-			expect(getMemberStatus({ ...baseMember, firstName })).toBe('PhD student');
+			expect(getMemberStatus({ ...baseMember, firstName })).toBe('PhD Student');
 		}
 	});
 
 	it.each([
 		['undergrad', 'Undergraduate student'],
 		['master', 'Master’s student'],
-		['phd-student', 'PhD student'],
+		['phd-student', 'PhD Student'],
 		['phd-candidate', 'PhD candidate'],
 		['phd-graduated', 'PhD graduate'],
 		['postdoc', 'Postdoctoral researcher'],
