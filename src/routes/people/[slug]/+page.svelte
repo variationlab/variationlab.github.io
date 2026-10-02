@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
+	import Building2 from '@lucide/svelte/icons/building-2';
 	import Globe from '@lucide/svelte/icons/globe';
 	import GraduationCap from '@lucide/svelte/icons/graduation-cap';
 	import Mail from '@lucide/svelte/icons/mail';
@@ -21,12 +22,9 @@
 	let { data }: PageProps = $props();
 
 	const member = $derived(data.member);
+	const office = $derived(member.office?.trim() ?? '');
 	const emailLink = $derived(getMemberEmailLink(member));
-	const profileLinks = $derived(getMemberProfileLinks(member));
-	const websiteLinks = $derived(
-		profileLinks.filter((link) => link.icon === 'website' && !link.title)
-	);
-	const links = $derived(profileLinks.filter((link) => link.icon !== 'website' || link.title));
+	const links = $derived(getMemberProfileLinks(member));
 	const linkLabels = {
 		github: 'GitHub',
 		googleScholar: 'Google Scholar',
@@ -78,7 +76,7 @@
 				</div>
 			{/if}
 
-			{#if emailLink || websiteLinks.length > 0}
+			{#if office || emailLink}
 				<div class="mt-3 flex flex-col items-center gap-2">
 					{#if emailLink}
 						<a
@@ -89,17 +87,14 @@
 							<span class="break-all">{member.email}</span>
 						</a>
 					{/if}
-					{#each websiteLinks as link (link.url)}
-						<a
-							class="metaText flex items-start justify-center gap-1.5 text-center text-zinc-700 hover:text-[var(--brand-color)]"
-							href={link.url}
-							target="_blank"
-							rel="external noopener noreferrer"
+					{#if office}
+						<p
+							class="metaText flex items-start justify-center gap-1.5 text-center text-zinc-700"
 						>
-							<Globe aria-hidden="true" class="mt-0.5 shrink-0" size={16} />
-							<span class="break-all">{link.url}</span>
-						</a>
-					{/each}
+							<Building2 aria-hidden="true" class="mt-0.5 shrink-0" size={16} />
+							<span>{office}</span>
+						</p>
+					{/if}
 				</div>
 			{/if}
 		</div>

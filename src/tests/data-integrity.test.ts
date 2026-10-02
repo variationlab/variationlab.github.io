@@ -118,6 +118,9 @@ describe('Data integrity', () => {
 			if (member.currentRole !== undefined) {
 				expect(member.currentRole.trim()).toBeTruthy();
 			}
+			if (member.office !== undefined) {
+				expect(member.office.trim()).toBeTruthy();
+			}
 		});
 	});
 

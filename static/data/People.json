@@ -21,10 +21,11 @@
       "AI-resilient interfaces",
       "Human-AI collaboration"
     ],
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "bio": "Elena L. Glassman is an Assistant Professor of Computer Science at the Harvard John A. Paulson School of Engineering & Applied Sciences, specializing in human-computer interaction. Prior to that, she was a postdoctoral scholar at UC Berkeley, and obtained a BS, MEng, and PhD in Electrical Engineering and Computer Science from MIT. She has been named a Stanley A. Marks & William H. Marks Professor at the Radcliffe Institute for Advanced Study and a National Academy of Sciences Kavli Fellow. Her work has been funded by the NSF, private industry, the Berkeley Institute for Data Science, and the Sloan Research Fellowship. This work has received Best Paper and Honorable Mention awards at top-tier human-computer interaction research venues.",
     "startTime": "2018-07-01",
     "publicationName": "Elena L. Glassman",
-    "currentRole": "Assistant Professor, Computer Science, SEAS"
+    "currentRole": "Assistant Professor, Computer Science",
+    "office": "SEC 2.108"
   },
   {
     "firstName": "Chelse",
@@ -85,7 +86,8 @@
     "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "startTime": "2026-09-01",
     "publicationName": "Chau Vu",
-    "currentRole": "PhD Student, Computer Science"
+    "currentRole": "PhD Student, Computer Science",
+    "office": "SEC 2.347"
   },
   {
     "firstName": "Ruishi",
@@ -126,7 +128,8 @@
         "icon": "bluesky"
       }
     ],
-    "currentRole": "PhD Student, Computer Science"
+    "currentRole": "PhD Student, Computer Science",
+    "office": "SEC 2.347"
   },
   {
     "firstName": "Trevor",
@@ -156,7 +159,8 @@
       "Data visualization"
     ],
     "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "currentRole": "PhD Student, Computer Science"
+    "currentRole": "PhD Student, Computer Science",
+    "office": "SEC 2.347 | SEC 2.409"
   },
   {
     "firstName": "Tyler",

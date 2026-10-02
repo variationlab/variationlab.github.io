@@ -22,6 +22,8 @@ export interface Members extends Authors {
 		| 'other';
 	/** Full /images/members/ path including .jpg, .jpeg, .png, or .webp; square, at most 650 × 650 px. */
 	headshot?: string;
+	/** Office number, shown under the photo on the profile page. */
+	office?: string;
 	interests: string[];
 	/** Shown under research interests. Used for current members. */
 	bio?: string;
@@ -46,7 +48,7 @@ export type MemberProfileLinkIcon = (typeof memberProfileLinkIcons)[number];
 export interface MemberProfileLink {
 	url: string;
 	icon?: MemberProfileLinkIcon;
-	/** Shown under the bio for a generic link. The personal website omits this and stays under the photo. */
+	/** Label shown with the link under the bio. Defaults to the icon name, such as Website. */
 	title?: string;
 }
 
