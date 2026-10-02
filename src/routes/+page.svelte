@@ -37,6 +37,22 @@
 				</li>
 			{/each}
 		</ul>
+		<div class="mt-6 space-y-4">
+			<p class="bodyText text-zinc-700">
+				AI is powerful, but it can be wrong, contextually inappropriate, or subjectively bad—and suppress the user’s
+                critical engagement and learning at the same time. The Variation Lab’s research is defining and refining our understanding
+                of AI-resilient interfaces that help people use AI while (a) maintaining their ability to notice AI choices, e.g., 
+                by spurring curiosity and cognitive engagement through surfacing variation in the data and/or the AI’s outputs and 
+                (b) giving them the context necessary to evaluate whether those choices are wrong, or at least not right for them. 
+                This is critical during context- and preference-dominated open-ended tasks, like ideating, searching, sensemaking, 
+                and reading or writing text and code at scale. 
+			</p>
+			<p class="bodyText text-zinc-700">
+				AI-resilient interfaces improve AI safety, usability, and utility by working with, not against, human perception, 
+                attention, and cognition. To achieve this, we derive and disseminate design implications from cognitive science and 
+                empirical studies of novel system prototypes, even and especially when these implications fly in the face of common usability guidelines.
+			</p>
+		</div>
 		<div class="mt-6 flex flex-wrap gap-3">
 			<a class="homeLink" href="/publications">View Publications</a>
 			<a class="homeLink homeLinkSecondary" href="/people">Meet People</a>
