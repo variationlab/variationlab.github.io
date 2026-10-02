@@ -7,6 +7,7 @@
 
 @theme {
 	--font-sans: 'Fira Sans', ui-sans-serif, system-ui, sans-serif;
+	--font-logo: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
 	--color-sidebar-ring: var(--sidebar-ring);
 	--color-sidebar-border: var(--sidebar-border);
 	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -108,10 +109,16 @@ a:hover {
 }
 
 .navBrand {
+	font-family: var(--font-logo);
 	font-size: 1.25rem;
-	font-weight: 600;
-	letter-spacing: 0;
+	font-weight: 700;
+	letter-spacing: -0.02em;
 	line-height: var(--line-compact);
+	text-transform: uppercase;
+}
+
+.logoThin {
+	font-weight: 400;
 }
 
 .navText {
@@ -193,9 +200,12 @@ a:hover {
 }
 
 .footerBrand {
+	font-family: var(--font-logo);
 	font-size: 0.875rem;
-	font-weight: 500;
+	font-weight: 700;
+	letter-spacing: -0.02em;
 	line-height: var(--line-compact);
+	text-transform: uppercase;
 }
 
 .footerNav {

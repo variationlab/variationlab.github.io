@@ -30,8 +30,9 @@
 				<span
 					class="navBrand border-b border-transparent text-zinc-950 transition-colors group-hover:border-zinc-300 group-hover:text-[var(--brand-color)] group-focus-visible:border-zinc-300 group-focus-visible:text-[var(--brand-color)]"
 				>
-					<span class="text-harvard">{site.institution}</span>
-					{site.labName}
+					{#each site.labName.split(' ') as word, index (word)}
+						{#if index > 0}{' '}{/if}<span class={index === 0 ? undefined : 'logoThin'}>{word}</span>
+					{/each}
 				</span>
 			</a>
 			<nav
@@ -101,10 +102,15 @@
 	>
 		<div class="mx-auto flex w-full max-w-5xl flex-col items-center gap-6">
 			<div class="flex flex-wrap items-center justify-center gap-x-7 gap-y-4">
-				<div class="footerBrand text-right">
-					{#each site.footerNameLines as line, index (index)}<span class="block">{line}</span>{/each}
+				<div class="flex flex-col items-center gap-3">
+					<img class="h-12 w-auto" src={site.footerMark.src} alt={site.footerMark.alt} />
+					<div class="footerBrand">
+						{#each site.footerNameLines as line, index (index)}
+							{#if index > 0}{' '}{/if}<span class={index === 0 ? undefined : 'logoThin'}>{line}</span>
+						{/each}
+					</div>
 				</div>
-				<div class="h-16 w-px bg-white/30"></div>
+				<div class="w-px self-stretch bg-white/30"></div>
 				<img class="h-16 w-auto max-w-72" src={site.footerLogo.src} alt={site.footerLogo.alt} />
 			</div>
 

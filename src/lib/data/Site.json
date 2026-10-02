@@ -7,8 +7,12 @@
     "Lab"
   ],
   "headerLogo": {
-    "src": "/images/harvard-hci-logo.png",
-    "alt": "Harvard HCI"
+    "src": "/images/temp_logo.png",
+    "alt": "Variation Lab"
+  },
+  "footerMark": {
+    "src": "/images/temp_logo_white.png",
+    "alt": ""
   },
   "footerLogo": {
     "src": "/images/harvard-seas.svg",
