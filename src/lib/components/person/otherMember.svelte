@@ -1,27 +1,16 @@
 <script lang="ts">
 	import UserRound from '@lucide/svelte/icons/user-round';
 	import Image from '$lib/components/Image.svelte';
-	import { getMemberName, getMemberStatus, getMemberWebsiteLink } from '$lib/data/Members';
+	import { getMemberName, getMemberStatus } from '$lib/data/Members';
 	import type { Members } from '$lib/types';
 
 	let { member }: { member: Members } = $props();
-
-	const websiteLink = $derived(getMemberWebsiteLink(member));
 </script>
 
 {#snippet memberSummary()}
 	<div class="min-w-0">
 		<h3 class="personTitle truncate text-zinc-950">
-			{#if websiteLink}
-				<a
-					class="rounded-sm link-underline transition-colors outline-none hover:text-(--brand-color) focus-visible:text-(--brand-color) focus-visible:ring-2 focus-visible:ring-(--brand-color)"
-					href={websiteLink.url}
-					target="_blank"
-					rel="external noopener noreferrer">{getMemberName(member)}</a
-				>
-			{:else}
-				{getMemberName(member)}
-			{/if}
+			{getMemberName(member)}
 		</h3>
 		{#if member.formerRole && member.currentRole}
 			<div class="bodyText mt-0.5 text-zinc-800">

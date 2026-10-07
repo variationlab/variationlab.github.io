@@ -8,10 +8,10 @@
 	</div>
 
 	<p class="bodyText text-zinc-700">
-		We are always looking for motivated individuals to work with us! We aim to foster a vibrant, supportive
-		community of undergraduates, master's students, PhD students, postdoctoral researchers, and
-		collaborators who create open-source tools that augment human sensemaking and human-computer
-		collaboration, as well as communal open-source resources like the
+		We are always looking for motivated individuals to work with us! We aim to foster a vibrant,
+		supportive community of undergraduates, master's students, PhD students, postdoctoral
+		researchers, and collaborators who create open-source tools that augment human sensemaking and
+		human-computer collaboration, as well as communal open-source resources like the
 		<a
 			class={linkClass}
 			href="https://glassmanlab.seas.harvard.edu/theory-in-hci/"
@@ -40,8 +40,8 @@
 			rel="external noopener noreferrer"
 			>more about what we're excited to pursue with new students</a
 		>
-		and browse our <a class={linkClass} href="#/publications">publications</a> to find the directions
-		that resonate with you.
+		and browse our <a class={linkClass} href="/publications">publications</a> to find the directions that
+		resonate with you.
 	</p>
 </section>
 
@@ -53,7 +53,7 @@
 	</p>
 	<p class="bodyText mt-3 text-zinc-700">
 		If you are interested in joining us, please feel free to email Prof. Elena Glassman or any of
-		the <a class={linkClass} href="#/people">current PhD students</a> whose interests align with
+		the <a class={linkClass} href="/people">current PhD students</a> whose interests align with
 		yours. Please also fill out our
 		<!-- TODO: link to the Google Form once it exists. -->
 		<span class={linkClass}>interest form</span> to help us get to know you better. We hope you can reach

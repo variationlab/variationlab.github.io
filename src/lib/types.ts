@@ -8,9 +8,8 @@ export interface Authors {
 export interface Members extends Authors {
 	nickName?: string;
 	email?: string;
-	url?: string;
-	googleScholar?: string;
-	github?: string;
+	/** Profile URLs. Each uses the website icon unless `icon` is set. A generic link can set `title`. */
+	profileLinks?: MemberProfileLink[];
 	category: 'faculty' | 'alumni' | 'member' | 'staff' | 'other';
 	currentAcademicStatus:
 		| 'undergrad'
@@ -23,19 +22,34 @@ export interface Members extends Authors {
 		| 'other';
 	/** Full /images/members/ path including .jpg, .jpeg, .png, or .webp; square, at most 650 × 650 px. */
 	headshot?: string;
+	/** Office number, shown under the photo on the profile page. */
+	office?: string;
 	interests: string[];
+	/** Shown under research interests. Used for current members. */
+	bio?: string;
 	startTime: string;
 	endTime?: string;
 	formerRole?: string;
 	/** Display title for any member; otherwise use the general academic-status label. */
 	currentRole?: string;
-	contact?: SocialMedia;
 }
 
-export interface SocialMedia {
-	linkedin?: string;
-	twitter?: string;
-	bluesky?: string;
+export const memberProfileLinkIcons = [
+	'website',
+	'github',
+	'googleScholar',
+	'linkedin',
+	'twitter',
+	'bluesky'
+] as const;
+
+export type MemberProfileLinkIcon = (typeof memberProfileLinkIcons)[number];
+
+export interface MemberProfileLink {
+	url: string;
+	icon?: MemberProfileLinkIcon;
+	/** Label shown with the link under the bio. Defaults to the icon name, such as Website. */
+	title?: string;
 }
 
 export type Venue = {

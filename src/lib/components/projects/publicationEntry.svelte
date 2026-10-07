@@ -62,12 +62,12 @@
 					<span class="linkSeparator">·</span>{publication.affiliation}{/if}
 			</p>
 			{#if awardLabel}
-				<p class="metaText mt-1 flex items-center gap-1.5 text-harvard">
+				<p class="metaText text-harvard mt-1 flex items-center gap-1.5">
 					<Trophy aria-hidden="true" size={16} class="shrink-0" />
 					{#if publication.awardLink}
 						<Button
 							variant="link"
-							class="metaText h-auto border-0 p-0 font-normal text-harvard"
+							class="metaText text-harvard h-auto border-0 p-0 font-normal"
 							href={publication.awardLink}
 							target="_blank"
 							rel="external noopener noreferrer"><span>{awardLabel}</span></Button

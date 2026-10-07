@@ -3,9 +3,8 @@
 ## Editing site content
 
 - Set each person's display title with `currentRole` in `static/data/People.json`. It applies to current members and alumni. If omitted, the title uses a general label from `currentAcademicStatus`, without assuming a department or matching a name. Alumni `formerRole` may be any nonempty title.
-- Edit branding, logos, introductory copy, the people tagline, and course/contact messages in `static/data/Site.json`.
-- The home hero shows `labName` and the intro copy (`introPrefix`, `highlight`, `introSuffix`) on the plain white page.
-- Edit the home page Research Themes in `home.researchThemes` in `static/data/Site.json`; each theme has a `title` and a `description`. This configuration is imported at build time; rebuild to publish changes.
+- Edit branding, logos, introductory copy, and the people tagline in `src/lib/data/Site.json`. This configuration is imported at build time; rebuild to publish changes.
+- Edit the home page Research Themes in `researchThemes` in `src/routes/+page.svelte`; each theme has a `title` and a `description`.
 - Set brand colors in the `:root` variables in `src/routes/layout.css`.
 - Publications are ordered by `publishDate`; JSON array order does not control recency. Set `"isSelected": true` on a publication to feature it in Selected Publications on the home page (all selected papers are shown, newest first). The footer copyright year fills in automatically with the visitor's current year, even if the page is prerendered or cached.
 

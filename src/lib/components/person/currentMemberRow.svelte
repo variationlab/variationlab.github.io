@@ -14,6 +14,7 @@
 		getMemberGitHubLink,
 		getMemberGoogleScholarLink,
 		getMemberName,
+		getMemberProfilePath,
 		getMemberSocialLinks,
 		getMemberStatus,
 		getMemberWebsiteLink,
@@ -70,49 +71,48 @@
 	});
 
 	const memberActionButtonClass =
-		'size-(--member-action-size) text-zinc-600 transition-colors hover:text-(--brand-color) focus-visible:text-(--brand-color) [&_svg]:size-(--member-action-icon-size)';
-	const socialTriggerButtonClass = `${memberActionButtonClass} data-[state=open]:text-(--brand-color)`;
+		'size-[var(--member-action-size)] text-zinc-600 transition-colors hover:text-[var(--brand-color)] focus-visible:text-[var(--brand-color)] [&_svg]:size-[var(--member-action-icon-size)]';
+	const socialTriggerButtonClass = `${memberActionButtonClass} data-[state=open]:text-[var(--brand-color)]`;
 </script>
 
 {#snippet memberDetails()}
 	<div class="min-w-0">
 		<h2
-			class="personTitle text-zinc-950 link-underline-base transition-colors group-hover/member:text-(--brand-color) group-hover/member:decoration-current group-focus-visible/member:text-(--brand-color) group-focus-visible/member:decoration-current"
+			class="personTitle text-zinc-950 group-hover/member:text-[var(--brand-color)] group-focus-visible/member:text-[var(--brand-color)]"
 		>
 			{getMemberName(member)}
 		</h2>
 		<p class="bodyText mt-0.5 text-zinc-800 italic">{getMemberStatus(member)}</p>
 		<p class="bodyText mt-0.5 text-zinc-700">{member.interests.join(', ')}</p>
+		{#if member.bio}
+			<hr class="my-4 border-zinc-200" />
+			<p class="bodyText text-zinc-700">{member.bio}</p>
+		{/if}
 	</div>
 {/snippet}
 
 <article class="flex min-w-0 items-start gap-4 py-1">
-	{#if member.headshot}
-		<Image
-			class="h-28 w-28 shrink-0 rounded-sm object-cover"
-			src={member.headshot}
-			alt={`${getMemberName(member)} headshot`}
-		/>
-	{:else}
-		<div class="flex h-28 w-28 shrink-0 items-center justify-center rounded-sm bg-zinc-100">
-			<UserRound aria-hidden="true" size={36} strokeWidth={1.6} class="text-zinc-400" />
-		</div>
-	{/if}
+	<a class="shrink-0 rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-color)]" href={getMemberProfilePath(member)}>
+		{#if member.headshot}
+			<Image
+				class="h-28 w-28 rounded-sm object-cover"
+				src={member.headshot}
+				alt={`${getMemberName(member)} headshot`}
+			/>
+		{:else}
+			<div class="flex h-28 w-28 items-center justify-center rounded-sm bg-zinc-100">
+				<UserRound aria-hidden="true" size={36} strokeWidth={1.6} class="text-zinc-400" />
+			</div>
+		{/if}
+	</a>
 
 	<div class="min-w-0 flex-1 pt-0.5">
-		{#if websiteLink}
-			<a
-				class="group/member block rounded-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-(--brand-color)"
-				href={websiteLink.url}
-				target="_blank"
-				rel="external noopener noreferrer"
-				aria-label={`${getMemberName(member)} website`}
-			>
-				{@render memberDetails()}
-			</a>
-		{:else}
+		<a
+			class="group/member block rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-color)]"
+			href={getMemberProfilePath(member)}
+		>
 			{@render memberDetails()}
-		{/if}
+		</a>
 
 		{#if hasLinks}
 			<div class="mt-1.5 flex items-center gap-1.5">
@@ -200,7 +200,7 @@
 									{#snippet child({ props })}
 										<a
 											{...props}
-											class={`${props.class ?? ''} w-full text-zinc-800 link-underline hover:text-(--brand-color)`}
+											class={`${props.class ?? ''} w-full text-zinc-800 hover:text-[var(--brand-color)]`}
 											href={link.url}
 											target="_blank"
 											rel="external noopener noreferrer"

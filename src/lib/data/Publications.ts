@@ -1,4 +1,5 @@
 import type { Authors, Members, Publication } from '$lib/types';
+import { getMemberWebsiteLink } from '$lib/data/Members';
 
 export type LabAuthorMembership = {
 	publicationName: string;
@@ -83,7 +84,7 @@ export function getLabAuthorMemberships(
 				publicationName: member.publicationName,
 				startTime: member.startTime,
 				endTime: member.endTime,
-				url: member.url
+				url: getMemberWebsiteLink(member)?.url
 			}
 		])
 	);

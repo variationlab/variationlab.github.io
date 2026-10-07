@@ -1,3 +1,3 @@
-import site from '../../../static/data/Site.json';
+import site from './Site.json';
 
 export default site;

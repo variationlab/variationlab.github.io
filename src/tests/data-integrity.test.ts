@@ -2,8 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { describe, expect, it } from 'vitest';
-import { normalizeHash } from '$lib/HashRoutes';
-import type { Authors, Members, Publication } from '$lib/types';
+import { isCurrentRoute, pathForHash } from '$lib/SiteRoutes';
+import { memberProfileLinkIcons, type Authors, type Members, type Publication } from '$lib/types';
+import { getMemberSlug } from '$lib/data/Members';
 import {
 	getLabAuthorHomepage,
 	getLabAuthorMemberships,
@@ -130,6 +131,21 @@ describe('Data integrity', () => {
 		});
 	});
 
+	it('has valid optional profile links', () => {
+		expect(members.length).toBeGreaterThan(0);
+		members.forEach((member) => {
+			member.profileLinks?.forEach((link) => {
+				expect(link.url.trim()).toBeTruthy();
+				if (link.icon !== undefined) {
+					expect(memberProfileLinkIcons).toContain(link.icon);
+				}
+				if (link.title !== undefined) {
+					expect(link.title.trim()).toBeTruthy();
+				}
+			});
+		});
+	});
+
 	it('has valid optional alumni role fields', () => {
 		members.forEach((member) => {
 			if (member.formerRole !== undefined) {
@@ -138,6 +154,30 @@ describe('Data integrity', () => {
 			if (member.currentRole !== undefined) {
 				expect(member.currentRole.trim()).toBeTruthy();
 			}
+			if (member.office !== undefined) {
+				expect(member.office.trim()).toBeTruthy();
+			}
+		});
+	});
+
+	it('gives current members unique profile slugs', () => {
+		const slugs = members
+			.filter((member) => member.category !== 'alumni')
+			.map((member) => getMemberSlug(member));
+
+		expect(slugs.length).toBeGreaterThan(0);
+		slugs.forEach((slug) => {
+			expect(slug).toMatch(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
+		});
+		expect(new Set(slugs).size).toBe(slugs.length);
+	});
+
+	it('has a bio for every current member', () => {
+		const currentMembers = members.filter((member) => member.category !== 'alumni');
+
+		expect(currentMembers.length).toBeGreaterThan(0);
+		currentMembers.forEach((member) => {
+			expect(member.bio?.trim()).toBeTruthy();
 		});
 	});
 
@@ -249,6 +289,23 @@ describe('Data integrity', () => {
 		expect(sortPublicationsByDate([])).toEqual([]);
 	});
 
+	it('maps old hash aliases to real paths', () => {
+		expect(pathForHash('#/people')).toBe('/people');
+		expect(pathForHash('#people')).toBe('/people');
+		expect(pathForHash('#/publications')).toBe('/publications');
+		expect(pathForHash('#/papers')).toBe('/publications');
+		expect(pathForHash('#papers')).toBe('/publications');
+		expect(pathForHash('#/courses')).toBe('/courses');
+		expect(pathForHash('#courses')).toBe('/courses');
+		expect(pathForHash('#/contact')).toBe('/contact');
+		expect(pathForHash('#contact')).toBe('/contact');
+		expect(pathForHash('#/')).toBeUndefined();
+		expect(isCurrentRoute('/people/elena-l-glassman', '/people')).toBe(true);
+		expect(isCurrentRoute('/publications', '/people')).toBe(false);
+		expect(isCurrentRoute('/', '/')).toBe(true);
+		expect(isCurrentRoute('/people', '/')).toBe(false);
+	});
+
 	it('has boolean isSelected flags and at least one selected publication', () => {
 		publications.forEach((publication) => {
 			if (publication.isSelected !== undefined) {
@@ -279,7 +336,11 @@ describe('Data integrity', () => {
 			endTime: '2022-12-31'
 		};
 		const memberships = getLabAuthorMemberships([
-			{ ...author, ...memberBase, url: 'https://example.com/lab-member' },
+			{
+				...author,
+				...memberBase,
+				profileLinks: [{ url: 'https://example.com/lab-member', icon: 'website' }]
+			},
 			{ ...outsider, ...memberBase, publicationName: 'No Homepage' }
 		]);
 		const during = { ...publications[0], publishDate: '2021-06-01' };
@@ -376,18 +437,5 @@ describe('Data integrity', () => {
 			{ kind: 'codeLink', name: 'Code', url: 'https://github.com/example/code' },
 			{ kind: 'slidesLink', name: 'Slides', url: 'https://example.com/slides' }
 		]);
-	});
-
-	it('normalizes supported hash routes and aliases', () => {
-		expect(normalizeHash('#/people')).toBe('people');
-		expect(normalizeHash('#people')).toBe('people');
-		expect(normalizeHash('#/publications')).toBe('publications');
-		expect(normalizeHash('#/papers')).toBe('publications');
-		expect(normalizeHash('#papers')).toBe('publications');
-		expect(normalizeHash('#/courses')).toBe('courses');
-		expect(normalizeHash('#courses')).toBe('courses');
-		expect(normalizeHash('#/contact')).toBe('contact');
-		expect(normalizeHash('#contact')).toBe('contact');
-		expect(normalizeHash('#/')).toBe('home');
 	});
 });

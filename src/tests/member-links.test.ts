@@ -4,6 +4,10 @@ import {
 	getMemberEmailLink,
 	getMemberGitHubLink,
 	getMemberGoogleScholarLink,
+	getMemberProfileLinks,
+	getMemberProfilePath,
+	getMemberShortRole,
+	getMemberSlug,
 	getMemberStatus,
 	orderActiveMembers,
 	getMemberSocialLinks,
@@ -22,40 +26,69 @@ const baseMember: Members = {
 };
 
 describe('Member contact link helpers', () => {
-	it('keeps active faculty first and shuffles everyone else without changing the input', () => {
-		const studentA = { ...baseMember, publicationName: 'Student A' };
-		const studentB = { ...baseMember, publicationName: 'Student B' };
+	it('keeps active faculty first and orders everyone else by start date without changing the input', () => {
+		const studentA = { ...baseMember, publicationName: 'Student A', startTime: '2024-01-01' };
+		const studentB = { ...baseMember, publicationName: 'Student B', startTime: '2022-09-01' };
+		const studentC = { ...baseMember, publicationName: 'Student C', startTime: '2022-09-01' };
 		const faculty: Members = {
 			...baseMember,
 			publicationName: 'Faculty',
-			currentAcademicStatus: 'faculty'
+			currentAcademicStatus: 'faculty',
+			startTime: '2010-01-01'
 		};
-		const secondFaculty: Members = { ...faculty, publicationName: 'Second Faculty' };
+		const secondFaculty: Members = {
+			...faculty,
+			publicationName: 'Second Faculty',
+			startTime: '2015-01-01'
+		};
 		const alumni: Members = { ...faculty, publicationName: 'Alumni', category: 'alumni' };
-		const input = [studentA, faculty, alumni, studentB, secondFaculty];
-		expect(orderActiveMembers(input, () => 0)).toEqual([
+		const input = [studentA, faculty, alumni, studentC, studentB, secondFaculty];
+		expect(orderActiveMembers(input)).toEqual([
 			faculty,
 			secondFaculty,
+			studentC,
 			studentB,
 			studentA
 		]);
-		expect(input).toEqual([studentA, faculty, alumni, studentB, secondFaculty]);
-		expect(orderActiveMembers([], () => 0)).toEqual([]);
-		expect(orderActiveMembers([studentA], () => 0)).toEqual([studentA]);
+		expect(input).toEqual([studentA, faculty, alumni, studentC, studentB, secondFaculty]);
+		expect(orderActiveMembers([])).toEqual([]);
+		expect(orderActiveMembers([studentA])).toEqual([studentA]);
 	});
+	it('builds a stable profile path from the publication name', () => {
+		expect(getMemberSlug({ ...baseMember, publicationName: 'Elena L. Glassman' })).toBe(
+			'elena-l-glassman'
+		);
+		expect(getMemberProfilePath({ ...baseMember, publicationName: 'Ziwei Gu' })).toBe(
+			'/people/ziwei-gu'
+		);
+	});
+
+	it('uses the role before the department on short labels', () => {
+		expect(
+			getMemberShortRole({
+				...baseMember,
+				currentRole: 'Assistant Professor, Computer Science, SEAS'
+			})
+		).toBe('Assistant Professor');
+		expect(
+			getMemberShortRole({ ...baseMember, currentRole: 'PhD Student, Computer Science' })
+		).toBe('PhD Student');
+		expect(getMemberShortRole(baseMember)).toBe('PhD Student');
+	});
+
 	it('uses explicit current roles regardless of name or category', () => {
 		for (const firstName of ['Elena', 'Chau', 'Ruishi', 'Example']) {
 			expect(getMemberStatus({ ...baseMember, firstName, currentRole: 'Research scientist' })).toBe(
 				'Research scientist'
 			);
-			expect(getMemberStatus({ ...baseMember, firstName })).toBe('PhD student');
+			expect(getMemberStatus({ ...baseMember, firstName })).toBe('PhD Student');
 		}
 	});
 
 	it.each([
 		['undergrad', 'Undergraduate student'],
 		['master', 'Master’s student'],
-		['phd-student', 'PhD student'],
+		['phd-student', 'PhD Student'],
 		['phd-candidate', 'PhD candidate'],
 		['phd-graduated', 'PhD graduate'],
 		['postdoc', 'Postdoctoral researcher'],
@@ -75,8 +108,33 @@ describe('Member contact link helpers', () => {
 		});
 	});
 
+	it('defaults a generic profile link to the website icon', () => {
+		expect(
+			getMemberProfileLinks({
+				...baseMember,
+				profileLinks: [{ url: ' https://example.edu/lab ' }, { url: 'https://github.com/example', icon: 'github' }]
+			})
+		).toEqual([
+			{ url: 'https://example.edu/lab', icon: 'website' },
+			{ url: 'https://github.com/example', icon: 'github' }
+		]);
+		expect(getMemberProfileLinks(baseMember)).toEqual([]);
+		expect(
+			getMemberProfileLinks({
+				...baseMember,
+				profileLinks: [{ url: 'https://example.edu/talk', title: ' Lab talk ' }]
+			})
+		).toEqual([{ url: 'https://example.edu/talk', icon: 'website', title: 'Lab talk' }]);
+	});
+
 	it('keeps website links separate from profile dropdown links', () => {
-		const member = { ...baseMember, url: 'https://example.edu' };
+		const member = {
+			...baseMember,
+			profileLinks: [
+				{ url: 'https://example.edu/notes', title: 'Notes' },
+				{ url: 'https://example.edu' }
+			]
+		};
 
 		expect(getMemberWebsiteLink(member)).toEqual({
 			kind: 'website',
@@ -89,7 +147,7 @@ describe('Member contact link helpers', () => {
 	it('keeps Google Scholar as a direct profile button link', () => {
 		const member = {
 			...baseMember,
-			googleScholar: 'https://scholar.google.com/citations?user=example'
+			profileLinks: [{ url: 'https://scholar.google.com/citations?user=example', icon: 'googleScholar' as const }]
 		};
 
 		expect(getMemberGoogleScholarLink(member)).toEqual({
@@ -101,7 +159,10 @@ describe('Member contact link helpers', () => {
 	});
 
 	it('keeps GitHub as a direct profile button link', () => {
-		const member = { ...baseMember, github: 'https://github.com/example' };
+		const member = {
+			...baseMember,
+			profileLinks: [{ url: 'https://github.com/example', icon: 'github' as const }]
+		};
 
 		expect(getMemberGitHubLink(member)).toEqual({
 			kind: 'github',
@@ -114,13 +175,13 @@ describe('Member contact link helpers', () => {
 	it('collects only available social dropdown links', () => {
 		const member: Members = {
 			...baseMember,
-			github: 'https://github.com/example',
-			googleScholar: 'https://scholar.google.com/citations?user=example',
-			contact: {
-				linkedin: 'https://linkedin.com/in/example',
-				twitter: 'https://twitter.com/example',
-				bluesky: 'https://bsky.app/profile/example.bsky.social'
-			}
+			profileLinks: [
+				{ url: 'https://github.com/example', icon: 'github' },
+				{ url: 'https://scholar.google.com/citations?user=example', icon: 'googleScholar' },
+				{ url: 'https://linkedin.com/in/example', icon: 'linkedin' },
+				{ url: 'https://twitter.com/example', icon: 'twitter' },
+				{ url: 'https://bsky.app/profile/example.bsky.social', icon: 'bluesky' }
+			]
 		};
 
 		expect(getMemberSocialLinks(member)).toEqual([

@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import 'shadcn-svelte/tailwind.css';
@@ -7,22 +6,8 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-	--font-sans: 'Nunito Sans', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-
-	/* Type scale: typography classes below use only these sizes and line heights. */
-	--text-xs: 0.75rem;
-	--text-sm: 0.875rem;
-	--text-base: 1rem;
-	--text-lg: 1.125rem;
-	--text-xl: 1.25rem;
-	--text-2xl: 1.5rem;
-	--text-4xl: 2.25rem;
-	--text-5xl: 3rem;
-	--leading-compact: 1.18;
-	--leading-content: 1.32;
-	--leading-title: 1.36;
-	--leading-control: 1;
-
+	--font-sans: 'Fira Sans', ui-sans-serif, system-ui, sans-serif;
+	--font-logo: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
 	--color-sidebar-ring: var(--sidebar-ring);
 	--color-sidebar-border: var(--sidebar-border);
 	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -66,10 +51,16 @@
 :root {
 	--brand-color: #a51c30;
 	--brand-hover: #7f1725;
+	--link-hover: #c45162;
 	--brand-surface: #f8f4f5;
 	--footer-background: #303a46;
 	color: #18181b;
-	font-family: var(--font-sans);
+	font-family: 'Fira Sans', ui-sans-serif, system-ui, sans-serif;
+	--line-display: 1.16;
+	--line-title: 1.36;
+	--line-content: 1.32;
+	--line-compact: 1.18;
+	--line-control: 1;
 	--background: oklch(1 0 0);
 	--foreground: oklch(0.145 0 0);
 	--card: oklch(1 0 0);
@@ -106,34 +97,106 @@
 
 body {
 	margin: 0;
+	overflow-anchor: none;
 	font-family: inherit;
 }
 
-@utility text-harvard {
+a:hover {
+	color: var(--link-hover);
+}
+
+.text-harvard {
 	color: var(--brand-color);
 }
 
-/* Header and footer navigation share one underline: always on the current page, lighter on hover. */
-.navLink {
-	text-decoration-line: underline;
-	text-decoration-color: transparent;
-	text-decoration-thickness: 2px;
-	text-underline-offset: 0.35em;
-	transition: text-decoration-color 150ms ease;
+.navBrand {
+	font-family: var(--font-logo);
+	font-size: 1.25rem;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	line-height: var(--line-compact);
+	text-transform: uppercase;
 }
 
-.navLink:hover {
-	text-decoration-color: color-mix(in oklab, currentColor 45%, transparent);
+.logoThin {
+	font-weight: 400;
 }
 
-.navLink[aria-current='page'] {
-	text-decoration-color: currentColor;
+.navText {
+	font-size: 0.875rem;
+	line-height: var(--line-content);
 }
 
-/* Center button labels optically. Nunito Sans reserves far more space above the glyphs than below,
-   so a centered line box leaves text sitting high next to icons. Trimming the label's box to the cap
-   height and baseline lets flex centering align the letters themselves. text-box only trims block or
-   inline boxes, not bare text in a flex container, so every Button label is wrapped in a <span>. */
+.heroTitle {
+	font-size: 2.25rem;
+	font-weight: 600;
+	letter-spacing: 0;
+	line-height: var(--line-display);
+}
+
+.heroLead {
+	font-size: 1.125rem;
+	line-height: var(--line-content);
+}
+
+.pageTitle {
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: var(--line-title);
+}
+
+.pageKicker,
+.sectionLabel {
+	font-size: 0.875rem;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	line-height: var(--line-title);
+	text-transform: uppercase;
+}
+
+.itemTitle {
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: var(--line-title);
+}
+
+.detailTitle {
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: var(--line-title);
+}
+
+.personTitle {
+	font-size: 1.1rem;
+	font-weight: 700;
+	line-height: var(--line-title);
+}
+
+.bodyText {
+	font-size: 1rem;
+	line-height: var(--line-content);
+}
+
+.metaText {
+	font-size: 0.875rem;
+	line-height: var(--line-content);
+}
+
+.smallLink {
+	font-size: 0.875rem;
+	font-weight: 600;
+	line-height: var(--line-content);
+}
+
+.linkSeparator {
+	display: inline-block;
+	padding: 0 0.35rem;
+	color: #a1a1aa;
+}
+
+/* Center button labels optically: trim each label's box to the cap height and baseline so flex
+   centering aligns the letters with icons. text-box only trims block or inline boxes, not bare text
+   in a flex container, so every Button label is wrapped in a <span>. */
 [data-slot='button'] > span {
 	text-box: trim-both cap alphabetic;
 }
@@ -156,94 +219,214 @@ body {
 	}
 }
 
-/* Typography roles, largest to smallest. */
-.heroTitle {
-	font-size: var(--text-4xl);
-	font-weight: 700;
-	line-height: var(--leading-compact);
-
-	@variant sm {
-		font-size: var(--text-5xl);
-	}
-}
-
-.pageTitle {
-	font-size: var(--text-2xl);
-	font-weight: 700;
-	line-height: var(--leading-title);
-}
-
-.sectionLabel {
-	font-size: var(--text-xl);
-	font-weight: 700;
-	line-height: var(--leading-title);
-}
-
-.heroLead {
-	font-size: var(--text-lg);
-	line-height: var(--leading-content);
-}
-
-.personTitle {
-	font-size: var(--text-lg);
-	font-weight: 700;
-	line-height: var(--leading-title);
-}
-
-.itemTitle {
-	font-size: var(--text-base);
-	font-weight: 600;
-	line-height: var(--leading-title);
-}
-
-.yearLabel,
 .tileName {
-	font-size: var(--text-base);
+	font-size: 1rem;
 	font-weight: 700;
-	line-height: var(--leading-title);
+	line-height: var(--line-compact);
 }
 
-.bodyText {
-	font-size: var(--text-base);
-	line-height: var(--leading-content);
-}
-
-.navText {
-	font-size: var(--text-sm);
-	line-height: var(--leading-content);
-
-	@variant sm {
-		font-size: var(--text-base);
-	}
-}
-
-.metaText {
-	font-size: var(--text-sm);
-	line-height: var(--leading-content);
-}
-
-.smallLink,
-.footerNav {
-	font-size: var(--text-sm);
-	font-weight: 600;
-	line-height: var(--leading-content);
+.yearLabel {
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: var(--line-title);
 }
 
 .footerBrand {
-	font-size: var(--text-sm);
-	font-weight: 500;
-	line-height: var(--leading-compact);
+	font-family: var(--font-logo);
+	font-size: 0.875rem;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	line-height: var(--line-compact);
+	text-transform: uppercase;
+}
+
+.footerNav {
+	font-size: 0.875rem;
+	font-weight: 600;
+	line-height: var(--line-content);
 }
 
 .footerCopyright {
-	font-size: var(--text-xs);
-	line-height: var(--leading-content);
+	font-size: 0.75rem;
+	line-height: var(--line-content);
 }
 
-.linkSeparator {
-	display: inline-block;
-	padding: 0 0.35rem;
-	color: #a1a1aa;
+.headerBar {
+	--collapse: 1;
+	--logo-expanded: 8rem;
+	--logo-compact: 2.5rem;
+	--logo-h: calc(
+		var(--logo-expanded) - (var(--logo-expanded) - var(--logo-compact)) * var(--collapse)
+	);
+	--word-compact: 1.25rem;
+	--word-expanded: clamp(1.5rem, 4.8vw, 2.2rem);
+	--word-size: calc(
+		var(--word-expanded) - (var(--word-expanded) - var(--word-compact)) * var(--collapse)
+	);
+	--sub-size: 1.0625rem;
+	--sub-gap: calc(0.2rem * (1 - var(--collapse)));
+	--sub-h: calc(var(--sub-size) * 1.35 * (1 - var(--collapse)));
+	overflow-anchor: none;
+}
+
+.headerInner {
+	padding-top: calc(0.75rem + 0.45rem * (1 - var(--collapse)));
+	padding-bottom: calc(0.75rem + 0.75rem * (1 - var(--collapse)));
+}
+
+.headerBrand {
+	display: flex;
+	flex: 0 0 auto;
+	align-items: center;
+	gap: calc(0.75rem + 0.25rem * (1 - var(--collapse)));
+}
+
+.headerLogo {
+	height: var(--logo-h);
+	width: auto;
+	flex: 0 0 auto;
+	object-fit: contain;
+}
+
+.headerWords {
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--sub-gap);
+}
+
+.headerWords .navBrand {
+	font-size: var(--word-size);
+	white-space: nowrap;
+}
+
+.headerSubtitle {
+	height: var(--sub-h);
+	overflow: hidden;
+	color: #52525b;
+	font-family: var(--font-sans);
+	font-size: var(--sub-size);
+	font-style: italic;
+	font-weight: 400;
+	line-height: 1.35;
+	white-space: nowrap;
+	opacity: calc(1 - min(var(--collapse) * 1.75, 1));
+}
+
+.headerCompact .headerLogo {
+	height: 2.5rem;
+}
+
+.headerCompact .headerBrand {
+	gap: 0.75rem;
+}
+
+.headerCompact .headerInner {
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+}
+
+.headerCompact .headerWords .navBrand {
+	font-size: 1.25rem;
+}
+
+.headerCompact .headerSubtitle {
+	display: none;
+}
+
+@media (min-width: 640px) {
+	.navBrand {
+		font-size: 1.5rem;
+	}
+
+	.headerBar {
+		--word-compact: 1.5rem;
+	}
+
+	.headerCompact .headerWords .navBrand {
+		font-size: 1.5rem;
+	}
+
+	.navText {
+		font-size: 1rem;
+	}
+
+	.heroTitle {
+		font-size: 3rem;
+	}
+}
+
+.homeLink {
+	display: inline-flex;
+	align-items: center;
+	border: 1px solid var(--brand-color);
+	border-radius: 8px;
+	background: var(--brand-color);
+	color: #fff;
+	font-size: 0.875rem;
+	font-weight: 600;
+	padding: 0.55rem 0.85rem;
+	line-height: var(--line-control);
+}
+
+.homeLink:hover {
+	background: var(--brand-hover);
+	color: #fff;
+}
+
+.homeLinkSecondary {
+	background: #fff;
+	color: var(--brand-color);
+}
+
+.homeLinkSecondary:hover {
+	background: var(--brand-surface);
+	color: var(--brand-hover);
+}
+
+.homePersonTile {
+	position: relative;
+	display: block;
+	aspect-ratio: 1 / 1;
+	overflow: hidden;
+	border-radius: 8px;
+	background: #f4f4f5;
+	box-shadow: 0 1px 2px rgba(24, 24, 27, 0.12);
+}
+
+.homePersonName {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(to top, rgba(9, 9, 11, 0.82), transparent);
+	padding: 2.25rem 0.45rem 0.35rem;
+	color: #fff;
+	font-size: 0.875rem;
+	font-weight: 700;
+	line-height: var(--line-compact);
+	text-shadow: 0 1px 2px rgba(9, 9, 11, 0.9);
+}
+
+.homePersonStatus {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: end;
+	background: rgba(9, 9, 11, 0.72);
+	color: #fff;
+	font-size: 0.75rem;
+	font-weight: 600;
+	line-height: var(--line-content);
+	opacity: 0;
+	padding: 0.45rem;
+	transition: opacity 160ms ease;
+}
+
+.homePersonTile:hover .homePersonStatus,
+.homePersonTile:focus-visible .homePersonStatus {
+	opacity: 1;
 }
 
 .personCard {
@@ -259,6 +442,19 @@ body {
 	border: 1px solid #e4e4e7;
 	border-radius: 8px;
 	padding: 0.75rem;
+}
+
+.publicationItem {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	border-left: 3px solid rgba(165, 28, 48, 0.28);
+	padding-left: 1rem;
+}
+
+@media (min-width: 640px) {
+	.publicationItem {
+		margin-left: 0.55rem;
+	}
 }
 
 @layer base {
