@@ -5,14 +5,14 @@
 
 <script lang="ts">
 	import Image from '$lib/components/Image.svelte';
-	import { getTeaserKind } from '$lib/data/Publications';
+	import { getTeaserKind, type PublicationLink } from '$lib/data/Publications';
 
 	let {
 		src,
 		title,
-		href,
+		link,
 		class: className = ''
-	}: { src: string; title: string; href?: string; class?: string } = $props();
+	}: { src: string; title: string; link?: PublicationLink; class?: string } = $props();
 
 	const kind = $derived(getTeaserKind(src));
 	// Teasers are 16:9. Media always spans the full width; extra height is cropped evenly
@@ -44,18 +44,18 @@
 </script>
 
 {#if kind}
-	<!-- With an interactive version, the whole teaser links to it in a new tab. -->
+	<!-- The teaser opens the publication's first link (DOI, Paper, ...) in a new tab. -->
 	<svelte:element
-		this={href ? 'a' : 'div'}
+		this={link ? 'a' : 'div'}
 		class={`flex aspect-video items-center self-start overflow-hidden rounded-md border border-zinc-200 bg-zinc-100 ${
-			href
+			link
 				? 'transition-colors outline-none hover:border-(--brand-color) focus-visible:ring-2 focus-visible:ring-(--brand-color)'
 				: ''
 		} ${className}`}
-		{href}
-		target={href ? '_blank' : undefined}
-		rel={href ? 'external noopener noreferrer' : undefined}
-		aria-label={href ? `Open interactive version of ${title}` : undefined}
+		href={link?.url}
+		target={link ? '_blank' : undefined}
+		rel={link ? 'external noopener noreferrer' : undefined}
+		aria-label={link ? `${link.name}: ${title}` : undefined}
 	>
 		{#if kind === 'video'}
 			<video

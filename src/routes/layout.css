@@ -145,6 +145,13 @@ a:hover {
 	line-height: var(--line-title);
 }
 
+/* Sentence-case section heading, sized between pageTitle and itemTitle. */
+.sectionTitle {
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: var(--line-title);
+}
+
 .pageKicker,
 .sectionLabel {
 	font-size: 0.875rem;

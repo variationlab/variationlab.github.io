@@ -25,7 +25,8 @@
 		/>
 
 		<div class="space-y-8">
-			{#each publicationGroups as group (group.year)}
+			{#each publicationGroups as group, index (group.year)}
+				{#if index > 0}<hr class="border-zinc-200" />{/if}
 				<section class="publicationYear scroll-mt-24" id={getPublicationYearId(group.year)}>
 					<h2 class="yearLabel mb-3 text-zinc-950">{group.year}</h2>
 					<div class="space-y-6">

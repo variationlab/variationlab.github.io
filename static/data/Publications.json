@@ -31,7 +31,6 @@
     "award": "best-paper",
     "awardText": "Best Paper Award (top 1%)",
     "awardLink": "https://example.com/mock-awards",
-    "isSelected": true,
     "paperLink": "https://example.com/mock-preprint.pdf",
     "exploreLink": "https://example.com/mock-explore",
     "codeLink": "https://github.com/example/mock-publication",
@@ -39,8 +38,7 @@
     "presentationLink": "https://example.com/mock-talk",
     "materialLink": "https://example.com/mock-materials",
     "slidesLink": "https://example.com/mock-slides",
-    "teaser": "/images/publications/mock-teaser.png",
-    "teaserInteractive": "https://example.com/mock-interactive"
+    "teaser": "/images/publications/mock-teaser.png"
   },
   {
     "title": "How Notations Evolve: A Historical Analysis with Implications for Supporting User-Defined Abstractions",
@@ -753,8 +751,7 @@
     "doi": "",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/mesotext.pdf",
     "award": "honorable-mention",
-    "awardText": "Honorable Mention Award",
-    "isSelected": true
+    "awardText": "Honorable Mention Award"
   },
   {
     "title": "ChainForge: A Visual Toolkit for Prompt Engineering and LLM Hypothesis Testing",
@@ -797,7 +794,6 @@
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/chainforge.pdf",
     "award": "honorable-mention",
     "awardText": "Honorable Mention Award",
-    "isSelected": true,
     "exploreLink": "https://chainforge.ai/",
     "codeLink": "https://github.com/ianarawjo/ChainForge"
   },
@@ -1903,8 +1899,7 @@
     "doi": "",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/examplenet_chi2021.pdf",
     "award": "honorable-mention",
-    "awardText": "Honorable Mention Award",
-    "isSelected": true
+    "awardText": "Honorable Mention Award"
   },
   {
     "title": "Evaluating the Interpretability of Generative Models by Interactive Reconstruction",
@@ -1946,8 +1941,7 @@
     "doi": "",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/evalGenModels_chi2021.pdf",
     "award": "honorable-mention",
-    "awardText": "Honorable Mention Award",
-    "isSelected": true
+    "awardText": "Honorable Mention Award"
   },
   {
     "title": "ASSUAGE: Assembly Synthesis Using A Guided Exploration",
@@ -2386,8 +2380,7 @@
     "publishDate": "2018-01-01",
     "doi": "",
     "award": "honorable-mention",
-    "awardText": "Best of CHI Honorable Mention",
-    "isSelected": true
+    "awardText": "Best of CHI Honorable Mention"
   },
   {
     "title": "Writing Reusable Code Feedback at Scale with Mixed-Initiative Program Synthesis",
@@ -2899,8 +2892,7 @@
     "publishDate": "2015-01-01",
     "doi": "",
     "award": "honorable-mention",
-    "awardText": "Best of CHI Honorable Mention",
-    "isSelected": true
+    "awardText": "Best of CHI Honorable Mention"
   },
   {
     "title": "RIMES: Embedding Interactive Multimedia Exercises in Lecture Videos",

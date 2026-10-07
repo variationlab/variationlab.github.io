@@ -31,7 +31,7 @@
 				class="w-full max-w-sm"
 				src={publication.teaser}
 				title={publication.title}
-				href={publication.teaserInteractive}
+				link={publicationLinks[0]}
 			/>
 		{/if}
 		<div class="min-w-0">

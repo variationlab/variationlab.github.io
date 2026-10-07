@@ -94,6 +94,4 @@ export interface Publication {
 	slidesLink?: string;
 	/** Full /images/publications/ path: a .jpg, .jpeg, .png, .webp, or .gif image, or a short .mp4 or .webm video (played muted on loop); shown in a 16:9 frame at full width, cropping extra height. */
 	teaser?: string;
-	/** URL of an interactive version of the teaser; clicking the teaser opens it in a new tab. */
-	teaserInteractive?: string;
 }

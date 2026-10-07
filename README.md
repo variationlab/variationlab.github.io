@@ -24,7 +24,7 @@ Each entry in `static/data/Publications.json` requires `title`, `authors`, `venu
 - `award` (`best-paper`, `honorable-mention`, or `other`) with `awardText` as the label, shown in crimson with a trophy above the link buttons; `awardLink` makes the label a link.
 - `affiliation` appears after the venue, for example "Work done at Microsoft Research".
 - `isSelected` features the paper on the home page.
-- `teaser` and `teaserInteractive` are described below.
+- `teaser` is described below.
 
 ## Publication teasers
 
@@ -32,7 +32,7 @@ A publication can show an optional teaser beside its entry on the Publications p
 
 - Images: `.jpg`, `.jpeg`, `.png`, `.webp`, or `.gif` (animated GIFs play as-is).
 - Short videos: `.mp4` or `.webm`. Videos play muted on a loop while on screen and show controls instead of autoplaying for visitors who prefer reduced motion. Keep them short and small; they have no audio.
-- Teasers always display in a 16:9 frame, so use that aspect ratio for the best fit. The full width is always shown: taller media is cropped evenly from the top and bottom, and wider media is centered with a band above and below. Set `teaserInteractive` to a URL to make the teaser open an interactive version in a new tab. Omit `teaser` if there is none; the integrity tests check that every teaser path has a supported extension and an existing file, and that every media file in the folder is referenced by a publication.
+- Teasers always display in a 16:9 frame, so use that aspect ratio for the best fit. The full width is always shown: taller media is cropped evenly from the top and bottom, and wider media is centered with a band above and below. When the publication has links, clicking the teaser opens the first one shown under the paper (for example DOI or Paper) in a new tab. Omit `teaser` if there is none; the integrity tests check that every teaser path has a supported extension and an existing file, and that every media file in the folder is referenced by a publication.
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 

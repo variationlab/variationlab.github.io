@@ -373,8 +373,7 @@ describe('Data integrity', () => {
 			expect(venueTypes, publication.title).toContain(publication.venue.venueType);
 			const urls = [
 				...getPublicationLinks(publication).map((link) => link.url),
-				publication.awardLink,
-				publication.teaserInteractive
+				publication.awardLink
 			].filter((url): url is string => url !== undefined);
 			urls.forEach((url) => expect(url, publication.title).toMatch(urlPattern));
 			if (publication.doi !== '') {
@@ -405,8 +404,7 @@ describe('Data integrity', () => {
 			'presentationLink',
 			'materialLink',
 			'slidesLink',
-			'teaser',
-			'teaserInteractive'
+			'teaser'
 		]);
 
 		publications.forEach((publication) => {

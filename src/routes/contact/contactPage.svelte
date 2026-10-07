@@ -1,5 +1,19 @@
 <script lang="ts">
+	import Info from '@lucide/svelte/icons/info';
+
 	const linkClass = 'font-semibold text-harvard link-underline';
+
+	// Placeholder questions; replace with the lab's real FAQ.
+	const faqs = [
+		{
+			question: 'Placeholder question about joining the lab?',
+			answer: 'Placeholder answer. Replace this text with the real answer to the question.'
+		},
+		{
+			question: 'Placeholder question about collaborating with us?',
+			answer: 'Placeholder answer. Replace this text with the real answer to the question.'
+		}
+	];
 </script>
 
 <section>
@@ -20,14 +34,25 @@
 			>reading list and classroom activity examples for supporting HCI's engagement with theory</a
 		>.
 	</p>
+
+	<aside
+		class="mt-5 flex items-start gap-2.5 rounded-lg border border-zinc-200 px-4 py-3"
+		aria-label="Course questions"
+	>
+		<Info class="text-harvard mt-0.5 size-5 shrink-0" aria-hidden="true" />
+		<p class="bodyText text-zinc-800">
+			<strong class="font-semibold text-zinc-950">Taking one of our classes?</strong> Please reach the
+			course staff through the course's Canvas site or Ed discussion board instead of emailing the lab.
+		</p>
+	</aside>
 </section>
 
 <section class="mt-8">
-	<h2 class="sectionLabel text-zinc-950">Postdoctoral Researchers</h2>
+	<h2 class="sectionTitle text-zinc-950">Postdoctoral Researchers</h2>
 </section>
 
 <section class="mt-8">
-	<h2 class="sectionLabel text-zinc-950">PhD Students</h2>
+	<h2 class="sectionTitle text-zinc-950">PhD Students</h2>
 	<p class="bodyText mt-3 text-zinc-700">
 		Prof. Elena Glassman is not accepting new PhD students for the Fall 2027 admissions cycle.
 	</p>
@@ -46,7 +71,7 @@
 </section>
 
 <section class="mt-8">
-	<h2 class="sectionLabel text-zinc-950">Undergraduate, Master's, and Visiting Students</h2>
+	<h2 class="sectionTitle text-zinc-950">Undergraduate, Master's, and Visiting Students</h2>
 	<p class="bodyText mt-3 text-zinc-700">
 		We <strong class="font-bold text-zinc-950">always welcome</strong> undergraduate, master's, and visiting
 		students from a wide range of backgrounds. Visiting positions can be in person or remote.
@@ -56,13 +81,33 @@
 		the <a class={linkClass} href="/people">current PhD students</a> whose interests align with
 		yours. Please also fill out our
 		<!-- TODO: link to the Google Form once it exists. -->
-		<span class={linkClass}>interest form</span> to help us get to know you better. We hope you can reach
-		out to us with a goal in mind, and we will try our best to support you in this journey. We regularly
-		review these requests, though we cannot guarantee a reply to every one.
+		<span class={linkClass}
+			><a
+				href="https://forms.gle/V272JwbmH95wWBNb7"
+				target="_blank"
+				rel="external noopener noreferrer">interest form</a
+			></span
+		> to help us get to know you better. We hope you can reach out to us with a goal in mind, and we will
+		try our best to support you in this journey. We regularly review these requests, though we cannot
+		guarantee a reply to every one.
 	</p>
 	<p class="bodyText mt-3 text-zinc-700">P.S. In person preferred!</p>
 </section>
 
 <section class="mt-8 border-t border-zinc-200 pt-6">
-	<h2 class="sectionLabel text-zinc-950">FAQ</h2>
+	<h2 class="sectionTitle text-zinc-950">FAQ</h2>
+	<div class="mt-4 grid gap-x-6 gap-y-4 md:grid-cols-2">
+		{#each faqs as faq (faq.question)}
+			<div class="self-start">
+				<h3 class="itemTitle bg-[var(--brand-surface)] px-4 py-3 text-zinc-950">
+					<span class="text-harvard">Q:</span>
+					{faq.question}
+				</h3>
+				<p class="bodyText px-4 py-3 text-zinc-800">
+					<span class="text-harvard font-semibold">A:</span>
+					{faq.answer}
+				</p>
+			</div>
+		{/each}
+	</div>
 </section>

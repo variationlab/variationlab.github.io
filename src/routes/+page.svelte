@@ -39,8 +39,8 @@
 
 <section class="grid gap-8 md:items-start">
 	<div class="max-w-full">
-		<p class="heroLead mt-4 text-zinc-700">
-			{site.home.introPrefix} <span class="pageKicker text-harvard">{site.home.highlight}</span>
+		<p class="bodyText mt-4 text-zinc-700">
+			{site.home.introPrefix} <span class="font-semibold text-harvard">{site.home.highlight}</span>
 			{site.home.introSuffix}
 		</p>
 		<ul class="mt-6 flex items-start gap-4 overflow-x-auto lg:overflow-visible">
