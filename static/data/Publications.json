@@ -1,5 +1,48 @@
 [
   {
+    "title": "Mock Publication: An Example Entry With Every Field Populated",
+    "authors": [
+      {
+        "firstName": "Ruishi",
+        "lastName": "Zou",
+        "publicationName": "Ruishi Zou"
+      },
+      {
+        "firstName": "Alex",
+        "lastName": "Example",
+        "publicationName": "Alex Example"
+      },
+      {
+        "firstName": "Elena",
+        "lastName": "Glassman",
+        "middleName": "L.",
+        "publicationName": "Elena L. Glassman"
+      }
+    ],
+    "venue": {
+      "fullName": "Mock Conference on Human Factors (MOCK '26)",
+      "shortName": "MOCK",
+      "venueType": "conference"
+    },
+    "year": 2026,
+    "publishDate": "2026-09-15",
+    "doi": "10.5555/mock.2026.0001",
+    "affiliation": "Work done at Example Research",
+    "award": "best-paper",
+    "awardText": "Best Paper Award (top 1%)",
+    "awardLink": "https://example.com/mock-awards",
+    "isSelected": true,
+    "paperLink": "https://example.com/mock-preprint.pdf",
+    "exploreLink": "https://example.com/mock-explore",
+    "codeLink": "https://github.com/example/mock-publication",
+    "videoLink": "https://example.com/mock-video",
+    "presentationLink": "https://example.com/mock-talk",
+    "materialLink": "https://example.com/mock-materials",
+    "slidesLink": "https://example.com/mock-slides",
+    "teaser": "/images/publications/mock-teaser.png",
+    "teaserInteractive": "https://example.com/mock-interactive"
+  },
+  {
     "title": "How Notations Evolve: A Historical Analysis with Implications for Supporting User-Defined Abstractions",
     "authors": [
       {
@@ -37,7 +80,7 @@
     "year": 2026,
     "publishDate": "2026-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/notationsCHI26.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/notationsCHI26.pdf"
   },
   {
     "title": "A Paradigm for Creative Ownership",
@@ -68,13 +111,8 @@
     "year": 2026,
     "publishDate": "2026-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/ownershipCHI26.pdf",
-    "supplementals": [
-      {
-        "name": "Live Demo",
-        "url": "https://creative-ownership.tejaswi.net/"
-      }
-    ]
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/ownershipCHI26.pdf",
+    "exploreLink": "https://creative-ownership.tejaswi.net/"
   },
   {
     "title": "Meta-HCI: Practising Reflection in HCI Research",
@@ -139,7 +177,7 @@
     "year": 2026,
     "publishDate": "2026-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/meta_HCI_CHI26meetup.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/meta_HCI_CHI26meetup.pdf"
   },
   {
     "title": "Science and Technology for Augmenting Reading (STAR)",
@@ -196,7 +234,7 @@
     "year": 2026,
     "publishDate": "2026-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/star_workshop_chi26.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/star_workshop_chi26.pdf"
   },
   {
     "title": "MagicCopy: Bring my data along with me beyond boundaries of apps",
@@ -236,12 +274,12 @@
     "venue": {
       "fullName": "arXiv",
       "shortName": "arXiv",
-      "venueType": "other"
+      "venueType": "arxiv"
     },
     "year": 2026,
     "publishDate": "2026-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/magiccopy.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/magiccopy.pdf"
   },
   {
     "title": "Interface Design to Support Legal Reading and Writing: Insights from Interviews with Legal Experts",
@@ -266,12 +304,12 @@
     "venue": {
       "fullName": "arXiv",
       "shortName": "arXiv",
-      "venueType": "other"
+      "venueType": "arxiv"
     },
     "year": 2025,
     "publishDate": "2025-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/legalinterviews.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/legalinterviews.pdf"
   },
   {
     "title": "AbstractExplorer: Leveraging Structure-Mapping Theory to Enhance Comparative Close Reading at Scale",
@@ -321,7 +359,7 @@
     "year": 2025,
     "publishDate": "2025-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/abstractexplorer.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/abstractexplorer.pdf"
   },
   {
     "title": "Semantic Commit: Helping Users Update Intent Specifications for AI Memory at Scale",
@@ -371,7 +409,7 @@
     "year": 2025,
     "publishDate": "2025-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/semantic_commit.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/semantic_commit.pdf"
   },
   {
     "title": "CorpusStudio: Surfacing Emergent Patterns In A Corpus Of Prior Work While Writing",
@@ -406,7 +444,7 @@
     "year": 2025,
     "publishDate": "2025-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/corpusstudio.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/corpusstudio.pdf"
   },
   {
     "title": "Supporting Co-Adaptive Machine Teaching through Human Concept Learning and Cognitive Theories",
@@ -441,9 +479,10 @@
     "year": 2025,
     "publishDate": "2025-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/mocha_chi25.pdf",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/mocha_chi25.pdf",
     "award": "best-paper",
-    "awardText": "Best Paper Award"
+    "awardText": "Best Paper Award",
+    "isSelected": true
   },
   {
     "title": "Creative Writers' Attitudes on Writing as Training Data for Large Language Models",
@@ -489,9 +528,10 @@
     "year": 2025,
     "publishDate": "2025-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/gero_LIL_chi25.pdf",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/gero_LIL_chi25.pdf",
     "award": "best-paper",
-    "awardText": "Best Paper Award"
+    "awardText": "Best Paper Award",
+    "isSelected": true
   },
   {
     "title": "Leveraging Variation Theory in Counterfactual Data Augmentation for Optimized Active Learning",
@@ -531,7 +571,7 @@
     "year": 2025,
     "publishDate": "2025-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/leveragingVT_acl.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/leveragingVT_acl.pdf"
   },
   {
     "title": "Law is vulnerable to AI influence; interface design can help",
@@ -561,13 +601,7 @@
     "year": 2025,
     "publishDate": "2025-01-01",
     "doi": "",
-    "preprint": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5387231",
-    "supplementals": [
-      {
-        "name": "PDF",
-        "url": "https://glassmanlab.seas.harvard.edu/papers/law_is_vulnerable_SSRN.pdf"
-      }
-    ]
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/law_is_vulnerable_SSRN.pdf"
   },
   {
     "title": "An AI-Resilient Text Rendering Technique for Reading and Skimming Documents",
@@ -608,13 +642,8 @@
     "year": 2024,
     "publishDate": "2024-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/gptsm.pdf",
-    "supplementals": [
-      {
-        "name": "Software",
-        "url": "https://github.com/ZiweiGu/GP-TSM"
-      }
-    ]
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/gptsm.pdf",
+    "codeLink": "https://github.com/ZiweiGu/GP-TSM"
   },
   {
     "title": "Why Do Skimmers Perform Better with Grammar-Preserving Text Saliency Modulation (GP-TSM)? Evidence from an Eye Tracking Study",
@@ -649,7 +678,7 @@
     "year": 2024,
     "publishDate": "2024-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/gptsm_eye_lbw.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/gptsm_eye_lbw.pdf"
   },
   {
     "title": "AI-Resilient Interfaces",
@@ -675,18 +704,12 @@
     "venue": {
       "fullName": "arXiv",
       "shortName": "arXiv",
-      "venueType": "other"
+      "venueType": "arxiv"
     },
     "year": 2024,
     "publishDate": "2024-01-01",
     "doi": "",
-    "preprint": "https://arxiv.org/abs/2405.08447",
-    "supplementals": [
-      {
-        "name": "PDF",
-        "url": "https://glassmanlab.seas.harvard.edu/papers/AI_Resilient_Interfaces_draft.pdf"
-      }
-    ]
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/AI_Resilient_Interfaces_draft.pdf"
   },
   {
     "title": "Supporting Sensemaking of Large Language Model Outputs at Scale",
@@ -728,9 +751,10 @@
     "year": 2024,
     "publishDate": "2024-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/mesotext.pdf",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/mesotext.pdf",
     "award": "honorable-mention",
-    "awardText": "Honorable Mention Award"
+    "awardText": "Honorable Mention Award",
+    "isSelected": true
   },
   {
     "title": "ChainForge: A Visual Toolkit for Prompt Engineering and LLM Hypothesis Testing",
@@ -770,19 +794,12 @@
     "year": 2024,
     "publishDate": "2024-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/chainforge.pdf",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/chainforge.pdf",
     "award": "honorable-mention",
     "awardText": "Honorable Mention Award",
-    "supplementals": [
-      {
-        "name": "Demo",
-        "url": "https://chainforge.ai/"
-      },
-      {
-        "name": "Software",
-        "url": "https://github.com/ianarawjo/ChainForge"
-      }
-    ]
+    "isSelected": true,
+    "exploreLink": "https://chainforge.ai/",
+    "codeLink": "https://github.com/ianarawjo/ChainForge"
   },
   {
     "title": "DynaVis: Dynamically Synthesized UI Widgets for Visualization Editing",
@@ -817,9 +834,10 @@
     "year": 2024,
     "publishDate": "2024-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/dynavis.pdf",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/dynavis.pdf",
     "award": "best-paper",
-    "awardText": "Best Paper Award"
+    "awardText": "Best Paper Award",
+    "isSelected": true
   },
   {
     "title": "Imagining a Future of Designing with AI: Dynamic Grounding, Constructive Negotiation, and Sustainable Motivation",
@@ -849,7 +867,7 @@
     "year": 2024,
     "publishDate": "2024-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/imagining_dis24.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/imagining_dis24.pdf"
   },
   {
     "title": "Syntaktis: A Large-Language-Model-Backed Editing Interface for Supporting Ethical Journalism Practices",
@@ -878,7 +896,7 @@
     "year": 2024,
     "publishDate": "2024-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/syntaktis.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/syntaktis.pdf"
   },
   {
     "title": "Amortizing Pragmatic Program Synthesis with Rankings",
@@ -918,7 +936,7 @@
     "year": 2024,
     "publishDate": "2024-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/amortizing_icml24.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/amortizing_icml24.pdf"
   },
   {
     "title": "Reliability Criteria for News Websites",
@@ -943,7 +961,7 @@
     "year": 2024,
     "publishDate": "2024-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/reliability_criteria.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/reliability_criteria.pdf"
   },
   {
     "title": "Antagonistic AI",
@@ -968,7 +986,7 @@
     "venue": {
       "fullName": "arXiv",
       "shortName": "arXiv",
-      "venueType": "other"
+      "venueType": "arxiv"
     },
     "year": 2024,
     "publishDate": "2024-01-01",
@@ -1065,7 +1083,7 @@
     "year": 2023,
     "publishDate": "2023-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/patat_CHI23.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/patat_CHI23.pdf"
   },
   {
     "title": "Human-Computer Interaction and AI: What practitioners need to know to design and build effective AI system from a human perspective",
@@ -1100,18 +1118,13 @@
     "venue": {
       "fullName": "Course @ CHI",
       "shortName": "CHI Course",
-      "venueType": "other"
+      "venueType": "course"
     },
     "year": 2023,
     "publishDate": "2023-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/Human-Computer_Interaction_and_AI_CHIcourse23.pdf",
-    "supplementals": [
-      {
-        "name": "Course Website",
-        "url": "https://sites.google.com/view/chi-2023-hci-and-ai-tutorial/home"
-      }
-    ]
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/Human-Computer_Interaction_and_AI_CHIcourse23.pdf",
+    "materialLink": "https://sites.google.com/view/chi-2023-hci-and-ai-tutorial/home"
   },
   {
     "title": "Varying How We Teach: Adding Contrast Helps Humans Learn about Robot Motions",
@@ -1146,7 +1159,7 @@
     "year": 2023,
     "publishDate": "2023-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/HRI_2023_HIRL_Workshop__Learning_about_Robot_Motions_with_Variation_Theory.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/HRI_2023_HIRL_Workshop__Learning_about_Robot_Motions_with_Variation_Theory.pdf"
   },
   {
     "title": "Towards More Effective AI-Assisted Programming: A Systematic Design Exploration to Improve Visual Studio IntelliCode's User Experience",
@@ -1216,7 +1229,7 @@
     "year": 2023,
     "publishDate": "2023-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/Vaithilingam2023ICSE_IntelliCode.PDF"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/Vaithilingam2023ICSE_IntelliCode.PDF"
   },
   {
     "title": "Accessible Text Tools for People with Cognitive Impairments and Non-Native Readers: Challenges and Opportunities",
@@ -1241,7 +1254,7 @@
     "year": 2023,
     "publishDate": "2023-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/accessible_text_tools_MuC23.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/accessible_text_tools_MuC23.pdf"
   },
   {
     "title": "Accessible Text Tools: Where They Are Needed & What They Should Look Like",
@@ -1266,7 +1279,7 @@
     "year": 2023,
     "publishDate": "2023-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/heuer_CHI23LBW_accessibleTextTools.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/heuer_CHI23LBW_accessibleTextTools.pdf"
   },
   {
     "title": "Designing Interfaces for Human-Computer Communication: An On-Going Collection of Considerations",
@@ -1281,12 +1294,12 @@
     "venue": {
       "fullName": "arXiv",
       "shortName": "arXiv",
-      "venueType": "other"
+      "venueType": "arxiv"
     },
     "year": 2023,
     "publishDate": "2023-01-01",
     "doi": "",
-    "preprint": "https://arxiv.org/pdf/2309.02257.pdf"
+    "paperLink": "https://arxiv.org/pdf/2309.02257.pdf"
   },
   {
     "title": "The Usability of Pragmatic Communication in Regular Expression Synthesis",
@@ -1311,7 +1324,7 @@
     "venue": {
       "fullName": "arXiv",
       "shortName": "arXiv",
-      "venueType": "other"
+      "venueType": "arxiv"
     },
     "year": 2023,
     "publishDate": "2023-01-01",
@@ -1350,7 +1363,7 @@
     "venue": {
       "fullName": "arXiv",
       "shortName": "arXiv",
-      "venueType": "other"
+      "venueType": "arxiv"
     },
     "year": 2023,
     "publishDate": "2023-01-01",
@@ -1380,7 +1393,7 @@
     "venue": {
       "fullName": "arXiv",
       "shortName": "arXiv",
-      "venueType": "other"
+      "venueType": "arxiv"
     },
     "year": 2023,
     "publishDate": "2023-01-01",
@@ -1489,7 +1502,7 @@
     "year": 2022,
     "publishDate": "2022-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/gero2022_neuripsworkshop.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/gero2022_neuripsworkshop.pdf"
   },
   {
     "title": "A Selective Summary of Where to Hide a Stolen Elephant: Leaps in Creative Writing with Multimodal Machine Intelligence",
@@ -1524,7 +1537,7 @@
     "year": 2022,
     "publishDate": "2022-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/elephant_in2writing_selective_summary.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/elephant_in2writing_selective_summary.pdf"
   },
   {
     "title": "Where to Hide a Stolen Elephant: Leaps in Creative Writing with Multimodal Machine Intelligence",
@@ -1559,7 +1572,7 @@
     "year": 2022,
     "publishDate": "2022-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/elephant_tochi2022.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/elephant_tochi2022.pdf"
   },
   {
     "title": "Revisiting Human-Robot Teaching and Learning Through the Lens of Human Concept Learning Theory",
@@ -1599,7 +1612,7 @@
     "year": 2022,
     "publishDate": "2022-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/booth_hri2022.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/booth_hri2022.pdf"
   },
   {
     "title": "Do explanations increase the effectiveness of AI-crowd generated fake news warnings?",
@@ -1644,7 +1657,7 @@
     "year": 2022,
     "publishDate": "2022-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/epsteinEtAl_CS279_icwsm.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/epsteinEtAl_CS279_icwsm.pdf"
   },
   {
     "title": "Expectation vs. Experience: Evaluating the Usability of Code Generation Tools Powered by Large Language Models",
@@ -1674,7 +1687,7 @@
     "year": 2022,
     "publishDate": "2022-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/copilot_lbw_chi22.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/copilot_lbw_chi22.pdf"
   },
   {
     "title": "Concept-Annotated Examples for Library Comparison",
@@ -1714,7 +1727,7 @@
     "year": 2022,
     "publishDate": "2022-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/paralib_uist22.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/paralib_uist22.pdf"
   },
   {
     "title": "A Comparative Evaluation of Interventions Against Misinformation: Augmenting the WHO Checklist",
@@ -1739,7 +1752,7 @@
     "year": 2022,
     "publishDate": "2022-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/who_checklist_chi22.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/who_checklist_chi22.pdf"
   },
   {
     "title": "Metric Elicitation; Moving from Theory to Practice",
@@ -1774,7 +1787,7 @@
     "venue": {
       "fullName": "arXiv",
       "shortName": "arXiv",
-      "venueType": "other"
+      "venueType": "arxiv"
     },
     "year": 2022,
     "publishDate": "2022-01-01",
@@ -1813,13 +1826,8 @@
     "year": 2021,
     "publishDate": "2021-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/MiC_NeurIPS21_Loopholes.pdf",
-    "supplementals": [
-      {
-        "name": "Workshop",
-        "url": "https://mic-workshop.github.io/"
-      }
-    ]
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/MiC_NeurIPS21_Loopholes.pdf",
+    "materialLink": "https://mic-workshop.github.io/"
   },
   {
     "title": "Interactive Cohort Analysis and Hypothesis Discovery by Exploring Temporal Patterns in Population-Level Health Records",
@@ -1861,7 +1869,7 @@
     "year": 2021,
     "publishDate": "2021-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/Interactive_Visual_Analytics_for_EHRs_VAHC_2021.pdf",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/Interactive_Visual_Analytics_for_EHRs_VAHC_2021.pdf",
     "award": "honorable-mention",
     "awardText": "Honorable Mention Award"
   },
@@ -1893,9 +1901,10 @@
     "year": 2021,
     "publishDate": "2021-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/examplenet_chi2021.pdf",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/examplenet_chi2021.pdf",
     "award": "honorable-mention",
-    "awardText": "Honorable Mention Award"
+    "awardText": "Honorable Mention Award",
+    "isSelected": true
   },
   {
     "title": "Evaluating the Interpretability of Generative Models by Interactive Reconstruction",
@@ -1935,9 +1944,10 @@
     "year": 2021,
     "publishDate": "2021-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/evalGenModels_chi2021.pdf",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/evalGenModels_chi2021.pdf",
     "award": "honorable-mention",
-    "awardText": "Honorable Mention Award"
+    "awardText": "Honorable Mention Award",
+    "isSelected": true
   },
   {
     "title": "ASSUAGE: Assembly Synthesis Using A Guided Exploration",
@@ -1977,7 +1987,7 @@
     "year": 2021,
     "publishDate": "2021-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/ASSUAGE_UIST21.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/ASSUAGE_UIST21.pdf"
   },
   {
     "title": "PL and HCI: Better Together",
@@ -2008,13 +2018,7 @@
     "year": 2021,
     "publishDate": "2021-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/PLandHCI_betterTogether.pdf",
-    "supplementals": [
-      {
-        "name": "HTML",
-        "url": "https://cacm.acm.org/magazines/2021/8/254314-pl-and-hci/fulltext"
-      }
-    ]
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/PLandHCI_betterTogether.pdf"
   },
   {
     "title": "Interpretable Program Synthesis",
@@ -2059,7 +2063,7 @@
     "year": 2021,
     "publishDate": "2021-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/ips_chi2021.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/ips_chi2021.pdf"
   },
   {
     "title": "Proxy Tasks and Subjective Measures Can Be Misleading in Evaluating XAI Systems",
@@ -2094,9 +2098,10 @@
     "year": 2020,
     "publishDate": "2020-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/bucinca_iui20_proxy.pdf",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/bucinca_iui20_proxy.pdf",
     "award": "best-paper",
-    "awardText": "Best Paper Award"
+    "awardText": "Best Paper Award",
+    "isSelected": true
   },
   {
     "title": "Interactive Program Synthesis by Augmented Examples",
@@ -2131,7 +2136,7 @@
     "year": 2020,
     "publishDate": "2020-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/ips_augex_uist20.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/ips_augex_uist20.pdf"
   },
   {
     "title": "Exempla Gratis (E.G.): Code Examples for Free",
@@ -2171,7 +2176,7 @@
     "year": 2020,
     "publishDate": "2020-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/fse2020-industry-example-generation.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/fse2020-industry-example-generation.pdf"
   },
   {
     "title": "Enabling Data-Driven API Design with Community Usage Data: A Need-Finding Study",
@@ -2206,7 +2211,7 @@
     "year": 2020,
     "publishDate": "2020-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/Data-driven-API-CHI20.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/Data-driven-API-CHI20.pdf"
   },
   {
     "title": "Triangulating the News: Visualizing Commonality and Variation Across Many News Stories on the Same Event",
@@ -2246,7 +2251,7 @@
     "year": 2020,
     "publishDate": "2020-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/glassman_CJ_2020.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/glassman_CJ_2020.pdf"
   },
   {
     "title": "Characterizing Developer Use of Automatically Generated Patches",
@@ -2286,7 +2291,7 @@
     "year": 2019,
     "publishDate": "2019-01-01",
     "doi": "",
-    "preprint": "https://arxiv.org/abs/1907.06535"
+    "paperLink": "https://arxiv.org/abs/1907.06535"
   },
   {
     "title": "Approaching polyglot programming: what can we learn from bilingualism studies?",
@@ -2345,7 +2350,7 @@
     "year": 2018,
     "publishDate": "2018-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/examplore_chi18.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/examplore_chi18.pdf"
   },
   {
     "title": "Interactive Extraction of Examples from Existing Code",
@@ -2381,7 +2386,8 @@
     "publishDate": "2018-01-01",
     "doi": "",
     "award": "honorable-mention",
-    "awardText": "Best of CHI Honorable Mention"
+    "awardText": "Best of CHI Honorable Mention",
+    "isSelected": true
   },
   {
     "title": "Writing Reusable Code Feedback at Scale with Mixed-Initiative Program Synthesis",
@@ -2431,7 +2437,7 @@
     "year": 2017,
     "publishDate": "2017-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/glassmanLatS17.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/glassmanLatS17.pdf"
   },
   {
     "title": "TraceDiff: Debugging Unexpected Code Behavior Using Trace Divergences",
@@ -2776,7 +2782,7 @@
     "venue": {
       "fullName": "Design Recommendations for Intelligent Tutoring Systems: Domain Modeling",
       "shortName": "Book Chapter",
-      "venueType": "book"
+      "venueType": "other"
     },
     "year": 2016,
     "publishDate": "2016-07-01",
@@ -2816,7 +2822,7 @@
     "year": 2015,
     "publishDate": "2015-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/uist2015-elg-foobaz.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/uist2015-elg-foobaz.pdf"
   },
   {
     "title": "OverCode: Visualizing Variation in Student Solutions to Programming Problems at Scale",
@@ -2857,7 +2863,7 @@
     "year": 2015,
     "publishDate": "2015-01-01",
     "doi": "",
-    "preprint": "https://glassmanlab.seas.harvard.edu/papers/glassman-tochi.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/glassman-tochi.pdf"
   },
   {
     "title": "Mudslide: A Spatially Anchored Census of Student Confusion for Online Lecture Videos",
@@ -2893,7 +2899,8 @@
     "publishDate": "2015-01-01",
     "doi": "",
     "award": "honorable-mention",
-    "awardText": "Best of CHI Honorable Mention"
+    "awardText": "Best of CHI Honorable Mention",
+    "isSelected": true
   },
   {
     "title": "RIMES: Embedding Interactive Multimedia Exercises in Lecture Videos",
@@ -2957,7 +2964,7 @@
     "venue": {
       "fullName": "MIT CSAIL Technical Report",
       "shortName": "CSAIL TR",
-      "venueType": "other"
+      "venueType": "research"
     },
     "year": 2015,
     "publishDate": "2015-04-01",
@@ -3068,112 +3075,6 @@
     },
     "year": 2013,
     "publishDate": "2013-01-01",
-    "doi": ""
-  },
-  {
-    "title": "Region of attraction estimation for a perching aircraft: A Lyapunov method exploiting barrier certificates",
-    "authors": [
-      {
-        "firstName": "Elena",
-        "middleName": "L.",
-        "lastName": "Glassman",
-        "publicationName": "Elena L. Glassman"
-      },
-      {
-        "firstName": "Alexis",
-        "lastName": "Desbiens",
-        "publicationName": "Alexis Desbiens"
-      },
-      {
-        "firstName": "Mark",
-        "lastName": "Tobenkin",
-        "publicationName": "Mark Tobenkin"
-      },
-      {
-        "firstName": "Mark",
-        "lastName": "Cutkosky",
-        "publicationName": "Mark Cutkosky"
-      },
-      {
-        "firstName": "Russ",
-        "lastName": "Tedrake",
-        "publicationName": "Russ Tedrake"
-      }
-    ],
-    "venue": {
-      "fullName": "IEEE International Conference on Robotics and Automation",
-      "shortName": "ICRA",
-      "venueType": "conference"
-    },
-    "year": 2012,
-    "publishDate": "2012-01-01",
-    "doi": ""
-  },
-  {
-    "title": "A quadratic regulator-based heuristic for rapidly exploring state space",
-    "authors": [
-      {
-        "firstName": "Elena",
-        "middleName": "L.",
-        "lastName": "Glassman",
-        "publicationName": "Elena L. Glassman"
-      },
-      {
-        "firstName": "Russ",
-        "lastName": "Tedrake",
-        "publicationName": "Russ Tedrake"
-      }
-    ],
-    "venue": {
-      "fullName": "IEEE International Conference on Robotics and Automation",
-      "shortName": "ICRA",
-      "venueType": "conference"
-    },
-    "year": 2010,
-    "publishDate": "2010-01-01",
-    "doi": ""
-  },
-  {
-    "title": "Reducing the number of channels for an ambulatory patient-specific EEG-based epileptic seizure detector by applying recursive feature elimination",
-    "authors": [
-      {
-        "firstName": "Elena",
-        "middleName": "L.",
-        "lastName": "Glassman",
-        "publicationName": "Elena L. Glassman"
-      },
-      {
-        "firstName": "John",
-        "lastName": "Guttag",
-        "publicationName": "John Guttag"
-      }
-    ],
-    "venue": {
-      "fullName": "IEEE Engineering in Medicine and Biology Society",
-      "shortName": "EMBS",
-      "venueType": "conference"
-    },
-    "year": 2006,
-    "publishDate": "2006-01-01",
-    "doi": ""
-  },
-  {
-    "title": "A wavelet-like filter based on neuron action potentials for analysis of human scalp electroencephalographs",
-    "authors": [
-      {
-        "firstName": "Elena",
-        "middleName": "L.",
-        "lastName": "Glassman",
-        "publicationName": "Elena L. Glassman"
-      }
-    ],
-    "venue": {
-      "fullName": "IEEE Transactions on Biomedical Engineering",
-      "shortName": "TBME",
-      "venueType": "journal"
-    },
-    "year": 2005,
-    "publishDate": "2005-11-01",
     "doi": ""
   }
 ]

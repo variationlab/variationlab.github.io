@@ -139,6 +139,12 @@ a:hover {
 	line-height: var(--line-content);
 }
 
+.pageTitle {
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: var(--line-title);
+}
+
 .pageKicker,
 .sectionLabel {
 	font-size: 0.875rem;
@@ -188,6 +194,31 @@ a:hover {
 	color: #a1a1aa;
 }
 
+/* Center button labels optically: trim each label's box to the cap height and baseline so flex
+   centering aligns the letters with icons. text-box only trims block or inline boxes, not bare text
+   in a flex container, so every Button label is wrapped in a <span>. */
+[data-slot='button'] > span {
+	text-box: trim-both cap alphabetic;
+}
+
+/* Plain text links (not buttons) underline on hover and keyboard focus, matching the shadcn
+   Button link variant. Use link-underline on the link itself, or link-underline-base plus
+   group-hover:decoration-current on text inside a group link. */
+@utility link-underline-base {
+	text-decoration-line: underline;
+	text-decoration-color: transparent;
+	text-underline-offset: 4px;
+}
+
+@utility link-underline {
+	@apply link-underline-base;
+
+	&:hover,
+	&:focus-visible {
+		text-decoration-color: currentColor;
+	}
+}
+
 .tileName {
 	font-size: 1rem;
 	font-weight: 700;
@@ -224,10 +255,14 @@ a:hover {
 	--collapse: 1;
 	--logo-expanded: 8rem;
 	--logo-compact: 2.5rem;
-	--logo-h: calc(var(--logo-expanded) - (var(--logo-expanded) - var(--logo-compact)) * var(--collapse));
+	--logo-h: calc(
+		var(--logo-expanded) - (var(--logo-expanded) - var(--logo-compact)) * var(--collapse)
+	);
 	--word-compact: 1.25rem;
 	--word-expanded: clamp(1.5rem, 4.8vw, 2.2rem);
-	--word-size: calc(var(--word-expanded) - (var(--word-expanded) - var(--word-compact)) * var(--collapse));
+	--word-size: calc(
+		var(--word-expanded) - (var(--word-expanded) - var(--word-compact)) * var(--collapse)
+	);
 	--sub-size: 1.0625rem;
 	--sub-gap: calc(0.2rem * (1 - var(--collapse)));
 	--sub-h: calc(var(--sub-size) * 1.35 * (1 - var(--collapse)));

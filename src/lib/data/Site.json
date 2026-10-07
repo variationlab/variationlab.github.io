@@ -1,32 +1,26 @@
 {
-  "title": "Harvard Variation Lab",
-  "institution": "Harvard",
-  "labName": "Variation Lab",
-  "headerSubtitle": "Human-Computer Interaction @SEAS",
-  "footerNameLines": [
-    "Variation",
-    "Lab"
-  ],
-  "headerLogo": {
-    "src": "/images/temp_logo.png",
-    "alt": "Variation Lab"
-  },
-  "footerMark": {
-    "src": "/images/temp_logo_white.png",
-    "alt": ""
-  },
-  "footerLogo": {
-    "src": "/images/harvard-seas.svg",
-    "alt": "Harvard SEAS"
-  },
-  "copyrightHolder": "The President and Fellows of Harvard College",
-  "home": {
-    "introPrefix": "We are the",
-    "highlight": "Variation lab",
-    "introSuffix": "from Harvard SEAS. We build AI-resilient interfaces that help people notice, evaluate, and recover from AI choices during open-ended work like reading, writing, ideating, and sensemaking.",
-    "recentPublicationsLimit": 5
-  },
-  "peopleTagline": "Augmenting human intelligence with variation",
-  "coursesMessage": "Course information coming soon.",
-  "contactMessage": "Contact information coming soon."
+	"title": "Harvard Variation Lab",
+	"institution": "Harvard",
+	"labName": "Variation Lab",
+	"headerSubtitle": "Human-Computer Interaction @SEAS",
+	"footerNameLines": ["Variation", "Lab"],
+	"headerLogo": {
+		"src": "/images/temp_logo.png",
+		"alt": "Variation Lab"
+	},
+	"footerMark": {
+		"src": "/images/temp_logo_white.png",
+		"alt": ""
+	},
+	"footerLogo": {
+		"src": "/images/harvard-seas.svg",
+		"alt": "Harvard SEAS"
+	},
+	"copyrightHolder": "The President and Fellows of Harvard College",
+	"home": {
+		"introPrefix": "We are the",
+		"highlight": "Variation lab",
+		"introSuffix": "from Harvard SEAS. We build AI-resilient interfaces that help people notice, evaluate, and recover from AI choices during open-ended work like reading, writing, ideating, and sensemaking."
+	},
+	"peopleTagline": "Augmenting human intelligence with variation"
 }

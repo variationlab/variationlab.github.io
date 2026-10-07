@@ -16,6 +16,8 @@
 
 	let scrollCollapse = $state(0);
 	let collapse = $derived(page.url.pathname === '/' ? scrollCollapse : 1);
+	// Recomputed in the browser so prerendered or cached HTML never shows a stale year.
+	let copyrightYear = $state(new Date().getFullYear());
 
 	function syncHeader() {
 		if (page.url.pathname !== '/') return;
@@ -28,6 +30,7 @@
 	}
 
 	onMount(() => {
+		copyrightYear = new Date().getFullYear();
 		syncHeader();
 		if (page.url.pathname !== '/') return;
 
@@ -62,7 +65,9 @@
 						class="navBrand border-b border-transparent text-zinc-950 transition-colors group-hover:border-zinc-300 group-hover:text-[var(--brand-color)] group-focus-visible:border-zinc-300 group-focus-visible:text-[var(--brand-color)]"
 					>
 						{#each site.labName.split(' ') as word, index (word)}
-							{#if index > 0}{' '}{/if}<span class={index === 0 ? undefined : 'logoThin'}>{word}</span>
+							{#if index > 0}{' '}{/if}<span class={index === 0 ? undefined : 'logoThin'}
+								>{word}</span
+							>
 						{/each}
 					</span>
 					<span class="headerSubtitle">{site.headerSubtitle}</span>
@@ -111,7 +116,9 @@
 												: 'text-zinc-700 hover:text-[var(--brand-color)]'
 										}`}
 										href={route.href}
-										aria-current={isCurrentRoute(page.url.pathname, route.href) ? 'page' : undefined}
+										aria-current={isCurrentRoute(page.url.pathname, route.href)
+											? 'page'
+											: undefined}
 									>
 										{route.label}
 									</a>
@@ -139,7 +146,9 @@
 					<img class="h-12 w-auto" src={site.footerMark.src} alt={site.footerMark.alt} />
 					<div class="footerBrand">
 						{#each site.footerNameLines as line, index (index)}
-							{#if index > 0}{' '}{/if}<span class={index === 0 ? undefined : 'logoThin'}>{line}</span>
+							{#if index > 0}{' '}{/if}<span class={index === 0 ? undefined : 'logoThin'}
+								>{line}</span
+							>
 						{/each}
 					</div>
 				</div>
@@ -160,7 +169,7 @@
 			</nav>
 
 			<p class="footerCopyright text-center text-white/55">
-				Copyright © {new Date().getFullYear()}
+				Copyright © {copyrightYear}
 				{site.copyrightHolder}
 			</p>
 		</div>
