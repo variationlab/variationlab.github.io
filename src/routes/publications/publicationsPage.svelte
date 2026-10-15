@@ -18,7 +18,7 @@
 		<h1 class="pageTitle text-zinc-950">Publications</h1>
 	</div>
 
-	<div class="md:grid md:grid-cols-[6rem_minmax(0,1fr)] md:gap-8">
+	<div class="publicationText md:grid md:grid-cols-[6rem_minmax(0,1fr)] md:gap-8">
 		<PublicationYearNav
 			years={publicationYears}
 			class="sticky top-24 hidden max-h-[calc(100vh-7rem)] self-start overflow-y-auto md:block"

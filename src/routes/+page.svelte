@@ -40,7 +40,7 @@
 <section class="grid gap-8 md:items-start">
 	<div class="max-w-full">
 		<p class="bodyText mt-4 text-zinc-700">
-			{site.home.introPrefix} <span class="font-semibold text-harvard">{site.home.highlight}</span>
+			{site.home.introPrefix} <span class="text-harvard font-semibold">{site.home.highlight}</span>
 			{site.home.introSuffix}
 		</p>
 		<ul class="mt-6 flex items-start gap-4 overflow-x-auto lg:overflow-visible">
@@ -78,7 +78,7 @@
 </section>
 
 <section class="mt-10 border-t border-zinc-200 pt-6" aria-labelledby="research-themes-title">
-	<h2 id="research-themes-title" class="sectionLabel mb-5 text-zinc-950">Research Themes</h2>
+	<h2 id="research-themes-title" class="sectionTitle mb-5 text-zinc-950">Research Themes</h2>
 	<div class="grid gap-x-10 gap-y-6 md:grid-cols-3">
 		{#each researchThemes as theme (theme.title)}
 			<article>
@@ -91,7 +91,7 @@
 
 <section class="mt-10 border-t border-zinc-200 pt-6">
 	<div class="mb-4 flex items-baseline justify-between gap-4">
-		<h2 class="sectionLabel text-zinc-950">Selected Publications</h2>
+		<h2 class="sectionTitle text-zinc-950">Selected Publications</h2>
 		<Button
 			variant="link"
 			href="/publications"

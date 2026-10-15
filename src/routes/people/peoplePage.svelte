@@ -4,12 +4,17 @@
 	import CurrentMemberRow from '$lib/components/person/currentMemberRow.svelte';
 	import OtherMember from '$lib/components/person/otherMember.svelte';
 	import type { Members } from '$lib/types';
-	import { getMemberName, getMemberStatus, orderActiveMembers } from '$lib/data/Members';
+	import {
+		getMemberName,
+		getMemberStatus,
+		groupAlumniMembers,
+		orderActiveMembers
+	} from '$lib/data/Members';
 
 	let { members }: { members: Members[] } = $props();
 
 	let currentMembers = $derived(orderActiveMembers(members));
-	let alumniMembers = $derived(members.filter((member) => member.category === 'alumni'));
+	let alumniGroups = $derived(groupAlumniMembers(members));
 	let previewedMemberName = $state<string | undefined>();
 	let previewedMember = $derived(
 		currentMembers.find((member) => getMemberName(member) === previewedMemberName)
@@ -48,7 +53,7 @@
 
 <section>
 	<div class="mb-5 flex flex-wrap items-baseline gap-x-4 gap-y-1">
-		<h1 class="pageKicker text-zinc-950 sm:text-zinc-500">
+		<h1 class="pageTitle text-zinc-950">
 			<span class="sm:hidden">Members</span>
 			<span class="hidden sm:inline">People</span>
 		</h1>
@@ -70,24 +75,24 @@
 		<aside class="relative min-h-0 min-w-0 sm:col-span-2" aria-live="polite">
 			<div class="absolute inset-0 flex flex-col overflow-hidden px-1 py-2 lg:px-3">
 				{#if previewedMember}
-					<h2 class="personTitle max-w-full [overflow-wrap:anywhere] break-words text-zinc-950">
+					<h2 class="itemTitle max-w-full [overflow-wrap:anywhere] break-words text-zinc-950">
 						{getMemberName(previewedMember)}
 					</h2>
 					<p
-						class="bodyText mt-1 max-w-full [overflow-wrap:anywhere] break-words text-zinc-800 italic"
+						class="metaText mt-1 max-w-full font-semibold [overflow-wrap:anywhere] break-words text-zinc-700"
 					>
 						{getMemberStatus(previewedMember)}
 					</p>
-					<p class="bodyText mt-1 max-w-full [overflow-wrap:anywhere] break-words text-zinc-700">
+					<p class="metaText mt-0.5 max-w-full [overflow-wrap:anywhere] break-words text-zinc-600">
 						{previewedMember.interests.join(', ')}
 					</p>
 					{#if previewedMember.bio}
 						<div
 							bind:this={bioBox}
-							class="bodyText mt-4 min-h-0 flex-1 overflow-hidden border-t border-zinc-200 pt-4 text-zinc-700"
+							class="metaText mt-4 min-h-0 flex-1 overflow-hidden border-t border-zinc-200 pt-4 text-zinc-600"
 						>
 							<p
-								class="overflow-hidden [display:-webkit-box] [-webkit-box-orient:vertical] [overflow-wrap:anywhere] break-words"
+								class="[display:-webkit-box] overflow-hidden [overflow-wrap:anywhere] break-words [-webkit-box-orient:vertical]"
 								style:-webkit-line-clamp={bioLines}
 							>
 								{previewedMember.bio}
@@ -95,7 +100,7 @@
 						</div>
 					{/if}
 				{:else}
-					<p class="pageKicker text-harvard max-w-full [overflow-wrap:anywhere] break-words italic">
+					<p class="itemTitle text-harvard max-w-full [overflow-wrap:anywhere] break-words">
 						{site.peopleTagline}
 					</p>
 				{/if}
@@ -105,10 +110,25 @@
 </section>
 
 <section class="mt-8 border-t border-zinc-200 pt-6">
-	<h2 class="sectionLabel text-zinc-950">Alumni</h2>
-	<div class="mt-4 grid gap-x-8 gap-y-5 lg:grid-cols-2">
-		{#each alumniMembers as member (getMemberName(member))}
-			<OtherMember {member} />
+	<h2 class="sectionTitle text-zinc-950">Alumni</h2>
+	<div class="mt-4 space-y-6">
+		{#each alumniGroups as group (group.key)}
+			<section>
+				<h3 class="detailTitle text-zinc-950">{group.title}</h3>
+				{#if group.key === 'interns'}
+					<div class="mt-3 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-3">
+						{#each group.members as member (getMemberName(member))}
+							<OtherMember {member} compact />
+						{/each}
+					</div>
+				{:else}
+					<div class="mt-3 grid gap-x-8 gap-y-5 lg:grid-cols-2">
+						{#each group.members as member (getMemberName(member))}
+							<OtherMember {member} />
+						{/each}
+					</div>
+				{/if}
+			</section>
 		{/each}
 	</div>
 </section>

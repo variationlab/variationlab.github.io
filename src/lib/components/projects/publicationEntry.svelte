@@ -24,7 +24,7 @@
 	const awardLabel = $derived(publication.awardText);
 </script>
 
-<article class="min-w-0">
+<article class="publicationText min-w-0">
 	<div class={publication.teaser ? teaserRowClass : ''}>
 		{#if publication.teaser}
 			<PublicationTeaser
@@ -36,7 +36,7 @@
 		{/if}
 		<div class="min-w-0">
 			<h3 class="itemTitle text-zinc-950">{publication.title}</h3>
-			<p class="metaText text-zinc-800">
+			<p class="bodyText mt-0.5 text-zinc-800">
 				{#each publication.authors as author, index (author.publicationName)}
 					{@const homepage = getLabAuthorHomepage(author, publication, labAuthorMemberships)}
 					{#if index > 0}<span>, </span>{/if}
@@ -56,18 +56,18 @@
 					{/if}
 				{/each}
 			</p>
-			<p class="metaText text-zinc-700">
+			<p class="bodyText text-zinc-700">
 				<span class="italic">{publication.venue.fullName}, {publication.year}</span
 				>{#if publication.affiliation}
 					<span class="linkSeparator">·</span>{publication.affiliation}{/if}
 			</p>
 			{#if awardLabel}
-				<p class="metaText text-harvard mt-1 flex items-center gap-1.5">
+				<p class="bodyText text-harvard mt-1 flex items-center gap-1.5">
 					<Trophy aria-hidden="true" size={16} class="shrink-0" />
 					{#if publication.awardLink}
 						<Button
 							variant="link"
-							class="metaText text-harvard h-auto border-0 p-0 font-normal"
+							class="bodyText text-harvard h-auto border-0 p-0 font-normal"
 							href={publication.awardLink}
 							target="_blank"
 							rel="external noopener noreferrer"><span>{awardLabel}</span></Button

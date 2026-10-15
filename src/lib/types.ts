@@ -6,6 +6,7 @@ export interface Authors {
 }
 
 export interface Members extends Authors {
+	/** Preferred first name, shown as `Nick (First) Last` while `publicationName` still matches papers. */
 	nickName?: string;
 	email?: string;
 	/** Profile URLs. Each uses the website icon unless `icon` is set. A generic link can set `title`. */

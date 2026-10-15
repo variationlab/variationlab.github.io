@@ -117,9 +117,9 @@
 	></a>
 
 	<span
-		class="tileName pointer-events-none absolute inset-x-0 bottom-0 z-20 rounded-b-lg bg-gradient-to-t from-zinc-950/80 to-transparent px-2 pt-10 pb-2 text-white"
+		class="itemTitle pointer-events-none absolute inset-x-0 bottom-0 z-20 rounded-b-lg bg-gradient-to-t from-zinc-950/80 to-transparent px-2 pt-10 pb-2 text-white"
 	>
-		{member.firstName}
+		{getMemberName(member)}
 	</span>
 
 	{#if hasLinks}
@@ -192,7 +192,7 @@
 						<div class="w-max rounded-md bg-zinc-100/75 p-1 backdrop-blur-[2px]">
 							{#each socialLinks as link (link.kind)}
 								<a
-									class="ml-auto flex w-full items-center justify-end gap-2 rounded-sm px-2 py-1.5 text-right text-sm outline-none hover:bg-white/60 hover:text-[var(--brand-color)] focus-visible:bg-white/60 focus-visible:text-[var(--brand-color)]"
+									class="metaText ml-auto flex w-full items-center justify-end gap-2 rounded-sm px-2 py-1.5 text-right outline-none hover:bg-white/60 hover:text-[var(--brand-color)] focus-visible:bg-white/60 focus-visible:text-[var(--brand-color)]"
 									href={link.url}
 									target="_blank"
 									rel="external noopener noreferrer"

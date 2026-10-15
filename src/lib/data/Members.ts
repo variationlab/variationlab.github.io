@@ -13,6 +13,10 @@ export type MemberSocialLink = {
 };
 
 export function getMemberName(member: Members): string {
+	const nickName = member.nickName?.trim();
+	if (nickName && nickName !== member.firstName) {
+		return `${nickName} (${member.firstName}) ${member.lastName}`;
+	}
 	return member.publicationName;
 }
 
@@ -131,4 +135,38 @@ export function getMemberSocialLinks(member: Members): MemberSocialLink[] {
 
 export function hasMemberSocialLinks(member: Members): boolean {
 	return getMemberSocialLinks(member).length > 0;
+}
+
+export type AlumniGroup = {
+	key: 'postdocs' | 'visitors' | 'interns';
+	title: string;
+	members: Members[];
+};
+
+/** Groups alumni by their role in the lab (`formerRole`), keeping data order and dropping empty groups. */
+export function groupAlumniMembers(members: Members[]): AlumniGroup[] {
+	const groups: AlumniGroup[] = [
+		{ key: 'postdocs', title: 'Postdocs and PhD Graduates', members: [] },
+		{ key: 'visitors', title: 'Visiting Scholars', members: [] },
+		{ key: 'interns', title: 'Student Interns', members: [] }
+	];
+	const [postdocs, visitors, interns] = groups;
+
+	members
+		.filter((member) => member.category === 'alumni')
+		.forEach((member) => {
+			const formerRole = member.formerRole?.toLowerCase() ?? '';
+			if (formerRole.includes('visiting')) {
+				visitors.members.push(member);
+			} else if (
+				formerRole.includes('postdoc') ||
+				member.currentAcademicStatus === 'phd-graduated'
+			) {
+				postdocs.members.push(member);
+			} else {
+				interns.members.push(member);
+			}
+		});
+
+	return groups.filter((group) => group.members.length > 0);
 }

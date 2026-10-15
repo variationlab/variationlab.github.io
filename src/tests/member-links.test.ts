@@ -4,6 +4,7 @@ import {
 	getMemberEmailLink,
 	getMemberGitHubLink,
 	getMemberGoogleScholarLink,
+	getMemberName,
 	getMemberProfileLinks,
 	getMemberProfilePath,
 	getMemberShortRole,
@@ -12,6 +13,7 @@ import {
 	orderActiveMembers,
 	getMemberSocialLinks,
 	getMemberWebsiteLink,
+	groupAlumniMembers,
 	hasMemberSocialLinks
 } from '$lib/data/Members';
 
@@ -112,7 +114,10 @@ describe('Member contact link helpers', () => {
 		expect(
 			getMemberProfileLinks({
 				...baseMember,
-				profileLinks: [{ url: ' https://example.edu/lab ' }, { url: 'https://github.com/example', icon: 'github' }]
+				profileLinks: [
+					{ url: ' https://example.edu/lab ' },
+					{ url: 'https://github.com/example', icon: 'github' }
+				]
 			})
 		).toEqual([
 			{ url: 'https://example.edu/lab', icon: 'website' },
@@ -147,7 +152,9 @@ describe('Member contact link helpers', () => {
 	it('keeps Google Scholar as a direct profile button link', () => {
 		const member = {
 			...baseMember,
-			profileLinks: [{ url: 'https://scholar.google.com/citations?user=example', icon: 'googleScholar' as const }]
+			profileLinks: [
+				{ url: 'https://scholar.google.com/citations?user=example', icon: 'googleScholar' as const }
+			]
 		};
 
 		expect(getMemberGoogleScholarLink(member)).toEqual({
@@ -201,6 +208,20 @@ describe('Member contact link helpers', () => {
 		expect(hasMemberSocialLinks(baseMember)).toBe(false);
 	});
 
+	it('shows a nickname before the first name but keeps the publication name for papers', () => {
+		const member: Members = {
+			...baseMember,
+			firstName: 'Ning-Er',
+			nickName: 'Nina',
+			lastName: 'Lei',
+			publicationName: 'Nina Lei'
+		};
+
+		expect(getMemberName(member)).toBe('Nina (Ning-Er) Lei');
+		expect(getMemberName({ ...member, nickName: 'Ning-Er' })).toBe('Nina Lei');
+		expect(getMemberName(baseMember)).toBe('Example Member');
+	});
+
 	it('uses alumni current roles as display status', () => {
 		const member: Members = {
 			...baseMember,
@@ -210,5 +231,41 @@ describe('Member contact link helpers', () => {
 		};
 
 		expect(getMemberStatus(member)).toBe('Assistant Professor at Example University');
+	});
+
+	it('groups alumni by former lab role in display order and drops empty groups', () => {
+		const alumni: Members = { ...baseMember, category: 'alumni' };
+		const postdoc = {
+			...alumni,
+			publicationName: 'Postdoc',
+			formerRole: 'Postdoctoral researcher'
+		};
+		const graduate: Members = {
+			...alumni,
+			publicationName: 'Graduate',
+			currentAcademicStatus: 'phd-graduated',
+			formerRole: 'PhD Student'
+		};
+		const visitor = {
+			...alumni,
+			publicationName: 'Visitor',
+			formerRole: 'Visiting doctoral scholar'
+		};
+		const intern = { ...alumni, publicationName: 'Intern', formerRole: 'Undergraduate researcher' };
+		const current = {
+			...baseMember,
+			publicationName: 'Current',
+			formerRole: 'Postdoctoral researcher'
+		};
+
+		expect(groupAlumniMembers([intern, visitor, current, postdoc, graduate])).toEqual([
+			{ key: 'postdocs', title: 'Postdocs and PhD Graduates', members: [postdoc, graduate] },
+			{ key: 'visitors', title: 'Visiting Scholars', members: [visitor] },
+			{ key: 'interns', title: 'Student Interns', members: [intern] }
+		]);
+		expect(groupAlumniMembers([visitor])).toEqual([
+			{ key: 'visitors', title: 'Visiting Scholars', members: [visitor] }
+		]);
+		expect(groupAlumniMembers([current])).toEqual([]);
 	});
 });

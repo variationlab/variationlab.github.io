@@ -34,7 +34,7 @@
 
 <Button
 	variant="link"
-	class="metaText h-auto gap-1.5 border-0 p-0 font-normal text-zinc-800 hover:text-(--brand-color)"
+	class="bodyText h-auto gap-1.5 border-0 p-0 font-normal text-zinc-800 hover:text-(--brand-color)"
 	{href}
 	target="_blank"
 	rel="external noopener noreferrer"

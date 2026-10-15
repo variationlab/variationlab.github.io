@@ -78,15 +78,15 @@
 {#snippet memberDetails()}
 	<div class="min-w-0">
 		<h2
-			class="personTitle text-zinc-950 group-hover/member:text-[var(--brand-color)] group-focus-visible/member:text-[var(--brand-color)]"
+			class="itemTitle text-zinc-950 group-hover/member:text-[var(--brand-color)] group-focus-visible/member:text-[var(--brand-color)]"
 		>
 			{getMemberName(member)}
 		</h2>
-		<p class="bodyText mt-0.5 text-zinc-800 italic">{getMemberStatus(member)}</p>
-		<p class="bodyText mt-0.5 text-zinc-700">{member.interests.join(', ')}</p>
+		<p class="metaText mt-0.5 font-semibold text-zinc-700">{getMemberStatus(member)}</p>
+		<p class="metaText mt-0.5 text-zinc-600">{member.interests.join(', ')}</p>
 		{#if member.bio}
 			<hr class="my-4 border-zinc-200" />
-			<p class="bodyText text-zinc-700">{member.bio}</p>
+			<p class="metaText text-zinc-600">{member.bio}</p>
 		{/if}
 	</div>
 {/snippet}

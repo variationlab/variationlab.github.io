@@ -2,9 +2,12 @@
 	import './layout.css';
 	import site from '$lib/data/Site';
 	import favicon from '$lib/assets/favicon.svg';
+	import Moon from '@lucide/svelte/icons/moon';
+	import Sun from '@lucide/svelte/icons/sun';
 	import TextAlignJustify from '@lucide/svelte/icons/text-align-justify';
 	import { Button } from '$lib/components/ui/button';
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
+	import { dev } from '$app/environment';
 	import { afterNavigate, goto } from '$app/navigation';
 	import { page } from '$app/state';
 	import { isCurrentRoute, pathForHash, siteRoutes } from '$lib/SiteRoutes';
@@ -18,6 +21,12 @@
 	let collapse = $derived(page.url.pathname === '/' ? scrollCollapse : 1);
 	// Recomputed in the browser so prerendered or cached HTML never shows a stale year.
 	let copyrightYear = $state(new Date().getFullYear());
+	// Dev-only preview of a dark look; the site itself has no dark theme yet.
+	let darkPreview = $state(false);
+
+	$effect(() => {
+		document.documentElement.classList.toggle('darkPreview', darkPreview);
+	});
 
 	function syncHeader() {
 		if (page.url.pathname !== '/') return;
@@ -175,5 +184,23 @@
 		</div>
 	</footer>
 </div>
+
+{#if dev}
+	<Button
+		variant="outline"
+		size="icon"
+		class="fixed right-4 bottom-4 z-50 rounded-full bg-white shadow-md"
+		aria-label={darkPreview ? 'Turn off dark preview' : 'Preview dark mode'}
+		aria-pressed={darkPreview}
+		title="Dark preview (dev only)"
+		onclick={() => (darkPreview = !darkPreview)}
+	>
+		{#if darkPreview}
+			<Sun aria-hidden="true" />
+		{:else}
+			<Moon aria-hidden="true" />
+		{/if}
+	</Button>
+{/if}
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>

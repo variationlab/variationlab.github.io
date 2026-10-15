@@ -22,7 +22,7 @@
 
 	<div class="min-w-0">
 		<p
-			class="metaText font-semibold text-zinc-950 group-hover/member:text-[var(--brand-color)] group-focus-visible/member:text-[var(--brand-color)]"
+			class="itemTitle text-zinc-950 group-hover/member:text-[var(--brand-color)] group-focus-visible/member:text-[var(--brand-color)]"
 		>
 			{getMemberName(member)}
 		</p>

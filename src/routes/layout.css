@@ -6,8 +6,24 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-	--font-sans: 'Fira Sans', ui-sans-serif, system-ui, sans-serif;
+	--font-sans: 'Nunito Sans', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 	--font-logo: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+
+	/* Type scale: typography classes below use only these sizes and line heights. */
+	--text-xs: 0.75rem;
+	--text-sm: 0.875rem;
+	/* Default text size: 16px. Tailwind's text-base utility and every base-size role use it. */
+	--text-base: 1rem;
+	/* Publication text: 15px. */
+	--text-md: 0.9375rem;
+	--text-lg: 1.125rem;
+	--text-xl: 1.25rem;
+	--text-2xl: 1.5rem;
+	--leading-compact: 1.18;
+	--leading-content: 1.32;
+	--leading-title: 1.36;
+	--leading-control: 1;
+
 	--color-sidebar-ring: var(--sidebar-ring);
 	--color-sidebar-border: var(--sidebar-border);
 	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -55,12 +71,7 @@
 	--brand-surface: #f8f4f5;
 	--footer-background: #303a46;
 	color: #18181b;
-	font-family: 'Fira Sans', ui-sans-serif, system-ui, sans-serif;
-	--line-display: 1.16;
-	--line-title: 1.36;
-	--line-content: 1.32;
-	--line-compact: 1.18;
-	--line-control: 1;
+	font-family: var(--font-sans);
 	--background: oklch(1 0 0);
 	--foreground: oklch(0.145 0 0);
 	--card: oklch(1 0 0);
@@ -109,90 +120,106 @@ a:hover {
 	color: var(--brand-color);
 }
 
+/* Typography roles, largest to smallest. Reuse a role instead of a one-off font size:
+   page and section headings, then item names, then text (body for prose and descriptions,
+   meta for secondary details and compact links). */
+.pageTitle {
+	font-size: var(--text-2xl);
+	font-weight: 700;
+	line-height: var(--leading-title);
+}
+
+/* Section heading inside a page, such as Alumni, FAQ, or Research Themes. */
+.sectionTitle {
+	font-size: var(--text-xl);
+	font-weight: 700;
+	line-height: var(--leading-title);
+}
+
+/* A person's name as the heading of their profile page. */
+.personTitle {
+	font-size: var(--text-lg);
+	font-weight: 700;
+	line-height: var(--leading-title);
+}
+
+/* Name of an item in a list: publication titles, research themes, FAQ questions, people. */
+.itemTitle {
+	font-size: var(--text-base);
+	font-weight: 600;
+	line-height: var(--leading-title);
+}
+
+/* Group heading within a section, such as an alumni group or a publication year. */
+.detailTitle,
+.yearLabel {
+	font-size: var(--text-base);
+	font-weight: 700;
+	line-height: var(--leading-title);
+}
+
+/* Publications set every base-size role (titles, authors, venues, links, years) to 15px by
+   swapping the base size inside the publication list and each entry. */
+.publicationText {
+	--text-base: var(--text-md);
+}
+
+/* Prose and item descriptions, including publication authors and venues. */
+.bodyText {
+	font-size: var(--text-base);
+	line-height: var(--leading-content);
+}
+
+/* Secondary details under a name or description: roles, contact details, link rows. */
+.metaText {
+	font-size: var(--text-sm);
+	line-height: var(--leading-content);
+}
+
+.smallLink,
+.footerNav {
+	font-size: var(--text-sm);
+	font-weight: 600;
+	line-height: var(--leading-content);
+}
+
+.navText {
+	font-size: var(--text-sm);
+	line-height: var(--leading-content);
+
+	@variant sm {
+		font-size: var(--text-base);
+	}
+}
+
+.footerCopyright {
+	font-size: var(--text-xs);
+	line-height: var(--leading-content);
+}
+
+/* Logo wordmark in the header and footer. */
 .navBrand {
 	font-family: var(--font-logo);
-	font-size: 1.25rem;
+	font-size: var(--text-xl);
 	font-weight: 700;
 	letter-spacing: -0.02em;
-	line-height: var(--line-compact);
-	text-transform: uppercase;
+	line-height: var(--leading-compact);
+
+	@variant sm {
+		font-size: var(--text-2xl);
+	}
+}
+
+.footerBrand {
+	font-family: var(--font-logo);
+	font-size: var(--text-sm);
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	line-height: var(--leading-compact);
 }
 
 .logoThin {
 	font-weight: 400;
-}
-
-.navText {
-	font-size: 0.875rem;
-	line-height: var(--line-content);
-}
-
-.heroTitle {
-	font-size: 2.25rem;
-	font-weight: 600;
-	letter-spacing: 0;
-	line-height: var(--line-display);
-}
-
-.heroLead {
-	font-size: 1.125rem;
-	line-height: var(--line-content);
-}
-
-.pageTitle {
-	font-size: 1.5rem;
-	font-weight: 700;
-	line-height: var(--line-title);
-}
-
-/* Sentence-case section heading, sized between pageTitle and itemTitle. */
-.sectionTitle {
-	font-size: 1.25rem;
-	font-weight: 700;
-	line-height: var(--line-title);
-}
-
-.pageKicker,
-.sectionLabel {
-	font-size: 0.875rem;
-	font-weight: 700;
-	letter-spacing: 0.14em;
-	line-height: var(--line-title);
-	text-transform: uppercase;
-}
-
-.itemTitle {
-	font-size: 1rem;
-	font-weight: 600;
-	line-height: var(--line-title);
-}
-
-.detailTitle {
-	font-size: 1rem;
-	font-weight: 700;
-	line-height: var(--line-title);
-}
-
-.personTitle {
-	font-size: 1.1rem;
-	font-weight: 700;
-	line-height: var(--line-title);
-}
-
-.bodyText {
-	font-size: 1rem;
-	line-height: var(--line-content);
-}
-
-.metaText {
-	font-size: 0.875rem;
-	line-height: var(--line-content);
-}
-
-.smallLink {
-	font-size: 0.875rem;
-	font-weight: 600;
-	line-height: var(--line-content);
 }
 
 .linkSeparator {
@@ -201,9 +228,10 @@ a:hover {
 	color: #a1a1aa;
 }
 
-/* Center button labels optically: trim each label's box to the cap height and baseline so flex
-   centering aligns the letters with icons. text-box only trims block or inline boxes, not bare text
-   in a flex container, so every Button label is wrapped in a <span>. */
+/* Center button labels optically. Nunito Sans reserves far more space above the glyphs than below,
+   so a centered line box leaves text sitting high next to icons. Trimming the label's box to the cap
+   height and baseline lets flex centering align the letters themselves. text-box only trims block or
+   inline boxes, not bare text in a flex container, so every Button label is wrapped in a <span>. */
 [data-slot='button'] > span {
 	text-box: trim-both cap alphabetic;
 }
@@ -226,38 +254,6 @@ a:hover {
 	}
 }
 
-.tileName {
-	font-size: 1rem;
-	font-weight: 700;
-	line-height: var(--line-compact);
-}
-
-.yearLabel {
-	font-size: 1rem;
-	font-weight: 700;
-	line-height: var(--line-title);
-}
-
-.footerBrand {
-	font-family: var(--font-logo);
-	font-size: 0.875rem;
-	font-weight: 700;
-	letter-spacing: -0.02em;
-	line-height: var(--line-compact);
-	text-transform: uppercase;
-}
-
-.footerNav {
-	font-size: 0.875rem;
-	font-weight: 600;
-	line-height: var(--line-content);
-}
-
-.footerCopyright {
-	font-size: 0.75rem;
-	line-height: var(--line-content);
-}
-
 .headerBar {
 	--collapse: 1;
 	--logo-expanded: 8rem;
@@ -265,7 +261,8 @@ a:hover {
 	--logo-h: calc(
 		var(--logo-expanded) - (var(--logo-expanded) - var(--logo-compact)) * var(--collapse)
 	);
-	--word-compact: 1.25rem;
+	--word-compact: var(--text-xl);
+	/* The expanded header scales fluidly with the viewport, so these two sizes are local. */
 	--word-expanded: clamp(1.5rem, 4.8vw, 2.2rem);
 	--word-size: calc(
 		var(--word-expanded) - (var(--word-expanded) - var(--word-compact)) * var(--collapse)
@@ -335,7 +332,11 @@ a:hover {
 }
 
 .headerCompact .headerWords .navBrand {
-	font-size: 1.25rem;
+	font-size: var(--text-xl);
+
+	@variant sm {
+		font-size: var(--text-2xl);
+	}
 }
 
 .headerCompact .headerSubtitle {
@@ -343,24 +344,8 @@ a:hover {
 }
 
 @media (min-width: 640px) {
-	.navBrand {
-		font-size: 1.5rem;
-	}
-
 	.headerBar {
-		--word-compact: 1.5rem;
-	}
-
-	.headerCompact .headerWords .navBrand {
-		font-size: 1.5rem;
-	}
-
-	.navText {
-		font-size: 1rem;
-	}
-
-	.heroTitle {
-		font-size: 3rem;
+		--word-compact: var(--text-2xl);
 	}
 }
 
@@ -371,10 +356,10 @@ a:hover {
 	border-radius: 8px;
 	background: var(--brand-color);
 	color: #fff;
-	font-size: 0.875rem;
+	font-size: var(--text-sm);
 	font-weight: 600;
 	padding: 0.55rem 0.85rem;
-	line-height: var(--line-control);
+	line-height: var(--leading-control);
 }
 
 .homeLink:hover {
@@ -392,76 +377,18 @@ a:hover {
 	color: var(--brand-hover);
 }
 
-.homePersonTile {
-	position: relative;
-	display: block;
-	aspect-ratio: 1 / 1;
-	overflow: hidden;
-	border-radius: 8px;
-	background: #f4f4f5;
-	box-shadow: 0 1px 2px rgba(24, 24, 27, 0.12);
+/* Dev-only dark preview (the toggle in +layout.svelte): invert the page and rotate hues back so
+   brand colors keep their hue, then invert photos and teasers again so they look normal. Logos
+   stay inverted so they remain visible on the flipped backgrounds. */
+.darkPreview {
+	background: #fff;
+	filter: invert(1) hue-rotate(180deg);
 }
 
-.homePersonName {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: linear-gradient(to top, rgba(9, 9, 11, 0.82), transparent);
-	padding: 2.25rem 0.45rem 0.35rem;
-	color: #fff;
-	font-size: 0.875rem;
-	font-weight: 700;
-	line-height: var(--line-compact);
-	text-shadow: 0 1px 2px rgba(9, 9, 11, 0.9);
-}
-
-.homePersonStatus {
-	position: absolute;
-	inset: 0;
-	display: flex;
-	align-items: end;
-	background: rgba(9, 9, 11, 0.72);
-	color: #fff;
-	font-size: 0.75rem;
-	font-weight: 600;
-	line-height: var(--line-content);
-	opacity: 0;
-	padding: 0.45rem;
-	transition: opacity 160ms ease;
-}
-
-.homePersonTile:hover .homePersonStatus,
-.homePersonTile:focus-visible .homePersonStatus {
-	opacity: 1;
-}
-
-.personCard {
-	border: 1px solid #e4e4e7;
-	border-radius: 8px;
-	padding: 0.75rem;
-}
-
-.personRow {
-	display: flex;
-	min-width: 0;
-	gap: 0.75rem;
-	border: 1px solid #e4e4e7;
-	border-radius: 8px;
-	padding: 0.75rem;
-}
-
-.publicationItem {
-	display: grid;
-	grid-template-columns: minmax(0, 1fr);
-	border-left: 3px solid rgba(165, 28, 48, 0.28);
-	padding-left: 1rem;
-}
-
-@media (min-width: 640px) {
-	.publicationItem {
-		margin-left: 0.55rem;
-	}
+.darkPreview img[src*='/images/members/'],
+.darkPreview img[src*='/images/publications/'],
+.darkPreview video {
+	filter: invert(1) hue-rotate(180deg);
 }
 
 @layer base {
@@ -469,7 +396,7 @@ a:hover {
 		@apply border-border outline-ring/50;
 	}
 	body {
-		@apply bg-background text-foreground;
+		@apply bg-background text-base text-foreground;
 	}
 	html {
 		@apply font-sans;
