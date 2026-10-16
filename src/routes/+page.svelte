@@ -4,7 +4,7 @@
 	import { getSelectedPublications, getLabAuthorMemberships } from '$lib/data/Publications';
 	import { getMemberName, orderActiveMembers } from '$lib/data/Members';
 	import HomeMember from '$lib/components/person/homeMember.svelte';
-	import PublicationEntry from '$lib/components/projects/publicationEntry.svelte';
+	import PublicationList from '$lib/components/projects/publicationList.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import type { PageProps } from './$types';
 
@@ -38,14 +38,19 @@
 </svelte:head>
 
 <section class="grid gap-8 md:items-start">
-	<div class="max-w-full">
+	<!-- min-w-0 lets this grid item shrink to narrow screens instead of growing to its content. -->
+	<div class="min-w-0">
 		<p class="bodyText mt-4 text-zinc-700">
 			{site.home.introPrefix} <span class="text-harvard font-semibold">{site.home.highlight}</span>
 			{site.home.introSuffix}
 		</p>
-		<ul class="mt-6 flex items-start gap-4 overflow-x-auto lg:overflow-visible">
+		<!-- As many 8rem (photo-width) columns as fit, up to 6 per row; the column width never drops
+		     below a sixth of the row, so wide screens stop at 6. Members wrap onto further rows. -->
+		<ul
+			class="mt-6 grid grid-cols-[repeat(auto-fill,minmax(max(8rem,calc((100%_-_5rem)/6)),1fr))] items-start gap-x-4 gap-y-6"
+		>
 			{#each currentMembers as member (getMemberName(member))}
-				<li class="w-36 shrink-0 lg:w-auto lg:min-w-0 lg:flex-1">
+				<li class="min-w-0">
 					<HomeMember {member} />
 				</li>
 			{/each}
@@ -101,9 +106,5 @@
 			<span>View all papers</span>
 		</Button>
 	</div>
-	<div class="space-y-5">
-		{#each selectedPublications as publication (publication.title)}
-			<PublicationEntry {publication} {labAuthorMemberships} />
-		{/each}
-	</div>
+	<PublicationList publications={selectedPublications} {labAuthorMemberships} />
 </section>

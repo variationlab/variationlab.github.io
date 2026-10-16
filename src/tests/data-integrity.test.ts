@@ -6,11 +6,13 @@ import { isCurrentRoute, pathForHash } from '$lib/SiteRoutes';
 import { memberProfileLinkIcons, type Authors, type Members, type Publication } from '$lib/types';
 import { getMemberSlug } from '$lib/data/Members';
 import {
+	getAwardLabel,
 	getLabAuthorHomepage,
 	getLabAuthorMemberships,
 	getPublicationLinks,
 	getSelectedPublications,
 	getTeaserKind,
+	getVenueLabel,
 	groupPublicationsByYear,
 	sortPublicationsByDate,
 	isDateWithinMembership,
@@ -19,7 +21,7 @@ import {
 
 const testsDir = path.dirname(fileURLToPath(import.meta.url));
 const membersImagesDir = path.join(testsDir, '../../static/images/members');
-const publicationsImagesDir = path.join(testsDir, '../../static/images/publications');
+const teaserImagesDir = path.join(testsDir, '../../static/images/teaser');
 const dataDir = path.join(testsDir, '../../static/data');
 
 const members = JSON.parse(fs.readFileSync(path.join(dataDir, 'People.json'), 'utf8')) as Members[];
@@ -73,27 +75,27 @@ describe('Data integrity', () => {
 			.map((publication) => publication.teaser)
 			.filter((teaser): teaser is string => teaser !== undefined);
 		const unreferencedFiles = fs
-			.readdirSync(publicationsImagesDir)
+			.readdirSync(teaserImagesDir)
 			.filter((file) => getTeaserKind(file) !== undefined)
-			.filter((file) => !teasers.includes(`/images/publications/${file}`));
+			.filter((file) => !teasers.includes(`/images/teaser/${file}`));
 
 		expect(unreferencedFiles, 'Every teaser file must be referenced by a publication').toEqual([]);
 		teasers.forEach((teaser) => {
 			expect(
 				teaser,
-				'Use /images/publications/filename with a .jpg, .jpeg, .png, .webp, .gif, .mp4, or .webm extension'
-			).toMatch(/^\/images\/publications\/[^/\\]+\.(jpg|jpeg|png|webp|gif|mp4|webm)$/i);
-			const filePath = path.join(publicationsImagesDir, path.basename(teaser));
+				'Use /images/teaser/filename with a .jpg, .jpeg, .png, .webp, .gif, .mp4, or .webm extension'
+			).toMatch(/^\/images\/teaser\/[^/\\]+\.(jpg|jpeg|png|webp|gif|mp4|webm)$/i);
+			const filePath = path.join(teaserImagesDir, path.basename(teaser));
 			expect(fs.existsSync(filePath), teaser).toBe(true);
 		});
 	});
 
 	it('detects teaser media kind from the file extension', () => {
-		expect(getTeaserKind('/images/publications/demo.png')).toBe('image');
-		expect(getTeaserKind('/images/publications/demo.GIF')).toBe('image');
-		expect(getTeaserKind('/images/publications/demo.webm')).toBe('video');
-		expect(getTeaserKind('/images/publications/demo.mp4?v=2')).toBe('video');
-		expect(getTeaserKind('/images/publications/demo.mov')).toBeUndefined();
+		expect(getTeaserKind('/images/teaser/demo.png')).toBe('image');
+		expect(getTeaserKind('/images/teaser/demo.GIF')).toBe('image');
+		expect(getTeaserKind('/images/teaser/demo.webm')).toBe('video');
+		expect(getTeaserKind('/images/teaser/demo.mp4?v=2')).toBe('video');
+		expect(getTeaserKind('/images/teaser/demo.mov')).toBeUndefined();
 	});
 
 	it('has complete publication records', () => {
@@ -380,6 +382,61 @@ describe('Data integrity', () => {
 				expect(publication.doi, `${publication.title} DOI, without https://doi.org/`).toMatch(
 					/^10\.\d{4,9}\/\S+$/
 				);
+			}
+		});
+	});
+
+	it('labels venues with the abbreviation and year, adding Proc. for main proceedings', () => {
+		const base = publications[0];
+		const withVenue = (venue: Publication['venue'], year = 2026): Publication => ({
+			...base,
+			venue,
+			year
+		});
+
+		expect(
+			getVenueLabel(
+				withVenue({
+					fullName: 'ACM CHI Conference on Human Factors in Computing Systems',
+					shortName: 'CHI',
+					venueType: 'conference'
+				})
+			)
+		).toBe('ACM CHI Conference on Human Factors in Computing Systems (Proc. CHI 2026)');
+		expect(
+			getVenueLabel(
+				withVenue(
+					{
+						fullName: 'ACM Transactions on Computer-Human Interaction',
+						shortName: 'TOCHI',
+						venueType: 'journal'
+					},
+					2024
+				)
+			)
+		).toBe('ACM Transactions on Computer-Human Interaction (TOCHI 2024)');
+		expect(
+			getVenueLabel(withVenue({ fullName: 'arXiv', shortName: 'arXiv', venueType: 'arxiv' }))
+		).toBe('arXiv 2026');
+	});
+
+	it('labels standard awards from the award type and keeps awardText for other awards', () => {
+		const base = { ...publications[0], award: undefined, awardText: undefined };
+
+		expect(getAwardLabel(base)).toBeUndefined();
+		expect(getAwardLabel({ ...base, award: 'best-paper' })).toBe('Best Paper Award');
+		expect(getAwardLabel({ ...base, award: 'honorable-mention' })).toBe('Honorable Mention Award');
+		expect(getAwardLabel({ ...base, award: 'other', awardText: 'Best Demo Award' })).toBe(
+			'Best Demo Award'
+		);
+		publications.forEach((publication) => {
+			if (publication.awardText !== undefined) {
+				expect(publication.award, `${publication.title} awardText needs award: 'other'`).toBe(
+					'other'
+				);
+			}
+			if (publication.award === 'other') {
+				expect(publication.awardText?.trim(), publication.title).toBeTruthy();
 			}
 		});
 	});

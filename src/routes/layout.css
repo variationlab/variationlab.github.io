@@ -343,6 +343,17 @@ a:hover {
 	display: none;
 }
 
+/* Phones always use the compact header; !important overrides the inline scroll-driven value. */
+@media (max-width: 639px) {
+	.headerBar {
+		--collapse: 1 !important;
+	}
+
+	.headerSubtitle {
+		display: none;
+	}
+}
+
 @media (min-width: 640px) {
 	.headerBar {
 		--word-compact: var(--text-2xl);
@@ -386,7 +397,7 @@ a:hover {
 }
 
 .darkPreview img[src*='/images/members/'],
-.darkPreview img[src*='/images/publications/'],
+.darkPreview img[src*='/images/teaser/'],
 .darkPreview video {
 	filter: invert(1) hue-rotate(180deg);
 }

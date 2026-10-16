@@ -54,8 +54,11 @@ export interface MemberProfileLink {
 }
 
 export type Venue = {
+	/** Official venue series name without year, e.g. "ACM CHI Conference on Human Factors in Computing Systems". */
 	fullName: string;
+	/** Abbreviation shown in brackets with the year, e.g. "CHI", "CHI EA", "UIST Adjunct", "HIRL @ HRI". */
 	shortName: string;
+	/** "conference" means a paper in published conference proceedings, including CHI Extended Abstracts, adjunct, companion, and Findings volumes (shown as "Proc. CHI 2026", "Proc. CHI EA 2024"); non-archival venues use another type. */
 	venueType:
 		| 'conference'
 		| 'journal'
@@ -79,6 +82,7 @@ export interface Publication {
 	/** Affiliation note shown after the venue, e.g. "Work done at Microsoft Research". */
 	affiliation?: string;
 	award?: 'honorable-mention' | 'best-paper' | 'other';
+	/** Award name, only for `award: 'other'`; standard awards are labeled from `award`. */
 	awardText?: string;
 	/** Optional page for the award, linked from the award label. */
 	awardLink?: string;
@@ -93,6 +97,6 @@ export interface Publication {
 	/** Supplemental materials, e.g. a course or workshop website, appendix, or dataset. */
 	materialLink?: string;
 	slidesLink?: string;
-	/** Full /images/publications/ path: a .jpg, .jpeg, .png, .webp, or .gif image, or a short .mp4 or .webm video (played muted on loop); shown in a 16:9 frame at full width, cropping extra height. */
+	/** Full /images/teaser/ path: a .jpg, .jpeg, .png, .webp, or .gif image, or a short .mp4 or .webm video (played muted on loop); shown uncropped in a 16:9 frame, filling its height (or its width for wider media). */
 	teaser?: string;
 }

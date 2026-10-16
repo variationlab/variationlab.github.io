@@ -54,7 +54,7 @@
 <section class="mt-8">
 	<h2 class="sectionTitle text-zinc-950">PhD Students</h2>
 	<p class="bodyText mt-3 text-zinc-700">
-		Prof. Elena Glassman is not accepting new PhD students for the Fall 2027 admissions cycle.
+		We do not plan to recruit new PhD students for the Fall 2027 admissions cycle.
 	</p>
 	<p class="bodyText mt-3 text-zinc-700">
 		If you are interested in applying in a future cycle, read

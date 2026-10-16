@@ -44,6 +44,30 @@ export function getPublicationLinks(publication: Publication): PublicationLink[]
 	);
 }
 
+/**
+ * Venue line: the full venue name with the abbreviation and year in brackets, prefixed with
+ * "Proc." for papers in published conference proceedings (including extended abstracts, adjunct,
+ * companion, and Findings volumes), e.g.
+ * "ACM CHI Conference on Human Factors in Computing Systems (Proc. CHI 2026)". Venues whose full
+ * name is the abbreviation, such as arXiv, show only "arXiv 2026".
+ */
+export function getVenueLabel(publication: Publication): string {
+	const { fullName, shortName, venueType } = publication.venue;
+	const abbreviation = `${venueType === 'conference' ? 'Proc. ' : ''}${shortName} ${publication.year}`;
+	return fullName === shortName ? abbreviation : `${fullName} (${abbreviation})`;
+}
+
+const awardLabels = {
+	'best-paper': 'Best Paper Award',
+	'honorable-mention': 'Honorable Mention Award'
+} as const;
+
+/** Standard award names come from `award`; `awardText` names only `other` awards. */
+export function getAwardLabel(publication: Publication): string | undefined {
+	if (!publication.award) return undefined;
+	return publication.award === 'other' ? publication.awardText : awardLabels[publication.award];
+}
+
 const teaserImageExtensions = new Set(['jpg', 'jpeg', 'png', 'webp', 'gif']);
 const teaserVideoExtensions = new Set(['mp4', 'webm']);
 

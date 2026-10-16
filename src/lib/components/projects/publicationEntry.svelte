@@ -1,6 +1,8 @@
 <script lang="ts">
 	import {
+		getAwardLabel,
 		getAuthorName,
+		getVenueLabel,
 		getLabAuthorHomepage,
 		getPublicationLinks,
 		isLabAuthorForPublication,
@@ -21,19 +23,11 @@
 	} = $props();
 
 	const publicationLinks = $derived(getPublicationLinks(publication));
-	const awardLabel = $derived(publication.awardText);
+	const awardLabel = $derived(getAwardLabel(publication));
 </script>
 
 <article class="publicationText min-w-0">
 	<div class={publication.teaser ? teaserRowClass : ''}>
-		{#if publication.teaser}
-			<PublicationTeaser
-				class="w-full max-w-sm"
-				src={publication.teaser}
-				title={publication.title}
-				link={publicationLinks[0]}
-			/>
-		{/if}
 		<div class="min-w-0">
 			<h3 class="itemTitle text-zinc-950">{publication.title}</h3>
 			<p class="bodyText mt-0.5 text-zinc-800">
@@ -57,8 +51,7 @@
 				{/each}
 			</p>
 			<p class="bodyText text-zinc-700">
-				<span class="italic">{publication.venue.fullName}, {publication.year}</span
-				>{#if publication.affiliation}
+				<span class="italic">{getVenueLabel(publication)}</span>{#if publication.affiliation}
 					<span class="linkSeparator">·</span>{publication.affiliation}{/if}
 			</p>
 			{#if awardLabel}
@@ -85,5 +78,13 @@
 				</div>
 			{/if}
 		</div>
+		{#if publication.teaser}
+			<PublicationTeaser
+				class="w-full"
+				src={publication.teaser}
+				title={publication.title}
+				link={publicationLinks[0]}
+			/>
+		{/if}
 	</div>
 </article>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import PublicationEntry from '$lib/components/projects/publicationEntry.svelte';
+	import PublicationList from '$lib/components/projects/publicationList.svelte';
 	import PublicationYearNav, {
 		getPublicationYearId
 	} from '$lib/components/projects/publicationYearNav.svelte';
@@ -29,11 +29,7 @@
 				{#if index > 0}<hr class="border-zinc-200" />{/if}
 				<section class="publicationYear scroll-mt-24" id={getPublicationYearId(group.year)}>
 					<h2 class="yearLabel mb-3 text-zinc-950">{group.year}</h2>
-					<div class="space-y-6">
-						{#each group.publications as publication (publication.title)}
-							<PublicationEntry {publication} {labAuthorMemberships} />
-						{/each}
-					</div>
+					<PublicationList publications={group.publications} {labAuthorMemberships} />
 				</section>
 			{/each}
 		</div>

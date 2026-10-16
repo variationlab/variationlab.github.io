@@ -1,6 +1,6 @@
 <script lang="ts" module>
-	/** Row layout for an entry with a teaser: media above the text on phones, beside it from sm up. */
-	export const teaserRowClass = 'grid gap-3 sm:grid-cols-[10rem_minmax(0,1fr)] sm:gap-4';
+	/** Row layout for an entry with a teaser: text only on phones, media right of the text from sm up. */
+	export const teaserRowClass = 'sm:grid sm:grid-cols-[minmax(0,1fr)_10rem] sm:gap-4';
 </script>
 
 <script lang="ts">
@@ -15,9 +15,9 @@
 	}: { src: string; title: string; link?: PublicationLink; class?: string } = $props();
 
 	const kind = $derived(getTeaserKind(src));
-	// Teasers are 16:9. Media always spans the full width; extra height is cropped evenly
-	// from top and bottom, and wider media sits centered inside the 16:9 frame.
-	const mediaClass = 'block h-auto w-full max-w-none shrink-0';
+	// Teasers sit in a 16:9 frame and are never cropped: media fills the frame's height first,
+	// and media wider than 16:9 fills its width instead, centered on white.
+	const mediaClass = 'block h-full w-full object-contain';
 
 	let video = $state<HTMLVideoElement>();
 	let reduceMotion = $state(false);
@@ -44,10 +44,12 @@
 </script>
 
 {#if kind}
-	<!-- The teaser opens the publication's first link (DOI, Paper, ...) in a new tab. -->
+	<!-- The teaser opens the publication's first link (DOI, Paper, ...) in a new tab. It is hidden on
+	     phones so the list stays text-only there. The border is transparent (keeping its width so the
+	     media doesn't shift) and only shows on hover. -->
 	<svelte:element
 		this={link ? 'a' : 'div'}
-		class={`flex aspect-video items-center self-start overflow-hidden rounded-md border border-zinc-200 bg-zinc-100 ${
+		class={`hidden aspect-video items-center self-start overflow-hidden rounded-md border border-transparent bg-white sm:flex ${
 			link
 				? 'transition-colors outline-none hover:border-(--brand-color) focus-visible:ring-2 focus-visible:ring-(--brand-color)'
 				: ''

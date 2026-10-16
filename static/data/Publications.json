@@ -1,46 +1,5 @@
 [
   {
-    "title": "Mock Publication: An Example Entry With Every Field Populated",
-    "authors": [
-      {
-        "firstName": "Ruishi",
-        "lastName": "Zou",
-        "publicationName": "Ruishi Zou"
-      },
-      {
-        "firstName": "Alex",
-        "lastName": "Example",
-        "publicationName": "Alex Example"
-      },
-      {
-        "firstName": "Elena",
-        "lastName": "Glassman",
-        "middleName": "L.",
-        "publicationName": "Elena L. Glassman"
-      }
-    ],
-    "venue": {
-      "fullName": "Mock Conference on Human Factors (MOCK '26)",
-      "shortName": "MOCK",
-      "venueType": "conference"
-    },
-    "year": 2026,
-    "publishDate": "2026-09-15",
-    "doi": "10.5555/mock.2026.0001",
-    "affiliation": "Work done at Example Research",
-    "award": "best-paper",
-    "awardText": "Best Paper Award (top 1%)",
-    "awardLink": "https://example.com/mock-awards",
-    "paperLink": "https://example.com/mock-preprint.pdf",
-    "exploreLink": "https://example.com/mock-explore",
-    "codeLink": "https://github.com/example/mock-publication",
-    "videoLink": "https://example.com/mock-video",
-    "presentationLink": "https://example.com/mock-talk",
-    "materialLink": "https://example.com/mock-materials",
-    "slidesLink": "https://example.com/mock-slides",
-    "teaser": "/images/publications/mock-teaser.png"
-  },
-  {
     "title": "How Notations Evolve: A Historical Analysis with Implications for Supporting User-Defined Abstractions",
     "authors": [
       {
@@ -71,14 +30,15 @@
       }
     ],
     "venue": {
-      "fullName": "CHI",
+      "fullName": "ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI",
       "venueType": "conference"
     },
     "year": 2026,
-    "publishDate": "2026-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/notationsCHI26.pdf"
+    "publishDate": "2026-04-13",
+    "doi": "10.1145/3772318.3790264",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/notationsCHI26.pdf",
+    "teaser": "/images/teaser/notations-chi26.webp"
   },
   {
     "title": "A Paradigm for Creative Ownership",
@@ -102,15 +62,16 @@
       }
     ],
     "venue": {
-      "fullName": "CHI",
+      "fullName": "ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI",
       "venueType": "conference"
     },
     "year": 2026,
-    "publishDate": "2026-01-01",
-    "doi": "",
+    "publishDate": "2026-04-13",
+    "doi": "10.1145/3772318.3791316",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/ownershipCHI26.pdf",
-    "exploreLink": "https://creative-ownership.tejaswi.net/"
+    "exploreLink": "https://creative-ownership.tejaswi.net/",
+    "teaser": "/images/teaser/creative-ownership-chi26.webp"
   },
   {
     "title": "Meta-HCI: Practising Reflection in HCI Research",
@@ -122,8 +83,8 @@
       },
       {
         "firstName": "James Peter",
-        "lastName": "Arnera",
-        "publicationName": "James Peter Arnera"
+        "lastName": "Arnéra",
+        "publicationName": "James Peter Arnéra"
       },
       {
         "firstName": "Amelie",
@@ -168,13 +129,13 @@
       }
     ],
     "venue": {
-      "fullName": "CHI Extended Abstracts",
+      "fullName": "Extended Abstracts of the ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI EA",
       "venueType": "conference"
     },
     "year": 2026,
-    "publishDate": "2026-01-01",
-    "doi": "",
+    "publishDate": "2026-04-13",
+    "doi": "10.1145/3772363.3778877",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/meta_HCI_CHI26meetup.pdf"
   },
   {
@@ -225,13 +186,13 @@
       }
     ],
     "venue": {
-      "fullName": "CHI Extended Abstracts Workshop",
+      "fullName": "Workshop at the ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI EA",
-      "venueType": "workshop"
+      "venueType": "conference"
     },
     "year": 2026,
-    "publishDate": "2026-01-01",
-    "doi": "",
+    "publishDate": "2026-04-13",
+    "doi": "10.1145/3772363.3778695",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/star_workshop_chi26.pdf"
   },
   {
@@ -275,9 +236,10 @@
       "venueType": "arxiv"
     },
     "year": 2026,
-    "publishDate": "2026-01-01",
+    "publishDate": "2026-04-05",
     "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/magiccopy.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/magiccopy.pdf",
+    "teaser": "/images/teaser/magiccopy-arxiv26.webp"
   },
   {
     "title": "Interface Design to Support Legal Reading and Writing: Insights from Interviews with Legal Experts",
@@ -305,7 +267,7 @@
       "venueType": "arxiv"
     },
     "year": 2025,
-    "publishDate": "2025-01-01",
+    "publishDate": "2025-09-29",
     "doi": "",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/legalinterviews.pdf"
   },
@@ -323,14 +285,15 @@
         "publicationName": "Joyce Zhou"
       },
       {
-        "firstName": "Nina",
+        "firstName": "Ning-Er",
         "lastName": "Lei",
         "publicationName": "Nina Lei"
       },
       {
         "firstName": "Jonathan",
+        "middleName": "K.",
         "lastName": "Kummerfeld",
-        "publicationName": "Jonathan Kummerfeld"
+        "publicationName": "Jonathan K. Kummerfeld"
       },
       {
         "firstName": "Mahmood",
@@ -350,14 +313,15 @@
       }
     ],
     "venue": {
-      "fullName": "UIST",
+      "fullName": "ACM Symposium on User Interface Software and Technology",
       "shortName": "UIST",
       "venueType": "conference"
     },
     "year": 2025,
-    "publishDate": "2025-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/abstractexplorer.pdf"
+    "publishDate": "2025-09-28",
+    "doi": "10.1145/3746059.3747773",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/abstractexplorer.pdf",
+    "teaser": "/images/teaser/abstractexplorer-uist25.webp"
   },
   {
     "title": "Semantic Commit: Helping Users Update Intent Specifications for AI Memory at Scale",
@@ -400,14 +364,15 @@
       }
     ],
     "venue": {
-      "fullName": "UIST",
+      "fullName": "ACM Symposium on User Interface Software and Technology",
       "shortName": "UIST",
       "venueType": "conference"
     },
     "year": 2025,
-    "publishDate": "2025-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/semantic_commit.pdf"
+    "publishDate": "2025-09-28",
+    "doi": "10.1145/3746059.3747778",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/semantic_commit.pdf",
+    "teaser": "/images/teaser/semantic-commit-uist25.webp"
   },
   {
     "title": "CorpusStudio: Surfacing Emergent Patterns In A Corpus Of Prior Work While Writing",
@@ -435,14 +400,16 @@
       }
     ],
     "venue": {
-      "fullName": "CHI",
+      "fullName": "ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI",
       "venueType": "conference"
     },
     "year": 2025,
-    "publishDate": "2025-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/corpusstudio.pdf"
+    "publishDate": "2025-04-26",
+    "doi": "10.1145/3706598.3713974",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/corpusstudio.pdf",
+    "exploreLink": "https://hciaiprojects.uni-bayreuth.de/projects/corpusstudio",
+    "teaser": "/images/teaser/corpusstudio-chi25.webp"
   },
   {
     "title": "Supporting Co-Adaptive Machine Teaching through Human Concept Learning and Cognitive Theories",
@@ -470,17 +437,16 @@
       }
     ],
     "venue": {
-      "fullName": "CHI",
+      "fullName": "ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI",
       "venueType": "conference"
     },
     "year": 2025,
-    "publishDate": "2025-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/mocha_chi25.pdf",
+    "publishDate": "2025-04-26",
+    "doi": "10.1145/3706598.3713708",
     "award": "best-paper",
-    "awardText": "Best Paper Award",
-    "isSelected": true
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/mocha_chi25.pdf",
+    "teaser": "/images/teaser/mocha-chi25.webp"
   },
   {
     "title": "Creative Writers' Attitudes on Writing as Training Data for Large Language Models",
@@ -519,17 +485,17 @@
       }
     ],
     "venue": {
-      "fullName": "CHI",
+      "fullName": "ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI",
       "venueType": "conference"
     },
     "year": 2025,
-    "publishDate": "2025-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/gero_LIL_chi25.pdf",
+    "publishDate": "2025-04-26",
+    "doi": "10.1145/3706598.3713287",
     "award": "best-paper",
-    "awardText": "Best Paper Award",
-    "isSelected": true
+    "isSelected": true,
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/gero_LIL_chi25.pdf",
+    "teaser": "/images/teaser/creativewriters-chi25.webp"
   },
   {
     "title": "Leveraging Variation Theory in Counterfactual Data Augmentation for Optimized Active Learning",
@@ -562,14 +528,15 @@
       }
     ],
     "venue": {
-      "fullName": "ACL",
-      "shortName": "ACL",
+      "fullName": "Findings of the Association for Computational Linguistics",
+      "shortName": "Findings of ACL",
       "venueType": "conference"
     },
     "year": 2025,
-    "publishDate": "2025-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/leveragingVT_acl.pdf"
+    "publishDate": "2025-07-27",
+    "doi": "10.18653/v1/2025.findings-acl.50",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/leveragingVT_acl.pdf",
+    "teaser": "/images/teaser/variation-acl25.webp"
   },
   {
     "title": "Law is vulnerable to AI influence; interface design can help",
@@ -592,12 +559,12 @@
       }
     ],
     "venue": {
-      "fullName": "SSRN preprint",
+      "fullName": "SSRN",
       "shortName": "SSRN",
       "venueType": "other"
     },
     "year": 2025,
-    "publishDate": "2025-01-01",
+    "publishDate": "2025-07-31",
     "doi": "",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/law_is_vulnerable_SSRN.pdf"
   },
@@ -633,15 +600,16 @@
       }
     ],
     "venue": {
-      "fullName": "CHI",
+      "fullName": "ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI",
       "venueType": "conference"
     },
     "year": 2024,
-    "publishDate": "2024-01-01",
-    "doi": "",
+    "publishDate": "2024-05-11",
+    "doi": "10.1145/3613904.3642699",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/gptsm.pdf",
-    "codeLink": "https://github.com/ZiweiGu/GP-TSM"
+    "codeLink": "https://github.com/ZiweiGu/GP-TSM",
+    "teaser": "/images/teaser/gptsm-chi24.webp"
   },
   {
     "title": "Why Do Skimmers Perform Better with Grammar-Preserving Text Saliency Modulation (GP-TSM)? Evidence from an Eye Tracking Study",
@@ -669,14 +637,15 @@
       }
     ],
     "venue": {
-      "fullName": "CHI Late Breaking Work",
-      "shortName": "CHI LBW",
+      "fullName": "Late-Breaking Work at the ACM CHI Conference on Human Factors in Computing Systems",
+      "shortName": "CHI EA",
       "venueType": "conference"
     },
     "year": 2024,
-    "publishDate": "2024-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/gptsm_eye_lbw.pdf"
+    "publishDate": "2024-05-11",
+    "doi": "10.1145/3613905.3650956",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/gptsm_eye_lbw.pdf",
+    "teaser": "/images/teaser/gptsm-eye-chi24.webp"
   },
   {
     "title": "AI-Resilient Interfaces",
@@ -705,7 +674,7 @@
       "venueType": "arxiv"
     },
     "year": 2024,
-    "publishDate": "2024-01-01",
+    "publishDate": "2024-05-14",
     "doi": "",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/AI_Resilient_Interfaces_draft.pdf"
   },
@@ -742,16 +711,17 @@
       }
     ],
     "venue": {
-      "fullName": "CHI",
+      "fullName": "ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI",
       "venueType": "conference"
     },
     "year": 2024,
-    "publishDate": "2024-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/mesotext.pdf",
+    "publishDate": "2024-05-11",
+    "doi": "10.1145/3613904.3642139",
     "award": "honorable-mention",
-    "awardText": "Honorable Mention Award"
+    "isSelected": true,
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/mesotext.pdf",
+    "teaser": "/images/teaser/mesotext-chi24.webp"
   },
   {
     "title": "ChainForge: A Visual Toolkit for Prompt Engineering and LLM Hypothesis Testing",
@@ -784,18 +754,19 @@
       }
     ],
     "venue": {
-      "fullName": "CHI",
+      "fullName": "ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI",
       "venueType": "conference"
     },
     "year": 2024,
-    "publishDate": "2024-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/chainforge.pdf",
+    "publishDate": "2024-05-11",
+    "doi": "10.1145/3613904.3642016",
     "award": "honorable-mention",
-    "awardText": "Honorable Mention Award",
+    "isSelected": true,
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/chainforge.pdf",
     "exploreLink": "https://chainforge.ai/",
-    "codeLink": "https://github.com/ianarawjo/ChainForge"
+    "codeLink": "https://github.com/ianarawjo/ChainForge",
+    "teaser": "/images/teaser/chainforge-chi24.webp"
   },
   {
     "title": "DynaVis: Dynamically Synthesized UI Widgets for Visualization Editing",
@@ -823,17 +794,17 @@
       }
     ],
     "venue": {
-      "fullName": "CHI",
+      "fullName": "ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI",
       "venueType": "conference"
     },
     "year": 2024,
-    "publishDate": "2024-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/dynavis.pdf",
+    "publishDate": "2024-05-11",
+    "doi": "10.1145/3613904.3642639",
     "award": "best-paper",
-    "awardText": "Best Paper Award",
-    "isSelected": true
+    "isSelected": true,
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/dynavis.pdf",
+    "teaser": "/images/teaser/dynavis-chi24.webp"
   },
   {
     "title": "Imagining a Future of Designing with AI: Dynamic Grounding, Constructive Negotiation, and Sustainable Motivation",
@@ -856,43 +827,48 @@
       }
     ],
     "venue": {
-      "fullName": "DIS",
+      "fullName": "ACM Designing Interactive Systems Conference",
       "shortName": "DIS",
       "venueType": "conference"
     },
     "year": 2024,
-    "publishDate": "2024-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/imagining_dis24.pdf"
+    "publishDate": "2024-07-01",
+    "doi": "10.1145/3643834.3661525",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/imagining_dis24.pdf",
+    "teaser": "/images/teaser/imagining-dis24.webp"
   },
   {
     "title": "Syntaktis: A Large-Language-Model-Backed Editing Interface for Supporting Ethical Journalism Practices",
     "authors": [
       {
         "firstName": "Leah",
+        "middleName": "J.",
         "lastName": "Teichholtz",
-        "publicationName": "Leah Teichholtz"
+        "publicationName": "Leah J. Teichholtz"
       },
       {
         "firstName": "Katy",
+        "middleName": "Ilonka",
         "lastName": "Gero",
         "publicationName": "Katy Ilonka Gero"
       },
       {
         "firstName": "Elena",
+        "middleName": "L.",
         "lastName": "Glassman",
         "publicationName": "Elena L. Glassman"
       }
     ],
     "venue": {
-      "fullName": "Computation+Journalism",
+      "fullName": "Computation + Journalism Symposium",
       "shortName": "C+J",
-      "venueType": "conference"
+      "venueType": "other"
     },
     "year": 2024,
     "publishDate": "2024-01-01",
     "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/syntaktis.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/syntaktis.pdf",
+    "teaser": "/images/teaser/syntaktis-cj24.webp"
   },
   {
     "title": "Amortizing Pragmatic Program Synthesis with Rankings",
@@ -925,14 +901,15 @@
       }
     ],
     "venue": {
-      "fullName": "ICML",
+      "fullName": "International Conference on Machine Learning",
       "shortName": "ICML",
       "venueType": "conference"
     },
     "year": 2024,
-    "publishDate": "2024-01-01",
+    "publishDate": "2024-07-21",
     "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/amortizing_icml24.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/amortizing_icml24.pdf",
+    "teaser": "/images/teaser/amortizing-icml24.webp"
   },
   {
     "title": "Reliability Criteria for News Websites",
@@ -950,22 +927,22 @@
       }
     ],
     "venue": {
-      "fullName": "TOCHI",
+      "fullName": "ACM Transactions on Computer-Human Interaction",
       "shortName": "TOCHI",
       "venueType": "journal"
     },
     "year": 2024,
-    "publishDate": "2024-01-01",
-    "doi": "",
+    "publishDate": "2024-01-29",
+    "doi": "10.1145/3635147",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/reliability_criteria.pdf"
   },
   {
     "title": "Antagonistic AI",
     "authors": [
       {
-        "firstName": "Carrie",
+        "firstName": "Alice",
         "lastName": "Cai",
-        "publicationName": "Carrie Cai"
+        "publicationName": "Alice Cai"
       },
       {
         "firstName": "Ian",
@@ -985,16 +962,17 @@
       "venueType": "arxiv"
     },
     "year": 2024,
-    "publishDate": "2024-01-01",
-    "doi": ""
+    "publishDate": "2024-02-12",
+    "doi": "",
+    "paperLink": "https://arxiv.org/abs/2402.07350"
   },
   {
-    "title": "What do we even know about interpretability? (On Interpretability and Overreliance)",
+    "title": "On Interpretability and Overreliance",
     "authors": [
       {
-        "firstName": "Jan",
+        "firstName": "Julian",
         "lastName": "Skirzynski",
-        "publicationName": "Jan Skirzynski"
+        "publicationName": "Julian Skirzynski"
       },
       {
         "firstName": "Elena",
@@ -1009,13 +987,14 @@
       }
     ],
     "venue": {
-      "fullName": "Interpretable AI: Past, Present and Future @ NeurIPS",
-      "shortName": "NeurIPS Workshop",
+      "fullName": "Interpretable AI: Past, Present and Future Workshop at NeurIPS",
+      "shortName": "InterpretableAI @ NeurIPS",
       "venueType": "workshop"
     },
     "year": 2024,
     "publishDate": "2024-01-01",
-    "doi": ""
+    "doi": "",
+    "paperLink": "https://openreview.net/forum?id=0w7JBZibDc"
   },
   {
     "title": "AI-Resilient Interfaces and the Value of Variation",
@@ -1028,9 +1007,9 @@
       }
     ],
     "venue": {
-      "fullName": "U.S. Kavli Frontiers of Science",
-      "shortName": "NAS",
-      "venueType": "workshop"
+      "fullName": "National Academy of Sciences Kavli Frontiers of Science Symposium",
+      "shortName": "Kavli Frontiers of Science",
+      "venueType": "other"
     },
     "year": 2024,
     "publishDate": "2024-01-01",
@@ -1072,14 +1051,15 @@
       }
     ],
     "venue": {
-      "fullName": "CHI",
+      "fullName": "ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI",
       "venueType": "conference"
     },
     "year": 2023,
-    "publishDate": "2023-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/patat_CHI23.pdf"
+    "publishDate": "2023-04-19",
+    "doi": "10.1145/3544548.3581352",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/patat_CHI23.pdf",
+    "teaser": "/images/teaser/patat-chi23.webp"
   },
   {
     "title": "Human-Computer Interaction and AI: What practitioners need to know to design and build effective AI system from a human perspective",
@@ -1112,13 +1092,13 @@
       }
     ],
     "venue": {
-      "fullName": "Course @ CHI",
-      "shortName": "CHI Course",
-      "venueType": "course"
+      "fullName": "Course at the ACM CHI Conference on Human Factors in Computing Systems",
+      "shortName": "CHI EA",
+      "venueType": "conference"
     },
     "year": 2023,
-    "publishDate": "2023-01-01",
-    "doi": "",
+    "publishDate": "2023-04-19",
+    "doi": "10.1145/3544549.3574170",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/Human-Computer_Interaction_and_AI_CHIcourse23.pdf",
     "materialLink": "https://sites.google.com/view/chi-2023-hci-and-ai-tutorial/home"
   },
@@ -1148,14 +1128,15 @@
       }
     ],
     "venue": {
-      "fullName": "Human-Interactive Robot Learning Workshop @ HRI",
+      "fullName": "Human-Interactive Robot Learning Workshop at HRI",
       "shortName": "HIRL @ HRI",
       "venueType": "workshop"
     },
     "year": 2023,
-    "publishDate": "2023-01-01",
+    "publishDate": "2023-03-13",
     "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/HRI_2023_HIRL_Workshop__Learning_about_Robot_Motions_with_Variation_Theory.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/HRI_2023_HIRL_Workshop__Learning_about_Robot_Motions_with_Variation_Theory.pdf",
+    "teaser": "/images/teaser/variation-hri23.webp"
   },
   {
     "title": "Towards More Effective AI-Assisted Programming: A Systematic Design Exploration to Improve Visual Studio IntelliCode's User Experience",
@@ -1182,9 +1163,10 @@
         "publicationName": "Sumit Gulwani"
       },
       {
-        "firstName": "Austin Z",
+        "firstName": "Austin",
+        "middleName": "Z.",
         "lastName": "Henley",
-        "publicationName": "Austin Z Henley"
+        "publicationName": "Austin Z. Henley"
       },
       {
         "firstName": "Rohan",
@@ -1218,14 +1200,15 @@
       }
     ],
     "venue": {
-      "fullName": "International Conference on Software Engineering Software Engineering in Practice Track",
-      "shortName": "ICSE SEIP",
+      "fullName": "IEEE/ACM International Conference on Software Engineering: Software Engineering in Practice",
+      "shortName": "ICSE-SEIP",
       "venueType": "conference"
     },
     "year": 2023,
-    "publishDate": "2023-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/Vaithilingam2023ICSE_IntelliCode.PDF"
+    "publishDate": "2023-05-14",
+    "doi": "10.1109/icse-seip58684.2023.00022",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/Vaithilingam2023ICSE_IntelliCode.pdf",
+    "teaser": "/images/teaser/intellicode-icse23.webp"
   },
   {
     "title": "Accessible Text Tools for People with Cognitive Impairments and Non-Native Readers: Challenges and Opportunities",
@@ -1248,8 +1231,8 @@
       "venueType": "conference"
     },
     "year": 2023,
-    "publishDate": "2023-01-01",
-    "doi": "",
+    "publishDate": "2023-09-03",
+    "doi": "10.1145/3603555.3603569",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/accessible_text_tools_MuC23.pdf"
   },
   {
@@ -1268,13 +1251,13 @@
       }
     ],
     "venue": {
-      "fullName": "Late Breaking Work @ CHI",
-      "shortName": "CHI LBW",
+      "fullName": "Late-Breaking Work at the ACM CHI Conference on Human Factors in Computing Systems",
+      "shortName": "CHI EA",
       "venueType": "conference"
     },
     "year": 2023,
-    "publishDate": "2023-01-01",
-    "doi": "",
+    "publishDate": "2023-04-19",
+    "doi": "10.1145/3544549.3585749",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/heuer_CHI23LBW_accessibleTextTools.pdf"
   },
   {
@@ -1293,9 +1276,10 @@
       "venueType": "arxiv"
     },
     "year": 2023,
-    "publishDate": "2023-01-01",
+    "publishDate": "2023-09-05",
     "doi": "",
-    "paperLink": "https://arxiv.org/pdf/2309.02257.pdf"
+    "paperLink": "https://arxiv.org/pdf/2309.02257.pdf",
+    "teaser": "/images/teaser/human-computer-communication-arxiv23.webp"
   },
   {
     "title": "The Usability of Pragmatic Communication in Regular Expression Synthesis",
@@ -1323,31 +1307,32 @@
       "venueType": "arxiv"
     },
     "year": 2023,
-    "publishDate": "2023-01-01",
-    "doi": ""
+    "publishDate": "2023-08-13",
+    "doi": "",
+    "paperLink": "https://arxiv.org/abs/2308.06656"
   },
   {
     "title": "AtomXR: Streamlined XR Prototyping with Natural Language and Immersive Physical Interaction",
     "authors": [
       {
-        "firstName": "Carrie",
+        "firstName": "Alice",
         "lastName": "Cai",
-        "publicationName": "Carrie Cai"
+        "publicationName": "Alice Cai"
       },
       {
-        "firstName": "Cristian",
+        "firstName": "Caine",
         "lastName": "Ardayfio",
-        "publicationName": "Cristian Ardayfio"
+        "publicationName": "Caine Ardayfio"
       },
       {
-        "firstName": "An Phan",
+        "firstName": "AnhPhu",
         "lastName": "Nguyen",
-        "publicationName": "An Phan Nguyen"
+        "publicationName": "AnhPhu Nguyen"
       },
       {
-        "firstName": "Tiffany",
+        "firstName": "Tica",
         "lastName": "Lin",
-        "publicationName": "Tiffany Lin"
+        "publicationName": "Tica Lin"
       },
       {
         "firstName": "Elena",
@@ -1362,8 +1347,10 @@
       "venueType": "arxiv"
     },
     "year": 2023,
-    "publishDate": "2023-01-01",
-    "doi": ""
+    "publishDate": "2023-11-19",
+    "doi": "",
+    "paperLink": "https://arxiv.org/abs/2311.11238",
+    "teaser": "/images/teaser/atomxr-arxiv23.webp"
   },
   {
     "title": "An Interactive UI to Support Sensemaking over Collections of Parallel Texts",
@@ -1392,8 +1379,10 @@
       "venueType": "arxiv"
     },
     "year": 2023,
-    "publishDate": "2023-01-01",
-    "doi": ""
+    "publishDate": "2023-03-11",
+    "doi": "",
+    "paperLink": "https://arxiv.org/abs/2303.06264",
+    "teaser": "/images/teaser/avtaler-arxiv23.webp"
   },
   {
     "title": "ChainForge: An open-source visual programming environment for prompt engineering",
@@ -1421,13 +1410,15 @@
       }
     ],
     "venue": {
-      "fullName": "Poster @ ACM Symposium on User Interface Software and Technology",
-      "shortName": "UIST Poster",
-      "venueType": "workshop"
+      "fullName": "Poster at the ACM Symposium on User Interface Software and Technology",
+      "shortName": "UIST Adjunct",
+      "venueType": "conference"
     },
     "year": 2023,
-    "publishDate": "2023-01-01",
-    "doi": ""
+    "publishDate": "2023-10-29",
+    "doi": "10.1145/3586182.3616660",
+    "exploreLink": "https://chainforge.ai/",
+    "codeLink": "https://github.com/ianarawjo/ChainForge"
   },
   {
     "title": "Reverse Sketching",
@@ -1491,14 +1482,15 @@
       }
     ],
     "venue": {
-      "fullName": "Human Evaluation of Generative Models Workshop @ NeurIPS",
-      "shortName": "NeurIPS Workshop",
+      "fullName": "Human Evaluation of Generative Models Workshop at NeurIPS",
+      "shortName": "HEGM @ NeurIPS",
       "venueType": "workshop"
     },
     "year": 2022,
     "publishDate": "2022-01-01",
     "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/gero2022_neuripsworkshop.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/gero2022_neuripsworkshop.pdf",
+    "teaser": "/images/teaser/sensemaking-neurips22.webp"
   },
   {
     "title": "A Selective Summary of Where to Hide a Stolen Elephant: Leaps in Creative Writing with Multimodal Machine Intelligence",
@@ -1526,13 +1518,13 @@
       }
     ],
     "venue": {
-      "fullName": "Workshop on Intelligent and Interactive Writing Assistants @ ACL",
+      "fullName": "Workshop on Intelligent and Interactive Writing Assistants at ACL",
       "shortName": "In2Writing @ ACL",
       "venueType": "workshop"
     },
     "year": 2022,
-    "publishDate": "2022-01-01",
-    "doi": "",
+    "publishDate": "2022-05-26",
+    "doi": "10.18653/v1/2022.in2writing-1.3",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/elephant_in2writing_selective_summary.pdf"
   },
   {
@@ -1561,17 +1553,18 @@
       }
     ],
     "venue": {
-      "fullName": "TOCHI",
+      "fullName": "ACM Transactions on Computer-Human Interaction",
       "shortName": "TOCHI",
       "venueType": "journal"
     },
-    "year": 2022,
-    "publishDate": "2022-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/elephant_tochi2022.pdf"
+    "year": 2023,
+    "publishDate": "2023-09-23",
+    "doi": "10.1145/3511599",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/elephant_tochi2022.pdf",
+    "teaser": "/images/teaser/elephant-tochi23.webp"
   },
   {
-    "title": "Revisiting Human-Robot Teaching and Learning Through the Lens of Human Concept Learning Theory",
+    "title": "Revisiting Human-Robot Teaching and Learning Through the Lens of Human Concept Learning",
     "authors": [
       {
         "firstName": "Serena",
@@ -1606,12 +1599,13 @@
       "venueType": "conference"
     },
     "year": 2022,
-    "publishDate": "2022-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/booth_hri2022.pdf"
+    "publishDate": "2022-03-07",
+    "doi": "10.1109/hri53351.2022.9889398",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/booth_hri2022.pdf",
+    "teaser": "/images/teaser/conceptlearning-hri22.webp"
   },
   {
-    "title": "Do explanations increase the effectiveness of AI-crowd generated fake news warnings?",
+    "title": "Do Explanations Increase the Effectiveness of AI-Crowd Generated Fake News Warnings?",
     "authors": [
       {
         "firstName": "Ziv",
@@ -1651,8 +1645,8 @@
       "venueType": "conference"
     },
     "year": 2022,
-    "publishDate": "2022-01-01",
-    "doi": "",
+    "publishDate": "2022-06-06",
+    "doi": "10.1609/icwsm.v16i1.19283",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/epsteinEtAl_CS279_icwsm.pdf"
   },
   {
@@ -1676,13 +1670,13 @@
       }
     ],
     "venue": {
-      "fullName": "Late Breaking Work @ CHI",
-      "shortName": "CHI LBW",
+      "fullName": "Late-Breaking Work at the ACM CHI Conference on Human Factors in Computing Systems",
+      "shortName": "CHI EA",
       "venueType": "conference"
     },
     "year": 2022,
-    "publishDate": "2022-01-01",
-    "doi": "",
+    "publishDate": "2022-04-29",
+    "doi": "10.1145/3491101.3519665",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/copilot_lbw_chi22.pdf"
   },
   {
@@ -1699,9 +1693,9 @@
         "publicationName": "Miryung Kim"
       },
       {
-        "firstName": "Bjorn",
+        "firstName": "Björn",
         "lastName": "Hartmann",
-        "publicationName": "Bjorn Hartmann"
+        "publicationName": "Björn Hartmann"
       },
       {
         "firstName": "Tianyi",
@@ -1716,14 +1710,15 @@
       }
     ],
     "venue": {
-      "fullName": "UIST",
+      "fullName": "ACM Symposium on User Interface Software and Technology",
       "shortName": "UIST",
       "venueType": "conference"
     },
     "year": 2022,
-    "publishDate": "2022-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/paralib_uist22.pdf"
+    "publishDate": "2022-10-29",
+    "doi": "10.1145/3526113.3545647",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/paralib_uist22.pdf",
+    "teaser": "/images/teaser/paralib-uist22.webp"
   },
   {
     "title": "A Comparative Evaluation of Interventions Against Misinformation: Augmenting the WHO Checklist",
@@ -1741,32 +1736,33 @@
       }
     ],
     "venue": {
-      "fullName": "CHI",
+      "fullName": "ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI",
       "venueType": "conference"
     },
     "year": 2022,
-    "publishDate": "2022-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/who_checklist_chi22.pdf"
+    "publishDate": "2022-04-29",
+    "doi": "10.1145/3491102.3517717",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/who_checklist_chi22.pdf",
+    "teaser": "/images/teaser/whochecklist-chi22.webp"
   },
   {
     "title": "Metric Elicitation; Moving from Theory to Practice",
     "authors": [
       {
-        "firstName": "Saad",
+        "firstName": "Safinah",
         "lastName": "Ali",
-        "publicationName": "Saad Ali"
+        "publicationName": "Safinah Ali"
       },
       {
-        "firstName": "Shubhankar",
+        "firstName": "Sohini",
         "lastName": "Upadhyay",
-        "publicationName": "Shubhankar Upadhyay"
+        "publicationName": "Sohini Upadhyay"
       },
       {
-        "firstName": "Gaurang",
+        "firstName": "Gaurush",
         "lastName": "Hiranandani",
-        "publicationName": "Gaurang Hiranandani"
+        "publicationName": "Gaurush Hiranandani"
       },
       {
         "firstName": "Elena",
@@ -1786,8 +1782,11 @@
       "venueType": "arxiv"
     },
     "year": 2022,
-    "publishDate": "2022-01-01",
-    "doi": ""
+    "publishDate": "2022-12-07",
+    "doi": "",
+    "paperLink": "https://arxiv.org/abs/2212.03495",
+    "exploreLink": "https://safinahali.com/elicitation-graphs-static/",
+    "teaser": "/images/teaser/metricelicitation-neurips22.webp"
   },
   {
     "title": "Loopholes: a Window into Value Alignment and the Learning of Meaning",
@@ -1815,12 +1814,12 @@
       }
     ],
     "venue": {
-      "fullName": "Meaning in Context Workshop @ NeurIPS",
+      "fullName": "Meaning in Context Workshop at NeurIPS",
       "shortName": "MiC @ NeurIPS",
       "venueType": "workshop"
     },
     "year": 2021,
-    "publishDate": "2021-01-01",
+    "publishDate": "2021-12-13",
     "doi": "",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/MiC_NeurIPS21_Loopholes.pdf",
     "materialLink": "https://mic-workshop.github.io/"
@@ -1835,9 +1834,9 @@
       },
       {
         "firstName": "Thomas",
-        "middleName": "H. Jr.",
+        "middleName": "H.",
         "lastName": "McCoy",
-        "publicationName": "Thomas H. Jr. McCoy"
+        "publicationName": "Thomas H. McCoy Jr."
       },
       {
         "firstName": "Roy",
@@ -1858,16 +1857,16 @@
       }
     ],
     "venue": {
-      "fullName": "Workshop on Visual Analytics in Healthcare @ IEEE VIS",
+      "fullName": "Workshop on Visual Analytics in Healthcare at IEEE VIS",
       "shortName": "VAHC @ VIS",
       "venueType": "workshop"
     },
     "year": 2021,
-    "publishDate": "2021-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/Interactive_Visual_Analytics_for_EHRs_VAHC_2021.pdf",
+    "publishDate": "2021-10-24",
+    "doi": "10.1109/VAHC53616.2021.00007",
     "award": "honorable-mention",
-    "awardText": "Honorable Mention Award"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/Interactive_Visual_Analytics_for_EHRs_VAHC_2021.pdf",
+    "teaser": "/images/teaser/cohortexplore-vahc21.webp"
   },
   {
     "title": "Visualizing Examples of Deep Neural Networks at Scale",
@@ -1890,16 +1889,18 @@
       }
     ],
     "venue": {
-      "fullName": "CHI",
+      "fullName": "ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI",
       "venueType": "conference"
     },
     "year": 2021,
-    "publishDate": "2021-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/examplenet_chi2021.pdf",
+    "publishDate": "2021-05-08",
+    "doi": "10.1145/3411764.3445654",
     "award": "honorable-mention",
-    "awardText": "Honorable Mention Award"
+    "isSelected": true,
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/examplenet_chi2021.pdf",
+    "videoLink": "https://www.youtube.com/watch?v=kU8cBy-0z7Q",
+    "teaser": "/images/teaser/examplenet-chi21.webp"
   },
   {
     "title": "Evaluating the Interpretability of Generative Models by Interactive Reconstruction",
@@ -1932,16 +1933,16 @@
       }
     ],
     "venue": {
-      "fullName": "CHI",
+      "fullName": "ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI",
       "venueType": "conference"
     },
     "year": 2021,
-    "publishDate": "2021-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/evalGenModels_chi2021.pdf",
+    "publishDate": "2021-05-08",
+    "doi": "10.1145/3411764.3445296",
     "award": "honorable-mention",
-    "awardText": "Honorable Mention Award"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/evalGenModels_chi2021.pdf",
+    "codeLink": "https://github.com/dtak/interactive-reconstruction"
   },
   {
     "title": "ASSUAGE: Assembly Synthesis Using A Guided Exploration",
@@ -1974,13 +1975,13 @@
       }
     ],
     "venue": {
-      "fullName": "UIST",
+      "fullName": "ACM Symposium on User Interface Software and Technology",
       "shortName": "UIST",
       "venueType": "conference"
     },
     "year": 2021,
-    "publishDate": "2021-01-01",
-    "doi": "",
+    "publishDate": "2021-10-10",
+    "doi": "10.1145/3472749.3474740",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/ASSUAGE_UIST21.pdf"
   },
   {
@@ -2010,8 +2011,8 @@
       "venueType": "journal"
     },
     "year": 2021,
-    "publishDate": "2021-01-01",
-    "doi": "",
+    "publishDate": "2021-07-26",
+    "doi": "10.1145/3469279",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/PLandHCI_betterTogether.pdf"
   },
   {
@@ -2050,22 +2051,23 @@
       }
     ],
     "venue": {
-      "fullName": "CHI",
+      "fullName": "ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI",
       "venueType": "conference"
     },
     "year": 2021,
-    "publishDate": "2021-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/ips_chi2021.pdf"
+    "publishDate": "2021-05-08",
+    "doi": "10.1145/3411764.3445646",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/ips_chi2021.pdf",
+    "teaser": "/images/teaser/interpsynth-chi21.webp"
   },
   {
     "title": "Proxy Tasks and Subjective Measures Can Be Misleading in Evaluating XAI Systems",
     "authors": [
       {
         "firstName": "Zana",
-        "lastName": "Bucinca",
-        "publicationName": "Zana Bucinca"
+        "lastName": "Buçinca",
+        "publicationName": "Zana Buçinca"
       },
       {
         "firstName": "Phoebe",
@@ -2074,8 +2076,9 @@
       },
       {
         "firstName": "Krzysztof",
+        "middleName": "Z.",
         "lastName": "Gajos",
-        "publicationName": "Krzysztof Gajos"
+        "publicationName": "Krzysztof Z. Gajos"
       },
       {
         "firstName": "Elena",
@@ -2085,17 +2088,17 @@
       }
     ],
     "venue": {
-      "fullName": "IUI",
+      "fullName": "ACM International Conference on Intelligent User Interfaces",
       "shortName": "IUI",
       "venueType": "conference"
     },
     "year": 2020,
-    "publishDate": "2020-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/bucinca_iui20_proxy.pdf",
+    "publishDate": "2020-03-17",
+    "doi": "10.1145/3377325.3377498",
     "award": "best-paper",
-    "awardText": "Best Paper Award",
-    "isSelected": true
+    "isSelected": true,
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/bucinca_iui20_proxy.pdf",
+    "teaser": "/images/teaser/proxytasks-iui20.webp"
   },
   {
     "title": "Interactive Program Synthesis by Augmented Examples",
@@ -2123,14 +2126,15 @@
       }
     ],
     "venue": {
-      "fullName": "UIST",
+      "fullName": "ACM Symposium on User Interface Software and Technology",
       "shortName": "UIST",
       "venueType": "conference"
     },
     "year": 2020,
-    "publishDate": "2020-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/ips_augex_uist20.pdf"
+    "publishDate": "2020-10-20",
+    "doi": "10.1145/3379337.3415900",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/ips_augex_uist20.pdf",
+    "teaser": "/images/teaser/augexamples-uist20.webp"
   },
   {
     "title": "Exempla Gratis (E.G.): Code Examples for Free",
@@ -2163,13 +2167,13 @@
       }
     ],
     "venue": {
-      "fullName": "FSE Industry Track",
-      "shortName": "FSE",
+      "fullName": "ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering, Industry Track",
+      "shortName": "ESEC/FSE",
       "venueType": "conference"
     },
     "year": 2020,
-    "publishDate": "2020-01-01",
-    "doi": "",
+    "publishDate": "2020-11-08",
+    "doi": "10.1145/3368089.3417052",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/fse2020-industry-example-generation.pdf"
   },
   {
@@ -2181,9 +2185,9 @@
         "publicationName": "Tianyi Zhang"
       },
       {
-        "firstName": "Bjorn",
+        "firstName": "Björn",
         "lastName": "Hartmann",
-        "publicationName": "Bjorn Hartmann"
+        "publicationName": "Björn Hartmann"
       },
       {
         "firstName": "Miryung",
@@ -2198,13 +2202,13 @@
       }
     ],
     "venue": {
-      "fullName": "CHI",
+      "fullName": "ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI",
       "venueType": "conference"
     },
     "year": 2020,
-    "publishDate": "2020-01-01",
-    "doi": "",
+    "publishDate": "2020-04-25",
+    "doi": "10.1145/3313831.3376382",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/Data-driven-API-CHI20.pdf"
   },
   {
@@ -2240,20 +2244,21 @@
     "venue": {
       "fullName": "Computation + Journalism Symposium",
       "shortName": "C+J",
-      "venueType": "conference"
+      "venueType": "other"
     },
     "year": 2020,
     "publishDate": "2020-01-01",
     "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/glassman_CJ_2020.pdf"
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/glassman_CJ_2020.pdf",
+    "teaser": "/images/teaser/triangulate-cj20.webp"
   },
   {
     "title": "Characterizing Developer Use of Automatically Generated Patches",
     "authors": [
       {
-        "firstName": "Jose Pablo",
+        "firstName": "José Pablo",
         "lastName": "Cambronero",
-        "publicationName": "Jose Pablo Cambronero"
+        "publicationName": "José Pablo Cambronero"
       },
       {
         "firstName": "Jiasi",
@@ -2261,9 +2266,9 @@
         "publicationName": "Jiasi Shen"
       },
       {
-        "firstName": "Jurgen",
+        "firstName": "Jürgen",
         "lastName": "Cito",
-        "publicationName": "Jurgen Cito"
+        "publicationName": "Jürgen Cito"
       },
       {
         "firstName": "Elena",
@@ -2278,22 +2283,23 @@
       }
     ],
     "venue": {
-      "fullName": "VL/HCC",
+      "fullName": "IEEE Symposium on Visual Languages and Human-Centric Computing",
       "shortName": "VL/HCC",
       "venueType": "conference"
     },
     "year": 2019,
-    "publishDate": "2019-01-01",
-    "doi": "",
+    "publishDate": "2019-10-14",
+    "doi": "10.1109/vlhcc.2019.8818884",
     "paperLink": "https://arxiv.org/abs/1907.06535"
   },
   {
-    "title": "Approaching polyglot programming: what can we learn from bilingualism studies?",
+    "title": "Approaching Polyglot Programming: What Can We Learn from Bilingualism Studies?",
     "authors": [
       {
         "firstName": "Rebecca",
+        "middleName": "L.",
         "lastName": "Hao",
-        "publicationName": "Rebecca Hao"
+        "publicationName": "Rebecca L. Hao"
       },
       {
         "firstName": "Elena",
@@ -2308,8 +2314,9 @@
       "venueType": "workshop"
     },
     "year": 2019,
-    "publishDate": "2019-01-01",
-    "doi": ""
+    "publishDate": "2019-10-24",
+    "doi": "10.4230/OASIcs.PLATEAU.2019.1",
+    "paperLink": "https://drops.dagstuhl.de/storage/01oasics/oasics-vol076-plateau2019/OASIcs.PLATEAU.2019.1/OASIcs.PLATEAU.2019.1.pdf"
   },
   {
     "title": "Visualizing API Usage Examples at Scale",
@@ -2326,9 +2333,9 @@
         "publicationName": "Tianyi Zhang"
       },
       {
-        "firstName": "Bjorn",
+        "firstName": "Björn",
         "lastName": "Hartmann",
-        "publicationName": "Bjorn Hartmann"
+        "publicationName": "Björn Hartmann"
       },
       {
         "firstName": "Miryung",
@@ -2337,14 +2344,16 @@
       }
     ],
     "venue": {
-      "fullName": "CHI",
+      "fullName": "ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI",
       "venueType": "conference"
     },
     "year": 2018,
-    "publishDate": "2018-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/examplore_chi18.pdf"
+    "publishDate": "2018-04-21",
+    "doi": "10.1145/3173574.3174154",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/examplore_chi18.pdf",
+    "codeLink": "https://github.com/UCLA-SEAL/Examplore",
+    "teaser": "/images/teaser/examplore-chi18.webp"
   },
   {
     "title": "Interactive Extraction of Examples from Existing Code",
@@ -2361,26 +2370,28 @@
         "publicationName": "Elena L. Glassman"
       },
       {
-        "firstName": "Bjorn",
+        "firstName": "Björn",
         "lastName": "Hartmann",
-        "publicationName": "Bjorn Hartmann"
+        "publicationName": "Björn Hartmann"
       },
       {
         "firstName": "Marti",
+        "middleName": "A.",
         "lastName": "Hearst",
-        "publicationName": "Marti Hearst"
+        "publicationName": "Marti A. Hearst"
       }
     ],
     "venue": {
-      "fullName": "ACM Conference on Human Factors in Computing Systems",
+      "fullName": "ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI",
       "venueType": "conference"
     },
     "year": 2018,
-    "publishDate": "2018-01-01",
-    "doi": "",
+    "publishDate": "2018-04-21",
+    "doi": "10.1145/3173574.3173659",
     "award": "honorable-mention",
-    "awardText": "Best of CHI Honorable Mention"
+    "paperLink": "https://people.eecs.berkeley.edu/~bjoern/papers/head-codescoop-chi2018.pdf",
+    "teaser": "/images/teaser/codescoop-chi18.webp"
   },
   {
     "title": "Writing Reusable Code Feedback at Scale with Mixed-Initiative Program Synthesis",
@@ -2417,20 +2428,21 @@
         "publicationName": "Loris D'Antoni"
       },
       {
-        "firstName": "Bjorn",
+        "firstName": "Björn",
         "lastName": "Hartmann",
-        "publicationName": "Bjorn Hartmann"
+        "publicationName": "Björn Hartmann"
       }
     ],
     "venue": {
-      "fullName": "Learning @ Scale",
+      "fullName": "ACM Conference on Learning @ Scale",
       "shortName": "L@S",
       "venueType": "conference"
     },
     "year": 2017,
-    "publishDate": "2017-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/glassmanLatS17.pdf"
+    "publishDate": "2017-04-20",
+    "doi": "10.1145/3051457.3051467",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/glassmanLatS17.pdf",
+    "teaser": "/images/teaser/reusablefeedback-las17.webp"
   },
   {
     "title": "TraceDiff: Debugging Unexpected Code Behavior Using Trace Divergences",
@@ -2457,14 +2469,14 @@
         "publicationName": "Elena L. Glassman"
       },
       {
-        "firstName": "Rafael",
+        "firstName": "Ruan",
         "lastName": "Reis",
-        "publicationName": "Rafael Reis"
+        "publicationName": "Ruan Reis"
       },
       {
-        "firstName": "Mauro",
+        "firstName": "Melina",
         "lastName": "Mongiovi",
-        "publicationName": "Mauro Mongiovi"
+        "publicationName": "Melina Mongiovi"
       },
       {
         "firstName": "Loris",
@@ -2472,9 +2484,9 @@
         "publicationName": "Loris D'Antoni"
       },
       {
-        "firstName": "Bjorn",
+        "firstName": "Björn",
         "lastName": "Hartmann",
-        "publicationName": "Bjorn Hartmann"
+        "publicationName": "Björn Hartmann"
       }
     ],
     "venue": {
@@ -2483,16 +2495,19 @@
       "venueType": "conference"
     },
     "year": 2017,
-    "publishDate": "2017-01-01",
-    "doi": ""
+    "publishDate": "2017-10-11",
+    "doi": "10.1109/vlhcc.2017.8103457",
+    "paperLink": "https://arxiv.org/abs/1708.03786",
+    "codeLink": "https://github.com/ryosuzuki/trace-diff",
+    "teaser": "/images/teaser/tracediff-vlhcc17.webp"
   },
   {
     "title": "Clustering LaTeX Solutions to Machine Learning Assignments for Rapid Assessment",
     "authors": [
       {
-        "firstName": "Sarah",
+        "firstName": "Sindy",
         "lastName": "Tan",
-        "publicationName": "Sarah Tan"
+        "publicationName": "Sindy Tan"
       },
       {
         "firstName": "Finale",
@@ -2512,13 +2527,14 @@
       }
     ],
     "venue": {
-      "fullName": "Machine Learning for Education Workshop @ KDD",
+      "fullName": "Machine Learning for Education Workshop at KDD",
       "shortName": "KDD Workshop",
       "venueType": "workshop"
     },
     "year": 2017,
     "publishDate": "2017-01-01",
-    "doi": ""
+    "doi": "",
+    "paperLink": "https://finale.seas.harvard.edu/sites/scholar.harvard.edu/files/finale/files/2017clustering_latex_solutions_to_machine_learning_assignments_for_rapid_assessment.pdf"
   },
   {
     "title": "Exploring the Design Space of Automatically Synthesized Hints for Introductory Programming Assignments",
@@ -2550,27 +2566,27 @@
         "publicationName": "Loris D'Antoni"
       },
       {
-        "firstName": "Bjorn",
+        "firstName": "Björn",
         "lastName": "Hartmann",
-        "publicationName": "Bjorn Hartmann"
+        "publicationName": "Björn Hartmann"
       }
     ],
     "venue": {
-      "fullName": "CHI Conference Extended Abstracts on Human Factors in Computing Systems",
+      "fullName": "Extended Abstracts of the ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI EA",
       "venueType": "conference"
     },
     "year": 2017,
-    "publishDate": "2017-01-01",
-    "doi": ""
+    "publishDate": "2017-05-06",
+    "doi": "10.1145/3027063.3053187"
   },
   {
     "title": "Teamscope: Scalable Team Evaluation via Automated Metric Mining for Communication, Organization, Execution, and Evolution",
     "authors": [
       {
-        "firstName": "Andrew",
+        "firstName": "An",
         "lastName": "Ju",
-        "publicationName": "Andrew Ju"
+        "publicationName": "An Ju"
       },
       {
         "firstName": "Elena",
@@ -2585,13 +2601,13 @@
       }
     ],
     "venue": {
-      "fullName": "ACM Learning at Scale Conference",
+      "fullName": "ACM Conference on Learning @ Scale",
       "shortName": "L@S",
       "venueType": "conference"
     },
     "year": 2017,
-    "publishDate": "2017-01-01",
-    "doi": ""
+    "publishDate": "2017-04-12",
+    "doi": "10.1145/3051457.3053997"
   },
   {
     "title": "Learnersourcing Personalized Hints",
@@ -2619,13 +2635,15 @@
       }
     ],
     "venue": {
-      "fullName": "ACM Computer-Supported Cooperative Work and Social Computing",
+      "fullName": "ACM Conference on Computer-Supported Cooperative Work and Social Computing",
       "shortName": "CSCW",
       "venueType": "conference"
     },
     "year": 2016,
-    "publishDate": "2016-01-01",
-    "doi": ""
+    "publishDate": "2016-02-27",
+    "doi": "10.1145/2818048.2820011",
+    "paperLink": "https://people.csail.mit.edu/elg/papers/cscw_glassman.pdf",
+    "teaser": "/images/teaser/learnersourcing-cscw16.webp"
   },
   {
     "title": "DocMatrix: Self-Teaching from Multiple Sources",
@@ -2638,8 +2656,9 @@
       },
       {
         "firstName": "Daniel",
+        "middleName": "M.",
         "lastName": "Russell",
-        "publicationName": "Daniel Russell"
+        "publicationName": "Daniel M. Russell"
       }
     ],
     "venue": {
@@ -2649,7 +2668,7 @@
     },
     "year": 2016,
     "publishDate": "2016-01-01",
-    "doi": ""
+    "doi": "10.1002/pra2.2016.14505301064"
   },
   {
     "title": "Learning Latent Student Design Decisions in Python Programming Classes",
@@ -2662,7 +2681,7 @@
       }
     ],
     "venue": {
-      "fullName": "Workshop on Machine Learning for Digital Education and Assessment Systems @ ICML",
+      "fullName": "Workshop on Machine Learning for Digital Education and Assessment Systems at ICML",
       "shortName": "ICML Workshop",
       "venueType": "workshop"
     },
@@ -2683,7 +2702,7 @@
     "venue": {
       "fullName": "New England Machine Learning Day",
       "shortName": "NEML",
-      "venueType": "workshop"
+      "venueType": "other"
     },
     "year": 2016,
     "publishDate": "2016-01-01",
@@ -2705,13 +2724,13 @@
       }
     ],
     "venue": {
-      "fullName": "ACM Computer-Supported Cooperative Work and Social Computing",
-      "shortName": "CSCW",
-      "venueType": "workshop"
+      "fullName": "Companion of the ACM Conference on Computer-Supported Cooperative Work and Social Computing",
+      "shortName": "CSCW Companion",
+      "venueType": "conference"
     },
     "year": 2016,
-    "publishDate": "2016-01-01",
-    "doi": ""
+    "publishDate": "2016-02-27",
+    "doi": "10.1145/2818052.2874319"
   },
   {
     "title": "Scaling Up Qualitative Data Analysis With Interfaces Powered by Interpretable Machine Learning",
@@ -2734,8 +2753,8 @@
       }
     ],
     "venue": {
-      "fullName": "Human-Centered Data Science Workshop @ CSCW",
-      "shortName": "CSCW Workshop",
+      "fullName": "Human-Centered Data Science Workshop at CSCW",
+      "shortName": "HCDS @ CSCW",
       "venueType": "workshop"
     },
     "year": 2016,
@@ -2791,9 +2810,9 @@
         "publicationName": "Elena L. Glassman"
       },
       {
-        "firstName": "Lyla J",
+        "firstName": "Lyla",
         "lastName": "Fischer",
-        "publicationName": "Lyla J Fischer"
+        "publicationName": "Lyla Fischer"
       },
       {
         "firstName": "Jeremy",
@@ -2808,14 +2827,15 @@
       }
     ],
     "venue": {
-      "fullName": "UIST",
+      "fullName": "ACM Symposium on User Interface Software and Technology",
       "shortName": "UIST",
       "venueType": "conference"
     },
     "year": 2015,
-    "publishDate": "2015-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/uist2015-elg-foobaz.pdf"
+    "publishDate": "2015-11-05",
+    "doi": "10.1145/2807442.2807495",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/uist2015-elg-foobaz.pdf",
+    "teaser": "/images/teaser/foobaz-uist15.webp"
   },
   {
     "title": "OverCode: Visualizing Variation in Student Solutions to Programming Problems at Scale",
@@ -2849,14 +2869,16 @@
       }
     ],
     "venue": {
-      "fullName": "TOCHI",
+      "fullName": "ACM Transactions on Computer-Human Interaction",
       "shortName": "TOCHI",
       "venueType": "journal"
     },
     "year": 2015,
-    "publishDate": "2015-01-01",
-    "doi": "",
-    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/glassman-tochi.pdf"
+    "publishDate": "2015-03-10",
+    "doi": "10.1145/2699751",
+    "paperLink": "https://glassmanlab.seas.harvard.edu/papers/glassman-tochi.pdf",
+    "exploreLink": "https://people.csail.mit.edu/elg/overcode.html",
+    "teaser": "/images/teaser/overcode-tochi15.webp"
   },
   {
     "title": "Mudslide: A Spatially Anchored Census of Student Confusion for Online Lecture Videos",
@@ -2884,15 +2906,17 @@
       }
     ],
     "venue": {
-      "fullName": "ACM Conference on Human Factors in Computing Systems",
+      "fullName": "ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI",
       "venueType": "conference"
     },
     "year": 2015,
-    "publishDate": "2015-01-01",
-    "doi": "",
+    "publishDate": "2015-04-18",
+    "doi": "10.1145/2702123.2702304",
     "award": "honorable-mention",
-    "awardText": "Best of CHI Honorable Mention"
+    "isSelected": true,
+    "paperLink": "https://arxiv.org/abs/1507.01314",
+    "teaser": "/images/teaser/mudslide-chi15.webp"
   },
   {
     "title": "RIMES: Embedding Interactive Multimedia Exercises in Lecture Videos",
@@ -2920,13 +2944,14 @@
       }
     ],
     "venue": {
-      "fullName": "ACM Conference on Human Factors in Computing Systems",
+      "fullName": "ACM CHI Conference on Human Factors in Computing Systems",
       "shortName": "CHI",
       "venueType": "conference"
     },
     "year": 2015,
-    "publishDate": "2015-01-01",
-    "doi": ""
+    "publishDate": "2015-04-18",
+    "doi": "10.1145/2702123.2702186",
+    "paperLink": "https://arxiv.org/abs/1507.01318"
   },
   {
     "title": "iBCM: Interactive Bayesian Case Model Empowering Humans via Intuitive Interaction",
@@ -2960,7 +2985,8 @@
     },
     "year": 2015,
     "publishDate": "2015-04-01",
-    "doi": ""
+    "doi": "",
+    "paperLink": "https://dspace.mit.edu/handle/1721.1/96315"
   },
   {
     "title": "Learner-Sourcing in an Engineering Class at Scale",
@@ -2972,24 +2998,28 @@
         "publicationName": "Elena L. Glassman"
       },
       {
-        "firstName": "Chris",
+        "firstName": "Christopher",
+        "middleName": "J.",
         "lastName": "Terman",
-        "publicationName": "Chris Terman"
+        "publicationName": "Christopher J. Terman"
       },
       {
         "firstName": "Robert",
+        "middleName": "C.",
         "lastName": "Miller",
-        "publicationName": "Robert Miller"
+        "publicationName": "Robert C. Miller"
       }
     ],
     "venue": {
-      "fullName": "ACM Learning at Scale Conference",
+      "fullName": "ACM Conference on Learning @ Scale",
       "shortName": "L@S",
       "venueType": "conference"
     },
     "year": 2015,
-    "publishDate": "2015-01-01",
-    "doi": ""
+    "publishDate": "2015-03-14",
+    "doi": "10.1145/2724660.2728694",
+    "paperLink": "https://people.csail.mit.edu/elg/papers/lswp131-glassman.pdf",
+    "teaser": "/images/teaser/learnersourcing-las15.webp"
   },
   {
     "title": "Interacting with Massive Numbers of Student Solutions",
@@ -3002,13 +3032,13 @@
       }
     ],
     "venue": {
-      "fullName": "ACM Symposium on User Interface Software & Technology",
-      "shortName": "UIST",
-      "venueType": "workshop"
+      "fullName": "Adjunct Proceedings of the ACM Symposium on User Interface Software and Technology",
+      "shortName": "UIST Adjunct",
+      "venueType": "conference"
     },
     "year": 2014,
-    "publishDate": "2014-01-01",
-    "doi": ""
+    "publishDate": "2014-10-05",
+    "doi": "10.1145/2658779.2661167"
   },
   {
     "title": "Feature Engineering for Clustering Student Solutions",
@@ -3026,18 +3056,21 @@
       },
       {
         "firstName": "Robert",
+        "middleName": "C.",
         "lastName": "Miller",
-        "publicationName": "Robert Miller"
+        "publicationName": "Robert C. Miller"
       }
     ],
     "venue": {
-      "fullName": "ACM Learning at Scale Conference",
+      "fullName": "ACM Conference on Learning @ Scale",
       "shortName": "L@S",
-      "venueType": "workshop"
+      "venueType": "conference"
     },
     "year": 2014,
-    "publishDate": "2014-01-01",
-    "doi": ""
+    "publishDate": "2014-03-04",
+    "doi": "10.1145/2556325.2567865",
+    "paperLink": "https://www.microsoft.com/en-us/research/wp-content/uploads/2014/05/las14.pdf",
+    "teaser": "/images/teaser/feature-engineering-las14.webp"
   },
   {
     "title": "Toward Facilitating Assistance to Students Attempting Engineering Design Problems",
@@ -3049,9 +3082,9 @@
         "publicationName": "Elena L. Glassman"
       },
       {
-        "firstName": "Nate",
+        "firstName": "Ned",
         "lastName": "Gulley",
-        "publicationName": "Nate Gulley"
+        "publicationName": "Ned Gulley"
       },
       {
         "firstName": "Robert",
@@ -3061,12 +3094,14 @@
       }
     ],
     "venue": {
-      "fullName": "ACM International Computing Education Research",
+      "fullName": "ACM International Computing Education Research Conference",
       "shortName": "ICER",
       "venueType": "conference"
     },
     "year": 2013,
-    "publishDate": "2013-01-01",
-    "doi": ""
+    "publishDate": "2013-08-12",
+    "doi": "10.1145/2493394.2493400",
+    "paperLink": "https://up.csail.mit.edu/other-pubs/icer06d-glassman.pdf",
+    "teaser": "/images/teaser/toward-icer13.webp"
   }
 ]
