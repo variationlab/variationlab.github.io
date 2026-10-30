@@ -497,7 +497,7 @@
     "publishDate": "2025-04-26",
     "doi": "10.1145/3706598.3713287",
     "award": "best-paper",
-    "isSelected": true,
+    "isSelected": false,
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/gero_LIL_chi25.pdf",
     "teaser": "/images/teaser/creativewriters-chi25.webp"
   },
@@ -612,6 +612,7 @@
       "venueType": "conference"
     },
     "year": 2024,
+    "isSelected": true,
     "publishDate": "2024-05-11",
     "doi": "10.1145/3613904.3642699",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/gptsm.pdf",
@@ -809,7 +810,7 @@
     "publishDate": "2024-05-11",
     "doi": "10.1145/3613904.3642639",
     "award": "best-paper",
-    "isSelected": true,
+    "isSelected": false,
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/dynavis.pdf",
     "teaser": "/images/teaser/dynavis-chi24.webp"
   },
@@ -1904,7 +1905,7 @@
     "publishDate": "2021-05-08",
     "doi": "10.1145/3411764.3445654",
     "award": "honorable-mention",
-    "isSelected": true,
+    "isSelected": false,
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/examplenet_chi2021.pdf",
     "videoLink": "https://www.youtube.com/watch?v=kU8cBy-0z7Q",
     "teaser": "/images/teaser/examplenet-chi21.webp"
@@ -2921,7 +2922,7 @@
     "publishDate": "2015-04-18",
     "doi": "10.1145/2702123.2702304",
     "award": "honorable-mention",
-    "isSelected": true,
+    "isSelected": false,
     "paperLink": "https://arxiv.org/abs/1507.01314",
     "teaser": "/images/teaser/mudslide-chi15.webp"
   },

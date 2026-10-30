@@ -40,9 +40,10 @@
 <section class="grid gap-8 md:items-start">
 	<!-- min-w-0 lets this grid item shrink to narrow screens instead of growing to its content. -->
 	<div class="min-w-0">
-		<p class="leadText mt-4 text-zinc-700">
-			{site.home.introPrefix} <span class="text-harvard font-semibold">{site.home.highlight}</span>
-			{site.home.introSuffix}
+		<p class="bodyText mt-4 font-semibold text-zinc-900">
+			We are the <span class="text-harvard">Variation Lab</span> from Harvard SEAS. We build AI-resilient
+			interfaces that help people notice, evaluate, and recover from AI choices during open-ended work
+			like reading, writing, ideating, and sensemaking.
 		</p>
 		<!-- As many 8rem (photo-width) columns as fit, up to 6 per row; the column width never drops
 		     below a sixth of the row, so wide screens stop at 6. Members wrap onto further rows. -->
