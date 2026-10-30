@@ -115,7 +115,7 @@
 		{#each alumniGroups as group (group.key)}
 			<section>
 				<h3 class="detailTitle text-zinc-950">{group.title}</h3>
-				{#if group.key === 'interns'}
+				{#if group.key === 'interns' || group.key === 'affiliates'}
 					<div class="mt-3 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-3">
 						{#each group.members as member (getMemberName(member))}
 							<OtherMember {member} compact />

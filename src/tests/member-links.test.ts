@@ -252,16 +252,30 @@ describe('Member contact link helpers', () => {
 			formerRole: 'Visiting doctoral scholar'
 		};
 		const intern = { ...alumni, publicationName: 'Intern', formerRole: 'Undergraduate researcher' };
+		const studentIntern = {
+			...alumni,
+			publicationName: 'Student Intern',
+			formerRole: 'Student intern'
+		};
+		const affiliate: Members = {
+			...alumni,
+			publicationName: 'Affiliate',
+			currentAcademicStatus: 'phd-student',
+			formerRole: 'PhD Student'
+		};
 		const current = {
 			...baseMember,
 			publicationName: 'Current',
 			formerRole: 'Postdoctoral researcher'
 		};
 
-		expect(groupAlumniMembers([intern, visitor, current, postdoc, graduate])).toEqual([
+		expect(
+			groupAlumniMembers([affiliate, intern, visitor, current, postdoc, studentIntern, graduate])
+		).toEqual([
 			{ key: 'postdocs', title: 'Postdocs and PhD Graduates', members: [postdoc, graduate] },
 			{ key: 'visitors', title: 'Visiting Scholars', members: [visitor] },
-			{ key: 'interns', title: 'Student Interns', members: [intern] }
+			{ key: 'interns', title: 'Undergraduate Researchers', members: [intern, studentIntern] },
+			{ key: 'affiliates', title: 'Former Affiliates', members: [affiliate] }
 		]);
 		expect(groupAlumniMembers([visitor])).toEqual([
 			{ key: 'visitors', title: 'Visiting Scholars', members: [visitor] }

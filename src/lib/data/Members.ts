@@ -138,7 +138,7 @@ export function hasMemberSocialLinks(member: Members): boolean {
 }
 
 export type AlumniGroup = {
-	key: 'postdocs' | 'visitors' | 'interns';
+	key: 'postdocs' | 'visitors' | 'interns' | 'affiliates';
 	title: string;
 	members: Members[];
 };
@@ -148,9 +148,10 @@ export function groupAlumniMembers(members: Members[]): AlumniGroup[] {
 	const groups: AlumniGroup[] = [
 		{ key: 'postdocs', title: 'Postdocs and PhD Graduates', members: [] },
 		{ key: 'visitors', title: 'Visiting Scholars', members: [] },
-		{ key: 'interns', title: 'Student Interns', members: [] }
+		{ key: 'interns', title: 'Undergraduate Researchers', members: [] },
+		{ key: 'affiliates', title: 'Former Affiliates', members: [] }
 	];
-	const [postdocs, visitors, interns] = groups;
+	const [postdocs, visitors, interns, affiliates] = groups;
 
 	members
 		.filter((member) => member.category === 'alumni')
@@ -163,8 +164,11 @@ export function groupAlumniMembers(members: Members[]): AlumniGroup[] {
 				member.currentAcademicStatus === 'phd-graduated'
 			) {
 				postdocs.members.push(member);
-			} else {
+			} else if (formerRole.includes('intern') || formerRole.includes('undergrad')) {
 				interns.members.push(member);
+			} else {
+				// Anyone else, such as PhD students who continued elsewhere.
+				affiliates.members.push(member);
 			}
 		});
 
