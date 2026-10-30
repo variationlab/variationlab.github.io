@@ -2,6 +2,7 @@
 	import {
 		getAwardLabel,
 		getAuthorName,
+		getEqualContributionLabel,
 		getVenueLabel,
 		getLabAuthorHomepage,
 		getPublicationLinks,
@@ -33,6 +34,7 @@
 			<p class="bodyText mt-0.5 text-zinc-800">
 				{#each publication.authors as author, index (author.publicationName)}
 					{@const homepage = getLabAuthorHomepage(author, publication, labAuthorMemberships)}
+					{@const equalContributionLabel = getEqualContributionLabel(author)}
 					{#if index > 0}<span>, </span>{/if}
 					{#if homepage}
 						<a
@@ -47,7 +49,11 @@
 								? 'font-semibold text-zinc-950'
 								: ''}>{getAuthorName(author)}</span
 						>
-					{/if}
+					{/if}{#if equalContributionLabel}<span title={equalContributionLabel}
+							><span aria-hidden="true">*</span><span class="sr-only">
+								({equalContributionLabel})</span
+							></span
+						>{/if}
 				{/each}
 			</p>
 			<p class="bodyText text-zinc-700">

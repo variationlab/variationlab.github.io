@@ -319,6 +319,7 @@
     },
     "year": 2025,
     "publishDate": "2025-09-28",
+    "isSelected": true,
     "doi": "10.1145/3746059.3747773",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/abstractexplorer.pdf",
     "teaser": "/images/teaser/abstractexplorer-uist25.webp"
@@ -370,6 +371,7 @@
     },
     "year": 2025,
     "publishDate": "2025-09-28",
+    "isSelected": true,
     "doi": "10.1145/3746059.3747778",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/semantic_commit.pdf",
     "teaser": "/images/teaser/semantic-commit-uist25.webp"
@@ -428,12 +430,14 @@
         "firstName": "Elena",
         "middleName": "L.",
         "lastName": "Glassman",
-        "publicationName": "Elena L. Glassman"
+        "publicationName": "Elena L. Glassman",
+        "equalContribution": "co-last"
       },
       {
         "firstName": "Toby Jia-Jun",
         "lastName": "Li",
-        "publicationName": "Toby Jia-Jun Li"
+        "publicationName": "Toby Jia-Jun Li",
+        "equalContribution": "co-last"
       }
     ],
     "venue": {
@@ -519,12 +523,14 @@
         "firstName": "Elena",
         "middleName": "L.",
         "lastName": "Glassman",
-        "publicationName": "Elena L. Glassman"
+        "publicationName": "Elena L. Glassman",
+        "equalContribution": "co-last"
       },
       {
         "firstName": "Toby Jia-Jun",
         "lastName": "Li",
-        "publicationName": "Toby Jia-Jun Li"
+        "publicationName": "Toby Jia-Jun Li",
+        "equalContribution": "co-last"
       }
     ],
     "venue": {
@@ -566,6 +572,7 @@
     "year": 2025,
     "publishDate": "2025-07-31",
     "doi": "",
+    "isSelected": true,
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/law_is_vulnerable_SSRN.pdf"
   },
   {

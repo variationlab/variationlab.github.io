@@ -3,6 +3,8 @@ export interface Authors {
 	lastName: string;
 	middleName?: string;
 	publicationName: string;
+	/** On a paper's author list: shared first or last authorship, marked with an asterisk. Needs at least two authors with the same value. */
+	equalContribution?: 'co-first' | 'co-last';
 }
 
 export interface Members extends Authors {

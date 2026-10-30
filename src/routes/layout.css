@@ -164,6 +164,16 @@ a:hover {
 	--text-base: var(--text-md);
 }
 
+/* Opening paragraph of the home page, between a section heading and body prose. */
+.leadText {
+	font-size: var(--text-lg);
+	line-height: var(--leading-content);
+
+	@variant sm {
+		font-size: var(--text-xl);
+	}
+}
+
 /* Prose and item descriptions, including publication authors and venues. */
 .bodyText {
 	font-size: var(--text-base);

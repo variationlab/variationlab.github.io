@@ -40,7 +40,7 @@
 <section class="grid gap-8 md:items-start">
 	<!-- min-w-0 lets this grid item shrink to narrow screens instead of growing to its content. -->
 	<div class="min-w-0">
-		<p class="bodyText mt-4 text-zinc-700">
+		<p class="leadText mt-4 text-zinc-700">
 			{site.home.introPrefix} <span class="text-harvard font-semibold">{site.home.highlight}</span>
 			{site.home.introSuffix}
 		</p>

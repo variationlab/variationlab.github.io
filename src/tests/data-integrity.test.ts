@@ -7,6 +7,7 @@ import { memberProfileLinkIcons, type Authors, type Members, type Publication } 
 import { getMemberSlug } from '$lib/data/Members';
 import {
 	getAwardLabel,
+	getEqualContributionLabel,
 	getLabAuthorHomepage,
 	getLabAuthorMemberships,
 	getPublicationLinks,
@@ -114,6 +115,35 @@ describe('Data integrity', () => {
 				expect(author.publicationName).toBeTruthy();
 			});
 		});
+	});
+
+	it('marks shared first or last authorship on at least two authors', () => {
+		publications.forEach((publication) => {
+			const counts = new Map<string, number>();
+			publication.authors.forEach(({ equalContribution }) => {
+				if (equalContribution)
+					counts.set(equalContribution, (counts.get(equalContribution) ?? 0) + 1);
+			});
+			counts.forEach((count, kind) => {
+				expect(count, `${publication.title} has only one ${kind} author`).toBeGreaterThan(1);
+			});
+		});
+	});
+
+	it('labels shared first and last authorship', () => {
+		const author: Authors = {
+			firstName: 'Example',
+			lastName: 'Author',
+			publicationName: 'Example Author'
+		};
+
+		expect(getEqualContributionLabel(author)).toBeUndefined();
+		expect(getEqualContributionLabel({ ...author, equalContribution: 'co-first' })).toBe(
+			'Co-first author'
+		);
+		expect(getEqualContributionLabel({ ...author, equalContribution: 'co-last' })).toBe(
+			'Co-last corresponding author'
+		);
 	});
 
 	it('has publication names for every member', () => {

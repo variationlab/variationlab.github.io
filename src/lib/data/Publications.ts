@@ -62,6 +62,16 @@ const awardLabels = {
 	'honorable-mention': 'Honorable Mention Award'
 } as const;
 
+const equalContributionLabels = {
+	'co-first': 'Co-first author',
+	'co-last': 'Co-last corresponding author'
+} as const;
+
+/** Label for the asterisk after an author who shares first or last authorship. */
+export function getEqualContributionLabel(author: Authors): string | undefined {
+	return author.equalContribution ? equalContributionLabels[author.equalContribution] : undefined;
+}
+
 /** Standard award names come from `award`; `awardText` names only `other` awards. */
 export function getAwardLabel(publication: Publication): string | undefined {
 	if (!publication.award) return undefined;
