@@ -65,14 +65,17 @@
 		{/each}
 	</div>
 
-	<div class="hidden min-w-0 gap-2 sm:grid sm:grid-cols-4 lg:grid-cols-5">
-		<div class="grid grid-cols-2 gap-2 sm:col-span-2 lg:col-span-3 lg:grid-cols-3">
-			{#each currentMembers as member (getMemberName(member))}
-				<CurrentMember {member} onPreview={previewMember} onClearPreview={clearPreview} />
-			{/each}
-		</div>
+	<!-- The bio panel is pinned to the right two columns of the first two rows; member tiles
+	     auto-place around it, so rows after the second use every column. -->
+	<div class="hidden min-w-0 gap-2 sm:grid sm:grid-cols-4 lg:grid-cols-6">
+		{#each currentMembers as member (getMemberName(member))}
+			<CurrentMember {member} onPreview={previewMember} onClearPreview={clearPreview} />
+		{/each}
 
-		<aside class="relative min-h-0 min-w-0 sm:col-span-2" aria-live="polite">
+		<aside
+			class="relative row-span-2 row-start-1 min-h-0 min-w-0 sm:col-span-2 sm:col-start-3 lg:col-start-5"
+			aria-live="polite"
+		>
 			<div class="absolute inset-0 flex flex-col overflow-hidden px-1 py-2 lg:px-3">
 				{#if previewedMember}
 					<h2 class="itemTitle max-w-full [overflow-wrap:anywhere] break-words text-zinc-950">
@@ -115,8 +118,8 @@
 		{#each alumniGroups as group (group.key)}
 			<section>
 				<h3 class="detailTitle text-zinc-950">{group.title}</h3>
-				{#if group.key === 'interns' || group.key === 'affiliates'}
-					<div class="mt-3 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-3">
+				{#if group.key === 'masters' || group.key === 'interns' || group.key === 'affiliates'}
+					<div class="mt-3 grid grid-cols-2 gap-x-6 gap-y-1 sm:grid-cols-3 lg:grid-cols-4">
 						{#each group.members as member (getMemberName(member))}
 							<OtherMember {member} compact />
 						{/each}

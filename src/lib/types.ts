@@ -7,6 +7,16 @@ export interface Authors {
 	equalContribution?: 'co-first' | 'co-last';
 }
 
+export const alumniGroupKeys = [
+	'postdocs',
+	'visitors',
+	'masters',
+	'interns',
+	'affiliates'
+] as const;
+
+export type AlumniGroupKey = (typeof alumniGroupKeys)[number];
+
 export interface Members extends Authors {
 	/** Preferred first name, shown as `Nick (First) Last` while `publicationName` still matches papers. */
 	nickName?: string;
@@ -32,8 +42,11 @@ export interface Members extends Authors {
 	bio?: string;
 	startTime: string;
 	endTime?: string;
-	formerRole?: string;
-	/** Display title for any member; otherwise use the general academic-status label. */
+	/** What the member does or did in the lab: a current member's title ("PhD Student, Computer Science"), an alumnus's "Prev:" role, or, in compact alumni groups (master's, undergraduate, affiliates), the affiliation ("Harvard GSD"), which is kept for reference but not shown. Falls back to the academic-status label. */
+	roleAtLab?: string;
+	/** People page alumni section. Required for alumni; current members never have it. */
+	alumniGroup?: AlumniGroupKey;
+	/** Alumni only: where they went after the lab, shown as "Now:" or "→". Current members never have it. */
 	currentRole?: string;
 }
 

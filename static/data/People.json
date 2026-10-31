@@ -24,7 +24,7 @@
     "bio": "Elena L. Glassman is an Assistant Professor of Computer Science at the Harvard John A. Paulson School of Engineering & Applied Sciences, specializing in human-computer interaction. Prior to that, she was a postdoctoral scholar at UC Berkeley, and obtained a BS, MEng, and PhD in Electrical Engineering and Computer Science from MIT. She has been named a Stanley A. Marks & William H. Marks Professor at the Radcliffe Institute for Advanced Study and a National Academy of Sciences Kavli Fellow. Her work has been funded by the NSF, private industry, the Berkeley Institute for Data Science, and the Sloan Research Fellowship. This work has received Best Paper and Honorable Mention awards at top-tier human-computer interaction research venues.",
     "startTime": "2013-01-01",
     "publicationName": "Elena L. Glassman",
-    "currentRole": "Assistant Professor, Computer Science",
+    "roleAtLab": "Assistant Professor, Computer Science",
     "office": "SEC 2.108"
   },
   {
@@ -42,7 +42,7 @@
     "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "startTime": "2023-09-01",
     "publicationName": "Chelse Swoopes",
-    "currentRole": "PhD Student, Computer Science"
+    "roleAtLab": "PhD Student, Computer Science"
   },
   {
     "firstName": "Ziwei",
@@ -64,7 +64,7 @@
     "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "startTime": "2023-09-01",
     "publicationName": "Ziwei Gu",
-    "currentRole": "PhD Student, Computer Science"
+    "roleAtLab": "PhD Student, Computer Science"
   },
   {
     "firstName": "Chau",
@@ -86,7 +86,7 @@
     "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "startTime": "2026-09-01",
     "publicationName": "Chau Vu",
-    "currentRole": "PhD Student, Computer Science",
+    "roleAtLab": "PhD Student, Computer Science",
     "office": "SEC 2.347"
   },
   {
@@ -130,7 +130,7 @@
         "icon": "bluesky"
       }
     ],
-    "currentRole": "PhD Student, Computer Science",
+    "roleAtLab": "PhD Student, Computer Science",
     "office": "SEC 2.347"
   },
   {
@@ -161,8 +161,47 @@
       "Data visualization"
     ],
     "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "currentRole": "PhD Student, Computer Science",
+    "roleAtLab": "PhD Student, Computer Science",
     "office": "SEC 2.347 | SEC 2.409"
+  },
+  {
+    "firstName": "Rain",
+    "lastName": "YeYang",
+    "publicationName": "Rain YeYang",
+    "category": "member",
+    "currentAcademicStatus": "undergrad",
+    "interests": [],
+    "bio": "Rain is an undergraduate studying Computer Science and Mathematics with a secondary field in Philosophy.",
+    "startTime": "2026-09-01",
+    "roleAtLab": "Undergraduate Student, Computer Science and Mathematics"
+  },
+  {
+    "firstName": "Kanishk",
+    "lastName": "Tantia",
+    "publicationName": "Kanishk Tantia",
+    "profileLinks": [
+      {
+        "url": "https://kanishkt.com/"
+      }
+    ],
+    "category": "member",
+    "currentAcademicStatus": "master",
+    "headshot": "/images/members/kanishk.jpg",
+    "interests": [],
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "startTime": "2026-09-01",
+    "roleAtLab": "MS/MBA Student, SEAS and HBS"
+  },
+  {
+    "firstName": "Vihaan",
+    "lastName": "Gupta",
+    "publicationName": "Vihaan Gupta",
+    "category": "member",
+    "currentAcademicStatus": "undergrad",
+    "interests": [],
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "startTime": "2026-09-01",
+    "roleAtLab": "Undergraduate Student"
   },
   {
     "firstName": "Tyler",
@@ -182,7 +221,8 @@
     ],
     "startTime": "2020-09-01",
     "publicationName": "Tyler Holloway",
-    "formerRole": "PhD Student",
+    "roleAtLab": "PhD Student",
+    "alumniGroup": "affiliates",
     "currentRole": "PhD Student, Harvard"
   },
   {
@@ -203,8 +243,9 @@
     ],
     "startTime": "2022-09-01",
     "endTime": "2025-08-31",
-    "formerRole": "Postdoctoral researcher",
-    "currentRole": "Assistant Professor, Universite de Montreal",
+    "roleAtLab": "Postdoctoral Researcher",
+    "alumniGroup": "postdocs",
+    "currentRole": "Assistant Professor, Université de Montréal",
     "publicationName": "Ian Arawjo"
   },
   {
@@ -224,7 +265,8 @@
     ],
     "startTime": "2019-09-01",
     "endTime": "2026-08-31",
-    "formerRole": "PhD Student",
+    "roleAtLab": "PhD Student",
+    "alumniGroup": "postdocs",
     "currentRole": "ML Research Scientist, Apple",
     "publicationName": "Priyan Vaithilingam"
   },
@@ -247,7 +289,8 @@
     ],
     "startTime": "2022-09-01",
     "endTime": "2025-08-31",
-    "formerRole": "Postdoctoral researcher",
+    "roleAtLab": "Postdoctoral Researcher",
+    "alumniGroup": "postdocs",
     "currentRole": "Lecturer, University of Sydney",
     "publicationName": "Katy Ilonka Gero"
   },
@@ -270,7 +313,8 @@
     ],
     "startTime": "2023-01-01",
     "endTime": "2024-12-31",
-    "formerRole": "Visiting scholar",
+    "roleAtLab": "Visiting Scholar",
+    "alumniGroup": "visitors",
     "currentRole": "Associate Professor, Colby College",
     "publicationName": "Naser Al Madi"
   },
@@ -294,7 +338,8 @@
     ],
     "startTime": "2022-01-01",
     "endTime": "2023-12-31",
-    "formerRole": "Visiting scholar",
+    "roleAtLab": "Visiting Scholar",
+    "alumniGroup": "visitors",
     "currentRole": "Senior Lecturer, University of Sydney",
     "publicationName": "Jonathan K. Kummerfeld"
   },
@@ -317,7 +362,8 @@
     ],
     "startTime": "2020-01-01",
     "endTime": "2022-12-31",
-    "formerRole": "Visiting scholar",
+    "roleAtLab": "Visiting Scholar",
+    "alumniGroup": "visitors",
     "currentRole": "Research Professor, CAIS",
     "publicationName": "Hendrik Heuer"
   },
@@ -339,7 +385,8 @@
     ],
     "startTime": "2019-09-01",
     "endTime": "2021-08-31",
-    "formerRole": "Postdoctoral researcher",
+    "roleAtLab": "Postdoctoral Researcher",
+    "alumniGroup": "postdocs",
     "currentRole": "Assistant Professor, Purdue University",
     "publicationName": "Tianyi Zhang"
   },
@@ -362,8 +409,9 @@
     ],
     "startTime": "2024-01-01",
     "endTime": "2024-12-31",
-    "formerRole": "Visiting doctoral scholar",
-    "currentRole": "Doctoral researcher, University of Bayreuth",
+    "roleAtLab": "Visiting Doctoral Scholar",
+    "alumniGroup": "visitors",
+    "currentRole": "Doctoral Researcher, University of Bayreuth",
     "publicationName": "Hai Dang"
   },
   {
@@ -385,7 +433,8 @@
     ],
     "startTime": "2022-09-01",
     "endTime": "2023-12-31",
-    "formerRole": "PhD Student",
+    "roleAtLab": "PhD Student",
+    "alumniGroup": "affiliates",
     "currentRole": "PhD Student, Harvard",
     "publicationName": "Sonia K. Murthy"
   },
@@ -404,8 +453,507 @@
     "interests": [],
     "startTime": "2024-01-01",
     "endTime": "2025-12-31",
-    "formerRole": "Student intern",
+    "roleAtLab": "Harvard CS & Statistics",
+    "alumniGroup": "interns",
     "currentRole": "PhD Student, University of Michigan",
     "publicationName": "Nina Lei"
+  },
+  {
+    "firstName": "Daeun",
+    "lastName": "Yoo",
+    "publicationName": "Daeun Yoo",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2023-01-01",
+    "endTime": "2024-12-31",
+    "roleAtLab": "Harvard Design Engineering",
+    "alumniGroup": "masters"
+  },
+  {
+    "firstName": "Luke",
+    "lastName": "Reeve",
+    "publicationName": "Luke Reeve",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2023-01-01",
+    "endTime": "2023-12-31",
+    "roleAtLab": "Harvard Design Engineering",
+    "alumniGroup": "masters"
+  },
+  {
+    "firstName": "Jiabin",
+    "lastName": "Wei",
+    "publicationName": "Jiabin Wei",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2023-01-01",
+    "endTime": "2023-12-31",
+    "roleAtLab": "Harvard Design Engineering",
+    "alumniGroup": "masters"
+  },
+  {
+    "firstName": "Erica",
+    "lastName": "Luzzi",
+    "publicationName": "Erica Luzzi",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2022-01-01",
+    "endTime": "2022-12-31",
+    "roleAtLab": "Harvard Design Engineering",
+    "alumniGroup": "masters"
+  },
+  {
+    "firstName": "Litao",
+    "lastName": "Yan",
+    "publicationName": "Litao Yan",
+    "profileLinks": [
+      {
+        "url": "https://yanlitao.github.io/"
+      }
+    ],
+    "category": "alumni",
+    "currentAcademicStatus": "phd-student",
+    "interests": [],
+    "startTime": "2021-01-01",
+    "endTime": "2021-12-31",
+    "roleAtLab": "Harvard CSE",
+    "alumniGroup": "masters",
+    "currentRole": "PhD Student, University of Pennsylvania"
+  },
+  {
+    "firstName": "Janet",
+    "lastName": "Sung",
+    "publicationName": "Janet Sung",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2019-01-01",
+    "endTime": "2019-12-31",
+    "roleAtLab": "Harvard Design Engineering",
+    "alumniGroup": "masters"
+  },
+  {
+    "firstName": "Vicki",
+    "lastName": "Xu",
+    "publicationName": "Vicki Xu",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2023-01-01",
+    "endTime": "2023-12-31",
+    "roleAtLab": "Harvard SEAS",
+    "alumniGroup": "masters"
+  },
+  {
+    "firstName": "Victor",
+    "lastName": "Goncalves",
+    "publicationName": "Victor Goncalves",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2023-01-01",
+    "endTime": "2023-12-31",
+    "roleAtLab": "Harvard SEAS",
+    "alumniGroup": "masters"
+  },
+  {
+    "firstName": "Justin",
+    "lastName": "O’Dwyer",
+    "publicationName": "Justin O’Dwyer",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2023-01-01",
+    "endTime": "2023-12-31",
+    "roleAtLab": "Harvard SEAS",
+    "alumniGroup": "masters"
+  },
+  {
+    "firstName": "Luke",
+    "lastName": "Kenworthy",
+    "publicationName": "Luke Kenworthy",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2021-01-01",
+    "endTime": "2021-12-31",
+    "roleAtLab": "Harvard CS",
+    "alumniGroup": "masters"
+  },
+  {
+    "firstName": "Ashley",
+    "lastName": "Gong",
+    "publicationName": "Ashley Gong",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2024-01-01",
+    "endTime": "2025-12-31",
+    "roleAtLab": "Harvard CS & Classics",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Leah",
+    "lastName": "Teichholtz",
+    "publicationName": "Leah Teichholtz",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2023-01-01",
+    "endTime": "2024-12-31",
+    "roleAtLab": "Harvard CS",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Tara",
+    "lastName": "Nadella",
+    "publicationName": "Tara Nadella",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2023-01-01",
+    "endTime": "2024-12-31",
+    "roleAtLab": "Harvard CS",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Karina",
+    "lastName": "Halevy",
+    "publicationName": "Karina Halevy",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2021-01-01",
+    "endTime": "2023-12-31",
+    "roleAtLab": "Harvard CS & History",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Wassim",
+    "lastName": "Marrakchi",
+    "publicationName": "Wassim Marrakchi",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2021-01-01",
+    "endTime": "2021-12-31",
+    "roleAtLab": "Harvard CS",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Cole",
+    "lastName": "Bateman",
+    "publicationName": "Cole Bateman",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2020-01-01",
+    "endTime": "2021-12-31",
+    "roleAtLab": "Harvard CS",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Ahan",
+    "lastName": "Malhotra",
+    "publicationName": "Ahan Malhotra",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2020-01-01",
+    "endTime": "2021-12-31",
+    "roleAtLab": "Harvard CS",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "George",
+    "lastName": "Moe",
+    "publicationName": "George Moe",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2020-01-01",
+    "endTime": "2021-12-31",
+    "roleAtLab": "Harvard CS",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Katherine",
+    "lastName": "Qian",
+    "publicationName": "Katherine Qian",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2020-01-01",
+    "endTime": "2020-12-31",
+    "roleAtLab": "Harvard CS",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Jake",
+    "lastName": "Cui",
+    "publicationName": "Jake Cui",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2020-01-01",
+    "endTime": "2020-12-31",
+    "roleAtLab": "Harvard CS & Linguistics",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Rebecca",
+    "lastName": "Hao",
+    "publicationName": "Rebecca Hao",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2020-01-01",
+    "endTime": "2020-12-31",
+    "roleAtLab": "Harvard CS & Linguistics",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Sam",
+    "lastName": "Oh",
+    "publicationName": "Sam Oh",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2019-01-01",
+    "endTime": "2019-12-31",
+    "roleAtLab": "Harvard CS & Philosophy",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Alice",
+    "lastName": "Wu",
+    "publicationName": "Alice Wu",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2024-01-01",
+    "endTime": "2024-12-31",
+    "roleAtLab": "Harvard CS",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Alice",
+    "lastName": "Cai",
+    "publicationName": "Alice Cai",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2023-01-01",
+    "endTime": "2024-12-31",
+    "roleAtLab": "Harvard CS",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Caine",
+    "lastName": "Ardayfio",
+    "publicationName": "Caine Ardayfio",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2023-01-01",
+    "endTime": "2024-12-31",
+    "roleAtLab": "Harvard CS",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "AnhPhu",
+    "lastName": "Nguyen",
+    "publicationName": "AnhPhu Nguyen",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2023-01-01",
+    "endTime": "2024-12-31",
+    "roleAtLab": "Harvard CS",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Michaela",
+    "lastName": "Bibby",
+    "publicationName": "Michaela Bibby",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2023-01-01",
+    "endTime": "2024-12-31",
+    "roleAtLab": "Harvard CS",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Lauren",
+    "lastName": "Chen",
+    "publicationName": "Lauren Chen",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2021-01-01",
+    "endTime": "2022-12-31",
+    "roleAtLab": "Harvard Radcliffe Institute",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Maegan",
+    "lastName": "Jong",
+    "publicationName": "Maegan Jong",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2021-01-01",
+    "endTime": "2022-12-31",
+    "roleAtLab": "Harvard Radcliffe Institute",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Kayla",
+    "lastName": "Huang",
+    "publicationName": "Kayla Huang",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2021-01-01",
+    "endTime": "2022-12-31",
+    "roleAtLab": "Harvard Radcliffe Institute",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Kavya",
+    "lastName": "Kopparapu",
+    "publicationName": "Kavya Kopparapu",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2021-01-01",
+    "endTime": "2022-12-31",
+    "roleAtLab": "Harvard CS",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Eric",
+    "lastName": "Lin",
+    "publicationName": "Eric Lin",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2021-01-01",
+    "endTime": "2022-12-31",
+    "roleAtLab": "Harvard CS",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Elizabeth",
+    "lastName": "Hu",
+    "publicationName": "Elizabeth Hu",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2021-01-01",
+    "endTime": "2021-12-31",
+    "roleAtLab": "Harvard CS",
+    "alumniGroup": "interns"
+  },
+  {
+    "firstName": "Sharon",
+    "lastName": "Tai",
+    "publicationName": "Sharon Tai",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2021-01-01",
+    "endTime": "2023-12-31",
+    "roleAtLab": "Harvard Extension School",
+    "alumniGroup": "affiliates"
+  },
+  {
+    "firstName": "Nikhil",
+    "lastName": "Singh",
+    "publicationName": "Nikhil Singh",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2021-01-01",
+    "endTime": "2023-12-31",
+    "roleAtLab": "MIT Media Lab",
+    "alumniGroup": "affiliates"
+  },
+  {
+    "firstName": "Daria",
+    "lastName": "Savchenko",
+    "publicationName": "Daria Savchenko",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2021-01-01",
+    "endTime": "2022-12-31",
+    "roleAtLab": "Harvard Anthropology",
+    "alumniGroup": "affiliates"
+  },
+  {
+    "firstName": "Guillermo",
+    "lastName": "Bernal",
+    "publicationName": "Guillermo Bernal",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2021-01-01",
+    "endTime": "2022-12-31",
+    "roleAtLab": "MIT Media Lab",
+    "alumniGroup": "affiliates"
+  },
+  {
+    "firstName": "Anna",
+    "lastName": "Zeng",
+    "publicationName": "Anna Zeng",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2019-01-01",
+    "endTime": "2022-12-31",
+    "roleAtLab": "MIT EECS",
+    "alumniGroup": "affiliates"
+  },
+  {
+    "firstName": "Nicolo",
+    "lastName": "Foppiani",
+    "publicationName": "Nicolo Foppiani",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2021-01-01",
+    "endTime": "2021-12-31",
+    "roleAtLab": "Harvard Physics",
+    "alumniGroup": "affiliates"
+  },
+  {
+    "firstName": "Sanjana",
+    "lastName": "Sharma",
+    "publicationName": "Sanjana Sharma",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2020-01-01",
+    "endTime": "2021-12-31",
+    "roleAtLab": "Harvard GSD",
+    "alumniGroup": "affiliates"
+  },
+  {
+    "firstName": "Phoebe",
+    "lastName": "Lin",
+    "publicationName": "Phoebe Lin",
+    "category": "alumni",
+    "currentAcademicStatus": "other",
+    "interests": [],
+    "startTime": "2019-01-01",
+    "endTime": "2019-12-31",
+    "roleAtLab": "Harvard GSD",
+    "alumniGroup": "affiliates"
   }
 ]

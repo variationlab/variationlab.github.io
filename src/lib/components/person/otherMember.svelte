@@ -1,5 +1,4 @@
 <script lang="ts">
-	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import UserRound from '@lucide/svelte/icons/user-round';
 	import Image from '$lib/components/Image.svelte';
 	import {
@@ -10,7 +9,7 @@
 	} from '$lib/data/Members';
 	import type { Members } from '$lib/types';
 
-	/** `compact` shows only the name and an arrow to the current position, for narrow grid columns. */
+	/** `compact` shows only the name, without photo or roles, for narrow grid columns. */
 	let { member, compact = false }: { member: Members; compact?: boolean } = $props();
 
 	// Without a website, the name links to the first social profile, such as LinkedIn.
@@ -32,16 +31,12 @@
 			{/if}
 		</h4>
 		{#if compact}
-			<p class="metaText mt-0.5 flex items-start gap-1 text-zinc-600">
-				<ArrowRight class="mt-[0.16em] size-3.5 shrink-0 text-zinc-400" aria-hidden="true" />
-				<span class="sr-only">Now:</span>
-				<span class="min-w-0">{getMemberStatus(member)}</span>
-			</p>
-		{:else if member.formerRole && member.currentRole}
+			<!-- Compact cards show the name only. -->
+		{:else if member.roleAtLab && member.currentRole}
 			<div class="metaText mt-0.5 text-zinc-600">
 				<p>
 					<span class="font-semibold text-zinc-700">Prev:</span>
-					{member.formerRole}
+					{member.roleAtLab}
 				</p>
 				<p>
 					<span class="font-semibold text-zinc-700">Now:</span>
@@ -54,7 +49,7 @@
 	</div>
 {/snippet}
 
-<article class="flex min-w-0 items-start gap-4 py-1">
+<article class="flex min-w-0 items-start gap-4 {compact ? '' : 'py-1'}">
 	{#if !compact}
 		{#if member.headshot}
 			<Image

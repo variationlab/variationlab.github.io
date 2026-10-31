@@ -3,7 +3,13 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { describe, expect, it } from 'vitest';
 import { isCurrentRoute, pathForHash } from '$lib/SiteRoutes';
-import { memberProfileLinkIcons, type Authors, type Members, type Publication } from '$lib/types';
+import {
+	alumniGroupKeys,
+	memberProfileLinkIcons,
+	type Authors,
+	type Members,
+	type Publication
+} from '$lib/types';
 import { getMemberSlug } from '$lib/data/Members';
 import {
 	getAwardLabel,
@@ -180,8 +186,8 @@ describe('Data integrity', () => {
 
 	it('has valid optional alumni role fields', () => {
 		members.forEach((member) => {
-			if (member.formerRole !== undefined) {
-				expect(member.formerRole.trim()).toBeTruthy();
+			if (member.roleAtLab !== undefined) {
+				expect(member.roleAtLab.trim()).toBeTruthy();
 			}
 			if (member.currentRole !== undefined) {
 				expect(member.currentRole.trim()).toBeTruthy();
@@ -213,12 +219,36 @@ describe('Data integrity', () => {
 		});
 	});
 
-	it('has former roles for every alumni member', () => {
+	it('keeps currentRole (where they went next) for alumni only', () => {
+		const currentMembers = members.filter((member) => member.category !== 'alumni');
+
+		currentMembers.forEach((member) => {
+			expect(member.currentRole, `${member.publicationName} should use roleAtLab`).toBeUndefined();
+		});
+	});
+
+	it('has a lab role for every alumni member', () => {
 		const alumniMembers = members.filter((member) => member.category === 'alumni');
 
 		expect(alumniMembers.length).toBeGreaterThan(0);
 		alumniMembers.forEach((member) => {
-			expect(member.formerRole?.trim()).toBeTruthy();
+			expect(member.roleAtLab?.trim()).toBeTruthy();
+		});
+	});
+
+	it('puts every alumni member, and only alumni, in a valid alumni group', () => {
+		members.forEach((member) => {
+			if (member.category === 'alumni') {
+				expect(
+					alumniGroupKeys,
+					`${member.publicationName} needs an alumniGroup (${alumniGroupKeys.join(', ')})`
+				).toContain(member.alumniGroup);
+			} else {
+				expect(
+					member.alumniGroup,
+					`${member.publicationName} is not alumni and should have no alumniGroup`
+				).toBeUndefined();
+			}
 		});
 	});
 

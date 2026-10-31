@@ -1,6 +1,8 @@
 import type { Members, Publication } from '$lib/types';
 import type { LayoutLoad } from './$types';
 
+export const prerender = true;
+
 export const load: LayoutLoad = async ({ fetch }) => {
 	const [peopleResponse, publicationsResponse] = await Promise.all([
 		fetch('/data/People.json'),

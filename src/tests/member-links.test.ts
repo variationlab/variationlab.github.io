@@ -56,6 +56,42 @@ describe('Member contact link helpers', () => {
 		expect(orderActiveMembers([])).toEqual([]);
 		expect(orderActiveMembers([studentA])).toEqual([studentA]);
 	});
+	it('orders active members by status, then by start date within each status', () => {
+		const at = (
+			publicationName: string,
+			currentAcademicStatus: Members['currentAcademicStatus'],
+			startTime: string
+		): Members => ({ ...baseMember, publicationName, currentAcademicStatus, startTime });
+		const faculty = at('Faculty', 'faculty', '2013-01-01');
+		const postdoc = at('Postdoc', 'postdoc', '2025-01-01');
+		const olderPhd = at('Older PhD', 'phd-candidate', '2022-09-01');
+		const newerPhd = at('Newer PhD', 'phd-student', '2026-09-01');
+		const olderMaster = at('Older Master', 'master', '2024-09-01');
+		const newerMaster = at('Newer Master', 'master', '2026-09-01');
+		const olderUndergrad = at('Older Undergrad', 'undergrad', '2020-09-01');
+		const newerUndergrad = at('Newer Undergrad', 'undergrad', '2026-09-01');
+		expect(
+			orderActiveMembers([
+				newerUndergrad,
+				newerMaster,
+				olderUndergrad,
+				newerPhd,
+				postdoc,
+				olderMaster,
+				faculty,
+				olderPhd
+			])
+		).toEqual([
+			faculty,
+			postdoc,
+			olderPhd,
+			newerPhd,
+			olderMaster,
+			newerMaster,
+			olderUndergrad,
+			newerUndergrad
+		]);
+	});
 	it('builds a stable profile path from the publication name', () => {
 		expect(getMemberSlug({ ...baseMember, publicationName: 'Elena L. Glassman' })).toBe(
 			'elena-l-glassman'
@@ -69,18 +105,18 @@ describe('Member contact link helpers', () => {
 		expect(
 			getMemberShortRole({
 				...baseMember,
-				currentRole: 'Assistant Professor, Computer Science, SEAS'
+				roleAtLab: 'Assistant Professor, Computer Science, SEAS'
 			})
 		).toBe('Assistant Professor');
-		expect(
-			getMemberShortRole({ ...baseMember, currentRole: 'PhD Student, Computer Science' })
-		).toBe('PhD Student');
+		expect(getMemberShortRole({ ...baseMember, roleAtLab: 'PhD Student, Computer Science' })).toBe(
+			'PhD Student'
+		);
 		expect(getMemberShortRole(baseMember)).toBe('PhD Student');
 	});
 
-	it('uses explicit current roles regardless of name or category', () => {
+	it('uses explicit lab roles for current members regardless of name', () => {
 		for (const firstName of ['Elena', 'Chau', 'Ruishi', 'Example']) {
-			expect(getMemberStatus({ ...baseMember, firstName, currentRole: 'Research scientist' })).toBe(
+			expect(getMemberStatus({ ...baseMember, firstName, roleAtLab: 'Research scientist' })).toBe(
 				'Research scientist'
 			);
 			expect(getMemberStatus({ ...baseMember, firstName })).toBe('PhD Student');
@@ -222,60 +258,42 @@ describe('Member contact link helpers', () => {
 		expect(getMemberName(baseMember)).toBe('Example Member');
 	});
 
-	it('uses alumni current roles as display status', () => {
+	it('uses where alumni went next, not their lab role, as display status', () => {
 		const member: Members = {
 			...baseMember,
 			category: 'alumni',
 			currentAcademicStatus: 'faculty',
+			roleAtLab: 'Postdoctoral researcher',
 			currentRole: 'Assistant Professor at Example University'
 		};
 
 		expect(getMemberStatus(member)).toBe('Assistant Professor at Example University');
 	});
 
-	it('groups alumni by former lab role in display order and drops empty groups', () => {
+	it('groups alumni by alumniGroup in display order and drops empty groups', () => {
 		const alumni: Members = { ...baseMember, category: 'alumni' };
-		const postdoc = {
+		const at = (publicationName: string, alumniGroup: Members['alumniGroup']): Members => ({
 			...alumni,
-			publicationName: 'Postdoc',
-			formerRole: 'Postdoctoral researcher'
-		};
-		const graduate: Members = {
-			...alumni,
-			publicationName: 'Graduate',
-			currentAcademicStatus: 'phd-graduated',
-			formerRole: 'PhD Student'
-		};
-		const visitor = {
-			...alumni,
-			publicationName: 'Visitor',
-			formerRole: 'Visiting doctoral scholar'
-		};
-		const intern = { ...alumni, publicationName: 'Intern', formerRole: 'Undergraduate researcher' };
-		const studentIntern = {
-			...alumni,
-			publicationName: 'Student Intern',
-			formerRole: 'Student intern'
-		};
-		const affiliate: Members = {
-			...alumni,
-			publicationName: 'Affiliate',
-			currentAcademicStatus: 'phd-student',
-			formerRole: 'PhD Student'
-		};
-		const current = {
-			...baseMember,
-			publicationName: 'Current',
-			formerRole: 'Postdoctoral researcher'
-		};
+			publicationName,
+			alumniGroup
+		});
+		const postdoc = at('Postdoc', 'postdocs');
+		const graduate = at('Graduate', 'postdocs');
+		const visitor = at('Visitor', 'visitors');
+		const master = at('Master', 'masters');
+		const intern = at('Intern', 'interns');
+		const affiliate = at('Affiliate', 'affiliates');
+		const mentee = at('Mentee', 'affiliates');
+		const current: Members = { ...baseMember, publicationName: 'Current', alumniGroup: 'postdocs' };
 
 		expect(
-			groupAlumniMembers([affiliate, intern, visitor, current, postdoc, studentIntern, graduate])
+			groupAlumniMembers([affiliate, intern, master, visitor, current, postdoc, mentee, graduate])
 		).toEqual([
 			{ key: 'postdocs', title: 'Postdocs and PhD Graduates', members: [postdoc, graduate] },
 			{ key: 'visitors', title: 'Visiting Scholars', members: [visitor] },
-			{ key: 'interns', title: 'Undergraduate Researchers', members: [intern, studentIntern] },
-			{ key: 'affiliates', title: 'Former Affiliates', members: [affiliate] }
+			{ key: 'masters', title: 'Master’s Researchers', members: [master] },
+			{ key: 'interns', title: 'Undergraduate Researchers', members: [intern] },
+			{ key: 'affiliates', title: 'Former Affiliates', members: [affiliate, mentee] }
 		]);
 		expect(groupAlumniMembers([visitor])).toEqual([
 			{ key: 'visitors', title: 'Visiting Scholars', members: [visitor] }

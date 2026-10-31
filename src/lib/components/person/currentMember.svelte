@@ -3,6 +3,8 @@
 	import LinkIcon from '@lucide/svelte/icons/link';
 	import Mail from '@lucide/svelte/icons/mail';
 	import UserRound from '@lucide/svelte/icons/user-round';
+	import { goto } from '$app/navigation';
+	import { resolve } from '$app/paths';
 	import SocialLogo from '$lib/components/SocialLogo.svelte';
 	import Image from '$lib/components/Image.svelte';
 	import { Button } from '$lib/components/ui/button';
@@ -12,6 +14,7 @@
 		getMemberGoogleScholarLink,
 		getMemberName,
 		getMemberProfilePath,
+		getMemberSlug,
 		getMemberSocialLinks,
 		hasMemberSocialLinks
 	} from '$lib/data/Members';
@@ -35,6 +38,14 @@
 	function closePreview() {
 		isOpen = false;
 		onClearPreview();
+	}
+
+	// Keyboard users reach the profile through the tile link; this keeps a plain click on the
+	// selectable name working the same way, while a drag that selects text stays put.
+	function openProfileUnlessSelecting() {
+		if (window.getSelection()?.isCollapsed ?? true) {
+			goto(resolve('/people/[slug]', { slug: getMemberSlug(member) }));
+		}
 	}
 
 	function previewOnKeyboardFocus(event: FocusEvent) {
@@ -119,7 +130,14 @@
 	<span
 		class="itemTitle pointer-events-none absolute inset-x-0 bottom-0 z-20 rounded-b-lg bg-gradient-to-t from-zinc-950/80 to-transparent px-2 pt-10 pb-2 text-white"
 	>
-		{getMemberName(member)}
+		<!-- Only the name text takes the pointer, so it can be selected; a plain click still opens the profile. -->
+		<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
+		<span
+			class="pointer-events-auto cursor-pointer select-text"
+			onclick={openProfileUnlessSelecting}
+		>
+			{getMemberName(member)}
+		</span>
 	</span>
 
 	{#if hasLinks}
