@@ -1,0 +1,1 @@
+import{o as e,s as t}from"./D_3mnJ-c.js";import"./v_jBEYI6.js";import{t as n}from"./BKS8pPsj.js";function r(r,i){let a=e(i,[`$$slots`,`$$events`,`$$legacy`]),o=[[`circle`,{cx:`12`,cy:`8`,r:`5`}],[`path`,{d:`M20 21a8 8 0 0 0-16 0`}]];n(r,t({name:`user-round`},()=>a,{get iconNode(){return o}}))}export{r as t};
