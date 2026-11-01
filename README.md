@@ -1,4 +1,37 @@
-# sv
+# Variation Lab website
+
+A SvelteKit website built with Svelte 5, TypeScript, and Tailwind CSS 4.
+
+## Setup and validation
+
+Use `pnpm` for package-manager commands:
+
+```sh
+pnpm install
+pnpm check
+pnpm exec vitest run
+pnpm build
+```
+
+The build produces a static site in `build/`. To deploy it to GitHub Pages, run `pnpm run gh:deploy`.
+
+For local development, run `pnpm dev` yourself. Coding agents must not start development or preview servers unless explicitly requested. Tests run in Node; do not add browser tests.
+
+## Project structure
+
+| Location                        | Purpose                                                                                   |
+| ------------------------------- | ----------------------------------------------------------------------------------------- |
+| `src/routes/`                   | Pages and layouts; `/people`, `/publications`, `/courses`, and `/contact` use real paths. |
+| `src/routes/layout.css`         | Shared colors, typography roles, and global styles.                                       |
+| `src/lib/components/`           | Shared UI, including publication entries and lists.                                       |
+| `src/lib/components/ui/`        | Generated shadcn-svelte components.                                                       |
+| `src/lib/data/Site.json`        | Branding and shared site copy.                                                            |
+| `static/data/People.json`       | Member and alumni records.                                                                |
+| `static/data/Publications.json` | Publication records.                                                                      |
+| `static/images/`                | Logos, member headshots, and publication teasers.                                         |
+| `src/tests/`                    | Node unit and data-integrity tests.                                                       |
+
+See [AGENTS.md](AGENTS.md) for implementation and design conventions.
 
 ## Editing site content
 
@@ -6,9 +39,13 @@
 - Edit branding, logos, introductory copy, and the people tagline in `src/lib/data/Site.json`. This configuration is imported at build time; rebuild to publish changes.
 - Edit the home page Research Themes in `researchThemes` in `src/routes/+page.svelte`; each theme has a `title` and a `description`.
 - Set brand colors in the `:root` variables in `src/routes/layout.css`.
-- Add or edit papers in `static/data/Publications.json`; see [Publications](#publications). The footer copyright year fills in automatically with the visitor's current year, even if the page is prerendered or cached.
+- Add or edit papers in `static/data/Publications.json`; see [Publications](#publications).
 
-## Member images
+The footer copyright year uses the visitor's current year, even when the page is prerendered or cached.
+
+## People
+
+### Member images
 
 Place member headshots in `static/images/members/`. Use `.jpg`, `.jpeg`, `.png`, or `.webp` files with a 1:1 aspect ratio and dimensions up to and including **650 × 650 pixels**.
 
@@ -25,7 +62,7 @@ All papers live in `static/data/Publications.json`, one object per paper. The Pu
 1. Copy an existing entry of the same kind (a CHI paper, a journal article, an arXiv preprint, and so on) and edit it. Array order does not matter; papers are sorted by `publishDate`.
 2. Check the title, author list, and venue against the official record (ACM Digital Library, DBLP, arXiv, or the publisher's page).
 3. Add the links you have, and a teaser if the paper has a figure worth showing.
-4. Run `pnpm test` and `pnpm check`. The data-integrity tests catch missing fields, unknown fields, bad dates, malformed DOIs, and teaser files that are missing or unused.
+4. Run `pnpm exec vitest run` and `pnpm check`. The data-integrity tests catch missing fields, unknown fields, bad dates, malformed DOIs, and teaser files that are missing or unused.
 
 Example:
 
@@ -89,19 +126,21 @@ Each author has `firstName`, optional `middleName`, `lastName`, and `publication
 
 For lab members, `publicationName` must match their `publicationName` in `static/data/People.json` exactly (for example `"Elena L. Glassman"`, not `"Elena Glassman"`). A member is shown in bold, linked to their homepage, only when the name matches and `publishDate` falls within their `startTime`–`endTime` window.
 
+Shared authorship uses `equalContribution: 'co-first' | 'co-last'` on each participating author. At least two authors must share each value. The site renders an asterisk after their names and explains it beneath the Publications heading.
+
 ### Venues
 
 The venue line under each paper is built from `venue` and `year`: the full name, then the abbreviation and year in brackets. `venueType: "conference"` adds "Proc.":
 
-| Kind of paper                            | `fullName`                                                                           | `shortName`     | `venueType`  | Shown as                                                              |
-| ---------------------------------------- | ------------------------------------------------------------------------------------ | --------------- | ------------ | --------------------------------------------------------------------- |
-| Full paper in the proceedings            | `ACM CHI Conference on Human Factors in Computing Systems`                           | `CHI`           | `conference` | ACM CHI Conference on … (Proc. CHI 2026)                              |
-| Late-breaking work (published in CHI EA) | `Late-Breaking Work at the ACM CHI Conference on Human Factors in Computing Systems` | `CHI EA`        | `conference` | Late-Breaking Work at the ACM CHI Conference on … (Proc. CHI EA 2024) |
-| Workshop proposal or course in CHI EA    | `Workshop at the ACM CHI Conference on …` / `Course at the …`                        | `CHI EA`        | `conference` | Workshop at the ACM CHI Conference on … (Proc. CHI EA 2026)           |
-| Poster or demo in adjunct proceedings    | `Poster at the ACM Symposium on User Interface Software and Technology`              | `UIST Adjunct`  | `conference` | Poster at the ACM Symposium on … (Proc. UIST Adjunct 2023)            |
-| Workshop paper                           | `Meaning in Context Workshop at NeurIPS`                                             | `MiC @ NeurIPS` | `workshop`   | Meaning in Context Workshop at NeurIPS (MiC @ NeurIPS 2021)           |
-| Journal article                          | `ACM Transactions on Computer-Human Interaction`                                     | `TOCHI`         | `journal`    | ACM Transactions on Computer-Human Interaction (TOCHI 2024)           |
-| Preprint                                 | `arXiv`                                                                              | `arXiv`         | `arxiv`      | arXiv 2026                                                            |
+| Kind of paper                            | `fullName`                                                                           | `shortName`     | `venueType`  | Shown as                                                                |
+| ---------------------------------------- | ------------------------------------------------------------------------------------ | --------------- | ------------ | ----------------------------------------------------------------------- |
+| Full paper in the proceedings            | `ACM CHI Conference on Human Factors in Computing Systems`                           | `CHI`           | `conference` | ACM CHI Conference on … (Proc. CHI 2026)                                |
+| Late-breaking work (published in CHI EA) | `Extended Abstracts of the ACM CHI Conference on Human Factors in Computing Systems` | `CHI EA`        | `conference` | Extended Abstracts of the ACM CHI Conference on … (Proc. CHI EA 2024)   |
+| Workshop proposal or course in CHI EA    | `Extended Abstracts of the ACM CHI Conference on Human Factors in Computing Systems` | `CHI EA`        | `conference` | Extended Abstracts of the ACM CHI Conference on … (Proc. CHI EA 2026)   |
+| Poster or demo in adjunct proceedings    | `Adjunct Proceedings of the ACM Symposium on User Interface Software and Technology` | `UIST Adjunct`  | `conference` | Adjunct Proceedings of the ACM Symposium on … (Proc. UIST Adjunct 2023) |
+| Workshop paper                           | `Meaning in Context Workshop at NeurIPS`                                             | `MiC @ NeurIPS` | `workshop`   | Meaning in Context Workshop at NeurIPS (MiC @ NeurIPS 2021)             |
+| Journal article                          | `ACM Transactions on Computer-Human Interaction`                                     | `TOCHI`         | `journal`    | ACM Transactions on Computer-Human Interaction (TOCHI 2024)             |
+| Preprint                                 | `arXiv`                                                                              | `arXiv`         | `arxiv`      | arXiv 2026                                                              |
 
 Rules of thumb:
 
@@ -144,44 +183,3 @@ magick page-1.png -crop 2200x1100+150+300 +repage -fuzz 3% -trim +repage \
 ```
 
 Leave `teaser` out if the paper has no suitable figure or no public version.
-
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project
-npx sv create my-app
-```
-
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-pnpm dlx sv@0.15.3 create --template minimal --types ts --add prettier eslint vitest="usages:component,unit" tailwindcss="plugins:typography" mdsvex sveltekit-adapter="adapter:auto" --install pnpm vlab-website
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

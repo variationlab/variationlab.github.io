@@ -14,8 +14,9 @@
 </script>
 
 <section>
-	<div class="mb-6 flex flex-wrap items-baseline gap-x-4 gap-y-1">
+	<div class="mb-6 space-y-1">
 		<h1 class="pageTitle text-zinc-950">Publications</h1>
+		<p class="metaText text-zinc-600">* = equal contribution</p>
 	</div>
 
 	<div class="publicationText md:grid md:grid-cols-[6rem_minmax(0,1fr)] md:gap-8">

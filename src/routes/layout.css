@@ -7,7 +7,7 @@
 
 @theme {
 	--font-sans: 'Nunito Sans', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-	--font-logo: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+	--font-logo: 'Avenir', 'Avenir Next', 'Helvetica Neue', sans-serif;
 
 	/* Type scale: typography classes below use only these sizes and line heights. */
 	--text-xs: 0.75rem;

@@ -447,6 +447,7 @@
     },
     "year": 2025,
     "publishDate": "2025-04-26",
+    "isSelected": true,
     "doi": "10.1145/3706598.3713708",
     "award": "best-paper",
     "paperLink": "https://glassmanlab.seas.harvard.edu/papers/mocha_chi25.pdf",
@@ -1005,25 +1006,6 @@
     "paperLink": "https://openreview.net/forum?id=0w7JBZibDc"
   },
   {
-    "title": "AI-Resilient Interfaces and the Value of Variation",
-    "authors": [
-      {
-        "firstName": "Elena",
-        "middleName": "L.",
-        "lastName": "Glassman",
-        "publicationName": "Elena L. Glassman"
-      }
-    ],
-    "venue": {
-      "fullName": "National Academy of Sciences Kavli Frontiers of Science Symposium",
-      "shortName": "Kavli Frontiers of Science",
-      "venueType": "other"
-    },
-    "year": 2024,
-    "publishDate": "2024-01-01",
-    "doi": ""
-  },
-  {
     "title": "PaTAT: Human-AI Collaborative Qualitative Coding with Explainable Interactive Rule Synthesis",
     "authors": [
       {
@@ -1465,7 +1447,7 @@
     },
     "year": 2023,
     "publishDate": "2023-01-01",
-    "doi": ""
+    "doi": "10.1184/R1/22277320"
   },
   {
     "title": "Sensemaking Interfaces for Human Evaluation of Language Model Outputs",
@@ -2070,7 +2052,7 @@
     "teaser": "/images/teaser/interpsynth-chi21.webp"
   },
   {
-    "title": "Proxy Tasks and Subjective Measures Can Be Misleading in Evaluating XAI Systems",
+    "title": "Proxy Tasks and Subjective Measures Can Be Misleading in Evaluating Explainable AI Systems",
     "authors": [
       {
         "firstName": "Zana",
@@ -2976,9 +2958,9 @@
         "publicationName": "Elena L. Glassman"
       },
       {
-        "firstName": "Brittany",
+        "firstName": "Brittney",
         "lastName": "Johnson",
-        "publicationName": "Brittany Johnson"
+        "publicationName": "Brittney Johnson"
       },
       {
         "firstName": "Julie",
