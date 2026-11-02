@@ -2,16 +2,42 @@
 	import Info from '@lucide/svelte/icons/info';
 
 	const linkClass = 'font-semibold text-harvard link-underline';
+	const labEmail = 'variation@g.harvard.edu';
 
-	// Placeholder questions; replace with the lab's real FAQ.
-	const faqs = [
+	const fundingEmail = 'tdepodesta@seas.harvard.edu';
+	type FaqAnswerPart = string | { text: string };
+	const faqs: { question: string; answer: FaqAnswerPart[] }[] = [
 		{
-			question: 'Placeholder question about joining the lab?',
-			answer: 'Placeholder answer. Replace this text with the real answer to the question.'
+			question: 'Are there collaboration opportunities for non-Harvard affiliated students?',
+			answer: [
+				'If you are a non-Harvard affiliate visiting campus for an extended period of time, maybe! Post-secondary students in the greater Boston area are especially encouraged to reach out. ',
+				{
+					text: 'Unfortunately, we do not have opportunities for high school/pre-college students.'
+				}
+			]
 		},
 		{
-			question: 'Placeholder question about collaborating with us?',
-			answer: 'Placeholder answer. Replace this text with the real answer to the question.'
+			question:
+				'I have an idea for an interesting follow-up to a recent lab publication—who can I talk to?',
+			answer: [
+				'We love to talk to people with thoughts about our work! Most projects will list a corresponding author contact, but as a fallback you can email ',
+				labEmail,
+				'. The more brief and concrete you can make your description, the more likely we are to read it and get back to you.'
+			]
+		},
+		{
+			question: "How can I help fund the lab's research?",
+			answer: [
+				"Non-profits and philanthropists interested in funding the Variation Lab's research should reach out to ",
+				labEmail,
+				' or ',
+				fundingEmail,
+				', directly.'
+			]
+		},
+		{
+			question: 'Can I pay you to supervise a student?',
+			answer: ['No.']
 		}
 	];
 </script>
@@ -45,10 +71,23 @@
 			course staff through the course's Canvas site or Ed discussion board instead of emailing the lab.
 		</p>
 	</aside>
+
+	<p class="bodyText mt-5 text-zinc-700">
+		<span class="underline">
+			For all general + media inquiries, please email us at
+			<a class={linkClass} href="mailto:{labEmail}">{labEmail}</a>.
+		</span>
+		This is an actively monitored inbox, but if we miss your email after one business week, feel free to bump!
+		We are physically located on the second floor of Harvard's Science and Engineering Complex @ 150 Western Ave, Allston, MA 02134.
+	</p>
 </section>
 
 <section class="mt-8">
 	<h2 class="sectionTitle text-zinc-950">Postdoctoral Researchers</h2>
+	<p class="bodyText mt-3 text-zinc-700">
+		Interested postdocs should send an email to
+		<a class={linkClass} href="mailto:{labEmail}">{labEmail}</a>.
+	</p>
 </section>
 
 <section class="mt-8">
@@ -77,9 +116,10 @@
 		students from a wide range of backgrounds. Visiting positions can be in person or remote.
 	</p>
 	<p class="bodyText mt-3 text-zinc-700">
-		If you are interested in joining us, please feel free to email Prof. Elena Glassman or any of
-		the <a class={linkClass} href="/people">current PhD students</a> whose interests align with
-		yours. Please also fill out our
+		If you are interested in joining us, please email
+		<a class={linkClass} href="mailto:{labEmail}">{labEmail}</a>
+		or any of the <a class={linkClass} href="/people">current PhD students</a> whose interests align
+		with yours. Please also fill out our
 		<!-- TODO: link to the Google Form once it exists. -->
 		<span class={linkClass}
 			><a
@@ -105,7 +145,10 @@
 				</h3>
 				<p class="bodyText px-4 py-3 text-zinc-800">
 					<span class="text-harvard font-semibold">A:</span>
-					{faq.answer}
+					{#each faq.answer as part, index (index)}{#if typeof part !== 'string'}<span
+							class="underline">{part.text}</span
+						>{:else if part.includes('@')}<a class={linkClass} href="mailto:{part}">{part}</a
+						>{:else}{part}{/if}{/each}
 				</p>
 			</div>
 		{/each}
