@@ -3,6 +3,7 @@ import type { Members } from '$lib/types';
 import {
 	getMemberEmailLink,
 	getMemberGitHubLink,
+	getMemberGivenName,
 	getMemberGoogleScholarLink,
 	getMemberName,
 	getMemberProfileLinks,
@@ -10,7 +11,9 @@ import {
 	getMemberShortRole,
 	getMemberSlug,
 	getMemberStatus,
+	isCoreMember,
 	orderActiveMembers,
+	orderHomeMembers,
 	getMemberSocialLinks,
 	getMemberWebsiteLink,
 	groupAlumniMembers,
@@ -55,6 +58,58 @@ describe('Member contact link helpers', () => {
 		expect(input).toEqual([studentA, faculty, alumni, studentC, studentB, secondFaculty]);
 		expect(orderActiveMembers([])).toEqual([]);
 		expect(orderActiveMembers([studentA])).toEqual([studentA]);
+	});
+	it('shows active faculty and PhD students on the home page, in People-page order', () => {
+		const faculty: Members = {
+			...baseMember,
+			publicationName: 'Faculty',
+			currentAcademicStatus: 'faculty',
+			startTime: '2010-01-01'
+		};
+		const postdoc: Members = {
+			...baseMember,
+			publicationName: 'Postdoc',
+			currentAcademicStatus: 'postdoc',
+			startTime: '2021-09-01'
+		};
+		const candidate: Members = {
+			...baseMember,
+			publicationName: 'Candidate',
+			currentAcademicStatus: 'phd-candidate',
+			startTime: '2022-09-01'
+		};
+		const student: Members = {
+			...baseMember,
+			publicationName: 'Student',
+			currentAcademicStatus: 'phd-student',
+			startTime: '2024-09-01'
+		};
+		const master: Members = {
+			...baseMember,
+			publicationName: 'Master',
+			currentAcademicStatus: 'master',
+			startTime: '2023-09-01'
+		};
+		const undergrad: Members = {
+			...baseMember,
+			publicationName: 'Undergrad',
+			currentAcademicStatus: 'undergrad',
+			startTime: '2025-09-01'
+		};
+		const alumniPhd: Members = {
+			...student,
+			publicationName: 'Alumni PhD',
+			category: 'alumni',
+			startTime: '2018-09-01'
+		};
+		expect(
+			orderHomeMembers([undergrad, alumniPhd, master, student, postdoc, faculty, candidate])
+		).toEqual([faculty, candidate, student]);
+		expect(isCoreMember(faculty)).toBe(true);
+		expect(isCoreMember(candidate)).toBe(true);
+		expect(isCoreMember(postdoc)).toBe(false);
+		expect(isCoreMember(master)).toBe(false);
+		expect(isCoreMember(undergrad)).toBe(false);
 	});
 	it('orders active members by status, then by start date within each status', () => {
 		const at = (
@@ -254,6 +309,8 @@ describe('Member contact link helpers', () => {
 		};
 
 		expect(getMemberName(member)).toBe('Nina (Ning-Er) Lei');
+		expect(getMemberGivenName(member)).toBe('Nina');
+		expect(getMemberGivenName(baseMember)).toBe('Example');
 		expect(getMemberName({ ...member, nickName: 'Ning-Er' })).toBe('Nina Lei');
 		expect(getMemberName(baseMember)).toBe('Example Member');
 	});

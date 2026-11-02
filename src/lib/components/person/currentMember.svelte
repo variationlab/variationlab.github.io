@@ -11,6 +11,7 @@
 	import {
 		getMemberEmailLink,
 		getMemberGitHubLink,
+		getMemberGivenName,
 		getMemberGoogleScholarLink,
 		getMemberName,
 		getMemberProfilePath,
@@ -136,7 +137,7 @@
 			class="pointer-events-auto cursor-pointer select-text"
 			onclick={openProfileUnlessSelecting}
 		>
-			{getMemberName(member)}
+			{getMemberGivenName(member)}
 		</span>
 	</span>
 

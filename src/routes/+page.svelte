@@ -2,7 +2,7 @@
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import site from '$lib/data/Site';
 	import { getSelectedPublications, getLabAuthorMemberships } from '$lib/data/Publications';
-	import { getMemberName, orderActiveMembers } from '$lib/data/Members';
+	import { getMemberName, orderHomeMembers } from '$lib/data/Members';
 	import HomeMember from '$lib/components/person/homeMember.svelte';
 	import PublicationList from '$lib/components/projects/publicationList.svelte';
 	import { Button } from '$lib/components/ui/button';
@@ -28,7 +28,7 @@
 		}
 	];
 
-	let currentMembers = $derived(orderActiveMembers(data.members));
+	let currentMembers = $derived(orderHomeMembers(data.members));
 	let selectedPublications = $derived(getSelectedPublications(data.publications));
 	let labAuthorMemberships = $derived(getLabAuthorMemberships(data.members));
 </script>

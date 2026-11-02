@@ -20,6 +20,13 @@ export function getMemberName(member: Members): string {
 	return member.publicationName;
 }
 
+/** First name shown on an active-member photo card. Uses the nickname when one is set. */
+export function getMemberGivenName(member: Members): string {
+	const nickName = member.nickName?.trim();
+	if (nickName) return nickName;
+	return member.firstName;
+}
+
 export function getMemberSlug(member: Members): string {
 	return getMemberName(member)
 		.toLowerCase()
@@ -53,6 +60,22 @@ export function orderActiveMembers(members: Members[]): Members[] {
 				activeStatusRank[a.currentAcademicStatus] - activeStatusRank[b.currentAcademicStatus] ||
 				a.startTime.localeCompare(b.startTime)
 		);
+}
+
+const coreStatuses = new Set<Members['currentAcademicStatus']>([
+	'faculty',
+	'phd-student',
+	'phd-candidate'
+]);
+
+/** Faculty and current PhD students. Everyone else active is shown smaller on the People page. */
+export function isCoreMember(member: Members): boolean {
+	return coreStatuses.has(member.currentAcademicStatus);
+}
+
+/** Home page roster: active faculty and PhD students, in the same order as the People page. */
+export function orderHomeMembers(members: Members[]): Members[] {
+	return orderActiveMembers(members).filter(isCoreMember);
 }
 
 /** Current members show their role in the lab; alumni show where they went next. */
