@@ -210,12 +210,12 @@ describe('Data integrity', () => {
 		expect(new Set(slugs).size).toBe(slugs.length);
 	});
 
-	it('has a bio for every current member', () => {
+	it('keeps current-member bios free of placeholder text', () => {
 		const currentMembers = members.filter((member) => member.category !== 'alumni');
 
 		expect(currentMembers.length).toBeGreaterThan(0);
 		currentMembers.forEach((member) => {
-			expect(member.bio?.trim()).toBeTruthy();
+			expect(member.bio ?? '').not.toMatch(/lorem ipsum/i);
 		});
 	});
 

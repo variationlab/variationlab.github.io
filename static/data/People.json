@@ -39,7 +39,7 @@
       "AI-assisted reading",
       "Writing tools"
     ],
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "bio": "",
     "startTime": "2023-09-01",
     "publicationName": "Chelse Swoopes",
     "roleAtLab": "PhD Student, Computer Science"
@@ -61,7 +61,7 @@
       "Reading interfaces",
       "Human-AI interaction"
     ],
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "bio": "",
     "startTime": "2023-09-01",
     "publicationName": "Ziwei Gu",
     "roleAtLab": "PhD Student, Computer Science"
@@ -83,7 +83,7 @@
       "Creativity support",
       "Personal informatics"
     ],
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "bio": "",
     "startTime": "2026-09-01",
     "publicationName": "Chau Vu",
     "roleAtLab": "PhD Student, Computer Science",
@@ -160,7 +160,7 @@
       "Human-AI interaction",
       "Data visualization"
     ],
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "bio": "",
     "roleAtLab": "PhD Student, Computer Science",
     "office": "SEC 2.347 | SEC 2.409"
   },
@@ -188,7 +188,7 @@
     "currentAcademicStatus": "master",
     "headshot": "/images/members/kanishk.jpg",
     "interests": [],
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "bio": "",
     "startTime": "2026-09-01",
     "roleAtLab": "MS/MBA Student, SEAS and HBS"
   },
@@ -199,7 +199,7 @@
     "category": "member",
     "currentAcademicStatus": "undergrad",
     "interests": [],
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "bio": "",
     "startTime": "2026-09-01",
     "roleAtLab": "Undergraduate Student"
   },
