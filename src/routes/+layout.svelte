@@ -168,10 +168,30 @@
 				{/each}
 			</nav>
 
-			<p class="footerCopyright text-center text-white/55">
-				Copyright © {copyrightYear}
-				{site.copyrightHolder}
-			</p>
+			<div
+				class="footerCopyright flex max-w-full flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-white/55"
+			>
+				<p class="max-w-full">
+                    © {copyrightYear} {site.copyrightHolder}
+				</p>
+				<nav aria-label="Policies">
+					<ul class="flex max-w-full flex-wrap items-center justify-center gap-x-2 gap-y-1">
+						{#each site.footerPolicyLinks as link (link.href)}
+							<li class="flex items-center gap-x-2">
+								<span aria-hidden="true">|</span>
+								<a
+									class="link-underline hover:text-white"
+									href={link.href}
+									target="_blank"
+									rel="external noopener noreferrer"
+								>
+									{link.label}
+								</a>
+							</li>
+						{/each}
+					</ul>
+				</nav>
+			</div>
 		</div>
 	</footer>
 </div>

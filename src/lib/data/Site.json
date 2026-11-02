@@ -16,6 +16,24 @@
 		"src": "/images/harvard-seas.svg",
 		"alt": "Harvard SEAS"
 	},
-	"copyrightHolder": "The President and Fellows of Harvard College",
+	"copyrightHolder": "President and Fellows of Harvard College",
+	"footerPolicyLinks": [
+		{
+			"label": "Trademark Notice",
+			"href": "https://trademark.harvard.edu/pages/trademark-notice"
+		},
+		{
+			"label": "Accessibility",
+			"href": "https://accessibility.harvard.edu/"
+		},
+		{
+			"label": "Digital Accessibility",
+			"href": "https://accessibility.huit.harvard.edu/digital-accessibility-policy"
+		},
+		{
+			"label": "Privacy Statement",
+			"href": "https://privsec.harvard.edu/harvard-university-privacy-statement"
+		}
+	],
 	"peopleTagline": "Augmenting human intelligence with variation"
 }
