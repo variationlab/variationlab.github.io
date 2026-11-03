@@ -151,7 +151,16 @@
 	>
 		<div class="mx-auto flex w-full max-w-5xl flex-col items-center gap-6">
 			<div class="flex flex-wrap items-center justify-center gap-x-7 gap-y-4">
-				<img class="h-28 w-auto" src={site.footerMark.src} alt={site.footerMark.alt} />
+				<div class="flex flex-col items-center gap-3">
+					<img class="h-12 w-auto" src={site.footerMark.src} alt={site.footerMark.alt} />
+					<div class="footerBrand">
+						{#each site.footerNameLines as line, index (index)}
+							{#if index > 0}{' '}{/if}<span class={index === 0 ? undefined : 'logoThin'}
+								>{line}</span
+							>
+						{/each}
+					</div>
+				</div>
 				<div class="w-px self-stretch bg-white/30"></div>
 				<img class="h-16 w-auto max-w-72" src={site.footerLogo.src} alt={site.footerLogo.alt} />
 			</div>

@@ -7,7 +7,7 @@
 
 @theme {
 	--font-sans: 'Nunito Sans', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-	--font-logo: 'Avenir', 'Avenir Next', 'Helvetica Neue', sans-serif;
+	--font-logo: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
 
 	/* Type scale: typography classes below use only these sizes and line heights. */
 	--text-xs: 0.75rem;
@@ -200,22 +200,24 @@ a:hover {
 /* Logo wordmark in the header and footer. */
 .navBrand {
 	font-family: var(--font-logo);
-	font-size: var(--text-xl);
+	font-size: 1.25rem;
 	font-weight: 700;
 	letter-spacing: -0.02em;
 	line-height: var(--leading-compact);
+	text-transform: uppercase;
 
 	@variant sm {
-		font-size: var(--text-2xl);
+		font-size: 1.5rem;
 	}
 }
 
 .footerBrand {
 	font-family: var(--font-logo);
-	font-size: var(--text-sm);
+	font-size: 0.875rem;
 	font-weight: 700;
 	letter-spacing: -0.02em;
 	line-height: var(--leading-compact);
+	text-transform: uppercase;
 }
 
 .logoThin {
@@ -261,7 +263,7 @@ a:hover {
 	--logo-h: calc(
 		var(--logo-expanded) - (var(--logo-expanded) - var(--logo-compact)) * var(--collapse)
 	);
-	--word-compact: var(--text-xl);
+	--word-compact: 1.25rem;
 	/* The expanded header scales fluidly with the viewport, so these two sizes are local. */
 	--word-expanded: clamp(1.5rem, 4.8vw, 2.2rem);
 	--word-size: calc(
@@ -332,10 +334,10 @@ a:hover {
 }
 
 .headerCompact .headerWords .navBrand {
-	font-size: var(--text-xl);
+	font-size: 1.25rem;
 
 	@variant sm {
-		font-size: var(--text-2xl);
+		font-size: 1.5rem;
 	}
 }
 
@@ -356,7 +358,7 @@ a:hover {
 
 @media (min-width: 640px) {
 	.headerBar {
-		--word-compact: var(--text-2xl);
+		--word-compact: 1.5rem;
 	}
 }
 

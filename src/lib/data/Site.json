@@ -5,12 +5,12 @@
 	"headerSubtitle": "Human-Computer Interaction @SEAS",
 	"footerNameLines": ["Variation", "Lab"],
 	"headerLogo": {
-		"src": "/images/variation-lab-mark-color.svg",
+		"src": "/images/temp_logo.png",
 		"alt": "Variation Lab"
 	},
 	"footerMark": {
-		"src": "/images/variation-lab-stacked-white.svg",
-		"alt": "Variation Lab"
+		"src": "/images/temp_logo_white.png",
+		"alt": ""
 	},
 	"footerLogo": {
 		"src": "/images/harvard-seas.svg",
