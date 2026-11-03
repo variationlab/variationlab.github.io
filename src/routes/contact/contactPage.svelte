@@ -10,7 +10,7 @@
 		{
 			question: 'Are there collaboration opportunities for non-Harvard affiliated students?',
 			answer: [
-				'If you are a non-Harvard affiliate visiting campus for an extended period of time, maybe! Post-secondary students in the greater Boston area are especially encouraged to reach out. ',
+				'If you are not affiliated with Harvard but would like to visit or collaborate with us (in person or remotely) for an extended period, maybe! Post-secondary students in the greater Boston area are especially encouraged to reach out. ',
 				{
 					text: 'Unfortunately, we do not have opportunities for high school/pre-college students.'
 				}
