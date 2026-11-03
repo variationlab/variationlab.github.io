@@ -1,0 +1,1 @@
+.memberBoard.svelte-7tgp36{container-type:inline-size}.memberGrid.svelte-7tgp36{--member-gap:.5rem;--member-card:calc((100cqi - 3 * var(--member-gap)) / 4);gap:var(--member-gap);grid-template-columns:repeat(3, var(--member-card)) minmax(0, 1fr);display:grid}@media (width>=64rem){.memberGrid.svelte-7tgp36{--member-card:calc((100cqi - 5 * var(--member-gap)) / 6)}}
