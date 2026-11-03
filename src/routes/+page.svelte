@@ -40,7 +40,7 @@
 <section class="grid gap-8 md:items-start">
 	<!-- min-w-0 lets this grid item shrink to narrow screens instead of growing to its content. -->
 	<div class="min-w-0">
-		<p class="bodyText mt-4 font-semibold text-zinc-900">
+		<p class="bodyText mt-4 font-bold text-zinc-900">
 			We are the <span class="text-harvard">Variation Lab</span> from Harvard SEAS. We build AI-resilient
 			interfaces that help people notice, evaluate, and recover from AI choices during open-ended work
 			like reading, writing, ideating, and sensemaking.
@@ -88,7 +88,7 @@
 	<div class="grid gap-x-10 gap-y-6 md:grid-cols-3">
 		{#each researchThemes as theme (theme.title)}
 			<article>
-				<h3 class="itemTitle text-harvard">{theme.title}</h3>
+				<h3 class="itemTitle text-harvard font-bold!">{theme.title}</h3>
 				<p class="bodyText mt-1 text-zinc-700">{theme.description}</p>
 			</article>
 		{/each}
