@@ -96,7 +96,7 @@
 							class="metaText mt-4 min-h-0 flex-1 overflow-hidden border-t border-zinc-200 pt-4 text-zinc-600"
 						>
 							<p
-								class="[display:-webkit-box] overflow-hidden [overflow-wrap:anywhere] break-words [-webkit-box-orient:vertical]"
+								class="whitespace-pre-line [display:-webkit-box] overflow-hidden [overflow-wrap:anywhere] break-words [-webkit-box-orient:vertical]"
 								style:-webkit-line-clamp={bioLines}
 							>
 								{previewedMember.bio}

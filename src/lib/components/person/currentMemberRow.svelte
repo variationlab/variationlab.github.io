@@ -86,7 +86,7 @@
 		<p class="metaText mt-0.5 text-zinc-600">{member.interests.join(', ')}</p>
 		{#if member.bio}
 			<hr class="my-4 border-zinc-200" />
-			<p class="metaText text-zinc-600">{member.bio}</p>
+			<p class="metaText whitespace-pre-line text-zinc-600">{member.bio}</p>
 		{/if}
 	</div>
 {/snippet}

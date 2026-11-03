@@ -105,7 +105,7 @@
 			<p class="bodyText mt-1 text-zinc-700">{member.interests.join(', ')}</p>
 			{#if member.bio}
 				<hr class="my-4 max-w-2xl border-zinc-200" />
-				<p class="bodyText max-w-2xl text-zinc-700">{member.bio}</p>
+				<p class="bodyText max-w-2xl whitespace-pre-line text-zinc-700">{member.bio}</p>
 			{/if}
 			{#if links.length > 0}
 				<div class="mt-4 flex flex-wrap gap-x-4 gap-y-2">
