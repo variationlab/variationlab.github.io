@@ -1,7 +1,6 @@
 <script lang="ts">
 	import './layout.css';
 	import site from '$lib/data/Site';
-	import favicon from '$lib/assets/favicon.svg';
 	import Moon from '@lucide/svelte/icons/moon';
 	import Sun from '@lucide/svelte/icons/sun';
 	import TextAlignJustify from '@lucide/svelte/icons/text-align-justify';
@@ -223,4 +222,4 @@
 	</Button>
 {/if}
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
+<svelte:head><link rel="icon" href="/favicon.ico" type="image/x-icon" /></svelte:head>
