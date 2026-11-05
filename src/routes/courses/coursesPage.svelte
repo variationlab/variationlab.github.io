@@ -36,10 +36,14 @@
 		},
 		{
 			code: 'CS 2790R',
-			title: '',
+			title: 'Research Topics in Human-Computer Interaction',
 			term: 'Fall 2025',
 			termNote: '',
-			description: []
+			description: [
+				{
+					text: 'Students will read, write about, prepare presentations about, and discuss human-computer interaction (HCI) and HCI-relevant work with a focus on papers about interfaces and automation that work especially well with (or clash against) human cognitive capabilities. Papers will primarily be on the building and evaluation of novel systems, as well as theories of and studies characterizing human cognition relevant to human-AI interaction scenarios. As a semester-long final project, students will pursue a research project of their own design in self-organized groups and present their findings in writing and orally in a conference-style format, as means to understand more deeply the processes behind HCI research.'
+				}
+			]
 		}
 	];
 </script>
