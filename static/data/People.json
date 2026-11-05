@@ -72,6 +72,18 @@
     "profileLinks": [
       {
         "url": "https://www.vuhachau.com/"
+      },
+      {
+        "url": "https://www.linkedin.com/in/chauvuha/",
+        "icon": "linkedin"
+      },
+      {
+        "url": "https://scholar.google.com/citations?user=p8y2BQIAAAAJ&hl=en",
+        "icon": "googleScholar"
+      },
+      {
+        "url": "https://x.com/chauhavu",
+        "icon": "twitter"
       }
     ],
     "category": "member",
@@ -83,7 +95,7 @@
       "Creativity support",
       "Personal informatics"
     ],
-    "bio": "",
+    "bio": "I am Chau, a first-year PhD student in Computer Science at SEAS! I study how to design cognitively inviting tools that help people engage with complex work while leaving room for their own interpretation and critical thought. My previous projects range from tools for creative practice, AI-assisted programming, navigating research literature, to understanding critical personal health or legal data. Across these areas, my work aims to support both people's productivity and capacity to question and act on matters that affect their lives. Always open to hear from you, whether you have a question or an idea we could collaborate on! 😊",
     "startTime": "2026-09-01",
     "publicationName": "Chau Vu",
     "roleAtLab": "PhD Student, Computer Science",
