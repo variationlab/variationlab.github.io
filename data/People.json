@@ -172,7 +172,7 @@
       "Human-AI interaction",
       "Data visualization"
     ],
-    "bio": "Hey! 👋 My name is Trevor, and I’m a PhD student in Computer Science.  Prior to joining the Variation Lab, I spent four years co-advised by profs. Martin Wattenberg and Fernanda Viegas in the Insight & Interaction Lab, with a research focus at the intersection of interpretability, visualization, and human-centered design.  Much of my research asks what people need to see, steer, or verify to effectively engage with interactive AI systems, and builds interfaces that pair language with a visible, adjustable view of the state that shapes their results.\n\nA former Resident Tutor, I did my undergraduate and masters degrees at Harvard, where I became the College’s first ever AI degree holder with an AB in Ethical Human-AI Interaction.  I also co-teach ES 297, SEAS’ Scientific Writing Practicum every semester—interested graduate students (or advanced undergraduates working on a thesis) should feel free to reach out about joining our waitlists.\n\nBeyond my time at SEAS, I have held research affiliations with the Harvard Radcliffe Institute, the Belfer Center Intelligence Project at Harvard Kennedy School, and the Berkman Klein Center for Internet and Society at Harvard Law, where I now run the Student Leaders in AI program.",
+    "bio": "Hey! 👋 My name is Trevor, and I’m a PhD Candidate in Computer Science.  Prior to joining the Variation Lab, I spent four years co-advised by profs. Martin Wattenberg and Fernanda Viegas in the Insight & Interaction Lab, with a research focus at the intersection of interpretability, visualization, and human-centered design.  Much of my research asks what people need to see, steer, or verify to effectively engage with interactive AI systems, and builds interfaces that pair language with a visible, adjustable view of the state that shapes their results.\n\nA former Resident Tutor, I did my undergraduate and masters degrees at Harvard, where I became the College’s first ever AI degree holder with an AB in Ethical Human-AI Interaction.  I also co-teach ES 297, SEAS’ Scientific Writing Practicum every semester—interested graduate students (or advanced undergraduates working on a thesis) should feel free to reach out about joining our waitlists.\n\nBeyond my time at SEAS, I have held research affiliations with the Harvard Radcliffe Institute, the Belfer Center Intelligence Project at Harvard Kennedy School, and the Berkman Klein Center for Internet and Society at Harvard Law, where I now run the Student Leaders in AI program.",
     "roleAtLab": "PhD Student, Computer Science",
     "office": "SEC 2.347 | SEC 2.410"
   },
@@ -182,8 +182,10 @@
     "publicationName": "Rain YeYang",
     "category": "member",
     "currentAcademicStatus": "undergrad",
+    "email": "xyeyang@college.harvard.edu",
     "interests": [],
-    "bio": "Rain is an undergraduate studying Computer Science and Mathematics with a secondary field in Philosophy.",
+    "headshot": "/images/members/rain.jpg",
+    "bio": "Hello! I’m Rain, an undergraduate studying Computer Science and Mathematics with a secondary field in Philosophy. Some current research interests of mine lie in AI-resilient interfaces, design theory, and formal semantics. A few layers of abstraction down, I’ve generally been passionate about interface design (broadly construed), especially in the social impact space.",
     "startTime": "2026-09-01",
     "roleAtLab": "Undergraduate Student, Computer Science and Mathematics"
   },
@@ -194,13 +196,22 @@
     "profileLinks": [
       {
         "url": "https://kanishkt.com/"
+      },
+      {
+        "url": "https://www.linkedin.com/in/kanishktantia/",
+        "icon": "linkedin"
+      },
+      {
+        "url": "https://bsky.app/profile/kanishkt.bsky.social",
+        "icon": "bluesky"
       }
     ],
     "category": "member",
     "currentAcademicStatus": "master",
     "headshot": "/images/members/kanishk.jpg",
+    "email": "ktantia@mba2027.hbs.edu",
     "interests": [],
-    "bio": "",
+    "bio": "Hello! My name is Kanishk (He/Him) and I'm an MS/MBA student affiliated with Harvard Business School and Harvard SEAS. Before joining the Variation Lab, I spent 7 years working as a Forward Deployed Engineer at Microsoft, where I got to work on some cool problems including \"make cream cheese flow good\" and \"is it sunny in sweden?\" I work on helping accelerate human learning using AI tooling, and on AI ethics and governance. I also write short stories, and am actively founding. Feel free to reach out and chat, I love yapping.",
     "startTime": "2026-09-01",
     "roleAtLab": "MS/MBA Student, SEAS and HBS"
   },
